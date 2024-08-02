@@ -1,0 +1,377 @@
+1 Aether Barrier
+1 Aether Flash
+1 Alms Collector
+1 An-Zerrin Ruins
+1 Anafenza, the Foremost
+1 Angel of Jubilation
+1 Angelic Arbiter
+1 Anowon, the Ruin Sage
+1 Arboria
+1 Arcane Laboratory
+1 Archangel of Tithes
+1 Archelos, Lagoon Mystic
+1 Archfiend of Despair
+1 Archon of Absolution
+1 Archon of Emeria
+1 Archon of Valor's Reach
+1 Arena of the Ancients
+1 Ascendant Evincar
+1 Ashes of the Abhorrent
+1 Ashiok, Dream Render
+1 Ashling's Prerogative
+1 Aura Flux
+1 Aura of Silence
+1 Authority of the Consuls
+1 Aven Interrupter
+1 Aven Mindcensor
+1 Back to Basics
+1 Baird, Steward of Argive
+1 Basandra, Battle Seraph
+1 Bedlam
+1 Blazing Archon
+1 Blightbeetle
+1 Blind Obedience
+1 Blood Moon
+1 Blood Sun
+1 Bloodroot Apothecary
+1 Boromir, Warden of the Tower
+1 Bottomless Pit
+1 Braids, Cabal Minion
+1 Brand of Ill Omen
+1 Breath of Dreams
+1 Briar Patch
+1 Brisela, Voice of Nightmares
+1 Brutal Suppression
+1 Burning Earth
+1 Burning Sands
+1 Caltrops
+1 Catalyst Stone
+1 Caverns of Despair
+1 Chains of Mephistopheles
+1 Chalice of the Void
+1 Champions of Minas Tirith
+1 Chancellor of the Annex
+1 Charitable Levy
+1 Chill
+1 Choke
+1 Circle of Flame
+1 City in a Bottle
+1 Collective Restraint
+1 Collector Ouphe
+1 Confounding Conundrum
+1 Conqueror's Flail
+1 Containment Priest
+1 Contamination
+1 Cornered Market
+1 Cowardice
+1 Crackdown
+1 Crawlspace
+1 Creeping Dread
+1 Crovax, Ascendant Hero
+1 Curse of Exhaustion
+1 Curse of Marit Lage
+1 Cursed Totem
+1 Damping Engine
+1 Damping Field
+1 Damping Matrix
+1 Damping Sphere
+1 Dauntless Dismantler
+1 Dauthi Voidwalker
+1 Deafening Silence
+1 Defense Grid
+1 Defiler of Souls
+1 Dennick, Pious Apprentice
+1 Dense Foliage
+1 Destructive Flow
+1 Disciple of Caelus Nin
+1 Dissipation Field
+1 Doom Foretold
+1 Doorkeeper Thrull
+1 Dovescape
+1 Dovin, Hand of Control
+1 Drana and Linvala
+1 Drannith Magistrate
+1 Dread of Night
+1 Dream Tides
+1 Drop of Honey
+1 Drought
+1 Dryad Militant
+1 Dueling Grounds
+1 Dystopia
+1 Earthlink
+1 Eidolon of Obstruction
+1 Eidolon of Rhetoric
+1 Elephant Grass
+1 Elesh Norn
+1 Elesh Norn, Grand Cenobite
+1 Elesh Norn, Mother of Machines
+1 Embargo
+1 Enemy of Enlightenment
+1 Energy Flux
+1 Energy Storm
+1 Engineered Plague
+1 Ensnaring Bridge
+1 Erayo, Soratami Ascendant
+1 Erebos, God of the Dead
+1 Eriette of the Charmed Apple
+1 Ethereal Absolution
+1 Ethersworn Canonist
+1 Everlasting Torment
+1 Exiled Doomsayer
+1 Eye of Singularity
+1 False Floor
+1 Feroz's Ban
+1 Flooded Woodlands
+1 Forsaken Wastes
+1 Frozen Aether
+1 Gaddock Teeg
+1 Ghostly Prison
+1 Giant Cindermaw
+1 Gibbering Descent
+1 Gloom
+1 Glowrider
+1 Gnat Miser
+1 God-Pharaoh's Statue
+1 Grafdigger's Cage
+1 Grand Arbiter Augustin IV
+1 Gravity Sphere
+1 Gríma Wormtongue
+1 Hall of Gemstone
+1 Hand to Hand
+1 Harbinger of the Seas
+1 Havoc
+1 Havoc Festival
+1 High Noon
+1 High Seas
+1 Hinata, Dawn-Crowned
+1 Hokori, Dust Drinker
+1 Honden of Night's Reach
+1 Hullbreacher
+1 Hum of the Radix
+1 Humility
+1 Hushbringer
+1 Hushwing Gryff
+1 Illness in the Ranks
+1 Imi Statue
+1 Impatience
+1 Imposing Sovereign
+1 In the Eye of Chaos
+1 Infernal Darkness
+1 Intruder Alarm
+1 Iona, Shield of Emeria
+1 Irini Sengir
+1 Island Sanctuary
+1 Jin-Gitaxias, Core Augur
+1 Jin-Gitaxias, Progress Tyrant
+1 Judoon Enforcers
+1 Juntu Stakes
+1 Kaervek, the Spiteful
+1 Kambal, Consul of Allocation
+1 Karlov Watchdog
+1 Karn, the Great Creator
+1 Karn's Sylex
+1 Katabatic Winds
+1 Kataki, War's Wage
+1 Kinjalli's Sunwing
+1 Kismet
+1 Knight of Dusk's Shadow
+1 Koskun Falls
+1 Kudo, King Among Bears
+1 Kudzu
+1 Kulrath Knight
+1 Kunoros, Hound of Athreos
+1 Kutzil, Malamet Exemplar
+1 Land Equilibrium
+1 Lavinia, Azorius Renegade
+1 Leonin Arbiter
+1 Leovold, Emissary of Trest
+1 Leyline of Punishment
+1 Leyline of Singularity
+1 Leyline of the Void
+1 Liesa, Shroud of Dusk
+1 Light of Day
+1 Limited Resources
+1 Linvala, Keeper of Silence
+1 Llawan, Cephalid Empress
+1 Locust Miser
+1 Lodestone Golem
+1 Loxodon Gatekeeper
+1 MacCready, Lamplight Mayor
+2 Maddening Hex
+1 Magebane Lizard
+1 Magistrate's Veto
+1 Magnetic Mountain
+1 Magus of the Abyss
+1 Magus of the Moon
+1 Magus of the Tabernacle
+1 Mana Breach
+1 Mana Maze
+1 Mana Vortex
+1 Manabarbs
+1 Manglehorn
+1 Maralen of the Mornsong
+1 Marble Titan
+1 Meekstone
+1 Meishin, the Mind Cage
+1 Michiko Konda, Truth Seeker
+1 Mindlock Orb
+1 Misery's Shadow
+1 Mist of Stagnation
+1 Moat
+1 Molder Slug
+1 Mudslide
+1 Naked Singularity
+1 Narset, Parter of Veils
+1 Nature's Wrath
+1 Necrogen Mists
+1 Necrogoyf
+1 Nekusar, the Mindrazer
+1 Nether Void
+1 Night of Souls' Betrayal
+1 Noetic Scales
+1 Norn's Annex
+1 Notion Thief
+1 Null Rod
+1 Nullstone Gargoyle
+1 Ob Nixilis, Unshackled
+1 Omen Machine
+1 Onakke Oathkeeper
+1 Opposition Agent
+1 Oppression
+1 Orb of Dreams
+1 Orcish Bowmasters
+1 Overburden
+1 Overencumbered
+1 Painful Quandary
+1 Peacekeeper
+1 Pendrell Mists
+1 Phyrexian Censor
+1 Pillar Tombs of Aku
+1 Plague Drone
+1 Plague Engineer
+1 Planar Void
+1 Porphyry Nodes
+1 Portcullis
+1 Possessed Portal
+1 Pramikon, Sky Rampart
+1 Presence of the Master
+1 Price of Glory
+1 Propaganda
+1 Putrefaction
+1 Pyrostatic Pillar
+1 Quakebringer
+1 Quicksilver Fountain
+1 Rain of Gore
+1 Rampaging Ferocidon
+1 Reality Twist
+1 Reclamation
+1 Reidane, God of the Worthy
+1 Rest in Peace
+1 Rising Waters
+1 Ritual of Subdual
+1 River Song
+1 Roiling Vortex
+1 Root Maze
+1 Rule of Law
+1 Ruric Thar, the Unbowed
+1 Samurai of the Pale Curtain
+1 Sanctifier en-Vec
+1 Sanctum Prelate
+1 Scald
+1 Screaming Nemesis
+1 Scytheclaw Raptor
+1 Sen Triplets
+1 Shared Fate
+1 Sharkey, Tyrant of the Shire
+1 Sheoldred, the Apocalypse
+1 Sheoldred, Whispering One
+1 Silent Arbiter
+1 Sire of Insanity
+1 Smog Elemental
+1 Smoke
+1 Smokestack
+1 Solemnity
+1 Soulless Jailer
+1 Spelltithe Enforcer
+1 Sphere of Resistance
+1 Sphere of Safety
+1 Spirit of the Labyrinth
+1 Spreading Plague
+1 Squeeze
+1 Stabilizer
+1 Stasis
+1 Static Orb
+1 Stigma Lasher
+1 Stoic Angel
+1 Stone of Erech
+1 Stony Silence
+1 Storage Matrix
+1 Storm Cauldron
+1 Stormtide Leviathan
+1 Stranglehold
+1 Strict Proctor
+1 Stronghold Taskmaster
+1 Sulfur Elemental
+1 Sulfuric Vortex
+1 Sunspine Lynx
+1 Suppression Field
+1 Tainted Aether
+1 Tainted Remedy
+1 Talion, the Kindly Lord
+1 Tangle Wire
+1 Tectonic Instability
+1 Teferi, Mage of Zhalfir
+1 Teferi, Time Raveler
+1 Teferi's Realm
+1 Territorial Dispute
+1 Thalia and The Gitrog Monster
+1 Thalia, Guardian of Thraben
+1 Thalia, Heretic Cathar
+1 The Abyss
+1 The Immortal Sun
+1 The Tabernacle at Pendrell Vale
+1 Thorn of Amethyst
+1 Tibalt, Rakish Instigator
+1 Titania's Song
+1 Tocatli Honor Guard
+1 Tomik, Wielder of Law
+1 Torment of Scarabs
+1 Torpor Orb
+1 Toxrill, the Corrosive
+1 Trinisphere
+1 Triumph of Cruelty
+1 Trouble in Pairs
+1 Tsabo's Web
+1 Uba Mask
+1 Ugin's Nexus
+1 Underworld Cerberus
+1 Unstable Glyphbridge
+1 Uphill Battle
+1 Urabrask the Hidden
+1 Urabrask, Heretic Praetor
+1 Urborg Shambler
+1 Valentin, Dean of the Vein
+1 Vengeful Tracker
+1 Vexing Bauble
+1 Virulent Plague
+1 Void Mirror
+1 Void Winnower
+1 Vorinclex, Monstrous Raider
+1 Vorinclex, Voice of Hunger
+1 Vryn Wingmare
+1 Wandering Archaic
+1 War's Toll
+1 Ward of Bones
+1 Weathered Runestone
+1 Windborn Muse
+1 Winter Moon
+1 Winter Orb
+1 Witch Hunt
+1 Witch-king of Angmar
+1 World Queller
+1 Wrath of Marit Lage
+1 Yasharn, Implacable Earth
+1 Yixlid Jailer
+1 Yurlok of Scorch Thrash
+1 Zo-Zu the Punisher
+1 Zur's Weirding
