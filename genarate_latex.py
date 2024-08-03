@@ -70,7 +70,7 @@ def genarate_latex(sheet_name, multiface_sheet_name, latex_name):
             f"\tlegality / timeless = {data_row[17]},\n" \
             f"\tlegality / commander = {data_row[18]},\n" \
             f"\tlegality / duel_commander = {data_row[19]}\n" \
-            f"}}\n"
+            f"}}\n\n"
         cmc = int(data_row[20])
         card_type = data_row[4]
         card_english_name = data_row[0]
@@ -106,7 +106,7 @@ def genarate_latex(sheet_name, multiface_sheet_name, latex_name):
             f"\tlegality / timeless = {multiface_data_row[22]},\n" \
             f"\tlegality / commander = {multiface_data_row[23]},\n" \
             f"\tlegality / duel_commander = {multiface_data_row[24]}\n" \
-            f"}}\n"
+            f"}}\n\n"
         multiface_cmc = int(multiface_data_row[25])
         multiface_card_type = multiface_data_row[4]
         multiface_card_english_name = multiface_data_row[0]

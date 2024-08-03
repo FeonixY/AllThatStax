@@ -21,13 +21,14 @@
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me3-212-the-tabernacle-at-pendrell-vale.png,
 	card_name = None,
 	mana_cost = None,
 	card_type = 其他,
-	description = All creatures have "At the beginning of your upkeep, destroy this creature unless you pay {1}.",
+	description = All creatures have "At the beginning of your upkeep, destroy this creature unless you pay \{1\}.",
 	stax_type = None,
 	is_in_restricted_list = RL,
 	legality / standard = notlegal,
@@ -43,6 +44,7 @@
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/rtr-214-dryad-militant.png,
@@ -65,6 +67,7 @@
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/sok-70-gnat-miser.png,
@@ -87,6 +90,7 @@
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \mfcard
 {
 	front_card_image = Images/stx-161-valentin-dean-of-the-vein.png,
@@ -94,12 +98,12 @@
 	front_mana_cost = \{B\},
 	front_card_type = 生物,
 	front_description = Menace, lifelink
-If a nontoken creature an opponent controls would die, exile it instead. When you do, you may pay {2}. If you do, create a 1/1 black and green Pest creature token with "When this creature dies, you gain 1 life.",
+If a nontoken creature an opponent controls would die, exile it instead. When you do, you may pay \{2\}. If you do, create a 1/1 black and green Pest creature token with "When this creature dies, you gain 1 life.",
 	back_card_image = Images/stx-161-lisette-dean-of-the-root.png,
 	back_card_name = None,
 	back_mana_cost = \{2\}\{G\}\{G\},
 	back_card_type = 生物,
-	back_description = Whenever you gain life, you may pay {1}. If you do, put a +1/+1 counter on each creature you control and those creatures gain trample until end of turn.,
+	back_description = Whenever you gain life, you may pay \{1\}. If you do, put a +1/+1 counter on each creature you control and those creatures gain trample until end of turn.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -115,6 +119,7 @@ If a nontoken creature an opponent controls would die, exile it instead. When yo
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/m20-227-grafdigger-s-cage.png,
@@ -138,6 +143,7 @@ If a nontoken creature an opponent controls would die, exile it instead. When yo
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/7ed-307-meekstone.png,
@@ -160,6 +166,7 @@ If a nontoken creature an opponent controls would die, exile it instead. When yo
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ltr-251-stone-of-erech.png,
@@ -167,7 +174,7 @@ If a nontoken creature an opponent controls would die, exile it instead. When yo
 	mana_cost = \{1\},
 	card_type = 神器,
 	description = 如果某个由对手操控的生物将死去，则改为将它放逐。
-{2}，{T}，牺牲埃瑞赫的黑石：放逐目标牌手的坟墓场。抓一张牌。,
+\{2\}，\{T\}，牺牲埃瑞赫的黑石：放逐目标牌手的坟墓场。抓一张牌。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -183,6 +190,7 @@ If a nontoken creature an opponent controls would die, exile it instead. When yo
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mh3-212-vexing-bauble.png,
@@ -190,7 +198,7 @@ If a nontoken creature an opponent controls would die, exile it instead. When yo
 	mana_cost = \{1\},
 	card_type = 神器,
 	description = 每当任一牌手施放咒语，若施放它时未支付过法术力，则反击该咒语。
-{1}，{T}，牺牲乱心饰品：抓一张牌。,
+\{1\}，\{T\}，牺牲乱心饰品：抓一张牌。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -206,6 +214,7 @@ If a nontoken creature an opponent controls would die, exile it instead. When yo
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/kld-5-authority-of-the-consuls.png,
@@ -229,6 +238,7 @@ If a nontoken creature an opponent controls would die, exile it instead. When yo
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/pcy-85-brutal-suppression.png,
@@ -251,6 +261,7 @@ If a nontoken creature an opponent controls would die, exile it instead. When yo
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/eld-10-deafening-silence.png,
@@ -273,6 +284,7 @@ If a nontoken creature an opponent controls would die, exile it instead. When yo
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/6ed-122-dread-of-night.png,
@@ -295,6 +307,7 @@ If a nontoken creature an opponent controls would die, exile it instead. When yo
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me4-150-drop-of-honey.png,
@@ -318,15 +331,16 @@ When there are no creatures on the battlefield, sacrifice Drop of Honey.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/vis-104-elephant-grass.png,
 	card_name = None,
 	mana_cost = \{G\},
 	card_type = 结界,
-	description = Cumulative upkeep {1} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)
+	description = Cumulative upkeep \{1\} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)
 Black creatures can't attack you.
-Nonblack creatures can't attack you unless their controller pays {2} for each creature they control that's attacking you.,
+Nonblack creatures can't attack you unless their controller pays \{2\} for each creature they control that's attacking you.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -342,6 +356,7 @@ Nonblack creatures can't attack you unless their controller pays {2} for each cr
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/gtc-69-illness-in-the-ranks.png,
@@ -364,6 +379,7 @@ Nonblack creatures can't attack you unless their controller pays {2} for each cr
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/exo-10-limited-resources.png,
@@ -387,6 +403,7 @@ Players can't play lands as long as ten or more lands are on the battlefield.,
 	legality / commander = banned,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/usg-149-planar-void.png,
@@ -409,6 +426,7 @@ Players can't play lands as long as ten or more lands are on the battlefield.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/tsr-32-porphyry-nodes.png,
@@ -432,6 +450,7 @@ Players can't play lands as long as ten or more lands are on the battlefield.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/10e-292-root-maze.png,
@@ -454,6 +473,7 @@ Players can't play lands as long as ten or more lands are on the battlefield.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/m20-87-blightbeetle.png,
@@ -477,6 +497,7 @@ Players can't play lands as long as ten or more lands are on the battlefield.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mh1-158-collector-ouphe.png,
@@ -499,6 +520,7 @@ Players can't play lands as long as ten or more lands are on the battlefield.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/tsr-292-containment-priest.png,
@@ -522,6 +544,7 @@ Players can't play lands as long as ten or more lands are on the battlefield.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/lci-8-dauntless-dismantler.png,
@@ -529,7 +552,7 @@ Players can't play lands as long as ten or more lands are on the battlefield.,
 	mana_cost = \{1\}\{W\},
 	card_type = 生物,
 	description = 由对手操控的神器须横置进战场。
-{X}{X}{W}，牺牲不屈拆械人：消灭所有法术力值为X的神器。,
+\{X\}\{X\}\{W\}，牺牲不屈拆械人：消灭所有法术力值为X的神器。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = legal,
@@ -545,6 +568,7 @@ Players can't play lands as long as ten or more lands are on the battlefield.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mh2-81-dauthi-voidwalker.png,
@@ -553,7 +577,7 @@ Players can't play lands as long as ten or more lands are on the battlefield.,
 	card_type = 生物,
 	description = 次元幽影（此生物只能阻挡具次元幽影异能的生物，亦只能被具此异能的生物阻挡。）
 如果某牌将从任何区域进入对手的坟墓场，则改为将它放逐并在其上放置一个虚空指示物。
-{T}，牺牲道西虚空行者：选择一张由对手拥有、已放逐且其上有虚空指示物的牌。本回合中，你可以使用它，且不需支付其法术力费用。,
+\{T\}，牺牲道西虚空行者：选择一张由对手拥有、已放逐且其上有虚空指示物的牌。本回合中，你可以使用它，且不需支付其法术力费用。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -569,6 +593,7 @@ Players can't play lands as long as ten or more lands are on the battlefield.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \mfcard
 {
 	front_card_image = Images/mid-217-dennick-pious-apprentice.png,
@@ -577,13 +602,13 @@ Players can't play lands as long as ten or more lands are on the battlefield.,
 	front_card_type = 生物,
 	front_description = Lifelink
 Cards in graveyards can't be the targets of spells or abilities.
-Disturb {2}{W}{U} (You may cast this card from your graveyard transformed for its disturb cost.),
+Disturb \{2\}\{W\}\{U\} (You may cast this card from your graveyard transformed for its disturb cost.),
 	back_card_image = Images/mid-217-dennick-pious-apparition.png,
 	back_card_name = None,
 	back_mana_cost = None,
 	back_card_type = 生物,
 	back_description = Flying
-Whenever one or more creature cards are put into graveyards from anywhere, investigate. This ability triggers only once each turn. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")
+Whenever one or more creature cards are put into graveyards from anywhere, investigate. This ability triggers only once each turn. (Create a Clue token. It's an artifact with "\{2\}, Sacrifice this artifact: Draw a card.")
 If Dennick, Pious Apparition would be put into a graveyard from anywhere, exile it instead.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
@@ -600,6 +625,7 @@ If Dennick, Pious Apparition would be put into a graveyard from anywhere, exile 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mkm-13-doorkeeper-thrull.png,
@@ -624,6 +650,7 @@ If Dennick, Pious Apparition would be put into a graveyard from anywhere, exile 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/iko-11-drannith-magistrate.png,
@@ -646,6 +673,7 @@ If Dennick, Pious Apparition would be put into a graveyard from anywhere, exile 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \mfcard
 {
 	front_card_image = Images/None,
@@ -674,13 +702,14 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = banned,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/scg-13-exiled-doomsayer.png,
 	card_name = None,
 	mana_cost = \{1\}\{W\},
 	card_type = 生物,
-	description = All morph costs cost {2} more. (This doesn't affect the cost to cast creature spells face down.),
+	description = All morph costs cost \{2\} more. (This doesn't affect the cost to cast creature spells face down.),
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -696,6 +725,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/lrw-248-gaddock-teeg.png,
@@ -703,7 +733,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	mana_cost = \{G\}\{W\},
 	card_type = 生物,
 	description = 不能使用总法术力费用大于或等于4的非生物咒语。
-不能使用法术力费用中包括{X}的非生物咒语。,
+不能使用法术力费用中包括\{X\}的非生物咒语。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -719,6 +749,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/eld-18-hushbringer.png,
@@ -742,6 +773,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/m14-22-imposing-sovereign.png,
@@ -764,13 +796,14 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/sok-14-kataki-war-s-wage.png,
 	card_name = 战仇祸汰奇,
 	mana_cost = \{1\}\{W\},
 	card_type = 生物,
-	description = 所有神器具有「在你的维持开始时，除非你支付{1}，否则牺牲此神器。」,
+	description = 所有神器具有「在你的维持开始时，除非你支付\{1\}，否则牺牲此神器。」,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -786,6 +819,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/dmu-96-knight-of-dusk-s-shadow.png,
@@ -794,7 +828,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	card_type = 生物,
 	description = 威慑（此生物只能被两个或更多生物阻挡。）
 所有对手都不能获得生命。
-{1}{B}：暮影骑士得+1/+1直到回合结束。,
+\{1\}\{B\}：暮影骑士得+1/+1直到回合结束。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = legal,
@@ -810,6 +844,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mh3-192-kudo-king-among-bears.png,
@@ -832,6 +867,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/rvr-195-lavinia-azorius-renegade.png,
@@ -855,13 +891,14 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/2x2-16-leonin-arbiter.png,
 	card_name = 狮族仲裁者,
 	mana_cost = \{1\}\{W\},
 	card_type = 生物,
-	description = 牌手不能搜寻牌库。任意牌手可以支付{2}来让该牌手忽略此效应直到回合结束。,
+	description = 牌手不能搜寻牌库。任意牌手可以支付\{2\}来让该牌手忽略此效应直到回合结束。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -877,6 +914,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/pip-108-maccready-lamplight-mayor.png,
@@ -900,6 +938,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/otj-134-magebane-lizard.png,
@@ -922,6 +961,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/bro-107-misery-s-shadow.png,
@@ -929,7 +969,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	mana_cost = \{1\}\{B\},
 	card_type = 生物,
 	description = 如果某个由对手操控的生物将死去，则改为将它放逐。
-{1}：苦痛阴影得+1/+1直到回合结束。,
+\{1\}：苦痛阴影得+1/+1直到回合结束。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = legal,
@@ -945,14 +985,15 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/cmm-755-onakke-oathkeeper.png,
 	card_name = 欧纳克守誓魔,
 	mana_cost = \{1\}\{W\},
 	card_type = 生物,
-	description = 对每个生物而言，除非其操控者为其支付{1}，否则它不能攻击由你操控的鹏洛客。
-{4}{W}{W}，从你的坟墓场放逐欧纳克守誓魔：将目标鹏洛客牌从你的坟墓场移回战场。,
+	description = 对每个生物而言，除非其操控者为其支付\{1\}，否则它不能攻击由你操控的鹏洛客。
+\{4\}\{W\}\{W\}，从你的坟墓场放逐欧纳克守誓魔：将目标鹏洛客牌从你的坟墓场移回战场。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -968,6 +1009,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ltr-103-orcish-bowmasters.png,
@@ -991,6 +1033,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/chk-43-samurai-of-the-pale-curtain.png,
@@ -1014,6 +1057,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mh2-27-sanctifier-en-vec.png,
@@ -1038,6 +1082,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/eve-62-stigma-lasher.png,
@@ -1061,6 +1106,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/stx-33-strict-proctor.png,
@@ -1068,7 +1114,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	mana_cost = \{1\}\{W\},
 	card_type = 生物,
 	description = 飞行
-每当一个触发式异能因永久物进战场而触发时，除非其操控者支付{2}，否则反击之。,
+每当一个触发式异能因永久物进战场而触发时，除非其操控者支付\{2\}，否则反击之。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -1084,6 +1130,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mul-7-thalia-guardian-of-thraben.png,
@@ -1091,7 +1138,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	mana_cost = \{1\}\{W\},
 	card_type = 生物,
 	description = 先攻
-非生物咒语增加{1}来施放。,
+非生物咒语增加\{1\}来施放。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = legal,
@@ -1107,6 +1154,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/xln-42-tocatli-honor-guard.png,
@@ -1129,6 +1177,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mkm-147-vengeful-tracker.png,
@@ -1151,6 +1200,7 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/tsr-149-yixlid-jailer.png,
@@ -1173,14 +1223,15 @@ Whenever the fourth spell of a turn is cast, flip Erayo, Soratami Ascendant.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ody-297-catalyst-stone.png,
 	card_name = None,
 	mana_cost = \{2\},
 	card_type = 神器,
-	description = Flashback costs you pay cost {2} less.
-Flashback costs your opponents pay cost {2} more.,
+	description = Flashback costs you pay cost \{2\} less.
+Flashback costs your opponents pay cost \{2\} more.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -1196,6 +1247,7 @@ Flashback costs your opponents pay cost {2} more.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/vma-265-city-in-a-bottle.png,
@@ -1219,6 +1271,7 @@ Players can't cast spells or play lands with a name originally printed in the Ar
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/2x2-302-conqueror-s-flail.png,
@@ -1227,7 +1280,7 @@ Players can't cast spells or play lands with a name originally printed in the Ar
 	card_type = 神器,
 	description = 由你操控的永久物中每包括一种颜色，佩带此武具的生物便得+1/+1。
 只要征服者连枷贴附于某生物上，所有对手便不能在你的回合中施放咒语。
-佩带{2},
+佩带\{2\},
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -1243,6 +1296,7 @@ Players can't cast spells or play lands with a name originally printed in the Ar
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mh2-295-cursed-totem.png,
@@ -1265,14 +1319,15 @@ Players can't cast spells or play lands with a name originally printed in the Ar
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/dmr-219-damping-sphere.png,
 	card_name = 滞阻法球,
 	mana_cost = \{2\},
 	card_type = 神器,
-	description = 如果横置某个地以产生两点或更多法术力，则它改为产生{C}，而非其他类别和数量。
-牌手施放的咒语增加若干费用来施放，其数量为「该牌手本回合每施放过一个其他咒语，便需增加{1}」。,
+	description = 如果横置某个地以产生两点或更多法术力，则它改为产生\{C\}，而非其他类别和数量。
+牌手施放的咒语增加若干费用来施放，其数量为「该牌手本回合每施放过一个其他咒语，便需增加\{1\}」。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -1288,13 +1343,14 @@ Players can't cast spells or play lands with a name originally printed in the Ar
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/brr-13-defense-grid.png,
 	card_name = 阻御网,
 	mana_cost = \{2\},
 	card_type = 神器,
-	description = 每个咒语均增加{3}来施放，但于其操控者的回合中除外。,
+	description = 每个咒语均增加\{3\}来施放，但于其操控者的回合中除外。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -1310,6 +1366,7 @@ Players can't cast spells or play lands with a name originally printed in the Ar
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/2xm-14-ethersworn-canonist.png,
@@ -1332,6 +1389,7 @@ Players can't cast spells or play lands with a name originally printed in the Ar
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/inv-304-juntu-stakes.png,
@@ -1354,6 +1412,7 @@ Players can't cast spells or play lands with a name originally printed in the Ar
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/vma-278-null-rod.png,
@@ -1376,6 +1435,7 @@ Players can't cast spells or play lands with a name originally printed in the Ar
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/one-241-soulless-jailer.png,
@@ -1399,13 +1459,14 @@ Players can't cast spells or play lands with a name originally printed in the Ar
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/vma-284-sphere-of-resistance.png,
 	card_name = None,
 	mana_cost = \{2\},
 	card_type = 神器,
-	description = Spells cost {1} more to cast.,
+	description = Spells cost \{1\} more to cast.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -1421,6 +1482,7 @@ Players can't cast spells or play lands with a name originally printed in the Ar
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/scg-142-stabilizer.png,
@@ -1443,13 +1505,14 @@ Players can't cast spells or play lands with a name originally printed in the Ar
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/brr-60-thorn-of-amethyst.png,
 	card_name = 紫水晶刺,
 	mana_cost = \{2\},
 	card_type = 神器,
-	description = 非生物咒语增加{1}来施放。,
+	description = 非生物咒语增加\{1\}来施放。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -1465,6 +1528,7 @@ Players can't cast spells or play lands with a name originally printed in the Ar
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/big-27-torpor-orb.png,
@@ -1487,6 +1551,7 @@ Players can't cast spells or play lands with a name originally printed in the Ar
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/inv-317-tsabo-s-web.png,
@@ -1510,6 +1575,7 @@ Each land with an activated ability that isn't a mana ability doesn't untap duri
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mh2-242-void-mirror.png,
@@ -1532,6 +1598,7 @@ Each land with an activated ability that isn't a mana ability doesn't untap duri
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/khm-247-weathered-runestone.png,
@@ -1555,6 +1622,7 @@ Each land with an activated ability that isn't a mana ability doesn't untap duri
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mh3-213-winter-moon.png,
@@ -1577,6 +1645,7 @@ Each land with an activated ability that isn't a mana ability doesn't untap duri
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ema-234-winter-orb.png,
@@ -1599,6 +1668,7 @@ Each land with an activated ability that isn't a mana ability doesn't untap duri
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/xln-2-ashes-of-the-abhorrent.png,
@@ -1622,6 +1692,7 @@ Each land with an activated ability that isn't a mana ability doesn't untap duri
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/lrw-150-ashling-s-prerogative.png,
@@ -1646,13 +1717,14 @@ Each land with an activated ability that isn't a mana ability doesn't untap duri
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/rvr-9-blind-obedience.png,
 	card_name = 盲目服从,
 	mana_cost = \{1\}\{W\},
 	card_type = 结界,
-	description = 敲诈（每当你施放咒语时，你可以支付{W/B}。若你如此作，则每位对手各失去1点生命，且你获得等量的生命。）
+	description = 敲诈（每当你施放咒语时，你可以支付\{W/B\}。若你如此作，则每位对手各失去1点生命，且你获得等量的生命。）
 由对手操控的神器与生物须横置进战场。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
@@ -1669,6 +1741,7 @@ Each land with an activated ability that isn't a mana ability doesn't untap duri
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me1-63-chains-of-mephistopheles.png,
@@ -1691,13 +1764,14 @@ Each land with an activated ability that isn't a mana ability doesn't untap duri
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mh3-21-charitable-levy.png,
 	card_name = 征赋济贫,
 	mana_cost = \{1\}\{W\},
 	card_type = 结界,
-	description = 非生物咒语增加{1}来施放。
+	description = 非生物咒语增加\{1\}来施放。
 每当任一牌手施放非生物咒语时，在征赋济贫上放置一个收藏指示物。然后如果其上有三个或更多收藏指示物，将它牺牲。若你如此作，则抓一张牌，然后你可以从你牌库中搜寻一张平原牌，将之横置放进战场，然后洗牌。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
@@ -1714,13 +1788,14 @@ Each land with an activated ability that isn't a mana ability doesn't untap duri
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/6ed-60-chill.png,
 	card_name = None,
 	mana_cost = \{1\}\{U\},
 	card_type = 结界,
-	description = Red spells cost {2} more to cast.,
+	description = Red spells cost \{2\} more to cast.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -1736,6 +1811,7 @@ Each land with an activated ability that isn't a mana ability doesn't untap duri
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/m15-135-circle-of-flame.png,
@@ -1758,6 +1834,7 @@ Each land with an activated ability that isn't a mana ability doesn't untap duri
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/znr-53-confounding-conundrum.png,
@@ -1781,6 +1858,7 @@ Each land with an activated ability that isn't a mana ability doesn't untap duri
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/thb-12-eidolon-of-obstruction.png,
@@ -1788,7 +1866,7 @@ Each land with an activated ability that isn't a mana ability doesn't untap duri
 	mana_cost = \{1\}\{W\},
 	card_type = 结界,
 	description = 先攻
-由对手操控之鹏洛客的忠诚异能增加{1}来起动。,
+由对手操控之鹏洛客的忠诚异能增加\{1\}来起动。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -1804,13 +1882,14 @@ Each land with an activated ability that isn't a mana ability doesn't untap duri
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me2-11-energy-storm.png,
 	card_name = None,
 	mana_cost = \{1\}\{W\},
 	card_type = 结界,
-	description = Cumulative upkeep {1} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)
+	description = Cumulative upkeep \{1\} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)
 Prevent all damage that would be dealt by instant and sorcery spells.
 Creatures with flying don't untap during their controllers' untap steps.,
 	stax_type = None,
@@ -1828,6 +1907,7 @@ Creatures with flying don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/tmp-181-havoc.png,
@@ -1850,6 +1930,7 @@ Creatures with flying don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/otj-15-high-noon.png,
@@ -1857,7 +1938,7 @@ Creatures with flying don't untap during their controllers' untap steps.,
 	mana_cost = \{1\}\{W\},
 	card_type = 结界,
 	description = 每位牌手每回合所施放的咒语不能多于一个。
-{4}{R}，牺牲日正当中：它对任意一个目标造成5点伤害。,
+\{4\}\{R\}，牺牲日正当中：它对任意一个目标造成5点伤害。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = legal,
@@ -1873,6 +1954,7 @@ Creatures with flying don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/5ed-39-island-sanctuary.png,
@@ -1895,6 +1977,7 @@ Creatures with flying don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/inv-59-mana-maze.png,
@@ -1917,6 +2000,7 @@ Creatures with flying don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/pcy-39-overburden.png,
@@ -1939,6 +2023,7 @@ Creatures with flying don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/pip-18-overencumbered.png,
@@ -1947,7 +2032,7 @@ Creatures with flying don't untap during their controllers' untap steps.,
 	card_type = 结界,
 	description = 结附于对手
 当负重太多进战场时，所结附的对手派出一个线索衍生物，一个食品衍生物和一个废料衍生物。
-在所结附之对手回合的战斗开始时，该牌手可以为每个由其操控的神器各支付{1}。若其未如此作，则生物本次战斗不能攻击。,
+在所结附之对手回合的战斗开始时，该牌手可以为每个由其操控的神器各支付\{1\}。若其未如此作，则生物本次战斗不能攻击。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -1963,6 +2048,7 @@ Creatures with flying don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/scg-100-pyrostatic-pillar.png,
@@ -1985,6 +2071,7 @@ Creatures with flying don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/dis-126-rain-of-gore.png,
@@ -2007,6 +2094,7 @@ Creatures with flying don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/acr-83-rest-in-peace.png,
@@ -2030,6 +2118,7 @@ Creatures with flying don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/znr-156-roiling-vortex.png,
@@ -2038,7 +2127,7 @@ Creatures with flying don't untap during their controllers' untap steps.,
 	card_type = 结界,
 	description = 在每位牌手的维持开始时，狂搅漩涡对其造成1点伤害。
 每当任一牌手施放咒语，若施放该咒语时未支付过法术力，则狂搅漩涡对该牌手造成5点伤害。
-{R}：本回合中，对手不能获得生命。,
+\{R\}：本回合中，对手不能获得生命。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -2054,6 +2143,7 @@ Creatures with flying don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/usg-211-scald.png,
@@ -2076,6 +2166,7 @@ Creatures with flying don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/5ed-268-smoke.png,
@@ -2098,6 +2189,7 @@ Creatures with flying don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/bng-27-spirit-of-the-labyrinth.png,
@@ -2120,6 +2212,7 @@ Creatures with flying don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/5ed-127-stasis.png,
@@ -2127,7 +2220,7 @@ Creatures with flying don't untap during their controllers' untap steps.,
 	mana_cost = \{1\}\{U\},
 	card_type = 结界,
 	description = Players skip their untap steps.
-At the beginning of your upkeep, sacrifice Stasis unless you pay {U}.,
+At the beginning of your upkeep, sacrifice Stasis unless you pay \{U\}.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -2143,6 +2236,7 @@ At the beginning of your upkeep, sacrifice Stasis unless you pay {U}.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mm3-25-stony-silence.png,
@@ -2165,13 +2259,14 @@ At the beginning of your upkeep, sacrifice Stasis unless you pay {U}.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/rav-31-suppression-field.png,
 	card_name = 抑制力场,
 	mana_cost = \{1\}\{W\},
 	card_type = 结界,
-	description = 除了法术力异能之外，起动式异能的费用增加{2}来使用。,
+	description = 除了法术力异能之外，起动式异能的费用增加\{2\}来使用。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -2187,6 +2282,7 @@ At the beginning of your upkeep, sacrifice Stasis unless you pay {U}.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ktk-163-anafenza-the-foremost.png,
@@ -2210,6 +2306,7 @@ At the beginning of your upkeep, sacrifice Stasis unless you pay {U}.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/znr-4-archon-of-emeria.png,
@@ -2234,6 +2331,7 @@ At the beginning of your upkeep, sacrifice Stasis unless you pay {U}.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/otj-4-aven-interrupter.png,
@@ -2243,7 +2341,7 @@ At the beginning of your upkeep, sacrifice Stasis unless you pay {U}.,
 	description = 闪现
 飞行
 当阻咒艾文进战场时，放逐目标咒语。它成为已设谋。（过了该回合后，其拥有者便可于法术时机施放之，且不需支付其法术力费用。）
-对手从坟墓场或放逐区中施放的咒语增加{2}来施放。,
+对手从坟墓场或放逐区中施放的咒语增加\{2\}来施放。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = legal,
@@ -2259,6 +2357,7 @@ At the beginning of your upkeep, sacrifice Stasis unless you pay {U}.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/clb-688-aven-mindcensor.png,
@@ -2283,6 +2382,7 @@ At the beginning of your upkeep, sacrifice Stasis unless you pay {U}.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/blc-27-bloodroot-apothecary.png,
@@ -2307,6 +2407,7 @@ Whenever an opponent sacrifices a noncreature token, that player gets two poison
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ltr-4-boromir-warden-of-the-tower.png,
@@ -2331,6 +2432,7 @@ Whenever an opponent sacrifices a noncreature token, that player gets two poison
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/woe-202-eriette-of-the-charmed-apple.png,
@@ -2354,6 +2456,7 @@ Whenever an opponent sacrifices a noncreature token, that player gets two poison
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/bro-136-giant-cindermaw.png,
@@ -2377,13 +2480,14 @@ Whenever an opponent sacrifices a noncreature token, that player gets two poison
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/lgn-15-glowrider.png,
 	card_name = None,
 	mana_cost = \{2\}\{W\},
 	card_type = 生物,
-	description = Noncreature spells cost {1} more to cast.,
+	description = Noncreature spells cost \{1\} more to cast.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -2399,6 +2503,7 @@ Whenever an opponent sacrifices a noncreature token, that player gets two poison
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mh3-63-harbinger-of-the-seas.png,
@@ -2421,6 +2526,7 @@ Whenever an opponent sacrifices a noncreature token, that player gets two poison
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/cmr-74-hullbreacher.png,
@@ -2428,7 +2534,7 @@ Whenever an opponent sacrifices a noncreature token, that player gets two poison
 	mana_cost = \{2\}\{U\},
 	card_type = 生物,
 	description = 闪现
-如果某对手将抓一张牌，且这不是其于自己的每个抓牌步骤中所抓的第一张牌，则改为你派出一个珍宝衍生物。（珍宝衍生物是具有「{T}，牺牲此神器：加一点任意颜色的法术力」的神器。）,
+如果某对手将抓一张牌，且这不是其于自己的每个抓牌步骤中所抓的第一张牌，则改为你派出一个珍宝衍生物。（珍宝衍生物是具有「\{T\}，牺牲此神器：加一点任意颜色的法术力」的神器。）,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -2444,6 +2550,7 @@ Whenever an opponent sacrifices a noncreature token, that player gets two poison
 	legality / commander = banned,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/c16-68-hushwing-gryff.png,
@@ -2468,6 +2575,7 @@ Whenever an opponent sacrifices a noncreature token, that player gets two poison
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/2x2-237-kambal-consul-of-allocation.png,
@@ -2490,6 +2598,7 @@ Whenever an opponent sacrifices a noncreature token, that player gets two poison
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/xln-19-kinjalli-s-sunwing.png,
@@ -2513,6 +2622,7 @@ Whenever an opponent sacrifices a noncreature token, that player gets two poison
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/thb-222-kunoros-hound-of-athreos.png,
@@ -2537,6 +2647,7 @@ Whenever an opponent sacrifices a noncreature token, that player gets two poison
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/lci-232-kutzil-malamet-exemplar.png,
@@ -2560,6 +2671,7 @@ Whenever an opponent sacrifices a noncreature token, that player gets two poison
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/cn2-77-leovold-emissary-of-trest.png,
@@ -2583,6 +2695,7 @@ Whenever an opponent sacrifices a noncreature token, that player gets two poison
 	legality / commander = banned,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/tsr-175-magus-of-the-moon.png,
@@ -2605,6 +2718,7 @@ Whenever an opponent sacrifices a noncreature token, that player gets two poison
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/akh-175-manglehorn.png,
@@ -2628,6 +2742,7 @@ Whenever an opponent sacrifices a noncreature token, that player gets two poison
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mor-65-maralen-of-the-mornsong.png,
@@ -2651,6 +2766,7 @@ Whenever an opponent sacrifices a noncreature token, that player gets two poison
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/cmr-141-opposition-agent.png,
@@ -2675,13 +2791,14 @@ Whenever an opponent sacrifices a noncreature token, that player gets two poison
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/wth-22-peacekeeper.png,
 	card_name = None,
 	mana_cost = \{2\}\{W\},
 	card_type = 生物,
-	description = At the beginning of your upkeep, sacrifice Peacekeeper unless you pay {1}{W}.
+	description = At the beginning of your upkeep, sacrifice Peacekeeper unless you pay \{1\}\{W\}.
 Creatures can't attack.,
 	stax_type = None,
 	is_in_restricted_list = RL,
@@ -2698,6 +2815,7 @@ Creatures can't attack.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mom-31-phyrexian-censor.png,
@@ -2721,6 +2839,7 @@ Creatures can't attack.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mh1-100-plague-engineer.png,
@@ -2745,6 +2864,7 @@ Creatures can't attack.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/c19-47-pramikon-sky-rampart.png,
@@ -2769,6 +2889,7 @@ Each player may attack only the nearest opponent in the chosen direction and pla
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/xln-154-rampaging-ferocidon.png,
@@ -2793,6 +2914,7 @@ Each player may attack only the nearest opponent in the chosen direction and pla
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \mfcard
 {
 	front_card_image = Images/khm-21-reidane-god-of-the-worthy.png,
@@ -2801,13 +2923,13 @@ Each player may attack only the nearest opponent in the chosen direction and pla
 	front_card_type = 生物,
 	front_description = Flying, vigilance
 Snow lands your opponents control enter tapped.
-Noncreature spells your opponents cast with mana value 4 or greater cost {2} more to cast.,
+Noncreature spells your opponents cast with mana value 4 or greater cost \{2\} more to cast.,
 	back_card_image = Images/khm-21-valkmira-protector-s-shield.png,
 	back_card_name = None,
 	back_mana_cost = \{3\}\{W\},
 	back_card_type = 神器,
 	back_description = If a source an opponent controls would deal damage to you or a permanent you control, prevent 1 of that damage.
-Whenever you or another permanent you control becomes the target of a spell or ability an opponent controls, counter that spell or ability unless its controller pays {1}.,
+Whenever you or another permanent you control becomes the target of a spell or ability an opponent controls, counter that spell or ability unless its controller pays \{1\}.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -2823,6 +2945,7 @@ Whenever you or another permanent you control becomes the target of a spell or a
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/who-152-river-song.png,
@@ -2846,6 +2969,7 @@ Spoilers — Whenever an opponent scries, surveils, or searches their library, p
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mh2-491-sanctum-prelate.png,
@@ -2869,6 +2993,7 @@ Spoilers — Whenever an opponent scries, surveils, or searches their library, p
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/dsk-157-screaming-nemesis.png,
@@ -2892,6 +3017,7 @@ Whenever Screaming Nemesis is dealt damage, it deals that much damage to any oth
 	legality / commander = notlegal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/lci-165-scytheclaw-raptor.png,
@@ -2914,6 +3040,7 @@ Whenever Screaming Nemesis is dealt damage, it deals that much damage to any oth
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/tsr-195-sulfur-elemental.png,
@@ -2938,6 +3065,7 @@ Whenever Screaming Nemesis is dealt damage, it deals that much damage to any oth
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/emn-46-thalia-heretic-cathar.png,
@@ -2961,13 +3089,14 @@ Whenever Screaming Nemesis is dealt damage, it deals that much damage to any oth
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mkm-431-tomik-wielder-of-law.png,
 	card_name = 律法使者托米克,
 	mana_cost = \{1\}\{W\}\{B\},
 	card_type = 生物,
-	description = 鹏洛客共鸣（你每操控一个鹏洛客，此咒语便减少{1}来施放。）
+	description = 鹏洛客共鸣（你每操控一个鹏洛客，此咒语便减少\{1\}来施放。）
 飞行，警戒
 每当任一对手以生物攻击时，若这些生物中有两个或更多正向你和／或由你操控的鹏洛客进行攻击，则该对手失去3点生命且你抓一张牌。,
 	stax_type = None,
@@ -2985,6 +3114,7 @@ Whenever Screaming Nemesis is dealt damage, it deals that much damage to any oth
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/m21-43-vryn-wingmare.png,
@@ -2992,7 +3122,7 @@ Whenever Screaming Nemesis is dealt damage, it deals that much damage to any oth
 	mana_cost = \{2\}\{W\},
 	card_type = 生物,
 	description = 飞行
-非生物咒语增加{1}来施放。,
+非生物咒语增加\{1\}来施放。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -3008,6 +3138,7 @@ Whenever Screaming Nemesis is dealt damage, it deals that much damage to any oth
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/chk-200-zo-zu-the-punisher.png,
@@ -3030,6 +3161,7 @@ Whenever Screaming Nemesis is dealt damage, it deals that much damage to any oth
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me3-188-arena-of-the-ancients.png,
@@ -3053,6 +3185,7 @@ When Arena of the Ancients enters, tap all legendary creatures.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/7ed-288-caltrops.png,
@@ -3075,6 +3208,7 @@ When Arena of the Ancients enters, tap all legendary creatures.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/dmr-217-crawlspace.png,
@@ -3097,6 +3231,7 @@ When Arena of the Ancients enters, tap all legendary creatures.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mm3-218-damping-matrix.png,
@@ -3119,6 +3254,7 @@ When Arena of the Ancients enters, tap all legendary creatures.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/2xm-253-ensnaring-bridge.png,
@@ -3141,6 +3277,7 @@ When Arena of the Ancients enters, tap all legendary creatures.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/chk-255-imi-statue.png,
@@ -3163,6 +3300,7 @@ When Arena of the Ancients enters, tap all legendary creatures.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/dmu-234-karn-s-sylex.png,
@@ -3171,7 +3309,7 @@ When Arena of the Ancients enters, tap all legendary creatures.,
 	card_type = 神器,
 	description = 卡恩的同兆须横置进战场。
 牌手不能支付生命来施放咒语或来起动不属于法术力异能的异能。
-{X}，{T}，放逐卡恩的同兆：消灭所有法术力值等于或小于X的非地永久物。只能于法术时机起动。,
+\{X\}，\{T\}，放逐卡恩的同兆：消灭所有法术力值等于或小于X的非地永久物。只能于法术时机起动。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = legal,
@@ -3187,6 +3325,7 @@ When Arena of the Ancients enters, tap all legendary creatures.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/bok-156-orb-of-dreams.png,
@@ -3209,6 +3348,7 @@ When Arena of the Ancients enters, tap all legendary creatures.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mrd-233-quicksilver-fountain.png,
@@ -3232,6 +3372,7 @@ At the beginning of each end step, if all lands on the battlefield are Islands, 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/7ed-319-static-orb.png,
@@ -3254,6 +3395,7 @@ At the beginning of each end step, if all lands on the battlefield are Islands, 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/9ed-310-storage-matrix.png,
@@ -3276,6 +3418,7 @@ At the beginning of each end step, if all lands on the battlefield are Islands, 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/nem-139-tangle-wire.png,
@@ -3299,13 +3442,14 @@ At the beginning of each player's upkeep, that player taps an untapped artifact,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/2xm-303-trinisphere.png,
 	card_name = 三定法球,
 	mana_cost = \{3\},
 	card_type = 神器,
-	description = 只要三定法球未横置，每个施放时要支付的法术力少于三点之咒语均须支付三点法术力来施放。（需额外支付的费用可以用任意颜色的法术力或无色法术力来支付。举例来说，要支付{1}{B}来施放的咒语，则改为要支付{2}{B}来施放。),
+	description = 只要三定法球未横置，每个施放时要支付的法术力少于三点之咒语均须支付三点法术力来施放。（需额外支付的费用可以用任意颜色的法术力或无色法术力来支付。举例来说，要支付\{1\}\{B\}来施放的咒语，则改为要支付\{2\}\{B\}来施放。),
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -3321,13 +3465,14 @@ At the beginning of each player's upkeep, that player taps an untapped artifact,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/nem-27-aether-barrier.png,
 	card_name = None,
 	mana_cost = \{2\}\{U\},
 	card_type = 结界,
-	description = Whenever a player casts a creature spell, that player sacrifices a permanent unless they pay {1}.,
+	description = Whenever a player casts a creature spell, that player sacrifices a permanent unless they pay \{1\}.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -3343,6 +3488,7 @@ At the beginning of each player's upkeep, that player taps an untapped artifact,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/7ed-60-arcane-laboratory.png,
@@ -3365,13 +3511,14 @@ At the beginning of each player's upkeep, that player taps an untapped artifact,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ulg-27-aura-flux.png,
 	card_name = None,
 	mana_cost = \{2\}\{U\},
 	card_type = 结界,
-	description = Other enchantments have "At the beginning of your upkeep, sacrifice this enchantment unless you pay {2}.",
+	description = Other enchantments have "At the beginning of your upkeep, sacrifice this enchantment unless you pay \{2\}.",
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -3387,13 +3534,14 @@ At the beginning of each player's upkeep, that player taps an untapped artifact,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/c15-60-aura-of-silence.png,
 	card_name = 静寂灵气,
 	mana_cost = \{1\}\{W\}\{W\},
 	card_type = 结界,
-	description = 对手施放的神器和结界咒语增加{2}来施放。牺牲静寂灵气：消灭目标神器或结界。,
+	description = 对手施放的神器和结界咒语增加\{2\}来施放。牺牲静寂灵气：消灭目标神器或结界。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -3409,6 +3557,7 @@ At the beginning of each player's upkeep, that player taps an untapped artifact,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/usg-62-back-to-basics.png,
@@ -3431,6 +3580,7 @@ At the beginning of each player's upkeep, that player taps an untapped artifact,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/wot-40-blood-moon.png,
@@ -3453,6 +3603,7 @@ At the beginning of each player's upkeep, that player taps an untapped artifact,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/rix-92-blood-sun.png,
@@ -3476,6 +3627,7 @@ At the beginning of each player's upkeep, that player taps an untapped artifact,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/sth-51-bottomless-pit.png,
@@ -3498,6 +3650,7 @@ At the beginning of each player's upkeep, that player taps an untapped artifact,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mmq-232-briar-patch.png,
@@ -3520,6 +3673,7 @@ At the beginning of each player's upkeep, that player taps an untapped artifact,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/8ed-237-choke.png,
@@ -3542,6 +3696,7 @@ At the beginning of each player's upkeep, that player taps an untapped artifact,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/usg-123-contamination.png,
@@ -3549,7 +3704,7 @@ At the beginning of each player's upkeep, that player taps an untapped artifact,
 	mana_cost = \{2\}\{B\},
 	card_type = 结界,
 	description = At the beginning of your upkeep, sacrifice Contamination unless you sacrifice a creature.
-If a land is tapped for mana, it produces {B} instead of any other type and amount.,
+If a land is tapped for mana, it produces \{B\} instead of any other type and amount.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -3565,6 +3720,7 @@ If a land is tapped for mana, it produces {B} instead of any other type and amou
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mmq-14-cornered-market.png,
@@ -3588,6 +3744,7 @@ Players can't play nonbasic lands with the same name as a nontoken permanent.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mmq-15-crackdown.png,
@@ -3610,6 +3767,7 @@ Players can't play nonbasic lands with the same name as a nontoken permanent.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/atq-5-damping-field.png,
@@ -3632,6 +3790,7 @@ Players can't play nonbasic lands with the same name as a nontoken permanent.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/6ed-221-dense-foliage.png,
@@ -3654,6 +3813,7 @@ Players can't play nonbasic lands with the same name as a nontoken permanent.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/pls-102-destructive-flow.png,
@@ -3676,6 +3836,7 @@ Players can't play nonbasic lands with the same name as a nontoken permanent.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/inv-245-dueling-grounds.png,
@@ -3699,6 +3860,7 @@ No more than one creature can block each combat.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me2-88-dystopia.png,
@@ -3722,6 +3884,7 @@ At the beginning of each player's upkeep, that player sacrifices a green or whit
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/j22-54-eidolon-of-rhetoric.png,
@@ -3744,13 +3907,14 @@ At the beginning of each player's upkeep, that player sacrifices a green or whit
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/5ed-83-energy-flux.png,
 	card_name = None,
 	mana_cost = \{2\}\{U\},
 	card_type = 结界,
-	description = All artifacts have "At the beginning of your upkeep, sacrifice this artifact unless you pay {2}.",
+	description = All artifacts have "At the beginning of your upkeep, sacrifice this artifact unless you pay \{2\}.",
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -3766,6 +3930,7 @@ At the beginning of each player's upkeep, that player sacrifices a green or whit
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/7ed-133-engineered-plague.png,
@@ -3789,6 +3954,7 @@ All creatures of the chosen type get -1/-1.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/c16-233-everlasting-torment.png,
@@ -3813,13 +3979,14 @@ All creatures of the chosen type get -1/-1.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/voc-87-ghostly-prison.png,
 	card_name = 魂魅拘禁,
 	mana_cost = \{2\}\{W\},
 	card_type = 结界,
-	description = 对每个生物而言，除非其操控者为其支付{2}，否则它不能攻击你。,
+	description = 对每个生物而言，除非其操控者为其支付\{2\}，否则它不能攻击你。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -3835,14 +4002,15 @@ All creatures of the chosen type get -1/-1.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/5ed-165-gloom.png,
 	card_name = None,
 	mana_cost = \{2\}\{B\},
 	card_type = 结界,
-	description = White spells cost {3} more to cast.
-Activated abilities of white enchantments cost {3} more to activate.,
+	description = White spells cost \{3\} more to cast.
+Activated abilities of white enchantments cost \{3\} more to activate.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -3858,6 +4026,7 @@ Activated abilities of white enchantments cost {3} more to activate.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/tmp-180-hand-to-hand.png,
@@ -3880,13 +4049,14 @@ Activated abilities of white enchantments cost {3} more to activate.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mmq-83-high-seas.png,
 	card_name = None,
 	mana_cost = \{2\}\{U\},
 	card_type = 结界,
-	description = Red creature spells and green creature spells cost {1} more to cast.,
+	description = Red creature spells and green creature spells cost \{1\} more to cast.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -3902,6 +4072,7 @@ Activated abilities of white enchantments cost {3} more to activate.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/7ed-197-impatience.png,
@@ -3924,6 +4095,7 @@ Activated abilities of white enchantments cost {3} more to activate.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/wot-21-intruder-alarm.png,
@@ -3947,6 +4119,7 @@ Activated abilities of white enchantments cost {3} more to activate.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/vis-109-katabatic-winds.png,
@@ -3954,7 +4127,7 @@ Activated abilities of white enchantments cost {3} more to activate.,
 	mana_cost = \{2\}\{G\},
 	card_type = 结界,
 	description = Phasing (This phases in or out before you untap during each of your untap steps. While it's phased out, it's treated as though it doesn't exist.)
-Creatures with flying can't attack or block, and their activated abilities with {T} in their costs can't be activated.,
+Creatures with flying can't attack or block, and their activated abilities with \{T\} in their costs can't be activated.,
 	stax_type = None,
 	is_in_restricted_list = RL,
 	legality / standard = notlegal,
@@ -3970,6 +4143,7 @@ Creatures with flying can't attack or block, and their activated abilities with 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me4-159-kudzu.png,
@@ -3993,6 +4167,7 @@ When enchanted land becomes tapped, destroy it. That land's controller may attac
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/afc-32-maddening-hex.png,
@@ -4016,6 +4191,7 @@ When enchanted land becomes tapped, destroy it. That land's controller may attac
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mmq-204-magistrate-s-veto.png,
@@ -4038,6 +4214,7 @@ When enchanted land becomes tapped, destroy it. That land's controller may attac
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/4ed-209-magnetic-mountain.png,
@@ -4045,7 +4222,7 @@ When enchanted land becomes tapped, destroy it. That land's controller may attac
 	mana_cost = \{1\}\{R\}\{R\},
 	card_type = 结界,
 	description = Blue creatures don't untap during their controllers' untap steps.
-At the beginning of each player's upkeep, that player may choose any number of tapped blue creatures they control and pay {4} for each creature chosen this way. If the player does, untap those creatures.,
+At the beginning of each player's upkeep, that player may choose any number of tapped blue creatures they control and pay \{4\} for each creature chosen this way. If the player does, untap those creatures.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -4061,6 +4238,7 @@ At the beginning of each player's upkeep, that player may choose any number of t
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/7ed-85-mana-breach.png,
@@ -4083,6 +4261,7 @@ At the beginning of each player's upkeep, that player may choose any number of t
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me3-44-mana-vortex.png,
@@ -4107,6 +4286,7 @@ When there are no lands on the battlefield, sacrifice Mana Vortex.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me2-136-mudslide.png,
@@ -4114,7 +4294,7 @@ When there are no lands on the battlefield, sacrifice Mana Vortex.,
 	mana_cost = \{2\}\{R\},
 	card_type = 结界,
 	description = Creatures without flying don't untap during their controllers' untap steps.
-At the beginning of each player's upkeep, that player may choose any number of tapped creatures without flying they control and pay {2} for each creature chosen this way. If the player does, untap those creatures.,
+At the beginning of each player's upkeep, that player may choose any number of tapped creatures without flying they control and pay \{2\} for each creature chosen this way. If the player does, untap those creatures.,
 	stax_type = None,
 	is_in_restricted_list = RL,
 	legality / standard = notlegal,
@@ -4130,6 +4310,7 @@ At the beginning of each player's upkeep, that player may choose any number of t
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mrd-69-necrogen-mists.png,
@@ -4152,6 +4333,7 @@ At the beginning of each player's upkeep, that player may choose any number of t
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/wot-32-oppression.png,
@@ -4174,6 +4356,7 @@ At the beginning of each player's upkeep, that player may choose any number of t
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ody-214-price-of-glory.png,
@@ -4196,13 +4379,14 @@ At the beginning of each player's upkeep, that player may choose any number of t
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/acr-85-propaganda.png,
 	card_name = 宣导,
 	mana_cost = \{2\}\{U\},
 	card_type = 结界,
-	description = 对每个生物而言，除非其操控者为其支付{2}，否则它不能攻击你。,
+	description = 对每个生物而言，除非其操控者为其支付\{2\}，否则它不能攻击你。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -4218,14 +4402,15 @@ At the beginning of each player's upkeep, that player may choose any number of t
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ice-94-reality-twist.png,
 	card_name = None,
 	mana_cost = \{U\}\{U\}\{U\},
 	card_type = 结界,
-	description = Cumulative upkeep {1}{U}{U} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)
-If tapped for mana, Plains produce {R}, Swamps produce {G}, Mountains produce {W}, and Forests produce {B} instead of any other type.,
+	description = Cumulative upkeep \{1\}\{U\}\{U\} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)
+If tapped for mana, Plains produce \{R\}, Swamps produce \{G\}, Mountains produce \{W\}, and Forests produce \{B\} instead of any other type.,
 	stax_type = None,
 	is_in_restricted_list = RL,
 	legality / standard = notlegal,
@@ -4241,6 +4426,7 @@ If tapped for mana, Plains produce {R}, Swamps produce {G}, Mountains produce {W
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/m20-35-rule-of-law.png,
@@ -4263,6 +4449,7 @@ If tapped for mana, Plains produce {R}, Swamps produce {G}, Mountains produce {W
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/hou-22-solemnity.png,
@@ -4286,6 +4473,7 @@ If tapped for mana, Plains produce {R}, Swamps produce {G}, Mountains produce {W
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/dmr-144-sulfuric-vortex.png,
@@ -4309,6 +4497,7 @@ If tapped for mana, Plains produce {R}, Swamps produce {G}, Mountains produce {W
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ori-120-tainted-remedy.png,
@@ -4331,6 +4520,7 @@ If tapped for mana, Plains produce {R}, Swamps produce {G}, Mountains produce {W
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/inv-173-tectonic-instability.png,
@@ -4353,6 +4543,7 @@ If tapped for mana, Plains produce {R}, Swamps produce {G}, Mountains produce {W
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/avr-122-triumph-of-cruelty.png,
@@ -4375,6 +4566,7 @@ If tapped for mana, Plains produce {R}, Swamps produce {G}, Mountains produce {W
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mmq-222-uphill-battle.png,
@@ -4397,6 +4589,7 @@ If tapped for mana, Plains produce {R}, Swamps produce {G}, Mountains produce {W
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/dtk-125-virulent-plague.png,
@@ -4419,6 +4612,7 @@ If tapped for mana, Plains produce {R}, Swamps produce {G}, Mountains produce {W
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/war-228-ashiok-dream-render.png,
@@ -4442,13 +4636,14 @@ If tapped for mana, Plains produce {R}, Swamps produce {G}, Mountains produce {W
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/war-229-dovin-hand-of-control.png,
 	card_name = 操控之手多温,
 	mana_cost = \{2\}\{W/U\},
 	card_type = 其他,
-	description = 对手施放的神器、瞬间和法术咒语增加{1}来施放。
+	description = 对手施放的神器、瞬间和法术咒语增加\{1\}来施放。
 -1：直到你的下一个回合，防止目标由对手操控的永久物将受到或造成的所有伤害。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
@@ -4465,6 +4660,7 @@ If tapped for mana, Plains produce {R}, Swamps produce {G}, Mountains produce {W
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mir-125-forsaken-wastes.png,
@@ -4489,6 +4685,7 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/leg-151-gravity-sphere.png,
@@ -4511,6 +4708,7 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mir-221-hall-of-gemstone.png,
@@ -4533,13 +4731,14 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me4-51-in-the-eye-of-chaos.png,
 	card_name = None,
 	mana_cost = \{2\}\{U\},
 	card_type = 其他,
-	description = Whenever a player casts an instant spell, counter it unless that player pays {X}, where X is its mana value.,
+	description = Whenever a player casts an instant spell, counter it unless that player pays \{X\}, where X is its mana value.,
 	stax_type = None,
 	is_in_restricted_list = RL,
 	legality / standard = notlegal,
@@ -4555,6 +4754,7 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/war-61-narset-parter-of-veils.png,
@@ -4578,6 +4778,7 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/vis-44-teferi-s-realm.png,
@@ -4600,6 +4801,7 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/rvr-232-teferi-time-raveler.png,
@@ -4624,6 +4826,7 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/war-146-tibalt-rakish-instigator.png,
@@ -4647,6 +4850,7 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/cmm-10-alms-collector.png,
@@ -4670,6 +4874,7 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/avr-2-angel-of-jubilation.png,
@@ -4694,6 +4899,7 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/otj-2-archangel-of-tithes.png,
@@ -4701,8 +4907,8 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	mana_cost = \{1\}\{W\}\{W\}\{W\},
 	card_type = 生物,
 	description = 飞行
-只要什一税大天使未横置，对每个生物而言，除非其操控者为其支付{1}，否则它不能攻击你或由你操控的鹏洛客。
-只要什一税大天使正进行攻击，对每个生物而言，除非其操控者为其支付{1}，否则它不能进行阻挡。,
+只要什一税大天使未横置，对每个生物而言，除非其操控者为其支付\{1\}，否则它不能攻击你或由你操控的鹏洛客。
+只要什一税大天使正进行攻击，对每个生物而言，除非其操控者为其支付\{1\}，否则它不能进行阻挡。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = legal,
@@ -4718,6 +4924,7 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/dmc-140-archelos-lagoon-mystic.png,
@@ -4741,6 +4948,7 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/eld-3-archon-of-absolution.png,
@@ -4749,7 +4957,7 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	card_type = 生物,
 	description = 飞行
 反白保护（此生物不能被白色的东西阻挡、指定为目标、造成伤害、结附或是装备。）
-对每个生物而言，除非其操控者为其支付{1}，否则它不能攻击你或由你操控的鹏洛客。,
+对每个生物而言，除非其操控者为其支付\{1\}，否则它不能攻击你或由你操控的鹏洛客。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -4765,6 +4973,7 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/cmm-15-baird-steward-of-argive.png,
@@ -4772,7 +4981,7 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	mana_cost = \{2\}\{W\}\{W\},
 	card_type = 生物,
 	description = 警戒
-对每个生物而言，除非其操控者为其支付{1}，否则它不能攻击你或由你操控的鹏洛客。,
+对每个生物而言，除非其操控者为其支付\{1\}，否则它不能攻击你或由你操控的鹏洛客。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -4788,6 +4997,7 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mh2-273-braids-cabal-minion.png,
@@ -4810,6 +5020,7 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	legality / commander = banned,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mom-222-drana-and-linvala.png,
@@ -4834,6 +5045,7 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \mfcard
 {
 	front_card_image = Images/mom-12-elesh-norn.png,
@@ -4841,8 +5053,8 @@ Whenever Forsaken Wastes becomes the target of a spell, that spell's controller 
 	front_mana_cost = \{2\}\{W\}\{W\},
 	front_card_type = 生物,
 	front_description = 警戒
-每当一个由对手操控的来源对你或任一由你操控的永久物造成伤害时，除非该来源的操控者支付{1}，否则其失去2点生命。
-{2}{W}，牺牲三个其他生物：放逐艾蕾侬，然后将它在其拥有者的操控下移回战场且已转化。只能于法术时机起动。,
+每当一个由对手操控的来源对你或任一由你操控的永久物造成伤害时，除非该来源的操控者支付\{1\}，否则其失去2点生命。
+\{2\}\{W\}，牺牲三个其他生物：放逐艾蕾侬，然后将它在其拥有者的操控下移回战场且已转化。只能于法术时机起动。,
 	back_card_image = Images/mom-12-the-argent-etchings.png,
 	back_card_name = 银蚀圣典,
 	back_mana_cost = None,
@@ -4866,15 +5078,16 @@ III — 消灭所有其他永久物，但神器、地和非瑞人除外。放逐
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/2x2-221-grand-arbiter-augustin-iv.png,
 	card_name = 大仲裁者奥古斯汀四世,
 	mana_cost = \{2\}\{W\}\{U\},
 	card_type = 生物,
-	description = 你施放的白色咒语减少{1}来施放。
-你施放的蓝色咒语减少{1}来施放。
-对手施放的咒语增加{1}来施放。,
+	description = 你施放的白色咒语减少\{1\}来施放。
+你施放的蓝色咒语减少\{1\}来施放。
+对手施放的咒语增加\{1\}来施放。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -4890,6 +5103,7 @@ III — 消灭所有其他永久物，但神器、地和非瑞人除外。放逐
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/neo-222-hinata-dawn-crowned.png,
@@ -4897,8 +5111,8 @@ III — 消灭所有其他永久物，但神器、地和非瑞人除外。放逐
 	mana_cost = \{1\}\{U\}\{R\}\{W\},
 	card_type = 生物,
 	description = 飞行，践踏
-你施放的咒语每有一个目标，便减少{1}来施放。
-对手施放的咒语每有一个目标，便增加{1}来施放。,
+你施放的咒语每有一个目标，便减少\{1\}来施放。
+对手施放的咒语每有一个目标，便增加\{1\}来施放。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = legal,
@@ -4914,6 +5128,7 @@ III — 消灭所有其他永久物，但神器、地和非瑞人除外。放逐
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/bok-7-hokori-dust-drinker.png,
@@ -4937,13 +5152,14 @@ III — 消灭所有其他永久物，但神器、地和非瑞人除外。放逐
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/hml-54-irini-sengir.png,
 	card_name = None,
 	mana_cost = \{2\}\{B\}\{B\},
 	card_type = 生物,
-	description = Green enchantment spells and white enchantment spells cost {2} more to cast.,
+	description = Green enchantment spells and white enchantment spells cost \{2\} more to cast.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -4959,6 +5175,7 @@ III — 消灭所有其他永久物，但神器、地和非瑞人除外。放逐
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/m21-106-kaervek-the-spiteful.png,
@@ -4981,6 +5198,7 @@ III — 消灭所有其他永久物，但神器、地和非瑞人除外。放逐
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mkm-20-karlov-watchdog.png,
@@ -5005,6 +5223,7 @@ III — 消灭所有其他永久物，但神器、地和非瑞人除外。放逐
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mm3-13-linvala-keeper-of-silence.png,
@@ -5028,6 +5247,7 @@ III — 消灭所有其他永久物，但神器、地和非瑞人除外。放逐
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/tor-42-llawan-cephalid-empress.png,
@@ -5051,6 +5271,7 @@ Your opponents can't cast blue creature spells.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/sok-80-locust-miser.png,
@@ -5073,6 +5294,7 @@ Your opponents can't cast blue creature spells.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/rav-25-loxodon-gatekeeper.png,
@@ -5095,6 +5317,7 @@ Your opponents can't cast blue creature spells.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/2xm-97-magus-of-the-abyss.png,
@@ -5117,13 +5340,14 @@ Your opponents can't cast blue creature spells.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/plc-8-magus-of-the-tabernacle.png,
 	card_name = 大礼拜堂贤者,
 	mana_cost = \{3\}\{W\},
 	card_type = 生物,
-	description = 所有生物具有「在你的维持开始时，除非你支付{1}，否则牺牲此生物。」,
+	description = 所有生物具有「在你的维持开始时，除非你支付\{1\}，否则牺牲此生物。」,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -5139,6 +5363,7 @@ Your opponents can't cast blue creature spells.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/9ed-26-marble-titan.png,
@@ -5161,6 +5386,7 @@ Your opponents can't cast blue creature spells.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/j22-215-michiko-konda-truth-seeker.png,
@@ -5183,6 +5409,7 @@ Your opponents can't cast blue creature spells.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/znc-96-notion-thief.png,
@@ -5206,6 +5433,7 @@ Your opponents can't cast blue creature spells.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/40k-47-plague-drone.png,
@@ -5229,6 +5457,7 @@ Your opponents can't cast blue creature spells.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ltr-229-sharkey-tyrant-of-the-shire.png,
@@ -5253,6 +5482,7 @@ Your opponents can't cast blue creature spells.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/dmu-107-sheoldred-the-apocalypse.png,
@@ -5277,6 +5507,7 @@ Your opponents can't cast blue creature spells.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mm3-190-stoic-angel.png,
@@ -5300,6 +5531,7 @@ Your opponents can't cast blue creature spells.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/sth-72-stronghold-taskmaster.png,
@@ -5322,6 +5554,7 @@ Your opponents can't cast blue creature spells.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/blb-155-sunspine-lynx.png,
@@ -5346,6 +5579,7 @@ When Sunspine Lynx enters, it deals damage to each player equal to the number of
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/woe-215-talion-the-kindly-lord.png,
@@ -5370,6 +5604,7 @@ When Sunspine Lynx enters, it deals damage to each player equal to the number of
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mom-255-thalia-and-the-gitrog-monster.png,
@@ -5395,6 +5630,7 @@ When Sunspine Lynx enters, it deals damage to each player equal to the number of
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/inv-133-urborg-shambler.png,
@@ -5417,6 +5653,7 @@ When Sunspine Lynx enters, it deals damage to each player equal to the number of
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/dmr-36-windborn-muse.png,
@@ -5424,7 +5661,7 @@ When Sunspine Lynx enters, it deals damage to each player equal to the number of
 	mana_cost = \{3\}\{W\},
 	card_type = 生物,
 	description = 飞行
-对每个生物而言，除非其操控者为其支付{2}，否则它不能攻击你。,
+对每个生物而言，除非其操控者为其支付\{2\}，否则它不能攻击你。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -5440,6 +5677,7 @@ When Sunspine Lynx enters, it deals damage to each player equal to the number of
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/znr-240-yasharn-implacable-earth.png,
@@ -5463,6 +5701,7 @@ When Sunspine Lynx enters, it deals damage to each player equal to the number of
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/cmr-293-yurlok-of-scorch-thrash.png,
@@ -5471,7 +5710,7 @@ When Sunspine Lynx enters, it deals damage to each player equal to the number of
 	card_type = 生物,
 	description = 警戒
 牌手失去未用尽的法术力会使其失去等量的生命。
-{1}，{T}：每位牌手各加{B}{R}{G}。,
+\{1\}，\{T\}：每位牌手各加\{B\}\{R\}\{G\}。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -5487,6 +5726,7 @@ When Sunspine Lynx enters, it deals damage to each player equal to the number of
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ulg-124-damping-engine.png,
@@ -5509,6 +5749,7 @@ When Sunspine Lynx enters, it deals damage to each player equal to the number of
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ncc-182-false-floor.png,
@@ -5517,7 +5758,7 @@ When Sunspine Lynx enters, it deals damage to each player equal to the number of
 	card_type = 神器,
 	description = 活动地板须横置进战场。
 生物须横置进战场。
-{2}，{T}，放逐活动地板：放逐所有未横置的生物。只能于法术时机起动。,
+\{2\}，\{T\}，放逐活动地板：放逐所有未横置的生物。只能于法术时机起动。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -5533,13 +5774,14 @@ When Sunspine Lynx enters, it deals damage to each player equal to the number of
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/brr-29-lodestone-golem.png,
 	card_name = 磁石魔像,
 	mana_cost = \{4\},
 	card_type = 神器,
-	description = 非神器咒语增加{1}来施放。,
+	description = 非神器咒语增加\{1\}来施放。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -5555,6 +5797,7 @@ When Sunspine Lynx enters, it deals damage to each player equal to the number of
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ala-51-mindlock-orb.png,
@@ -5577,6 +5820,7 @@ When Sunspine Lynx enters, it deals damage to each player equal to the number of
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/usg-304-noetic-scales.png,
@@ -5599,6 +5843,7 @@ When Sunspine Lynx enters, it deals damage to each player equal to the number of
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/sth-139-portcullis.png,
@@ -5621,6 +5866,7 @@ When Sunspine Lynx enters, it deals damage to each player equal to the number of
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/cns-204-silent-arbiter.png,
@@ -5644,6 +5890,7 @@ When Sunspine Lynx enters, it deals damage to each player equal to the number of
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/usg-309-smokestack.png,
@@ -5667,6 +5914,7 @@ At the beginning of each player's upkeep, that player sacrifices a permanent for
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/chk-272-uba-mask.png,
@@ -5690,6 +5938,7 @@ At the beginning of each player's upkeep, that player sacrifices a permanent for
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/7ed-172-aether-flash.png,
@@ -5712,6 +5961,7 @@ At the beginning of each player's upkeep, that player sacrifices a permanent for
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me2-117-an-zerrin-ruins.png,
@@ -5735,6 +5985,7 @@ Creatures of the chosen type don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/7ed-174-bedlam.png,
@@ -5757,6 +6008,7 @@ Creatures of the chosen type don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ice-177-brand-of-ill-omen.png,
@@ -5764,7 +6016,7 @@ Creatures of the chosen type don't untap during their controllers' untap steps.,
 	mana_cost = \{3\}\{R\},
 	card_type = 结界,
 	description = Enchant creature
-Cumulative upkeep {R} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)
+Cumulative upkeep \{R\} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)
 Enchanted creature's controller can't cast creature spells.,
 	stax_type = None,
 	is_in_restricted_list = RL,
@@ -5781,14 +6033,15 @@ Enchanted creature's controller can't cast creature spells.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ice-62-breath-of-dreams.png,
 	card_name = None,
 	mana_cost = \{2\}\{U\}\{U\},
 	card_type = 结界,
-	description = Cumulative upkeep {U} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)
-Green creatures have "Cumulative upkeep {1}.",
+	description = Cumulative upkeep \{U\} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)
+Green creatures have "Cumulative upkeep \{1\}.",
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -5804,6 +6057,7 @@ Green creatures have "Cumulative upkeep {1}.",
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/m14-130-burning-earth.png,
@@ -5826,13 +6080,14 @@ Green creatures have "Cumulative upkeep {1}.",
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/inv-49-collective-restraint.png,
 	card_name = None,
 	mana_cost = \{3\}\{U\},
 	card_type = 结界,
-	description = Domain — Creatures can't attack you unless their controller pays {X} for each creature they control that's attacking you, where X is the number of basic land types among lands you control.,
+	description = Domain — Creatures can't attack you unless their controller pays \{X\} for each creature they control that's attacking you, where X is the number of basic land types among lands you control.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -5848,6 +6103,7 @@ Green creatures have "Cumulative upkeep {1}.",
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/soi-104-creeping-dread.png,
@@ -5870,6 +6126,7 @@ Green creatures have "Cumulative upkeep {1}.",
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/dka-5-curse-of-exhaustion.png,
@@ -5892,6 +6149,7 @@ Green creatures have "Cumulative upkeep {1}.",
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/clb-718-dissipation-field.png,
@@ -5914,6 +6172,7 @@ Green creatures have "Cumulative upkeep {1}.",
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/eld-187-doom-foretold.png,
@@ -5936,6 +6195,7 @@ Green creatures have "Cumulative upkeep {1}.",
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/vis-31-dream-tides.png,
@@ -5943,7 +6203,7 @@ Green creatures have "Cumulative upkeep {1}.",
 	mana_cost = \{2\}\{U\}\{U\},
 	card_type = 结界,
 	description = Creatures don't untap during their controllers' untap steps.
-At the beginning of each player's upkeep, that player may choose any number of tapped nongreen creatures they control and pay {2} for each creature chosen this way. If the player does, untap those creatures.,
+At the beginning of each player's upkeep, that player may choose any number of tapped nongreen creatures they control and pay \{2\} for each creature chosen this way. If the player does, untap those creatures.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -5959,13 +6219,14 @@ At the beginning of each player's upkeep, that player may choose any number of t
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ice-21-drought.png,
 	card_name = None,
 	mana_cost = \{2\}\{W\}\{W\},
 	card_type = 结界,
-	description = At the beginning of your upkeep, sacrifice Drought unless you pay {W}{W}.
+	description = At the beginning of your upkeep, sacrifice Drought unless you pay \{W\}\{W\}.
 Spells cost an additional "Sacrifice a Swamp" to cast for each black mana symbol in their mana costs.
 Activated abilities cost an additional "Sacrifice a Swamp" to activate for each black mana symbol in their activation costs.,
 	stax_type = None,
@@ -5983,6 +6244,7 @@ Activated abilities cost an additional "Sacrifice a Swamp" to activate for each 
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mmq-77-embargo.png,
@@ -6006,6 +6268,7 @@ At the beginning of your upkeep, you lose 2 life.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ths-85-erebos-god-of-the-dead.png,
@@ -6013,9 +6276,9 @@ At the beginning of your upkeep, you lose 2 life.,
 	mana_cost = \{3\}\{B\},
 	card_type = 结界,
 	description = 不灭
-只要你的黑色献力小于五，厄睿柏斯便不是生物。（由你操控之永久物的法术力费用当中每含有一个{B}，你的黑色献力就加一。）
+只要你的黑色献力小于五，厄睿柏斯便不是生物。（由你操控之永久物的法术力费用当中每含有一个\{B\}，你的黑色献力就加一。）
 对手不能获得生命。
-{1}{B}，支付2点生命：抓一张牌。,
+\{1\}\{B\}，支付2点生命：抓一张牌。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -6031,6 +6294,7 @@ At the beginning of your upkeep, you lose 2 life.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ice-290-flooded-woodlands.png,
@@ -6053,6 +6317,7 @@ At the beginning of your upkeep, you lose 2 life.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/plc-54-frozen-aether.png,
@@ -6075,6 +6340,7 @@ At the beginning of your upkeep, you lose 2 life.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ema-91-honden-of-night-s-reach.png,
@@ -6097,13 +6363,14 @@ At the beginning of your upkeep, you lose 2 life.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mrd-122-hum-of-the-radix.png,
 	card_name = None,
 	mana_cost = \{2\}\{G\}\{G\},
 	card_type = 结界,
-	description = Each artifact spell costs {1} more to cast for each artifact its controller controls.,
+	description = Each artifact spell costs \{1\} more to cast for each artifact its controller controls.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -6119,6 +6386,7 @@ At the beginning of your upkeep, you lose 2 life.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/tpr-16-humility.png,
@@ -6141,14 +6409,15 @@ At the beginning of your upkeep, you lose 2 life.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me2-97-infernal-darkness.png,
 	card_name = None,
 	mana_cost = \{2\}\{B\}\{B\},
 	card_type = 结界,
-	description = Cumulative upkeep—Pay {B} and 1 life. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)
-If a land is tapped for mana, it produces {B} instead of any other type.,
+	description = Cumulative upkeep—Pay \{B\} and 1 life. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)
+If a land is tapped for mana, it produces \{B\} instead of any other type.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -6164,6 +6433,7 @@ If a land is tapped for mana, it produces {B} instead of any other type.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/6ed-27-kismet.png,
@@ -6186,6 +6456,7 @@ If a land is tapped for mana, it produces {B} instead of any other type.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me3-40-land-equilibrium.png,
@@ -6208,6 +6479,7 @@ If a land is tapped for mana, it produces {B} instead of any other type.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/m11-148-leyline-of-punishment.png,
@@ -6232,6 +6504,7 @@ If a land is tapped for mana, it produces {B} instead of any other type.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/gpt-29-leyline-of-singularity.png,
@@ -6255,6 +6528,7 @@ If a land is tapped for mana, it produces {B} instead of any other type.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/wot-30-leyline-of-the-void.png,
@@ -6278,6 +6552,7 @@ If a land is tapped for mana, it produces {B} instead of any other type.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/6ed-29-light-of-day.png,
@@ -6300,6 +6575,7 @@ If a land is tapped for mana, it produces {B} instead of any other type.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/m12-150-manabarbs.png,
@@ -6322,6 +6598,7 @@ If a land is tapped for mana, it produces {B} instead of any other type.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me1-21-moat.png,
@@ -6344,6 +6621,7 @@ If a land is tapped for mana, it produces {B} instead of any other type.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ima-99-night-of-souls-betrayal.png,
@@ -6366,13 +6644,14 @@ If a land is tapped for mana, it produces {B} instead of any other type.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/wth-47-pendrell-mists.png,
 	card_name = None,
 	mana_cost = \{3\}\{U\},
 	card_type = 结界,
-	description = All creatures have "At the beginning of your upkeep, sacrifice this creature unless you pay {1}.",
+	description = All creatures have "At the beginning of your upkeep, sacrifice this creature unless you pay \{1\}.",
 	stax_type = None,
 	is_in_restricted_list = RL,
 	legality / standard = notlegal,
@@ -6388,6 +6667,7 @@ If a land is tapped for mana, it produces {B} instead of any other type.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/usg-32-presence-of-the-master.png,
@@ -6410,6 +6690,7 @@ If a land is tapped for mana, it produces {B} instead of any other type.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ice-300-reclamation.png,
@@ -6432,6 +6713,7 @@ If a land is tapped for mana, it produces {B} instead of any other type.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/nem-38-rising-waters.png,
@@ -6455,13 +6737,14 @@ At the beginning of each player's upkeep, that player untaps a land they control
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mmq-105-squeeze.png,
 	card_name = None,
 	mana_cost = \{3\}\{U\},
 	card_type = 结界,
-	description = Sorcery spells cost {3} more to cast.,
+	description = Sorcery spells cost \{3\} more to cast.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -6477,6 +6760,7 @@ At the beginning of each player's upkeep, that player untaps a land they control
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/cma-87-stranglehold.png,
@@ -6500,6 +6784,7 @@ If an opponent would begin an extra turn, that player skips that turn instead.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/7ed-167-tainted-aether.png,
@@ -6522,6 +6807,7 @@ If an opponent would begin an extra turn, that player skips that turn instead.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/5ed-332-titania-s-song.png,
@@ -6544,6 +6830,7 @@ If an opponent would begin an extra turn, that player skips that turn instead.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/hou-78-torment-of-scarabs.png,
@@ -6567,6 +6854,7 @@ If an opponent would begin an extra turn, that player skips that turn instead.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mkc-326-trouble-in-pairs.png,
@@ -6590,6 +6878,7 @@ If an opponent would begin an extra turn, that player skips that turn instead.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/bbd-187-war-s-toll.png,
@@ -6613,6 +6902,7 @@ If an opponent would begin an extra turn, that player skips that turn instead.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/9ed-114-zur-s-weirding.png,
@@ -6636,6 +6926,7 @@ If an opponent would begin an extra turn, that player skips that turn instead.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/dmr-149-arboria.png,
@@ -6658,6 +6949,7 @@ If an opponent would begin an extra turn, that player skips that turn instead.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/leg-136-caverns-of-despair.png,
@@ -6681,6 +6973,7 @@ No more than two creatures can block each combat.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/vis-4-eye-of-singularity.png,
@@ -6704,6 +6997,7 @@ Whenever a permanent other than a basic land enters, destroy all other permanent
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/rvr-1-karn-the-great-creator.png,
@@ -6728,6 +7022,7 @@ Whenever a permanent other than a basic land enters, destroy all other permanent
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/hml-55-koskun-falls.png,
@@ -6735,7 +7030,7 @@ Whenever a permanent other than a basic land enters, destroy all other permanent
 	mana_cost = \{2\}\{B\}\{B\},
 	card_type = 其他,
 	description = At the beginning of your upkeep, sacrifice Koskun Falls unless you tap an untapped creature you control.
-Creatures can't attack you unless their controller pays {2} for each creature they control that's attacking you.,
+Creatures can't attack you unless their controller pays \{2\} for each creature they control that's attacking you.,
 	stax_type = None,
 	is_in_restricted_list = RL,
 	legality / standard = notlegal,
@@ -6751,13 +7046,14 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me3-73-nether-void.png,
 	card_name = None,
 	mana_cost = \{3\}\{B\},
 	card_type = 其他,
-	description = Whenever a player casts a spell, counter it unless that player pays {3}.,
+	description = Whenever a player casts a spell, counter it unless that player pays \{3\}.,
 	stax_type = None,
 	is_in_restricted_list = RL,
 	legality / standard = notlegal,
@@ -6773,6 +7069,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/vis-67-pillar-tombs-of-aku.png,
@@ -6795,6 +7092,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me3-77-the-abyss.png,
@@ -6817,6 +7115,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/voc-118-anowon-the-ruin-sage.png,
@@ -6839,6 +7138,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/cns-184-basandra-battle-seraph.png,
@@ -6847,7 +7147,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	card_type = 生物,
 	description = 飞行
 牌手在战斗中不能施放咒语。
-{R}：目标生物本回合若能攻击，则必须攻击。,
+\{R\}：目标生物本回合若能攻击，则必须攻击。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -6863,6 +7163,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/brc-21-disciple-of-caelus-nin.png,
@@ -6886,6 +7187,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/one-10-elesh-norn-mother-of-machines.png,
@@ -6910,6 +7212,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/shm-190-kulrath-knight.png,
@@ -6934,13 +7237,14 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/cmr-286-liesa-shroud-of-dusk.png,
 	card_name = 薄暮之帷莉艾莎,
 	mana_cost = \{2\}\{W\}\{W\}\{B\},
 	card_type = 生物,
-	description = 对此咒语而言，你不是支付等同于你本盘游戏中此前从统帅区施放过它之次数的{2}，而是支付该次数的2点生命。
+	description = 对此咒语而言，你不是支付等同于你本盘游戏中此前从统帅区施放过它之次数的\{2\}，而是支付该次数的2点生命。
 飞行，系命
 每当任一牌手施放咒语时，其失去2点生命。,
 	stax_type = None,
@@ -6958,6 +7262,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mrd-125-molder-slug.png,
@@ -6980,6 +7285,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mh2-93-necrogoyf.png,
@@ -6988,7 +7294,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	card_type = 生物,
 	description = 死冥耶夫的力量等同于所有坟墓场中的生物牌数量。
 在每位牌手的维持开始时，该牌手弃一张牌。
-疯魔{1}{B}{B}（如果你弃掉此牌，将之弃到放逐区。当你如此作时，支付其疯魔费用施放之，否则便将其置入你的坟墓场。）,
+疯魔\{1\}\{B\}\{B\}（如果你弃掉此牌，将之弃到放逐区。当你如此作时，支付其疯魔费用施放之，否则便将其置入你的坟墓场。）,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -7004,6 +7310,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/cmm-349-nekusar-the-mindrazer.png,
@@ -7027,6 +7334,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/khm-145-quakebringer.png,
@@ -7035,7 +7343,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	card_type = 生物,
 	description = 对手不能获得生命。
 在你的维持开始时，撼地狂汉向每位对手各造成2点伤害。此异能只有于撼地狂汉在战场时或于撼地狂汉在你坟墓场中且你操控巨人时才会触发。
-预示{2}{R}{R},
+预示\{2\}\{R\}\{R\},
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -7051,13 +7359,14 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/gpt-18-spelltithe-enforcer.png,
 	card_name = 什一咒执法者,
 	mana_cost = \{3\}\{W\}\{W\},
 	card_type = 生物,
-	description = 每当任一对手使用咒语时，除非该牌手支付{1}，否则他牺牲一个永久物。,
+	description = 每当任一对手使用咒语时，除非该牌手支付\{1\}，否则他牺牲一个永久物。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -7073,6 +7382,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/tsr-91-teferi-mage-of-zhalfir.png,
@@ -7097,6 +7407,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ths-208-underworld-cerberus.png,
@@ -7121,6 +7432,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mul-23-urabrask-the-hidden.png,
@@ -7144,6 +7456,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/snc-129-urabrask-heretic-praetor.png,
@@ -7168,13 +7481,14 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \mfcard
 {
 	front_card_image = Images/stx-6-wandering-archaic.png,
 	front_card_name = None,
 	front_mana_cost = \{5\},
 	front_card_type = 生物,
-	front_description = Whenever an opponent casts an instant or sorcery spell, they may pay {2}. If they don't, you may copy that spell. You may choose new targets for the copy.,
+	front_description = Whenever an opponent casts an instant or sorcery spell, they may pay \{2\}. If they don't, you may copy that spell. You may choose new targets for the copy.,
 	back_card_image = Images/stx-6-explore-the-vastlands.png,
 	back_card_name = None,
 	back_mana_cost = \{3\},
@@ -7195,6 +7509,7 @@ Creatures can't attack you unless their controller pays {2} for each creature th
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ltr-114-witch-king-of-angmar.png,
@@ -7219,6 +7534,7 @@ Discard a card: Witch-king of Angmar gains indestructible until end of turn. Tap
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/zen-39-world-queller.png,
@@ -7241,14 +7557,15 @@ Discard a card: Witch-king of Angmar gains indestructible until end of turn. Tap
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me4-216-naked-singularity.png,
 	card_name = None,
 	mana_cost = \{5\},
 	card_type = 神器,
-	description = Cumulative upkeep {3} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)
-If tapped for mana, Plains produce {R}, Islands produce {G}, Swamps produce {W}, Mountains produce {U}, and Forests produce {B} instead of any other type.,
+	description = Cumulative upkeep \{3\} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)
+If tapped for mana, Plains produce \{R\}, Islands produce \{G\}, Swamps produce \{W\}, Mountains produce \{U\}, and Forests produce \{B\} instead of any other type.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -7264,14 +7581,15 @@ If tapped for mana, Plains produce {R}, Islands produce {G}, Swamps produce {W},
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/nph-17-norn-s-annex.png,
 	card_name = 艾蕾侬别馆,
 	mana_cost = \{3\}\{W/P\}\{W/P\},
 	card_type = 神器,
-	description = （{W/P}可用{W}或2点生命来支付。）
-对每个生物而言，除非其操控者为其支付{W/P}，否则它不能攻击你或由你操控的鹏洛客。,
+	description = （\{W/P\}可用\{W\}或2点生命来支付。）
+对每个生物而言，除非其操控者为其支付\{W/P\}，否则它不能攻击你或由你操控的鹏洛客。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -7287,6 +7605,7 @@ If tapped for mana, Plains produce {R}, Islands produce {G}, Swamps produce {W},
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/2xm-218-sen-triplets.png,
@@ -7309,6 +7628,7 @@ If tapped for mana, Plains produce {R}, Islands produce {G}, Swamps produce {W},
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/7ed-320-storm-cauldron.png,
@@ -7332,6 +7652,7 @@ Whenever a land is tapped for mana, return it to its owner's hand.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ktk-227-ugin-s-nexus.png,
@@ -7355,6 +7676,7 @@ Whenever a land is tapped for mana, return it to its owner's hand.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \mfcard
 {
 	front_card_image = Images/lci-41-unstable-glyphbridge.png,
@@ -7362,7 +7684,7 @@ Whenever a land is tapped for mana, return it to its owner's hand.,
 	front_mana_cost = \{3\}\{W\}\{W\},
 	front_card_type = 神器,
 	front_description = 当不稳雕符桥进战场时，若它经你施放，则为每位牌手各选择一个由其操控且力量等于或小于2的生物。然后消灭所有生物，但以此法选中的生物除外。
-以神器化炼{3}{W}{W}（{3}{W}{W}，放逐此神器，放逐另一个由你操控的神器或一张你坟墓场中的神器牌：将此牌在其拥有者的操控下移回且已转化。只能于法术时机化炼。）,
+以神器化炼\{3\}\{W\}\{W\}（\{3\}\{W\}\{W\}，放逐此神器，放逐另一个由你操控的神器或一张你坟墓场中的神器牌：将此牌在其拥有者的操控下移回且已转化。只能于法术时机化炼。）,
 	back_card_image = Images/lci-41-sandswirl-wanderglyph.png,
 	back_card_name = 砂旋漫游符,
 	back_mana_cost = None,
@@ -7385,6 +7707,7 @@ Whenever a land is tapped for mana, return it to its owner's hand.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ody-180-burning-sands.png,
@@ -7407,6 +7730,7 @@ Whenever a land is tapped for mana, return it to its owner's hand.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/9ed-70-cowardice.png,
@@ -7429,6 +7753,7 @@ Whenever a land is tapped for mana, return it to its owner's hand.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ice-181-curse-of-marit-lage.png,
@@ -7452,6 +7777,7 @@ Islands don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/jud-48-mist-of-stagnation.png,
@@ -7475,6 +7801,7 @@ At the beginning of each player's upkeep, that player chooses a permanent for ea
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/bro-111-painful-quandary.png,
@@ -7497,6 +7824,7 @@ At the beginning of each player's upkeep, that player chooses a permanent for ea
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mmq-153-putrefaction.png,
@@ -7519,6 +7847,7 @@ At the beginning of each player's upkeep, that player chooses a permanent for ea
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mrd-49-shared-fate.png,
@@ -7542,13 +7871,14 @@ Each player may look at cards they exiled with Shared Fate, and they may play la
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/rvr-447-sphere-of-safety.png,
 	card_name = 安全球罩,
 	mana_cost = \{4\}\{W\},
 	card_type = 结界,
-	description = 对每个生物而言，除非其操控者为其支付{X}，否则它不能攻击你或由你操控的鹏洛客，X为由你操控的结界数量。,
+	description = 对每个生物而言，除非其操控者为其支付\{X\}，否则它不能攻击你或由你操控的鹏洛客，X为由你操控的结界数量。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -7564,6 +7894,7 @@ Each player may look at cards they exiled with Shared Fate, and they may play la
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/inv-125-spreading-plague.png,
@@ -7586,6 +7917,7 @@ Each player may look at cards they exiled with Shared Fate, and they may play la
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/c13-133-witch-hunt.png,
@@ -7610,6 +7942,7 @@ At the beginning of your end step, target opponent chosen at random gains contro
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/8ed-115-wrath-of-marit-lage.png,
@@ -7633,6 +7966,7 @@ Red creatures don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/bbd-74-archon-of-valor-s-reach.png,
@@ -7657,6 +7991,7 @@ Red creatures don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/10e-127-ascendant-evincar.png,
@@ -7681,6 +8016,7 @@ Red creatures don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/ltc-10-champions-of-minas-tirith.png,
@@ -7688,7 +8024,7 @@ Red creatures don't untap during their controllers' untap steps.,
 	mana_cost = \{5\}\{W\},
 	card_type = 生物,
 	description = 当米那斯提力斯斗士进战场时，你成为君主。
-在每位对手回合的战斗开始时，若你是君主，则该对手可以支付{X}，X为其手牌数量。若其未如此作，则该对手本次战斗不能攻击你。,
+在每位对手回合的战斗开始时，若你是君主，则该对手可以支付\{X\}，X为其手牌数量。若其未如此作，则该对手本次战斗不能攻击你。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -7704,6 +8040,7 @@ Red creatures don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/tsr-15-crovax-ascendant-hero.png,
@@ -7728,6 +8065,7 @@ Red creatures don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/arb-37-defiler-of-souls.png,
@@ -7751,6 +8089,7 @@ Red creatures don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/2x2-84-ob-nixilis-unshackled.png,
@@ -7775,6 +8114,7 @@ Red creatures don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/2x2-271-ruric-thar-the-unbowed.png,
@@ -7799,6 +8139,7 @@ Red creatures don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/dgm-104-sire-of-insanity.png,
@@ -7821,6 +8162,7 @@ Red creatures don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/gtc-79-smog-elemental.png,
@@ -7844,6 +8186,7 @@ Red creatures don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/khm-199-vorinclex-monstrous-raider.png,
@@ -7868,13 +8211,14 @@ Red creatures don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/7ed-295-feroz-s-ban.png,
 	card_name = None,
 	mana_cost = \{6\},
 	card_type = 神器,
-	description = Creature spells cost {2} more to cast.,
+	description = Creature spells cost \{2\} more to cast.,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -7890,13 +8234,14 @@ Red creatures don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/war-238-god-pharaoh-s-statue.png,
 	card_name = 法老神塑像,
 	mana_cost = \{6\},
 	card_type = 神器,
-	description = 对手施放的咒语增加{2}来施放。
+	description = 对手施放的咒语增加\{2\}来施放。
 在你的结束步骤开始时，每位对手各失去1点生命。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
@@ -7913,6 +8258,7 @@ Red creatures don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/nph-148-omen-machine.png,
@@ -7936,6 +8282,7 @@ Red creatures don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/cmm-393-the-immortal-sun.png,
@@ -7944,7 +8291,7 @@ Red creatures don't untap during their controllers' untap steps.,
 	card_type = 神器,
 	description = 牌手不能起动鹏洛客的忠诚异能。
 在你的抓牌步骤开始时，额外抓一张牌。
-你施放的咒语减少{1}来施放。
+你施放的咒语减少\{1\}来施放。
 由你操控的生物得+1/+1。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
@@ -7961,6 +8308,7 @@ Red creatures don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/eve-174-ward-of-bones.png,
@@ -7983,13 +8331,14 @@ Red creatures don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/dis-143-dovescape.png,
 	card_name = 化鸽咒帘,
 	mana_cost = \{3\}\{W/U\}\{W/U\}\{W/U\},
 	card_type = 结界,
-	description = （{W/U}可用{W}或{U}来支付。）
+	description = （\{W/U\}可用\{W\}或\{U\}来支付。）
 每当任一牌手使用非生物咒语时，反击该咒语。 该牌手将X个1/1，既是白色也是蓝色，具飞行异能的鸟衍生物放置进场，X为该咒语的总法术力费用。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
@@ -8006,13 +8355,14 @@ Red creatures don't untap during their controllers' untap steps.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me2-192-earthlink.png,
 	card_name = None,
 	mana_cost = \{3\}\{B\}\{R\}\{G\},
 	card_type = 结界,
-	description = At the beginning of your upkeep, sacrifice Earthlink unless you pay {2}.
+	description = At the beginning of your upkeep, sacrifice Earthlink unless you pay \{2\}.
 Whenever a creature dies, that creature's controller sacrifices a land.,
 	stax_type = None,
 	is_in_restricted_list = RL,
@@ -8029,6 +8379,7 @@ Whenever a creature dies, that creature's controller sacrifices a land.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/thb-92-enemy-of-enlightenment.png,
@@ -8053,6 +8404,7 @@ Whenever a creature dies, that creature's controller sacrifices a land.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/rna-170-ethereal-absolution.png,
@@ -8061,7 +8413,7 @@ Whenever a creature dies, that creature's controller sacrifices a land.,
 	card_type = 结界,
 	description = 由你操控的生物得+1/+1。
 由对手操控的生物得-1/-1。
-{2}{W}{B}：将目标牌从任一对手的坟墓场放逐。如果它是生物牌，则你派出一个1/1，白黑双色，具飞行异能的精怪衍生生物。,
+\{2\}\{W\}\{B\}：将目标牌从任一对手的坟墓场放逐。如果它是生物牌，则你派出一个1/1，白黑双色，具飞行异能的精怪衍生生物。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -8077,6 +8429,7 @@ Whenever a creature dies, that creature's controller sacrifices a land.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/fut-66-gibbering-descent.png,
@@ -8085,7 +8438,7 @@ Whenever a creature dies, that creature's controller sacrifices a land.,
 	card_type = 结界,
 	description = 在每位牌手的维持开始时，该牌手失去1点生命且弃一张牌。
 背水战～若你没有手牌，则略过你的维持步骤。
-疯魔{2}{B}{B}（如果你弃掉此牌，可以改为使用它并支付其疯魔费用，而非直接将它置入你的坟墓场。）,
+疯魔\{2\}\{B\}\{B\}（如果你弃掉此牌，可以改为使用它并支付其疯魔费用，而非直接将它置入你的坟墓场。）,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -8101,6 +8454,7 @@ Whenever a creature dies, that creature's controller sacrifices a land.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/rtr-166-havoc-festival.png,
@@ -8124,13 +8478,14 @@ Whenever a creature dies, that creature's controller sacrifices a land.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me2-172-nature-s-wrath.png,
 	card_name = None,
 	mana_cost = \{4\}\{G\}\{G\},
 	card_type = 结界,
-	description = At the beginning of your upkeep, sacrifice Nature's Wrath unless you pay {G}.
+	description = At the beginning of your upkeep, sacrifice Nature's Wrath unless you pay \{G\}.
 Whenever a player puts an Island or blue permanent onto the battlefield, that player sacrifices an Island or blue permanent.
 Whenever a player puts a Swamp or black permanent onto the battlefield, that player sacrifices a Swamp or black permanent.,
 	stax_type = None,
@@ -8148,13 +8503,14 @@ Whenever a player puts a Swamp or black permanent onto the battlefield, that pla
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/me2-174-ritual-of-subdual.png,
 	card_name = None,
 	mana_cost = \{4\}\{G\}\{G\},
 	card_type = 结界,
-	description = Cumulative upkeep {2} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)
+	description = Cumulative upkeep \{2\} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)
 If a land is tapped for mana, it produces colorless mana instead of any other type.,
 	stax_type = None,
 	is_in_restricted_list = RL,
@@ -8171,6 +8527,7 @@ If a land is tapped for mana, it produces colorless mana instead of any other ty
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mmq-217-territorial-dispute.png,
@@ -8194,6 +8551,7 @@ Players can't play lands.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/m11-4-angelic-arbiter.png,
@@ -8218,15 +8576,16 @@ Players can't play lands.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/nph-6-chancellor-of-the-annex.png,
 	card_name = 别馆督长,
 	mana_cost = \{4\}\{W\}\{W\}\{W\},
 	card_type = 生物,
-	description = 你可以从你的起手牌中展示此牌。 如果你如此作，当每位牌手施放他在本盘游戏中的第一个咒语时，除非该牌手支付{1}，否则反击之。
+	description = 你可以从你的起手牌中展示此牌。 如果你如此作，当每位牌手施放他在本盘游戏中的第一个咒语时，除非该牌手支付\{1\}，否则反击之。
 飞行
-每当任一对手施放咒语时，除非该牌手支付{1}，否则反击之。,
+每当任一对手施放咒语时，除非该牌手支付\{1\}，否则反击之。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -8242,6 +8601,7 @@ Players can't play lands.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mul-3-elesh-norn-grand-cenobite.png,
@@ -8266,6 +8626,7 @@ Players can't play lands.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/neo-59-jin-gitaxias-progress-tyrant.png,
@@ -8289,6 +8650,7 @@ Players can't play lands.,
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/who-138-judoon-enforcers.png,
@@ -8297,7 +8659,7 @@ Players can't play lands.,
 	card_type = 生物,
 	description = Trample
 No more than one creature can attack you each combat.
-Suspend 6—{1}{R}{W} (Rather than cast this card from your hand, you may pay {1}{R}{W} and exile it with six time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost. It has haste.),
+Suspend 6—\{1\}\{R\}\{W\} (Rather than cast this card from your hand, you may pay \{1\}\{R\}\{W\} and exile it with six time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost. It has haste.),
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -8313,6 +8675,7 @@ Suspend 6—{1}{R}{W} (Rather than cast this card from your hand, you may pay {1
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mul-16-sheoldred-whispering-one.png,
@@ -8337,6 +8700,7 @@ Suspend 6—{1}{R}{W} (Rather than cast this card from your hand, you may pay {1
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/vow-132-toxrill-the-corrosive.png,
@@ -8346,7 +8710,7 @@ Suspend 6—{1}{R}{W} (Rather than cast this card from your hand, you may pay {1
 	description = 在每个结束步骤开始时，在每个不由你操控的生物上各放置一个黏菌指示物。
 对每个不由你操控的生物而言，其上每有一个黏菌指示物，它便得-1/-1。
 每当一个不由你操控且其上有黏菌指示物的生物死去时，你派出一个1/1黑色蛞蝓衍生生物。
-{U}{B}，牺牲一个蛞蝓：抓一张牌。,
+\{U\}\{B\}，牺牲一个蛞蝓：抓一张牌。,
 	stax_type = None,
 	is_in_restricted_list = Not RL,
 	legality / standard = legal,
@@ -8362,6 +8726,7 @@ Suspend 6—{1}{R}{W} (Rather than cast this card from your hand, you may pay {1
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/sok-44-meishin-the-mind-cage.png,
@@ -8384,6 +8749,7 @@ Suspend 6—{1}{R}{W} (Rather than cast this card from your hand, you may pay {1
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/cmm-137-archfiend-of-despair.png,
@@ -8408,6 +8774,7 @@ Suspend 6—{1}{R}{W} (Rather than cast this card from your hand, you may pay {1
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/cmr-407-stormtide-leviathan.png,
@@ -8432,6 +8799,7 @@ Suspend 6—{1}{R}{W} (Rather than cast this card from your hand, you may pay {1
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mul-29-vorinclex-voice-of-hunger.png,
@@ -8456,6 +8824,7 @@ Suspend 6—{1}{R}{W} (Rather than cast this card from your hand, you may pay {1
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/5dn-144-possessed-portal.png,
@@ -8479,6 +8848,7 @@ Suspend 6—{1}{R}{W} (Rather than cast this card from your hand, you may pay {1
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/rvr-8-blazing-archon.png,
@@ -8502,6 +8872,7 @@ Suspend 6—{1}{R}{W} (Rather than cast this card from your hand, you may pay {1
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mm2-20-iona-shield-of-emeria.png,
@@ -8526,6 +8897,7 @@ Suspend 6—{1}{R}{W} (Rather than cast this card from your hand, you may pay {1
 	legality / commander = banned,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/bfz-17-void-winnower.png,
@@ -8548,6 +8920,7 @@ Suspend 6—{1}{R}{W} (Rather than cast this card from your hand, you may pay {1
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/rav-266-nullstone-gargoyle.png,
@@ -8571,6 +8944,7 @@ Suspend 6—{1}{R}{W} (Rather than cast this card from your hand, you may pay {1
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/mul-11-jin-gitaxias-core-augur.png,
@@ -8595,6 +8969,7 @@ Suspend 6—{1}{R}{W} (Rather than cast this card from your hand, you may pay {1
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
 \card
 {
 	card_image = Images/emn-15b-brisela-voice-of-nightmares.png,
@@ -8618,3 +8993,4 @@ Suspend 6—{1}{R}{W} (Rather than cast this card from your hand, you may pay {1
 	legality / commander = legal,
 	legality / duel_commander = None
 }
+
