@@ -796,7 +796,7 @@
 }{\relax}
 
 
-\graphicspath{{./figure/}{./figures/}{./image/}{./images/}{./graphics/}{./graphic/}{./pictures/}{./picture/}}
+\graphicspath{{./Figures/}{./Images/}}
 
 \RequirePackage{tikz} %% load tikz without tikz
 \usetikzlibrary{backgrounds,calc,shadows,positioning,fit}
@@ -1321,6 +1321,10 @@
 % restore the tt default family to lmodern tt family
 \renewcommand\ttdefault{lmtt}
 
+\newfontfamily\MTGENfont{Beleren2016}
+\newCJKfontfamily\MTGCNfont{华康魏碑 Std W7}
+\newCJKfontfamily\MTGDESfont{方正细等线_GBK_FIX}
+
 \ExplSyntaxOn
 
 \NewDocumentCommand{\cell}{m}
@@ -1344,7 +1348,7 @@
                 }
             { restricted }
                 {
-                    \node[align = center, minimum~width = 24mm, rectangle, rounded~corners = 0.2mm, ultra~thin, draw = black!20, scale = 0.75, fill = #1] (char) {限1};
+                    \node[align = center, minimum~width = 24mm, rectangle, rounded~corners = 0.2mm, ultra~thin, draw = black!20, scale = 0.75, fill = #1] (char) {限制};
                 }
         }
         { No idea! }
@@ -1353,8 +1357,9 @@
 
 \keys_define:nn { card }
 {
+	card_english_name     .tl_set:N = \card_english_name,
     card_image            .tl_set:N = \card_image,
-    card_name             .tl_set:N = \card_name,
+    card_chinese_name     .tl_set:N = \card_chinese_name,
     mana_cost             .tl_set:N = \mana_cost,
     card_type             .tl_set:N = \card_type,
     description           .tl_set:N = \description,
@@ -1381,18 +1386,26 @@
         \includegraphics[width = \textwidth]{\card_image}
     \end{minipage}\hfill
     \begin{minipage}{0.45\textwidth}
-        \textbf{\LARGE \card_name\hfill \mana_cost}\\
-        \textbf{\card_type}\\
-        \vspace{0.1cm}
+    	\begin{minipage}{0.45\textwidth}
+    		\MTGENfont{\huge \card_english_name}
+    		\vspace{0.2cm}\\
+    		\MTGCNfont{\huge \card_chinese_name}
+    	\end{minipage}\hfill
+        \textbf{\Huge \mana_cost}
+        \vspace{0.2cm}\\
         \textcolor[rgb]{0.8,0.8,0.8}{\rule{\linewidth}{0.4pt}}\\
-        \description\\
-        \vspace{0.1cm}
+        {\MTGCNfont \card_type}
+        \vspace{-0.3cm}\\
         \textcolor[rgb]{0.8,0.8,0.8}{\rule{\linewidth}{0.4pt}}\\
-        \textsc{锁牌类型：\stax_type}\\
+        {\MTGDESfont \description}
+        \vspace{-0.3cm}\\
+        \textcolor[rgb]{0.8,0.8,0.8}{\rule{\linewidth}{0.4pt}}\\
+        {\MTGCNfont 锁牌类型：\stax_type}
 
-        \ifthenelse{\equal{\is_in_restricted_list}{RL}}{在不重印列表中\\}{}
-        \vspace{0.3cm}
+        \ifthenelse{\equal{\is_in_restricted_list}{RL}}{\\在不重印列表中}{}
+        \vspace{-0.3cm}\\
         \textcolor[rgb]{0.8,0.8,0.8}{\rule{\linewidth}{0.4pt}}\\
+        \vspace{-0.3cm}\\
         \begin{tabular}
         {>{\centering\arraybackslash}m{1.5cm} >{\arraybackslash}m{1.5cm} >{\centering\arraybackslash}m{1.5cm} >{\arraybackslash}m{1.5cm}}
             \cell{\legality_standard} & 标准 & 
@@ -1413,18 +1426,20 @@
 
 \keys_define:nn { mfcard }
 {
-    front_card_image      .tl_set:N = \front_card_image,
-    front_card_name       .tl_set:N = \front_card_name,
-    front_mana_cost       .tl_set:N = \front_mana_cost,
-    front_card_type       .tl_set:N = \front_card_type,
-    front_description     .tl_set:N = \front_description,
-    back_card_image       .tl_set:N = \back_card_image,
-    back_card_name        .tl_set:N = \back_card_name,
-    back_mana_cost        .tl_set:N = \back_mana_cost,
-    back_card_type        .tl_set:N = \back_card_type,
-    back_description      .tl_set:N = \back_description,
-    stax_type             .tl_set:N = \stax_type,
-    is_in_restricted_list .tl_set:N = \is_in_restricted_list,
+	front_card_english_name .tl_set:N = \front_card_english_name,
+    front_card_image        .tl_set:N = \front_card_image,
+    front_card_chinese_name .tl_set:N = \front_card_chinese_name,
+    front_mana_cost         .tl_set:N = \front_mana_cost,
+    front_card_type         .tl_set:N = \front_card_type,
+    front_description       .tl_set:N = \front_description,
+    back_card_english_name  .tl_set:N = \back_card_english_name,
+    back_card_image         .tl_set:N = \back_card_image,
+    back_card_chinese_name  .tl_set:N = \back_card_chinese_name,
+    back_mana_cost          .tl_set:N = \back_mana_cost,
+    back_card_type          .tl_set:N = \back_card_type,
+    back_description        .tl_set:N = \back_description,
+    stax_type               .tl_set:N = \stax_type,
+    is_in_restricted_list   .tl_set:N = \is_in_restricted_list,
     legality / standard       .tl_set:N = \legality_standard,
     legality / alchemy        .tl_set:N = \legality_alchemy,
     legality / pioneer        .tl_set:N = \legality_pioneer,
@@ -1449,7 +1464,7 @@
         \includegraphics[width = 0.6\textwidth]{\back_card_image}
     \end{minipage}\hfill
     \begin{minipage}{0.45\textwidth}
-        \textbf{\LARGE \front_card_name\hfill \front_mana_cost}\\
+        \textbf{\LARGE \front_card_chinese_name\hfill \front_mana_cost}\\
         \textbf{\front_card_type}\\
         \vspace{0.1cm}
         \textcolor[rgb]{0.8,0.8,0.8}{\rule{\linewidth}{0.4pt}}\\
@@ -1457,7 +1472,7 @@
         
         \textcolor[rgb]{0.8,0.8,0.8}{\rule{\linewidth}{0.4pt}}\\
 
-        \textbf{\LARGE \back_card_name\hfill \back_mana_cost}\\
+        \textbf{\LARGE \back_card_chinese_name\hfill \back_mana_cost}\\
         \textbf{\back_card_type}\\
         \vspace{0.1cm}
         \textcolor[rgb]{0.8,0.8,0.8}{\rule{\linewidth}{0.4pt}}\\

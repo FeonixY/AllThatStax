@@ -51,7 +51,7 @@ def genarate_latex(sheet_name, multiface_sheet_name, latex_name):
     for data_row in data:
         card = f"\\card\n" \
             f"{{\n" \
-            f"\tcard_image = Images/{data_row[2]},\n" \
+            f"\tcard_image = {data_row[2]},\n" \
             f"\tcard_name = {data_row[1]},\n" \
             f"\tmana_cost = {(str)(data_row[3]).replace("{", "\\{").replace("}", "\\}")},\n" \
             f"\tcard_type = {data_row[4]},\n" \
@@ -82,12 +82,12 @@ def genarate_latex(sheet_name, multiface_sheet_name, latex_name):
     for multiface_data_row in multiface_data:
         multiface_card = f"\\mfcard\n" \
             f"{{\n" \
-            f"\tfront_card_image = Images/{multiface_data_row[2]},\n" \
+            f"\tfront_card_image = {multiface_data_row[2]},\n" \
             f"\tfront_card_name = {multiface_data_row[1]},\n" \
             f"\tfront_mana_cost = {(str)(multiface_data_row[3]).replace("{", "\\{").replace("}", "\\}")},\n" \
             f"\tfront_card_type = {multiface_data_row[4]},\n" \
             f"\tfront_description = {(str)(multiface_data_row[5]).replace("{", "\\{").replace("}", "\\}")},\n" \
-            f"\tback_card_image = Images/{multiface_data_row[7]},\n" \
+            f"\tback_card_image = {multiface_data_row[7]},\n" \
             f"\tback_card_name = {multiface_data_row[6]},\n" \
             f"\tback_mana_cost = {(str)(multiface_data_row[8]).replace("{", "\\{").replace("}", "\\}")},\n" \
             f"\tback_card_type = {multiface_data_row[9]},\n" \

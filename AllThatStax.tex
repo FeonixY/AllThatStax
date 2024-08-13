@@ -17,10 +17,10 @@
 \usepackage{array}
 
 % 修改合法性颜色
-\definecolor{legal}{RGB}{117, 152, 110}
-\definecolor{notlegal}{RGB}{174, 174, 174}
-\definecolor{banned}{RGB}{204, 125, 131}
-\definecolor{restricted}{RGB}{128, 167, 182}
+\definecolor{legal}{RGB}{0, 200, 0}
+\definecolor{notlegal}{RGB}{200, 200, 200}
+\definecolor{banned}{RGB}{255, 0, 0}
+\definecolor{restricted}{RGB}{255, 165, 0}
 
 % 修改标题页的色带
 \definecolor{customcolor}{RGB}{20,84,156}
@@ -36,7 +36,7 @@
 
 本文档收录万智牌（Magic: The Gathering）中所有的锁牌。
 
-在本文档的定义下，锁牌指具有锁效应的永久物牌。锁效应指可以阻碍一位或多位牌手（这里的牌手必须包括至少一位对手，否则不被认定为是锁效应，下面不再赘述）进行某种操作的触发式异能、静止式异能或替代式效应。
+在本文档的定义下，锁牌指具有锁效应的永久物牌。锁效应指可以阻止或阻碍一位或多位牌手（这里的牌手必须包括至少一位对手，否则不被认定为是锁效应，下面不再赘述）进行某种操作的触发式异能、静止式异能或替代式效应。
 
 需要注意的是，所阻碍的操作必须是“一般意义上正常游戏进程会执行的操作”，具体来说，包括以下操作：
 
@@ -46,15 +46,12 @@
 	\item 重置永久物
 	\item 使由自己操控的永久物保持在战场上
 	\item 抓牌
+	\item 维持手牌数量
 	\item 执行特殊动作
-	\item 使永久物保持对自己最有利的状态
-	\item 搜寻牌库
-	\item 起动起动式异能
 	\item 施放咒语
+	\item 起动起动式异能
 	\item 触发触发式异能
 	\item 攻击/格挡
-	\item 和坟墓场互动
-	\item 维持手牌数量
 \end{itemize}
 
 也就是说，帷幕，辟邪，守护及其他类似异能，不被认为是锁效应。
@@ -75,6 +72,8 @@
 		\end{itemize}
 \end{enumerate}
 
+根据上述要求，类似“和平主义效应”，“赋税压身”这种效应，在本文档中均不算做锁效应。
+
 以下对锁牌的各种分类方式进行详细介绍。
 
 \section*{按照软硬分类}
@@ -91,34 +90,108 @@
 按照针对锁效应所阻碍的操作，可将锁牌分为以下几类：
 
 \begin{itemize}
-	\item 冬之球效应：使某一类永久物不能重置或者不能重置多于一定数量的牌，例如该锁类别的名称“冬之球” \hfill \textbf{（重置永久物）}
-    \item 生物Hate：该类牌最常见的效应为“具有某种特征的生物-X/-X”；还包括一些具有修改生物的攻防或异能效应的牌，例如“谦卑” \hfill \textbf{（使由自己操控的永久物保持在战场上，使永久物保持对自己最有利的状态）}
-	\item 地Hate：多数牌具有改变地所产的法术力的类别的效应，例如“腥红之月”，还包括一些会摧毁地的效应 \hfill \textbf{（使由自己操控的永久物保持在战场上，使永久物保持对自己最有利的状态）}
-	\item 抓牌锁：限制抓牌的牌，例如“启示天灾希欧蕊” \hfill \textbf{（抓牌）}
-	\item 眠梦法球效应：使某一类永久物需横置进入战场的效应，例如该锁类别的名称“眠梦法球” \hfill \textbf{（使永久物保持对自己最有利的状态）}
-	\item 搜寻牌库锁：限制搜寻牌库的牌，例如“狮族仲裁者” \hfill \textbf{（搜寻牌库）}
-	\item 起动式异能锁：限制起动式异能的牌，例如“万创卡恩” \hfill \textbf{（起动起动式异能）}
-	\item 释放锁：限制释放某一类咒语的牌，例如“卓尼斯官员” \hfill \textbf{（施放咒语）}
-	\item ETB(Enter The Battlefield)锁：限制永久物进战场触发异能的牌，例如“迟钝法球” \hfill \textbf{（触发触发式异能）}
-	\item 攻击/格挡锁：限制进攻/格挡的牌，例如“魂魅拘禁” \hfill \textbf{（攻击/格挡）}
-	\item 坟墓场Hate：限制与坟场进行互动的牌，包括阻止某些牌进入坟场，例如“道西虚空行者”和“虚空地脉”，也包括阻止坟墓场中的牌成为目标或者离开坟墓场等，例如“挖坟人囚笼”和“虔敬新兵丹尼克” \hfill \textbf{（和坟墓场互动）}
-	\item 手牌Hate：限制手牌数量的牌，包括减少手牌数量上限和弃牌，例如“核心卜算师金吉塔厦”和“夜幕本殿” \hfill \textbf{（维持手牌数量）}
-	\item 获得生命锁：阻止获得生命的牌，例如“莽闯暴猛龙” \hfill \textbf{（保持正常的异能或效应）}
-	\item 依法治理效应：限制每回合施放咒语的数量的牌，例如该锁类别的名称“依法治理” \hfill \textbf{（施放咒语）}
-	\item 大礼拜堂效应：使某一类永久物获得”即在维持开始时，不支付一定法术力就牺牲该永久物“异能的牌，例如该锁效应类别的名称“潘卓欧谷大礼拜堂” \hfill \textbf{（使由自己操控的永久物保持在战场上）}
-	\item 烟囱效应：在维持开始时牺牲某一类永久物的效应，例如该锁类别的名称“烟囱” \hfill \textbf{（使由自己操控的永久物保持在战场上）}
-	\item 其他：限制其他上述未提到操作的牌，例如“卡洛夫看守犬” \hfill \textbf{（保持正常的游戏步骤，执行特殊动作）}
+	\item \textbf{保持正常的游戏阶段和步骤：}
+		\begin{itemize}
+			\item 阶段/步骤锁（Phase/Step Stax）：跳过某个或某些游戏阶段或步骤。
+		\end{itemize}
+	\item \textbf{保持正常的异能或效应：}
+		\begin{itemize}
+			\item 搜寻牌库锁（Search Library Stax）：阻止搜寻牌库。
+			\item 搜寻牌库税（Search Library Tax）：使搜寻牌库需要付出某些额外代价。
+			\item 获得生命锁（Life Gain Stax）：阻碍获得生命。
+			\item 坟墓场锁（Graveyard Stax）：阻碍与坟墓场中的牌产生互动。
+			\item 坟墓场Hate（Graveyard Hate）：阻碍某一类永久物进入坟墓场。
+			\item 眠梦法球效应（Orb of Dreams Effect）：使某一类永久物需横置进战场。
+			\item 腥红之月效应（Blood Moon Effect）：改变地的类别或者所产费的颜色，以及使地失去异能。
+			\item 谦卑效应（Humility Effect）：改变生物的攻防为某个固定值，以及使生物失去异能。
+			\item 其他异能/效应锁（Other Ability/Effect Stax）：其他可以使异能或效应改变其正常运作方式的效应。
+			\item 其他异能/效应税（Other Ability/Effect Tax）：其他可以使异能或效应正常运作需要付出某些额外代价的效应。
+		\end{itemize}
+	\item \textbf{重置永久物：}
+		\begin{itemize}
+			\item 冬之球效应（Winter Orb Effect）：使某一类永久物不能重置或者不能重置多于一定数量。
+		\end{itemize}
+	\item \textbf{使由自己操控的永久物保持在战场上：}
+		\begin{itemize}
+			\item 生物Hate（Creature Hate）：使具有某种特征的生物-X/-X
+			\item 大礼拜堂/烟囱效应（Tabernacle/Smokestack Effect）：周期性（尝试）从战场上移去某一类永久物。
+		\end{itemize}
+	\item \textbf{抓牌：}
+		\begin{itemize}
+			\item 抓牌锁（Draw Stax）：阻止抓牌。
+			\item 抓牌税（Draw Tax）：使抓牌需要付出某些额外代价。
+		\end{itemize}
+	\item \textbf{维持手牌数量：}
+		\begin{itemize}
+			\item 手牌Hate（Hand Hate）：减少手牌数量上限，或者周期性弃牌。
+		\end{itemize}
+	\item \textbf{执行特殊动作：}
+		\begin{itemize}
+			\item 地锁（Land Stax）：阻止使用地。
+			\item 地税（Land Tax）：使使用地或者起动地的异能需要付出某些额外代价。
+			\item 其他特殊动作锁（Other Special Action Stax）：阻碍其他特殊动作。
+		\end{itemize}
+	\item \textbf{施放咒语：}
+		\begin{itemize}
+			\item 咒语锁（Spell Stax）：阻止施放某一类咒语。
+			\item 咒语税（Spell Tax）：使施放某一类咒语需要付出某些额外代价。
+			\item 依法治理效应（Rule of Law Effect）：限制每回合施放咒语的数量。
+			\item 止咒高僧效应（Grand Abolisher Effect）：限制施放咒语的时机。
+		\end{itemize}
+	\item \textbf{起动起动式异能：}
+		\begin{itemize}
+			\item 起动式异能锁（Activated Ability Stax）：阻止起动某一类起动式异能。
+			\item 起动式异能税（Activated Ability Tax）：使起动某一类起动式异能需要付出某些额外代价。
+		\end{itemize}
+	\item \textbf{触发触发式异能：}
+		\begin{itemize}
+			\item ETB锁（ETB Stax）：阻止触发某一类永久物在进入战场时会触发的触发式异能。
+			\item 其他触发式异能锁（Other Triggered Ability Stax）：阻碍其他触发式异能。
+		\end{itemize}
+	\item \textbf{攻击/格挡：}
+		\begin{itemize}
+			\item 攻击/格挡锁（Attack/Block Stax）：阻止攻击/格挡。
+			\item 攻击/格挡税（Attack/Block Tax）：使攻击/格挡需要付出某些额外代价。
+		\end{itemize}
 \end{itemize}
 
 本书中锁牌按照法术力费用和牌张类别进行分类，每张牌都会标出其中文基本信息、锁牌类型和赛制合法性。
 
-对于类似“神器生物”这种多类别，按照“生物>神器>结界>其他”的顺序进行分类。
+本书中所有收录的锁牌都可以在Moxfield网站上找到，地址为https://www.moxfield.com/decks/kBI9w5lzJUijYHVBWddzfg。
+
+对于类似“神器生物”这种多牌张类别牌，按照“生物>神器>结界>其他”的顺序进行分类。
 
 \tableofcontents
 
 \mainmatter
 
 \chapter{1费}
+
+\card
+{
+	card_english_name = Chalice of the Void,
+	card_image = Images/lcc-105-chalice-of-the-void.png,
+	card_chinese_name = 虚空圣杯,
+	mana_cost = \{X\}\{X\},
+	card_type = 神器,
+	description = 虚空圣杯进战场时上面有X个充电指示物。\\
+	每当任一牌手施放法术力值等同于虚空圣杯上充电指示物数量的咒语时，反击该咒语。,
+	stax_type = None,
+	is_in_restricted_list = Not RL,
+	legality / standard = notlegal,
+	legality / alchemy = notlegal,
+	legality / pioneer = notlegal,
+	legality / explorer = notlegal,
+	legality / modern = legal,
+	legality / historic = legal,
+	legality / legacy = legal,
+	legality / pauper = notlegal,
+	legality / vintage = restricted,
+	legality / timeless = legal,
+	legality / commander = legal,
+	legality / duel_commander = legal
+}
+
 
 \section{生物}
 
