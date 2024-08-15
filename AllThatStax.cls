@@ -1357,9 +1357,9 @@
 
 \keys_define:nn { card }
 {
-	card_english_name     .tl_set:N = \card_english_name,
-    card_image            .tl_set:N = \card_image,
+    card_english_name     .tl_set:N = \card_english_name,
     card_chinese_name     .tl_set:N = \card_chinese_name,
+    card_image            .tl_set:N = \card_image,
     mana_cost             .tl_set:N = \mana_cost,
     card_type             .tl_set:N = \card_type,
     description           .tl_set:N = \description,
@@ -1426,15 +1426,15 @@
 
 \keys_define:nn { mfcard }
 {
-	front_card_english_name .tl_set:N = \front_card_english_name,
-    front_card_image        .tl_set:N = \front_card_image,
+	  front_card_english_name .tl_set:N = \front_card_english_name,
     front_card_chinese_name .tl_set:N = \front_card_chinese_name,
+    front_card_image        .tl_set:N = \front_card_image,
     front_mana_cost         .tl_set:N = \front_mana_cost,
     front_card_type         .tl_set:N = \front_card_type,
     front_description       .tl_set:N = \front_description,
     back_card_english_name  .tl_set:N = \back_card_english_name,
-    back_card_image         .tl_set:N = \back_card_image,
     back_card_chinese_name  .tl_set:N = \back_card_chinese_name,
+    back_card_image         .tl_set:N = \back_card_image,
     back_mana_cost          .tl_set:N = \back_mana_cost,
     back_card_type          .tl_set:N = \back_card_type,
     back_description        .tl_set:N = \back_description,

@@ -1,6 +1,40 @@
 {
-    "sheet_name": "sheet.xlsx",
-    "multiface_sheet_name": "multiface_sheet.xlsx",
+    "sheet_file_name": "card_information_sheet.xlsx",
+    "sheet_name": "Sheet",
+    "multiface_sheet_name": "Multiface Sheet",
     "list_name": "list.txt",
-    "latex_name": "latex.txt"
+    "latex_name": "latex.txt",
+    "stax_type":
+    {
+        "Phase/Step Stax": "阶段/步骤锁",
+	    "Search Library Stax": "搜寻牌库锁",
+		"Search Library Tax": "搜寻牌库税",
+		"Life Gain Stax": "获得生命锁",
+		"Graveyard Stax": "坟墓场锁",
+		"Graveyard Hate": "坟墓场Hate",
+		"Orb of Dreams Effect": "眠梦法球效应",
+		"Blood Moon Effect": "腥红之月效应",
+		"Humility Effect": "谦卑效应",
+		"Other Ability/Effect Stax": "其他异能/效应锁",
+		"Other Ability/Effect Tax": "其他异能/效应税",
+		"Winter Orb Effect": "冬之球效应",
+		"Creature Hate": "生物Hate",
+		"Tabernacle/Smokestack Effect": "大礼拜堂/烟囱效应",
+		"Draw Stax": "抓牌锁",
+		"Draw Tax": "抓牌税",
+		"Hand Hate": "手牌Hate",
+		"Land Stax": "地锁",
+		"Land Tax": "地税",
+		"Other Special Action Stax": "其他特殊动作锁",
+		"Spell Stax": "咒语锁",
+		"Spell Tax": "咒语税",
+		"Rule of Law Effect": "依法治理效应",
+		"Grand Abolisher Effect": "止咒高僧效应",
+		"Activated Ability Stax": "起动式异能锁",
+		"Activated Ability Tax": "起动式异能税",
+		"ETB Stax": "ETB锁",
+		"Other Triggered Ability Stax": "其他触发式异能锁",
+		"Attack/Block Stax": "攻击/格挡锁",
+		"Attack/Block Tax": "攻击/格挡税"
+    }
 }
