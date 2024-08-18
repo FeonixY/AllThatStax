@@ -18,8 +18,8 @@ def sort_key(item):
     return (cmc, card_type, card_english_name)
 
 card_type_order = {
-    '生物': 1,
-    '神器': 2,
-    '结界': 3,
-    '其他': 4
+    "生物": 1,
+    "神器": 2,
+    "结界": 3,
+    "其他": 4
 }

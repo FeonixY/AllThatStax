@@ -2,7 +2,8 @@ from utils import read_xlsx_excel, sort_key
 
 """
 单面牌表格结构：
-card_english_name, card_chinese_name, card_image_name, mana_cost, card_type, card_description, stax_type, is_rl, 
+card_english_name, card_chinese_name, card_image_name, mana_cost, card_type, card_description,
+stax_type, is_rl, 
 legalities["standard"], legalities["alchemy"], legalities["pioneer"], legalities["explorer"],
 legalities["modern"], legalities["historic"], legalities["legacy"], legalities["pauper"],
 legalities["vintage"], legalities["timeless"], legalities["commander"], legalities["duel"],
@@ -93,6 +94,23 @@ def genarate_latex(sheet_file_name, sheet_name, multiface_sheet_name, latex_name
     
     latex_datas.sort(key = sort_key)
 
+    # 写入文件，同时插入章节和小节标记
     with open(latex_name, "w", encoding = "utf-8") as f:
+        current_cmc = None
+        current_sort_card_type = None
+        
         for latex_data in latex_datas:
+            card, cmc, sort_card_type, card_english_name = latex_data
+
+            if cmc != current_cmc:
+                current_cmc = cmc
+                if current_cmc == 0:
+                    f.write(f"\\chapter{{{current_cmc}费（包括地）}}\n\n")
+                else:
+                    f.write(f"\\chapter{{{current_cmc}费}}\n\n")
+
+            if sort_card_type != current_sort_card_type:
+                current_sort_card_type = sort_card_type
+                f.write(f"\\section{{{current_sort_card_type}}}\n\n")
+                
             f.write(latex_data[0])

@@ -10,6 +10,7 @@ sheet_name = data["sheet_name"]
 multiface_sheet_name = data["multiface_sheet_name"]
 list_name = data["list_name"]
 latex_name = data["latex_name"]
+stax_type_dict = data["stax_type"]
 
-get_cards_information(sheet_file_name, sheet_name, multiface_sheet_name, list_name)
+get_cards_information(sheet_file_name, sheet_name, multiface_sheet_name, list_name, stax_type_dict)
 genarate_latex(sheet_file_name, sheet_name, multiface_sheet_name, latex_name)
