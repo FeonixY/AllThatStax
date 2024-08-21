@@ -1,4 +1,5 @@
 {
+	"image_folder_name": "Images",
     "sheet_file_name": "card_information_sheet.xlsx",
     "sheet_name": "Sheet",
     "multiface_sheet_name": "Multiface Sheet",

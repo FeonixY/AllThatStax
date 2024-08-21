@@ -1,4 +1,5 @@
-from utils import read_xlsx_excel, sort_key
+import re
+from openpyxl import load_workbook
 
 """
 单面牌表格结构：
@@ -19,7 +20,36 @@ legalities["vintage"], legalities["timeless"], legalities["commander"], legaliti
 cmc, sort_card_type
 """
 
-def genarate_latex(sheet_file_name, sheet_name, multiface_sheet_name, latex_name):
+def genarate_latex(
+        sheet_file_name : str,
+        sheet_name : str,
+        multiface_sheet_name : str,
+        latex_name : str):
+    
+    def read_xlsx_excel(sheet_file_name, read_sheet_name):
+        workbook = load_workbook(sheet_file_name)
+        sheet = workbook[read_sheet_name]
+        data = []
+        for row in sheet.rows:
+            data_row = []
+            for cell in row:
+                data_row.append(cell.value)
+            data.append(data_row)
+        return data
+
+    def sort_key(item):
+        cmc = item[1]
+        card_type = card_type_order[item[2]]
+        card_english_name = item[3]
+        return (cmc, card_type, card_english_name)
+
+    card_type_order = {
+        "生物": 1,
+        "神器": 2,
+        "结界": 3,
+        "其他": 4
+    }
+
     latex_datas = []
 
     # 处理单面牌数据
@@ -28,12 +58,12 @@ def genarate_latex(sheet_file_name, sheet_name, multiface_sheet_name, latex_name
     for data_row in data:
         card = f"\\card\n" \
             f"{{\n" \
-            f"\tcard_english_name = {data_row[0]},\n" \
-            f"\tcard_chinese_name = {data_row[1]},\n" \
+            f"\tcard_english_name = {{{data_row[0]}}},\n" \
+            f"\tcard_chinese_name = {{{data_row[1]}}},\n" \
             f"\tcard_image = {data_row[2]},\n" \
-            f"\tmana_cost = {(str)(data_row[3]).replace("{", "\\{").replace("}", "\\}")},\n" \
+            f"\tmana_cost = {(str)(data_row[3]).replace("{", "\\MTGsymbol{").replace("}", "}{5}")},\n" \
             f"\tcard_type = {data_row[4]},\n" \
-            f"\tdescription = {(str)(data_row[5]).replace("{", "\\{").replace("}", "\\}")},\n" \
+            f"\tdescription = {{{re.sub(r"\([^)]*\)|（[^）]*）", "", str(data_row[5]).replace("{", "\\MTGsymbol{").replace("}", "}{3}").replace("\n", "\\\\\n"))}}},\n" \
             f"\tstax_type = {data_row[6]},\n" \
             f"\tis_in_restricted_list = {data_row[7]},\n" \
             f"\tlegality / standard = {data_row[8]},\n" \
@@ -60,18 +90,18 @@ def genarate_latex(sheet_file_name, sheet_name, multiface_sheet_name, latex_name
     for multiface_data_row in multiface_data:
         multiface_card = f"\\mfcard\n" \
             f"{{\n" \
-            f"\tfront_card_enlish_name = {multiface_data_row[0]},\n" \
-            f"\tfront_card_chinese_name = {multiface_data_row[1]},\n" \
+            f"\tfront_card_english_name = {{{multiface_data_row[0]}}},\n" \
+            f"\tfront_card_chinese_name = {{{multiface_data_row[1]}}},\n" \
             f"\tfront_card_image = {multiface_data_row[2]},\n" \
-            f"\tfront_mana_cost = {(str)(multiface_data_row[3]).replace("{", "\\{").replace("}", "\\}")},\n" \
+            f"\tfront_mana_cost = {(str)(multiface_data_row[3]).replace("{", "\\MTGsymbol{").replace("}", "}{5}")},\n" \
             f"\tfront_card_type = {multiface_data_row[4]},\n" \
-            f"\tfront_description = {(str)(multiface_data_row[5]).replace("{", "\\{").replace("}", "\\}")},\n" \
-            f"\tback_card_english_name = {multiface_data_row[6]},\n" \
-            f"\tback_card_chinese_name = {multiface_data_row[7]},\n" \
+            f"\tfront_description = {{{re.sub(r"\([^)]*\)|（[^）]*）", "", str(multiface_data_row[5]).replace("{", "\\MTGsymbol{").replace("}", "}{3}").replace("\n", "\\\\\n"))}}},\n" \
+            f"\tback_card_english_name = {{{multiface_data_row[6]}}},\n" \
+            f"\tback_card_chinese_name = {{{multiface_data_row[7]}}},\n" \
             f"\tback_card_image = {multiface_data_row[8]},\n" \
-            f"\tback_mana_cost = {(str)(multiface_data_row[9]).replace("{", "\\{").replace("}", "\\}")},\n" \
+            f"\tback_mana_cost = {(str)(multiface_data_row[9]).replace("{", "\\MTGsymbol{").replace("}", "}{5}")},\n" \
             f"\tback_card_type = {multiface_data_row[10]},\n" \
-            f"\tback_description = {(str)(multiface_data_row[11]).replace("{", "\\{").replace("}", "\\}")},\n" \
+            f"\tback_description = {{{re.sub(r"\([^)]*\)|（[^）]*）", "", str(multiface_data_row[11]).replace("{", "\\MTGsymbol{").replace("}", "}{3}").replace("\n", "\\\\\n"))}}},\n" \
             f"\tstax_type = {multiface_data_row[12]},\n" \
             f"\tis_in_restricted_list = {multiface_data_row[13]},\n" \
             f"\tlegality / standard = {multiface_data_row[14]},\n" \

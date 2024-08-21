@@ -1,377 +1,380 @@
-1 Aether Barrier
-1 Aether Flash
-1 Alms Collector
-1 An-Zerrin Ruins
-1 Anafenza, the Foremost
-1 Angel of Jubilation
-1 Angelic Arbiter
-1 Anowon, the Ruin Sage
-1 Arboria
-1 Arcane Laboratory
-1 Archangel of Tithes
-1 Archelos, Lagoon Mystic
-1 Archfiend of Despair
-1 Archon of Absolution
-1 Archon of Emeria
-1 Archon of Valor's Reach
-1 Arena of the Ancients
-1 Ascendant Evincar
-1 Ashes of the Abhorrent
-1 Ashiok, Dream Render
-1 Ashling's Prerogative
-1 Aura Flux
-1 Aura of Silence
-1 Authority of the Consuls
-1 Aven Interrupter
-1 Aven Mindcensor
-1 Back to Basics
-1 Baird, Steward of Argive
-1 Basandra, Battle Seraph
-1 Bedlam
-1 Blazing Archon
-1 Blightbeetle
-1 Blind Obedience
-1 Blood Moon
-1 Blood Sun
-1 Bloodroot Apothecary
-1 Boromir, Warden of the Tower
-1 Bottomless Pit
-1 Braids, Cabal Minion
-1 Brand of Ill Omen
-1 Breath of Dreams
-1 Briar Patch
-1 Brisela, Voice of Nightmares
-1 Brutal Suppression
-1 Burning Earth
-1 Burning Sands
-1 Caltrops
-1 Catalyst Stone
-1 Caverns of Despair
-1 Chains of Mephistopheles
-1 Chalice of the Void
-1 Champions of Minas Tirith
-1 Chancellor of the Annex
-1 Charitable Levy
-1 Chill
-1 Choke
-1 Circle of Flame
-1 City in a Bottle
-1 Collective Restraint
-1 Collector Ouphe
-1 Confounding Conundrum
-1 Conqueror's Flail
-1 Containment Priest
-1 Contamination
-1 Cornered Market
-1 Cowardice
-1 Crackdown
-1 Crawlspace
-1 Creeping Dread
-1 Crovax, Ascendant Hero
-1 Curse of Exhaustion
-1 Curse of Marit Lage
-1 Cursed Totem
-1 Damping Engine
-1 Damping Field
-1 Damping Matrix
-1 Damping Sphere
-1 Dauntless Dismantler
-1 Dauthi Voidwalker
-1 Deafening Silence
-1 Defense Grid
-1 Defiler of Souls
-1 Dennick, Pious Apprentice
-1 Dense Foliage
-1 Destructive Flow
-1 Disciple of Caelus Nin
-1 Dissipation Field
-1 Doom Foretold
-1 Doorkeeper Thrull
-1 Dovescape
-1 Dovin, Hand of Control
-1 Drana and Linvala
-1 Drannith Magistrate
-1 Dread of Night
-1 Dream Tides
-1 Drop of Honey
-1 Drought
-1 Dryad Militant
-1 Dueling Grounds
-1 Dystopia
-1 Earthlink
-1 Eidolon of Obstruction
-1 Eidolon of Rhetoric
-1 Elephant Grass
-1 Elesh Norn
-1 Elesh Norn, Grand Cenobite
-1 Elesh Norn, Mother of Machines
-1 Embargo
-1 Enemy of Enlightenment
-1 Energy Flux
-1 Energy Storm
-1 Engineered Plague
-1 Ensnaring Bridge
-1 Erayo, Soratami Ascendant
-1 Erebos, God of the Dead
-1 Eriette of the Charmed Apple
-1 Ethereal Absolution
-1 Ethersworn Canonist
-1 Everlasting Torment
-1 Exiled Doomsayer
-1 Eye of Singularity
-1 False Floor
-1 Feroz's Ban
-1 Flooded Woodlands
-1 Forsaken Wastes
-1 Frozen Aether
-1 Gaddock Teeg
-1 Ghostly Prison
-1 Giant Cindermaw
-1 Gibbering Descent
-1 Gloom
-1 Glowrider
-1 Gnat Miser
-1 God-Pharaoh's Statue
-1 Grafdigger's Cage
-1 Grand Arbiter Augustin IV
-1 Gravity Sphere
-1 Gríma Wormtongue
-1 Hall of Gemstone
-1 Hand to Hand
-1 Harbinger of the Seas
-1 Havoc
-1 Havoc Festival
-1 High Noon
-1 High Seas
-1 Hinata, Dawn-Crowned
-1 Hokori, Dust Drinker
-1 Honden of Night's Reach
-1 Hullbreacher
-1 Hum of the Radix
-1 Humility
-1 Hushbringer
-1 Hushwing Gryff
-1 Illness in the Ranks
-1 Imi Statue
-1 Impatience
-1 Imposing Sovereign
-1 In the Eye of Chaos
-1 Infernal Darkness
-1 Intruder Alarm
-1 Iona, Shield of Emeria
-1 Irini Sengir
-1 Island Sanctuary
-1 Jin-Gitaxias, Core Augur
-1 Jin-Gitaxias, Progress Tyrant
-1 Judoon Enforcers
-1 Juntu Stakes
-1 Kaervek, the Spiteful
-1 Kambal, Consul of Allocation
-1 Karlov Watchdog
-1 Karn, the Great Creator
-1 Karn's Sylex
-1 Katabatic Winds
-1 Kataki, War's Wage
-1 Kinjalli's Sunwing
-1 Kismet
-1 Knight of Dusk's Shadow
-1 Koskun Falls
-1 Kudo, King Among Bears
-1 Kudzu
-1 Kulrath Knight
-1 Kunoros, Hound of Athreos
-1 Kutzil, Malamet Exemplar
-1 Land Equilibrium
-1 Lavinia, Azorius Renegade
-1 Leonin Arbiter
-1 Leovold, Emissary of Trest
-1 Leyline of Punishment
-1 Leyline of Singularity
-1 Leyline of the Void
-1 Liesa, Shroud of Dusk
-1 Light of Day
-1 Limited Resources
-1 Linvala, Keeper of Silence
-1 Llawan, Cephalid Empress
-1 Locust Miser
-1 Lodestone Golem
-1 Loxodon Gatekeeper
-1 MacCready, Lamplight Mayor
-2 Maddening Hex
-1 Magebane Lizard
-1 Magistrate's Veto
-1 Magnetic Mountain
-1 Magus of the Abyss
-1 Magus of the Moon
-1 Magus of the Tabernacle
-1 Mana Breach
-1 Mana Maze
-1 Mana Vortex
-1 Manabarbs
-1 Manglehorn
-1 Maralen of the Mornsong
-1 Marble Titan
-1 Meekstone
-1 Meishin, the Mind Cage
-1 Michiko Konda, Truth Seeker
-1 Mindlock Orb
-1 Misery's Shadow
-1 Mist of Stagnation
-1 Moat
-1 Molder Slug
-1 Mudslide
-1 Naked Singularity
-1 Narset, Parter of Veils
-1 Nature's Wrath
-1 Necrogen Mists
-1 Necrogoyf
-1 Nekusar, the Mindrazer
-1 Nether Void
-1 Night of Souls' Betrayal
-1 Noetic Scales
-1 Norn's Annex
-1 Notion Thief
-1 Null Rod
-1 Nullstone Gargoyle
-1 Ob Nixilis, Unshackled
-1 Omen Machine
-1 Onakke Oathkeeper
-1 Opposition Agent
-1 Oppression
-1 Orb of Dreams
-1 Orcish Bowmasters
-1 Overburden
-1 Overencumbered
-1 Painful Quandary
-1 Peacekeeper
-1 Pendrell Mists
-1 Phyrexian Censor
-1 Pillar Tombs of Aku
-1 Plague Drone
-1 Plague Engineer
-1 Planar Void
-1 Porphyry Nodes
-1 Portcullis
-1 Possessed Portal
-1 Pramikon, Sky Rampart
-1 Presence of the Master
-1 Price of Glory
-1 Propaganda
-1 Putrefaction
-1 Pyrostatic Pillar
-1 Quakebringer
-1 Quicksilver Fountain
-1 Rain of Gore
-1 Rampaging Ferocidon
-1 Reality Twist
-1 Reclamation
-1 Reidane, God of the Worthy
-1 Rest in Peace
-1 Rising Waters
-1 Ritual of Subdual
-1 River Song
-1 Roiling Vortex
-1 Root Maze
-1 Rule of Law
-1 Ruric Thar, the Unbowed
-1 Samurai of the Pale Curtain
-1 Sanctifier en-Vec
-1 Sanctum Prelate
-1 Scald
-1 Screaming Nemesis
-1 Scytheclaw Raptor
-1 Sen Triplets
-1 Shared Fate
-1 Sharkey, Tyrant of the Shire
-1 Sheoldred, the Apocalypse
-1 Sheoldred, Whispering One
-1 Silent Arbiter
-1 Sire of Insanity
-1 Smog Elemental
-1 Smoke
-1 Smokestack
-1 Solemnity
-1 Soulless Jailer
-1 Spelltithe Enforcer
-1 Sphere of Resistance
-1 Sphere of Safety
-1 Spirit of the Labyrinth
-1 Spreading Plague
-1 Squeeze
-1 Stabilizer
-1 Stasis
-1 Static Orb
-1 Stigma Lasher
-1 Stoic Angel
-1 Stone of Erech
-1 Stony Silence
-1 Storage Matrix
-1 Storm Cauldron
-1 Stormtide Leviathan
-1 Stranglehold
-1 Strict Proctor
-1 Stronghold Taskmaster
-1 Sulfur Elemental
-1 Sulfuric Vortex
-1 Sunspine Lynx
-1 Suppression Field
-1 Tainted Aether
-1 Tainted Remedy
-1 Talion, the Kindly Lord
-1 Tangle Wire
-1 Tectonic Instability
-1 Teferi, Mage of Zhalfir
-1 Teferi, Time Raveler
-1 Teferi's Realm
-1 Territorial Dispute
-1 Thalia and The Gitrog Monster
-1 Thalia, Guardian of Thraben
-1 Thalia, Heretic Cathar
-1 The Abyss
-1 The Immortal Sun
-1 The Tabernacle at Pendrell Vale
-1 Thorn of Amethyst
-1 Tibalt, Rakish Instigator
-1 Titania's Song
-1 Tocatli Honor Guard
-1 Tomik, Wielder of Law
-1 Torment of Scarabs
-1 Torpor Orb
-1 Toxrill, the Corrosive
-1 Trinisphere
-1 Triumph of Cruelty
-1 Trouble in Pairs
-1 Tsabo's Web
-1 Uba Mask
-1 Ugin's Nexus
-1 Underworld Cerberus
-1 Unstable Glyphbridge
-1 Uphill Battle
-1 Urabrask the Hidden
-1 Urabrask, Heretic Praetor
-1 Urborg Shambler
-1 Valentin, Dean of the Vein
-1 Vengeful Tracker
-1 Vexing Bauble
-1 Virulent Plague
-1 Void Mirror
-1 Void Winnower
-1 Vorinclex, Monstrous Raider
-1 Vorinclex, Voice of Hunger
-1 Vryn Wingmare
-1 Wandering Archaic
-1 War's Toll
-1 Ward of Bones
-1 Weathered Runestone
-1 Windborn Muse
-1 Winter Moon
-1 Winter Orb
-1 Witch Hunt
-1 Witch-king of Angmar
-1 World Queller
-1 Wrath of Marit Lage
-1 Yasharn, Implacable Earth
-1 Yixlid Jailer
-1 Yurlok of Scorch Thrash
-1 Zo-Zu the Punisher
-1 Zur's Weirding
+1 Aether Barrier (NEM) 27 #Spell Tax
+1 Aether Flash (WTH) 88 #Creature Hate
+1 Alms Collector (C17) 1 #Draw Stax
+1 An-Zerrin Ruins (HML) 64 #Winter Orb Effect
+1 Anafenza, the Foremost (KTK) 163 #Graveyard Hate
+1 Angel of Jubilation (AVR) 2 #Activated Ability Stax #Spell Stax
+1 Angelic Arbiter (CMA) 4 #Attack/Block Stax #Spell Stax
+1 Anowon, the Ruin Sage (VOC) 118 #Tabernacle/Smokestack Effect
+1 Arboria (DMR) 335 #Attack/Block Stax
+1 Arcane Laboratory (7ED) 60 #Rule of Law Effect
+1 Archangel of Tithes (OTJ) 2 #Attack/Block Tax
+1 Archelos, Lagoon Mystic (CMR) 268 #Orb of Dreams Effect
+1 Archfiend of Despair (BBD) 44 #Life Gain Stax
+1 Archon of Absolution (ELD) 3 #Attack/Block Tax
+1 Archon of Emeria (ZNR) 4 #Orb of Dreams Effect #Rule of Law Effect
+1 Archon of Valor's Reach (BBD) 74 #Spell Stax
+1 Arena of the Ancients (CHR) 91 #Winter Orb Effect
+1 Ascendant Evincar (10E) 127 #Creature Hate
+1 Ashes of the Abhorrent (XLN) 2 #Graveyard Stax
+1 Ashiok, Dream Render (WAR) 228 #Search Library Stax
+1 Ashling's Prerogative (LRW) 150 #Orb of Dreams Effect
+1 Aura Flux (ULG) 27 #Tabernacle/Smokestack Effect
+1 Aura of Silence (10E) 6 #Spell Tax
+1 Authority of the Consuls (KLD) 5 #Orb of Dreams Effect
+1 Aven Interrupter (OTJ) 4 #Spell Tax
+1 Aven Mindcensor (TSR) 5 #Search Library Stax
+1 Back to Basics (UMA) 46 #Winter Orb Effect
+1 Baird, Steward of Argive (DOM) 4 #Attack/Block Tax
+1 Basandra, Battle Seraph (CMA) 174 #Grand Abolisher Effect
+1 Bedlam (7ED) 174 #Attack/Block Stax
+1 Blazing Archon (RVR) 302 #Attack/Block Stax
+1 Blightbeetle (M20) 87 #Other Ability/Effect Stax
+1 Blind Obedience (RVR) 9 #Orb of Dreams Effect
+1 Blood Moon (CHR) 46 #Blood Moon Effect
+1 Blood Sun (RIX) 92 #Blood Moon Effect
+1 Bloodroot Apothecary (BLC) 27 #Other Ability/Effect Tax
+1 Boromir, Warden of the Tower (LTR) 4 #Spell Stax
+1 Bottomless Pit (STH) 51 #Hand Hate
+1 Braids, Cabal Minion (EMA) 82 #Tabernacle/Smokestack Effect
+1 Brand of Ill Omen (ICE) 177 #Spell Stax
+1 Breath of Dreams (ICE) 62 #Tabernacle/Smokestack Effect
+1 Briar Patch (MMQ) 232 #Attack/Block Tax
+1 Brisela, Voice of Nightmares (EMN) 15b #Spell Stax
+1 Brutal Suppression (PCY) 85 #Activated Ability Tax
+1 Burning Earth (M14) 130 #Land Tax
+1 Burning Sands (ODY) 180 #Other Ability/Effect Tax
+1 Caltrops (UDS) 129 #Attack/Block Tax
+1 Catalyst Stone (ODY) 297 #Spell Tax
+1 Caverns of Despair (LEG) 136 #Attack/Block Stax
+1 Cemetery Gatekeeper (VOW) 304 #Land Tax #Spell Tax
+1 Chains of Mephistopheles (LEG) 91 #Draw Tax
+1 Chalice of the Void (MMA) 203 #Spell Stax
+1 Champions of Minas Tirith (LTC) 10 #Attack/Block Tax
+1 Chancellor of the Annex (PLST) NPH-6 #Spell Tax
+1 Charitable Levy (MH3) 21 #Spell Tax
+1 Chill (6ED) 60 #Spell Tax
+1 Choke (8ED) 237 #Winter Orb Effect
+1 Circle of Flame (M15) 135 #Attack/Block Tax
+1 City in a Bottle (ARN) 60 #Land Stax #Spell Stax
+1 Collective Restraint (INV) 49 #Attack/Block Tax
+1 Collector Ouphe (PLST) MH1-158 #Activated Ability Stax
+1 Confounding Conundrum (ZNR) 53 #Land Stax
+1 Conqueror's Flail (C16) 53 #Grand Abolisher Effect
+1 Containment Priest (M21) 13 #Creature Hate
+1 Contamination (PLST) USG-123 #Blood Moon Effect
+1 Cornered Market (MMQ) 14 #Land Stax #Spell Stax
+1 Cowardice (8ED) 71 #Other Ability/Effect Stax
+1 Crackdown (MMQ) 15 #Winter Orb Effect
+1 Crawlspace (DMR) 375 #Attack/Block Stax
+1 Creeping Dread (SOI) 104 #Hand Hate
+1 Crovax, Ascendant Hero (TSR) 15 #Creature Hate
+1 Curse of Exhaustion (DKA) 5 #Rule of Law Effect
+1 Curse of Marit Lage (ICE) 181 #Winter Orb Effect
+1 Cursed Totem (MH2) 295 #Activated Ability Stax
+1 Damping Engine (ULG) 124 #Land Stax #Spell Stax
+1 Damping Field (ATQ) 5 #Winter Orb Effect
+1 Damping Matrix (MRD) 161 #Activated Ability Stax
+1 Damping Sphere (DOM) 213 #Blood Moon Effect #Spell Tax
+1 Dauntless Dismantler (LCI) 8 #Orb of Dreams Effect
+1 Dauthi Voidwalker (MH2) 81 #Graveyard Hate
+1 Deafening Silence (ELD) 10 #Rule of Law Effect
+1 Defense Grid (BRR) 13 #Grand Abolisher Effect
+1 Defiler of Souls (ARB) 37 #Tabernacle/Smokestack Effect
+1 Dennick, Pious Apprentice / Dennick, Pious Apparition (MID) 217 #Graveyard Stax
+1 Destructive Flow (PLS) 102 #Tabernacle/Smokestack Effect
+1 Disciple of Caelus Nin (BRC) 41 #Other Ability/Effect Stax
+1 Dissipation Field (CLB) 718 #Attack/Block Tax #Other Ability/Effect Tax
+1 Doom Foretold (ELD) 187 #Tabernacle/Smokestack Effect
+1 Doorkeeper Thrull (MKM) 338 #ETB Stax
+1 Dovescape (GK2) 11 #Spell Stax
+1 Dovin, Hand of Control (WAR) 229 #Spell Tax
+1 Drana and Linvala (MOM) 222 #Activated Ability Stax
+1 Drannith Magistrate (PIKO) 11p #Spell Stax
+1 Dread of Night (TMP) 130 #Creature Hate
+1 Dream Tides (VIS) 31 #Winter Orb Effect
+1 Drop of Honey (ARN) 47 #Tabernacle/Smokestack Effect
+1 Drought (ICE) 21 #Activated Ability Tax #Spell Tax
+1 Dryad Militant (RTR) 214 #Graveyard Hate
+1 Dueling Grounds (INV) 245 #Attack/Block Stax
+1 Dystopia (ALL) 47 #Tabernacle/Smokestack Effect
+1 Earthlink (ICE) 285 #Other Ability/Effect Tax
+1 Eidolon of Obstruction (PTHB) 12p #Activated Ability Tax
+1 Eidolon of Rhetoric (JOU) 10 #Rule of Law Effect
+1 Elephant Grass (PLST) VIS-104 #Attack/Block Tax
+1 Elesh Norn / The Argent Etchings (MOM) 12 #Other Ability/Effect Tax
+1 Elesh Norn, Grand Cenobite (SLD) 209 #Creature Hate
+1 Elesh Norn, Mother of Machines (ONE) 10 #ETB Stax
+1 Embargo (MMQ) 77 #Winter Orb Effect
+1 Enemy of Enlightenment (THB) 92 #Hand Hate
+1 Energy Flux (5ED) 83 #Tabernacle/Smokestack Effect
+1 Energy Storm (ICE) 24 #Winter Orb Effect
+1 Engineered Plague (ULG) 51 #Creature Hate
+1 Ensnaring Bridge (LTC) 350 #Attack/Block Stax
+1 Erayo, Soratami Ascendant / Erayo's Essence (SOK) 35 #Spell Stax
+1 Erebos, God of the Dead (THS) 85 #Life Gain Stax
+1 Eriette of the Charmed Apple (WOE) 299 #Attack/Block Stax
+1 Ethereal Absolution (RNA) 170 #Creature Hate
+1 Ethersworn Canonist (2XM) 14 #Spell Stax
+1 Everlasting Torment (C16) 233 #Life Gain Stax
+1 Exiled Doomsayer (SCG) 13 #Other Special Action Stax
+1 Eye of Singularity (VIS) 4 #Other Ability/Effect Stax
+1 False Floor (NCC) 82 #Orb of Dreams Effect
+1 Fatespinner (MRD) 36 #Phase/Step Stax
+1 Feroz's Ban (HML) 107 #Spell Tax
+1 Flooded Woodlands (ICE) 290 #Attack/Block Tax
+1 Forsaken Wastes (MIR) 125 #Life Gain Stax
+1 Frozen Aether (PLC) 54 #Orb of Dreams Effect
+1 Gaddock Teeg (UMA) 199 #Spell Stax
+1 Ghostly Prison (C19) 64 #Attack/Block Stax
+1 Giant Cindermaw (BRO) 136 #Life Gain Stax
+1 Gibbering Descent (FUT) 66 #Hand Hate
+1 Gloom (5ED) 165 #Activated Ability Tax #Spell Tax
+1 Glowrider (LGN) 15 #Spell Tax
+1 Gnat Miser (SOK) 70 #Hand Hate
+1 God-Pharaoh's Statue (WAR) 238 #Spell Tax
+1 Godsend (JOU) 12 #Spell Stax
+1 Grafdigger's Cage (MM3) 221 #Graveyard Stax
+1 Grand Abolisher (BIG) 2 #Grand Abolisher Effect
+1 Grand Arbiter Augustin IV (PLST) MMA-176 #Spell Tax
+1 Gravity Sphere (LEG) 151 #Humility Effect
+1 Gríma Wormtongue (LTR) 88 #Life Gain Stax
+1 Hall of Gemstone (MIR) 221 #Blood Moon Effect
+1 Hand to Hand (TMP) 180 #Grand Abolisher Effect
+1 Harbinger of the Seas (MH3) 63 #Blood Moon Effect
+1 Havoc (TMP) 181 #Spell Tax
+1 Havoc Festival (RTR) 166 #Life Gain Stax
+1 High Noon (OTJ) 15 #Rule of Law Effect
+1 High Seas (MMQ) 83 #Spell Tax
+1 Hinata, Dawn-Crowned (NEO) 222 #Spell Tax
+1 Hokori, Dust Drinker (PLST) BOK-7 #Winter Orb Effect
+1 Honden of Night's Reach (CHK) 116 #Hand Hate
+1 Hullbreacher (CMR) 74 #Draw Stax
+1 Hum of the Radix (MRD) 122 #Spell Tax
+1 Humility (TMP) 24 #Humility Effect
+1 Hushbringer (ELD) 18 #ETB Stax #Other Triggered Ability Stax
+1 Hushwing Gryff (M15) 15 #ETB Stax
+1 Illness in the Ranks (GTC) 69 #Creature Hate
+1 Imi Statue (CHK) 255 #Winter Orb Effect
+1 Imposing Sovereign (M14) 22 #Orb of Dreams Effect
+1 In the Eye of Chaos (LEG) 61 #Spell Tax
+1 Infernal Darkness (ICE) 135 #Blood Moon Effect
+1 Intruder Alarm (WOT) 21 #Winter Orb Effect
+1 Iona, Shield of Emeria (MM2) 20 #Spell Stax
+1 Irini Sengir (HML) 54 #Spell Tax
+1 Jin-Gitaxias, Core Augur (SLD) 210 #Hand Hate
+1 Jin-Gitaxias, Progress Tyrant (NEO) 59 #Spell Stax
+1 Judoon Enforcers (WHO) 138 #Attack/Block Stax
+1 Juntu Stakes (INV) 304 #Winter Orb Effect
+1 Kaervek, the Spiteful (M21) 106 #Creature Hate
+1 Kambal, Consul of Allocation (KLD) 183 #Spell Tax
+1 Karlov Watchdog (MKM) 20 #Other Special Action Stax
+1 Karn, the Great Creator (WAR) 1 #Activated Ability Stax
+1 Karn's Sylex (DMU) 234 #Activated Ability Stax #Spell Stax
+1 Katabatic Winds (VIS) 109 #Activated Ability Stax #Attack/Block Stax
+1 Kataki, War's Wage (MD1) 24 #Tabernacle/Smokestack Effect
+1 Kinjalli's Sunwing (XLN) 19 #Orb of Dreams Effect
+1 Kismet (4ED) 33 #Orb of Dreams Effect
+1 Knight of Dusk's Shadow (DMU) 96 #Life Gain Stax
+1 Koskun Falls (HML) 55 #Attack/Block Tax
+1 Kudo, King Among Bears (MH3) 192 #Humility Effect
+1 Kulrath Knight (SHM) 190 #Attack/Block Stax
+1 Kunoros, Hound of Athreos (THB) 222 #Graveyard Stax
+1 Kutzil, Malamet Exemplar (LCI) 304 #Grand Abolisher Effect
+1 Land Equilibrium (LEG) 64 #Land Stax
+1 Lavinia, Azorius Renegade (RVR) 195 #Spell Stax
+1 Leonin Arbiter (2X2) 16 #Search Library Stax
+1 Leovold, Emissary of Trest (UMA) 202 #Draw Stax
+1 Leyline of Punishment (M11) 148 #Life Gain Stax
+1 Leyline of Singularity (GPT) 29 #Other Ability/Effect Stax
+1 Leyline of the Void (M20) 107 #Graveyard Hate
+1 Liesa, Shroud of Dusk (CMR) 286 #Spell Tax
+1 Light of Day (6ED) 29 #Attack/Block Stax
+1 Limited Resources (EXO) 10 #Land Stax
+1 Linvala, Keeper of Silence (MM3) 13 #Activated Ability Stax
+1 Llawan, Cephalid Empress (TOR) 42 #Spell Stax
+1 Locust Miser (SOK) 80 #Hand Hate
+1 Lodestone Golem (BRR) 29 #Spell Tax
+1 Loxodon Gatekeeper (RAV) 25 #Orb of Dreams Effect
+1 MacCready, Lamplight Mayor (PIP) 108 #Attack/Block Tax
+1 Maddening Hex (AFC) 301 #Spell Tax
+1 Magebane Lizard (OTJ) 134 #Spell Tax
+1 Magistrate's Veto (MMQ) 204 #Attack/Block Stax
+1 Magnetic Mountain (4ED) 209 #Winter Orb Effect
+1 Magus of the Abyss (2XM) 97 #Tabernacle/Smokestack Effect
+1 Magus of the Moon (IMA) 138 #Blood Moon Effect
+1 Magus of the Tabernacle (PLC) 8 #Tabernacle/Smokestack Effect
+1 Mana Breach (EXO) 38 #Spell Tax
+1 Mana Maze (INV) 59 #Spell Stax
+1 Mana Vortex (DRK) 31 #Tabernacle/Smokestack Effect
+1 Manabarbs (4ED) 212 #Land Tax
+1 Manglehorn (AKH) 175 #Orb of Dreams Effect
+1 Maralen of the Mornsong (MOR) 65 #Draw Stax
+1 Marble Titan (TMP) 28 #Winter Orb Effect
+1 Marisi, Breaker of the Coil (PLST) C19-46 #Grand Abolisher Effect
+1 Meekstone (4ED) 335 #Winter Orb Effect
+1 Meishin, the Mind Cage (SOK) 44 #Creature Hate
+1 Michiko Konda, Truth Seeker (PLST) SOK-19 #Other Ability/Effect Tax
+1 Mindlock Orb (ALA) 51 #Search Library Stax
+1 Mindwhisker (BLB) 60 #Humility Effect
+1 Misery's Shadow (BRO) 330 #Graveyard Hate
+1 Mist of Stagnation (JUD) 48 #Winter Orb Effect
+1 Moat (LEG) 28 #Attack/Block Stax
+1 Molder Slug (MRD) 125 #Tabernacle/Smokestack Effect
+1 Mudslide (ICE) 204 #Winter Orb Effect
+1 Naked Singularity (ICE) 330 #Blood Moon Effect
+1 Narset, Parter of Veils (WAR) 61 #Draw Stax
+1 Nature's Wrath (ALL) 98 #Land Tax
+1 Necrogen Mists (MRD) 69 #Hand Hate
+1 Necrogoyf (MH2) 451 #Hand Hate
+1 Nekusar, the Mindrazer (CMM) 349 #Draw Tax
+1 Nether Void (LEG) 113 #Spell Tax
+1 Night of Souls' Betrayal (IMA) 99 #Creature Hate
+1 Noetic Scales (USG) 304 #Tabernacle/Smokestack Effect
+1 Norn's Annex (CMM) 829 #Attack/Block Tax
+1 Notion Thief (DGM) 88 #Draw Stax
+1 Null Rod (WTH) 154 #Activated Ability Stax
+1 Nullstone Gargoyle (RAV) 266 #Spell Stax
+1 Ob Nixilis, Unshackled (M15) 110 #Search Library Tax
+1 Omen Machine (NPH) 148 #Draw Stax
+1 Onakke Oathkeeper (CMM) 722 #Attack/Block Tax
+1 Opposition Agent (CMR) 141 #Search Library Stax
+1 Oppression (WOT) 32 #Spell Tax
+1 Orb of Dreams (BOK) 156 #Orb of Dreams Effect
+1 Orcish Bowmasters (LTR) 103 #Draw Tax
+1 Overburden (PCY) 39 #Other Ability/Effect Tax
+1 Overencumbered (PIP) 18 #Attack/Block Tax
+1 Painful Quandary (BRO) 111 #Spell Tax
+1 Peacekeeper (WTH) 22 #Attack/Block Stax
+1 Pendrell Mists (WTH) 47 #Tabernacle/Smokestack Effect
+1 Phyrexian Censor (MOM) 31 #Orb of Dreams Effect #Rule of Law Effect
+1 Pillar Tombs of Aku (VIS) 67 #Tabernacle/Smokestack Effect
+1 Plague Drone (40K) 47 #Life Gain Stax
+1 Plague Engineer (MH1) 100 #Creature Hate
+1 Planar Void (USG) 149 #Graveyard Hate
+1 Porphyry Nodes (PLC) 28 #Tabernacle/Smokestack Effect
+1 Portcullis (STH) 139 #Creature Hate
+1 Possessed Portal (5DN) 144 #Draw Stax #Tabernacle/Smokestack Effect
+1 Pramikon, Sky Rampart (C19) 47 *F* #Attack/Block Stax
+1 Presence of the Master (USG) 32 #Spell Stax
+1 Price of Glory (ODY) 214 #Land Tax
+1 Propaganda (ACR) 85 #Attack/Block Tax
+1 Putrefaction (MMQ) 153 #Spell Tax
+1 Pyrostatic Pillar (SCG) 100 #Spell Tax
+1 Quakebringer (KHM) 145 #Life Gain Stax
+1 Quicksilver Fountain (MRD) 233 #Blood Moon Effect
+1 Rain of Gore (DIS) 126 #Life Gain Stax
+1 Raking Canopy (SHM) 127 #Attack/Block Tax
+1 Rampaging Ferocidon (XLN) 154 #Life Gain Stax #Other Ability/Effect Tax
+1 Reality Twist (ICE) 94 #Blood Moon Effect
+1 Reclamation (ICE) 300 #Attack/Block Tax
+1 Reidane, God of the Worthy / Valkmira, Protector's Shield (KHM) 21 #Orb of Dreams Effect #Spell Tax
+1 Rest in Peace (ACR) 156 #Graveyard Hate
+1 Rising Waters (NEM) 38 #Winter Orb Effect
+1 Ritual of Subdual (ICE) 261 #Blood Moon Effect
+1 River Song (WHO) 152 #Other Ability/Effect Tax #Search Library Tax
+1 Roiling Vortex (ZNR) 156 #Spell Tax
+1 Root Maze (10E) 292 #Orb of Dreams Effect
+1 Rule of Law (M20) 35 #Rule of Law Effect
+1 Ruric Thar, the Unbowed (DGM) 99 #Spell Tax
+1 Samurai of the Pale Curtain (CHK) 43 #Graveyard Hate
+1 Sanctifier en-Vec (MH2) 27 #Graveyard Hate
+1 Sanctum Prelate (CN2) 23 #Spell Stax
+1 Scald (USG) 211 #Land Tax
+1 Screaming Nemesis (DSK) 157 #Life Gain Stax
+1 Scytheclaw Raptor (LCI) 323 #Spell Tax
+1 Sen Triplets (2XM) 218 #Grand Abolisher Effect
+1 Shared Fate (MRD) 49 #Draw Stax
+1 Sharkey, Tyrant of the Shire (LTR) 229 #Activated Ability Stax
+1 Sheoldred, the Apocalypse (DMU) 369 #Draw Tax
+1 Sheoldred, Whispering One (SLD) 211 #Tabernacle/Smokestack Effect
+1 Silent Arbiter (C20) 250 #Attack/Block Stax
+1 Sire of Insanity (DGM) 104 #Hand Hate
+1 Smog Elemental (GTC) 79 #Creature Hate
+1 Smoke (3ED) 178 #Winter Orb Effect
+1 Smokestack (SLC) 1998 #Tabernacle/Smokestack Effect
+1 Solemnity (HOU) 22 #Other Ability/Effect Stax
+1 Soulless Jailer (ONE) 241 #Graveyard Stax
+1 Spelltithe Enforcer (GPT) 18 #Spell Tax
+1 Sphere of Resistance (SLD) 1484 #Spell Tax
+1 Sphere of Safety (RVR) 447 #Attack/Block Tax
+1 Spirit of the Labyrinth (BNG) 27 #Draw Stax
+1 Spreading Plague (INV) 125 #Other Ability/Effect Tax
+1 Squeeze (MMQ) 105 #Spell Stax
+1 Stabilizer (SCG) 142 #Activated Ability Stax
+1 Stasis (5ED) 127 #Phase/Step Stax
+1 Static Orb (TMP) 310 #Winter Orb Effect
+1 Stigma Lasher (PLST) EVE-62 #Life Gain Stax
+1 Stoic Angel (ALA) 199 #Winter Orb Effect
+1 Stone of Erech (LTR) 251 #Graveyard Hate
+1 Stony Silence (MM3) 25 #Activated Ability Stax
+1 Storage Matrix (9ED) 310 #Winter Orb Effect
+1 Storm Cauldron (6ED) 314 #Land Stax
+1 Stormtide Leviathan (M11) 74 #Attack/Block Stax
+1 Stranglehold (CMA) 87 #Other Ability/Effect Stax #Search Library Stax
+1 Strict Proctor (STX) 33 #ETB Stax
+1 Stronghold Taskmaster (STH) 72 #Creature Hate
+1 Sulfur Elemental (PLC) 108 #Creature Hate
+1 Sulfuric Vortex (DDK) 68 #Life Gain Stax
+1 Sunspine Lynx (BLB) 155 #Life Gain Stax
+1 Suppression Field (RAV) 31 #Activated Ability Tax
+1 Tainted Aether (7ED) 167 #Other Ability/Effect Tax
+1 Tainted Remedy (ORI) 120 #Life Gain Stax
+1 Talion, the Kindly Lord (WOE) 215 #Spell Tax
+1 Tangle Wire (NEM) 139 #Winter Orb Effect
+1 Tectonic Instability (INV) 173 #Land Tax
+1 Teferi, Mage of Zhalfir (TSR) 91 #Grand Abolisher Effect
+1 Teferi, Time Raveler (RVR) 232 #Grand Abolisher Effect
+1 Teferi's Realm (VIS) 44 #Tabernacle/Smokestack Effect
+1 Territorial Dispute (MMQ) 217 #Land Stax
+1 Thalia and The Gitrog Monster (MOM) 316 #Orb of Dreams Effect
+1 Thalia, Guardian of Thraben (VOW) 318 #Spell Tax
+1 Thalia, Heretic Cathar (EMN) 46 #Orb of Dreams Effect
+1 The Abyss (LEG) 120 #Tabernacle/Smokestack Effect
+1 The Immortal Sun (RIX) 180 #Activated Ability Stax
+1 The Tabernacle at Pendrell Vale (LEG) 307 #Tabernacle/Smokestack Effect
+1 Thorn of Amethyst (BRR) 60 #Spell Tax
+1 Tibalt, Rakish Instigator (WAR) 146 #Life Gain Stax
+1 Titania's Song (3ED) 220 #Humility Effect
+1 Tocatli Honor Guard (XLN) 42 #ETB Stax
+1 Tomik, Wielder of Law (MKM) 431 *F* #Attack/Block Tax
+1 Torment of Scarabs (HOU) 78 #Hand Hate
+1 Torpor Orb (BIG) 27 #ETB Stax
+1 Toxrill, the Corrosive (VOW) 132 #Creature Hate
+1 Trinisphere (SLD) 1485 #Spell Tax
+1 Triumph of Cruelty (AVR) 122 #Hand Hate
+1 Trouble in Pairs (MKC) 15 #Other Ability/Effect Stax
+1 Tsabo's Web (INV) 317 #Winter Orb Effect
+1 Uba Mask (CHK) 272 #Draw Stax
+1 Ugin's Nexus (KTK) 227 #Other Ability/Effect Stax
+1 Underworld Cerberus (THS) 208 #Graveyard Stax
+1 Unstable Glyphbridge / Sandswirl Wanderglyph (LCI) 41 #Attack/Block Stax #Spell Stax
+1 Uphill Battle (MMQ) 222 #Orb of Dreams Effect
+1 Urabrask the Hidden (SLD) 212 #Orb of Dreams Effect
+1 Urabrask, Heretic Praetor (SNC) 129 #Draw Stax
+1 Urborg Shambler (INV) 133 #Creature Hate
+1 Valentin, Dean of the Vein / Lisette, Dean of the Root (STX) 161 #Graveyard Hate
+1 Vengeful Tracker (MKM) 147 #Other Ability/Effect Tax
+1 Vexing Bauble (MH3) 212 #Spell Stax
+1 Virulent Plague (DTK) 125 #Creature Hate
+1 Void Mirror (MH2) 242 #Spell Stax
+1 Void Winnower (SLD) 1075 #Attack/Block Stax #Spell Stax
+1 Vorinclex, Monstrous Raider (KHM) 333 #Other Ability/Effect Stax
+1 Vorinclex, Voice of Hunger (SLD) 213 #Land Tax
+1 Vren, the Relentless (BLB) 239 #Graveyard Hate
+1 Vryn Wingmare (M21) 43 #Spell Tax
+1 Wandering Archaic / Explore the Vastlands (STX) 6 #Spell Tax
+1 War's Toll (BBD) 187 #Attack/Block Tax #Land Tax
+1 Ward of Bones (EVE) 174 #Land Stax #Spell Stax
+1 Weathered Runestone (KHM) 247 #Graveyard Stax
+1 Windborn Muse (DMR) 278 #Attack/Block Tax
+1 Winter Moon (MH3) 213 #Winter Orb Effect
+1 Winter Orb (SLD) 1486 #Winter Orb Effect
+1 Witch Hunt (C13) 133 #Life Gain Stax
+1 Witch-king of Angmar (LTR) 114 #Attack/Block Tax
+1 World Queller (ZEN) 39 #Tabernacle/Smokestack Effect
+1 Wrath of Marit Lage (8ED) 115 #Winter Orb Effect
+1 Yasharn, Implacable Earth (ZNR) 240 #Activated Ability Stax #Spell Stax
+1 Yixlid Jailer (FUT) 93 #Graveyard Stax
+1 Yurlok of Scorch Thrash (CMR) 293 #Other Ability/Effect Tax
+1 Zo-Zu the Punisher (DDS) 41 #Land Tax

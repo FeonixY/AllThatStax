@@ -796,7 +796,7 @@
 }{\relax}
 
 
-\graphicspath{{./Figures/}{./Images/}}
+\graphicspath{{./Figures/}{./Images/}{./Symbols/}}
 
 \RequirePackage{tikz} %% load tikz without tikz
 \usetikzlibrary{backgrounds,calc,shadows,positioning,fit}
@@ -1321,6 +1321,8 @@
 % restore the tt default family to lmodern tt family
 \renewcommand\ttdefault{lmtt}
 
+\usepackage{l3keys2e}
+\usepackage[notransparent]{svg}
 \newfontfamily\MTGENfont{Beleren2016}
 \newCJKfontfamily\MTGCNfont{华康魏碑 Std W7}
 \newCJKfontfamily\MTGDESfont{方正细等线_GBK_FIX}
@@ -1336,23 +1338,46 @@
         {
             { legal }
                 {
-                    \node[align = center, minimum~width = 24mm, rectangle, rounded~corners = 0.2mm, ultra~thin, draw = black!20, scale = 0.75, fill = #1] (char) {合法};
+                    \node[align = center, minimum~width = 24mm, rectangle, rounded~corners = 0.2mm, ultra~thin, draw = black!20, scale = 0.75, fill = #1] (char) {\MTGDESfont{合法}};
                 }
             { notlegal }
                 {
-                    \node[align = center, minimum~width = 24mm, rectangle, rounded~corners = 0.2mm, ultra~thin, draw = black!20, scale = 0.75, fill = #1] (char) {不合法};
+                    \node[align = center, minimum~width = 24mm, rectangle, rounded~corners = 0.2mm, ultra~thin, draw = black!20, scale = 0.75, fill = #1] (char) {\MTGDESfont{不合法}};
                 }
             { banned }
                 {
-                    \node[align = center, minimum~width = 24mm, rectangle, rounded~corners = 0.2mm, ultra~thin, draw = black!20, scale = 0.75, fill = #1] (char) {禁牌};
+                    \node[align = center, minimum~width = 24mm, rectangle, rounded~corners = 0.2mm, ultra~thin, draw = black!20, scale = 0.75, fill = #1] (char) {\MTGDESfont{禁牌}};
                 }
             { restricted }
                 {
-                    \node[align = center, minimum~width = 24mm, rectangle, rounded~corners = 0.2mm, ultra~thin, draw = black!20, scale = 0.75, fill = #1] (char) {限制};
+                    \node[align = center, minimum~width = 24mm, rectangle, rounded~corners = 0.2mm, ultra~thin, draw = black!20, scale = 0.75, fill = #1] (char) {\MTGDESfont{限制}};
                 }
         }
         { No idea! }
     }
+}
+
+\NewDocumentCommand{\MTGsymbol}{mm}
+{
+	\str_case:nn { #1 }
+	{
+		{W} {\includesvg[width=#2mm]{W.svg}}
+		{U} {\includesvg[width=#2mm]{U.svg}}
+		{B} {\includesvg[width=#2mm]{B.svg}}
+		{R} {\includesvg[width=#2mm]{R.svg}}
+		{G} {\includesvg[width=#2mm]{G.svg}}
+		{1} {\includesvg[width=#2mm]{1.svg}}
+		{2} {\includesvg[width=#2mm]{2.svg}}
+		{3} {\includesvg[width=#2mm]{3.svg}}
+		{4} {\includesvg[width=#2mm]{4.svg}}
+		{5} {\includesvg[width=#2mm]{5.svg}}
+		{6} {\includesvg[width=#2mm]{6.svg}}
+		{7} {\includesvg[width=#2mm]{7.svg}}
+		{8} {\includesvg[width=#2mm]{8.svg}}
+		{9} {\includesvg[width=#2mm]{9.svg}}
+		{10} {\includesvg[width=#2mm]{10.svg}}
+		{default} {1234}
+	}
 }
 
 \keys_define:nn { card }
@@ -1385,48 +1410,46 @@
     \begin{minipage}{0.45\textwidth}
         \includegraphics[width = \textwidth]{\card_image}
     \end{minipage}\hfill
-    \begin{minipage}{0.45\textwidth}
-    	\begin{minipage}{0.45\textwidth}
-    		\MTGENfont{\huge \card_english_name}
-    		\vspace{0.2cm}\\
-    		\MTGCNfont{\huge \card_chinese_name}
-    	\end{minipage}\hfill
-        \textbf{\Huge \mana_cost}
-        \vspace{0.2cm}\\
+    \begin{minipage}{0.48\textwidth}
+    	\MTGENfont{\LARGE \card_english_name}
+    	\vspace{0.2cm}\\
+    	\MTGCNfont{\LARGE \card_chinese_name}
+    	\vspace{0.2cm}\\
+    	\mana_cost
+    	\vspace{-0.3cm}\\
         \textcolor[rgb]{0.8,0.8,0.8}{\rule{\linewidth}{0.4pt}}\\
-        {\MTGCNfont \card_type}
+        \MTGCNfont{\card_type}
         \vspace{-0.3cm}\\
         \textcolor[rgb]{0.8,0.8,0.8}{\rule{\linewidth}{0.4pt}}\\
-        {\MTGDESfont \description}
+        \MTGDESfont{\description}
         \vspace{-0.3cm}\\
         \textcolor[rgb]{0.8,0.8,0.8}{\rule{\linewidth}{0.4pt}}\\
-        {\MTGCNfont 锁牌类型：\stax_type}
-
-        \ifthenelse{\equal{\is_in_restricted_list}{RL}}{\\在不重印列表中}{}
+        \MTGDESfont{锁牌类型：\stax_type}
+        \ifthenelse{\equal{\is_in_restricted_list}{RL}}{\\\MTGDESfont{在不重印列表中}}{}
         \vspace{-0.3cm}\\
         \textcolor[rgb]{0.8,0.8,0.8}{\rule{\linewidth}{0.4pt}}\\
         \vspace{-0.3cm}\\
         \begin{tabular}
         {>{\centering\arraybackslash}m{1.5cm} >{\arraybackslash}m{1.5cm} >{\centering\arraybackslash}m{1.5cm} >{\arraybackslash}m{1.5cm}}
-            \cell{\legality_standard} & 标准 & 
-            \cell{\legality_alchemy} & 炼金 \\
-            \cell{\legality_pioneer} & 先驱 & 
-            \cell{\legality_explorer} & 探索 \\
-            \cell{\legality_modern} & 摩登 & 
-            \cell{\legality_historic} & 史迹 \\
-            \cell{\legality_legacy} & 薪传 & 
-            \cell{\legality_pauper} & 纯铁 \\
-            \cell{\legality_vintage} & 特选 & 
-            \cell{\legality_timeless} & 不朽 \\
-            \cell{\legality_commander} & 官禁 & 
-            \cell{\legality_duel_commander} & 法禁
+            \cell{\legality_standard} & \MTGDESfont{标准} & 
+            \cell{\legality_alchemy} & \MTGDESfont{炼金} \\
+            \cell{\legality_pioneer} & \MTGDESfont{先驱} & 
+            \cell{\legality_explorer} & \MTGDESfont{探索} \\
+            \cell{\legality_modern} & \MTGDESfont{摩登} & 
+            \cell{\legality_historic} & \MTGDESfont{史迹} \\
+            \cell{\legality_legacy} & \MTGDESfont{薪传} & 
+            \cell{\legality_pauper} & \MTGDESfont{纯铁} \\
+            \cell{\legality_vintage} & \MTGDESfont{特选} & 
+            \cell{\legality_timeless} & \MTGDESfont{不朽} \\
+            \cell{\legality_commander} & \MTGDESfont{官禁} & 
+            \cell{\legality_duel_commander} & \MTGDESfont{法禁}
         \end{tabular}
     \end{minipage}
 }
 
 \keys_define:nn { mfcard }
 {
-	  front_card_english_name .tl_set:N = \front_card_english_name,
+	front_card_english_name .tl_set:N = \front_card_english_name,
     front_card_chinese_name .tl_set:N = \front_card_chinese_name,
     front_card_image        .tl_set:N = \front_card_image,
     front_mana_cost         .tl_set:N = \front_mana_cost,
@@ -1458,45 +1481,56 @@
 {
     \keys_set:nn { mfcard } { #1 }
     \begin{minipage}{0.45\textwidth}
-        \includegraphics[width = 0.6\textwidth]{\front_card_image}%
+        \includegraphics[width = 0.8\textwidth]{\front_card_image}%
         \vfill%
         \hfill%
-        \includegraphics[width = 0.6\textwidth]{\back_card_image}
+        \includegraphics[width = 0.8\textwidth]{\back_card_image}
     \end{minipage}\hfill
-    \begin{minipage}{0.45\textwidth}
-        \textbf{\LARGE \front_card_chinese_name\hfill \front_mana_cost}\\
-        \textbf{\front_card_type}\\
-        \vspace{0.1cm}
+    \begin{minipage}{0.48\textwidth}
+        \MTGENfont{\LARGE \front_card_english_name}
+        \vspace{0.2cm}\\
+        \MTGCNfont{\LARGE \front_card_chinese_name}
+        \vspace{0.2cm}\\
+        \front_mana_cost
+        \vspace{-0.3cm}\\
         \textcolor[rgb]{0.8,0.8,0.8}{\rule{\linewidth}{0.4pt}}\\
-        \front_description\\\\
-        
+        \MTGCNfont{\front_card_type}
+        \vspace{-0.3cm}\\
         \textcolor[rgb]{0.8,0.8,0.8}{\rule{\linewidth}{0.4pt}}\\
-
-        \textbf{\LARGE \back_card_chinese_name\hfill \back_mana_cost}\\
-        \textbf{\back_card_type}\\
-        \vspace{0.1cm}
+        \MTGDESfont{\front_description}
+        \vspace{0.3cm}\\
+        \MTGENfont{\LARGE \back_card_english_name}
+        \vspace{0.2cm}\\
+        \MTGCNfont{\LARGE \back_card_chinese_name}
+        \vspace{0.2cm}\\
+        \back_mana_cost
+        \vspace{-0.3cm}\\
         \textcolor[rgb]{0.8,0.8,0.8}{\rule{\linewidth}{0.4pt}}\\
-        \back_description\\\\
-        
-        \textsc{锁牌类型：\stax_type}\\
-
-        \ifthenelse{\equal{\is_in_restricted_list}{RL}}{在不重印列表中\\}{}
-        \vspace{0.3cm}
+        \MTGCNfont{\back_card_type}
+        \vspace{-0.3cm}\\
         \textcolor[rgb]{0.8,0.8,0.8}{\rule{\linewidth}{0.4pt}}\\
+        \MTGDESfont{\back_description}
+        \vspace{-0.3cm}\\
+        \textcolor[rgb]{0.8,0.8,0.8}{\rule{\linewidth}{0.4pt}}\\
+        \MTGDESfont{锁牌类型：\stax_type}
+        \ifthenelse{\equal{\is_in_restricted_list}{RL}}{\\\MTGDESfont{在不重印列表中}}{}
+        \vspace{-0.3cm}\\
+        \textcolor[rgb]{0.8,0.8,0.8}{\rule{\linewidth}{0.4pt}}\\
+        \vspace{-0.3cm}\\
         \begin{tabular}
         {>{\centering\arraybackslash}m{1.5cm} >{\arraybackslash}m{1.5cm} >{\centering\arraybackslash}m{1.5cm} >{\arraybackslash}m{1.5cm}}
-            \cell{\legality_standard} & 标准 & 
-            \cell{\legality_alchemy} & 炼金 \\
-            \cell{\legality_pioneer} & 先驱 & 
-            \cell{\legality_explorer} & 探索 \\
-            \cell{\legality_modern} & 摩登 & 
-            \cell{\legality_historic} & 史迹 \\
-            \cell{\legality_legacy} & 薪传 & 
-            \cell{\legality_pauper} & 纯铁 \\
-            \cell{\legality_vintage} & 特选 & 
-            \cell{\legality_timeless} & 不朽 \\
-            \cell{\legality_commander} & 官禁 & 
-            \cell{\legality_duel_commander} & 法禁
+            \cell{\legality_standard} & \MTGDESfont{标准} & 
+            \cell{\legality_alchemy} & \MTGDESfont{炼金} \\
+            \cell{\legality_pioneer} & \MTGDESfont{先驱} & 
+            \cell{\legality_explorer} & \MTGDESfont{探索} \\
+            \cell{\legality_modern} & \MTGDESfont{摩登} & 
+            \cell{\legality_historic} & \MTGDESfont{史迹} \\
+            \cell{\legality_legacy} & \MTGDESfont{薪传} & 
+            \cell{\legality_pauper} & \MTGDESfont{纯铁} \\
+            \cell{\legality_vintage} & \MTGDESfont{特选} & 
+            \cell{\legality_timeless} & \MTGDESfont{不朽} \\
+            \cell{\legality_commander} & \MTGDESfont{官禁} & 
+            \cell{\legality_duel_commander} & \MTGDESfont{法禁}
         \end{tabular}
     \end{minipage}
 }
