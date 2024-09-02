@@ -165,60 +165,7 @@
 
 \mainmatter
 
-\chapter{0费（包括地）}
-
-\section{神器}
-
-\card
-{
-	card_english_name = {Chalice of the Void},
-	card_chinese_name = {虚空圣杯},
-	card_image = lcc-105-chalice-of-the-void.png,
-	mana_cost = \MTGsymbol{X}{5}\MTGsymbol{X}{5},
-	card_type = 神器,
-	description = {虚空圣杯进战场时上面有X个充电指示物。\\
-		每当任一牌手施放法术力值等同于虚空圣杯上充电指示物数量的咒语时，反击该咒语。},
-	stax_type = 咒语锁,
-	is_in_restricted_list = Not RL,
-	legality / standard = notlegal,
-	legality / alchemy = notlegal,
-	legality / pioneer = notlegal,
-	legality / explorer = notlegal,
-	legality / modern = legal,
-	legality / historic = legal,
-	legality / legacy = legal,
-	legality / pauper = notlegal,
-	legality / vintage = restricted,
-	legality / timeless = legal,
-	legality / commander = legal,
-	legality / duel_commander = legal
-}
-
-\section{其他}
-
-\card
-{
-	card_english_name = {The Tabernacle at Pendrell Vale},
-	card_chinese_name = {潘卓欧谷大礼拜堂},
-	card_image = me3-212-the-tabernacle-at-pendrell-vale.png,
-	mana_cost = None,
-	card_type = Legendary Land,
-	description = {All creatures have "At the beginning of your upkeep, destroy this creature unless you pay \MTGsymbol{1}{3}."},
-	stax_type = 大礼拜堂/烟囱效应,
-	is_in_restricted_list = RL,
-	legality / standard = notlegal,
-	legality / alchemy = notlegal,
-	legality / pioneer = notlegal,
-	legality / explorer = notlegal,
-	legality / modern = notlegal,
-	legality / historic = notlegal,
-	legality / legacy = legal,
-	legality / pauper = notlegal,
-	legality / vintage = legal,
-	legality / timeless = notlegal,
-	legality / commander = legal,
-	legality / duel_commander = banned
-}
+% Latex text starts here
 
 \chapter{1费}
 
@@ -434,7 +381,7 @@
 \card
 {
 	card_english_name = {Brutal Suppression},
-	card_chinese_name = {None},
+	card_chinese_name = {抑制兽性},
 	card_image = pcy-85-brutal-suppression.png,
 	mana_cost = \MTGsymbol{R}{5},
 	card_type = Enchantment,
@@ -535,7 +482,7 @@
 	card_image = vis-104-elephant-grass.png,
 	mana_cost = \MTGsymbol{G}{5},
 	card_type = Enchantment,
-	description = {Cumulative upkeep \MTGsymbol{1}{3} \\
+	description = {Cumulative upkeep \MTGsymbol{1}{3} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\\
 		Black creatures can't attack you.\\
 		Nonblack creatures can't attack you unless their controller pays \MTGsymbol{2}{3} for each creature they control that's attacking you.},
 	stax_type = 攻击/格挡税,
@@ -687,7 +634,7 @@
 	card_image = m20-87-blightbeetle.png,
 	mana_cost = \MTGsymbol{1}{5}\MTGsymbol{B}{5},
 	card_type = 生物 ～昆虫,
-	description = {反绿保护\\
+	description = {反绿保护（此生物不能被绿色的东西阻挡、指定为目标、造成伤害、结附或是装备。）\\
 		由对手操控的生物上不能放置+1/+1指示物。},
 	stax_type = 其他异能/效应锁,
 	is_in_restricted_list = Not RL,
@@ -812,7 +759,7 @@
 	card_image = mh2-81-dauthi-voidwalker.png,
 	mana_cost = \MTGsymbol{B}{5}\MTGsymbol{B}{5},
 	card_type = 生物 ～道西／浪客,
-	description = {次元幽影\\
+	description = {次元幽影（此生物只能阻挡具次元幽影异能的生物，亦只能被具此异能的生物阻挡。）\\
 		如果某牌将从任何区域进入对手的坟墓场，则改为将它放逐并在其上放置一个虚空指示物。\\
 		\MTGsymbol{T}{3}，牺牲道西虚空行者：选择一张由对手拥有、已放逐且其上有虚空指示物的牌。本回合中，你可以使用它，且不需支付其法术力费用。},
 	stax_type = 坟墓场Hate,
@@ -840,14 +787,14 @@
 	front_card_type = Legendary Creature — Human Soldier,
 	front_description = {Lifelink\\
 		Cards in graveyards can't be the targets of spells or abilities.\\
-		Disturb \MTGsymbol{2}{3}\MTGsymbol{W}{3}\MTGsymbol{U}{3} },
+		Disturb \MTGsymbol{2}{3}\MTGsymbol{W}{3}\MTGsymbol{U}{3} (You may cast this card from your graveyard transformed for its disturb cost.)},
 	back_card_english_name = {Dennick, Pious Apparition},
 	back_card_chinese_name = {虔敬新魂丹尼克},
 	back_card_image = mid-217-dennick-pious-apparition.png,
 	back_mana_cost = None,
 	back_card_type = Legendary Creature — Spirit Soldier,
 	back_description = {Flying\\
-		Whenever one or more creature cards are put into graveyards from anywhere, investigate. This ability triggers only once each turn. \\
+		Whenever one or more creature cards are put into graveyards from anywhere, investigate. This ability triggers only once each turn. (Create a Clue token. It's an artifact with "\MTGsymbol{2}{3}, Sacrifice this artifact: Draw a card.")\\
 		If Dennick, Pious Apparition would be put into a graveyard from anywhere, exile it instead.},
 	stax_type = 坟墓场锁,
 	is_in_restricted_list = Not RL,
@@ -1002,7 +949,7 @@
 	card_image = scg-13-exiled-doomsayer.png,
 	mana_cost = \MTGsymbol{1}{5}\MTGsymbol{W}{5},
 	card_type = Creature — Human Cleric,
-	description = {All morph costs cost \MTGsymbol{2}{3} more. },
+	description = {All morph costs cost \MTGsymbol{2}{3} more. (This doesn't affect the cost to cast creature spells face down.)},
 	stax_type = 其他特殊动作锁,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -1148,7 +1095,7 @@
 	card_image = dmu-96-knight-of-dusk-s-shadow.png,
 	mana_cost = \MTGsymbol{1}{5}\MTGsymbol{B}{5},
 	card_type = 生物 ～人类／骑士,
-	description = {威慑\\
+	description = {威慑（此生物只能被两个或更多生物阻挡。）\\
 		所有对手都不能获得生命。\\
 		\MTGsymbol{1}{3}\MTGsymbol{B}{3}：暮影骑士得+1/+1直到回合结束。},
 	stax_type = 获得生命锁,
@@ -1247,7 +1194,7 @@
 	card_image = pip-108-maccready-lamplight-mayor.png,
 	mana_cost = \MTGsymbol{W}{5}\MTGsymbol{B}{5},
 	card_type = 传奇生物 — 人类／参谋,
-	description = {每当一个由你操控且力量等于或小于2的生物攻击时，它获得潜匿异能直到回合结束。\\
+	description = {每当一个由你操控且力量等于或小于2的生物攻击时，它获得潜匿异能直到回合结束。（它不能被力量比它大的生物阻挡。）\\
 		每当一个力量等于或大于4的生物攻击你时，其操控者失去2点生命且你获得2点生命。},
 	stax_type = 攻击/格挡税,
 	is_in_restricted_list = Not RL,
@@ -1371,7 +1318,7 @@
 	card_image = chk-43-samurai-of-the-pale-curtain.png,
 	mana_cost = \MTGsymbol{W}{5}\MTGsymbol{W}{5},
 	card_type = 生物～狐／武士,
-	description = {武士道1\\
+	description = {武士道1（每当它进行阻挡或被阻挡时，它得+1/+1直到回合结束。）\\
 		若永久物将置入坟墓场，则改为将其移出对战。},
 	stax_type = 坟墓场Hate,
 	is_in_restricted_list = Not RL,
@@ -1471,7 +1418,7 @@
 	card_image = eve-62-stigma-lasher.png,
 	mana_cost = \MTGsymbol{R}{5}\MTGsymbol{R}{5},
 	card_type = 生物～元素／祭师,
-	description = {乾枯 \\
+	description = {乾枯 （此来源会以-1/-1指示物的方式对生物造成伤害。）\\
 		每当划疵鞭手对牌手造成伤害时，直到游戏结束，该牌手都不能获得生命。},
 	stax_type = 获得生命锁,
 	is_in_restricted_list = Not RL,
@@ -2062,7 +2009,7 @@
 	card_image = lrw-150-ashling-s-prerogative.png,
 	mana_cost = \MTGsymbol{1}{5}\MTGsymbol{R}{5},
 	card_type = 结界,
-	description = {于灰儿的特权进场时，选择奇数或偶数。 \\
+	description = {于灰儿的特权进场时，选择奇数或偶数。 （零是偶数。）\\
 		所有总法术力费用是该种数值的生物具有敏捷。\\
 		所有总法术力费用不是该种数值的生物须横置进场。},
 	stax_type = 眠梦法球效应,
@@ -2088,7 +2035,7 @@
 	card_image = rvr-9-blind-obedience.png,
 	mana_cost = \MTGsymbol{1}{5}\MTGsymbol{W}{5},
 	card_type = 结界,
-	description = {敲诈\\
+	description = {敲诈（每当你施放咒语时，你可以支付\MTGsymbol{W/B}{3}。若你如此作，则每位对手各失去1点生命，且你获得等量的生命。）\\
 		由对手操控的神器与生物须横置进战场。},
 	stax_type = 眠梦法球效应,
 	is_in_restricted_list = Not RL,
@@ -2235,7 +2182,7 @@
 	card_image = me2-11-energy-storm.png,
 	mana_cost = \MTGsymbol{1}{5}\MTGsymbol{W}{5},
 	card_type = Enchantment,
-	description = {Cumulative upkeep \MTGsymbol{1}{3} \\
+	description = {Cumulative upkeep \MTGsymbol{1}{3} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\\
 		Prevent all damage that would be dealt by instant and sorcery spells.\\
 		Creatures with flying don't untap during their controllers' untap steps.},
 	stax_type = 冬之球效应,
@@ -2661,7 +2608,7 @@
 	card_type = 生物 — 鸟／浪客,
 	description = {闪现\\
 		飞行\\
-		当阻咒艾文进战场时，放逐目标咒语。它成为已设谋。\\
+		当阻咒艾文进战场时，放逐目标咒语。它成为已设谋。（过了该回合后，其拥有者便可于法术时机施放之，且不需支付其法术力费用。）\\
 		对手从坟墓场或放逐区中施放的咒语增加\MTGsymbol{2}{3}来施放。},
 	stax_type = 咒语税,
 	is_in_restricted_list = Not RL,
@@ -2712,7 +2659,7 @@
 	card_image = blc-27-bloodroot-apothecary.png,
 	mana_cost = \MTGsymbol{2}{5}\MTGsymbol{G}{5},
 	card_type = Creature — Squirrel Druid,
-	description = {Toxic 2 \\
+	description = {Toxic 2 (Players dealt combat damage by this creature also get two poison counters. A player with ten or more poison counters loses the game.)\\
 		When Bloodroot Apothecary enters, you and target opponent each create a Treasure token.\\
 		Whenever an opponent sacrifices a noncreature token, that player gets two poison counters.},
 	stax_type = 其他异能/效应税,
@@ -2936,7 +2883,7 @@
 	mana_cost = \MTGsymbol{2}{5}\MTGsymbol{U}{5},
 	card_type = 生物 ～人鱼／海盗,
 	description = {闪现\\
-		如果某对手将抓一张牌，且这不是其于自己的每个抓牌步骤中所抓的第一张牌，则改为你派出一个珍宝衍生物。},
+		如果某对手将抓一张牌，且这不是其于自己的每个抓牌步骤中所抓的第一张牌，则改为你派出一个珍宝衍生物。（珍宝衍生物是具有「\MTGsymbol{T}{3}，牺牲此神器：加一点任意颜色的法术力」的神器。）},
 	stax_type = 抓牌锁,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -3181,11 +3128,11 @@
 \card
 {
 	card_english_name = {Mindwhisker},
-	card_chinese_name = {None},
+	card_chinese_name = {搅念师},
 	card_image = blb-60-mindwhisker.png,
 	mana_cost = \MTGsymbol{2}{5}\MTGsymbol{U}{5},
 	card_type = Creature — Rat Wizard,
-	description = {At the beginning of your upkeep, surveil 1. \\
+	description = {At the beginning of your upkeep, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)\\
 		Threshold — As long as seven or more cards are in your graveyard, creatures your opponents control get -1/-0.},
 	stax_type = 谦卑效应,
 	is_in_restricted_list = Not RL,
@@ -3497,7 +3444,7 @@
 	mana_cost = \MTGsymbol{2}{5}\MTGsymbol{R}{5},
 	card_type = 生物 ～元素,
 	description = {闪现\\
-		转瞬\\
+		转瞬（只要此咒语在堆叠上，牌手便不能施放咒语或起动不是法术力异能的异能。）\\
 		白色生物得+1/-1。},
 	stax_type = 生物Hate,
 	is_in_restricted_list = Not RL,
@@ -3547,7 +3494,7 @@
 	card_image = mkm-431-tomik-wielder-of-law.png,
 	mana_cost = \MTGsymbol{1}{5}\MTGsymbol{W}{5}\MTGsymbol{B}{5},
 	card_type = 传奇生物 — 人类／参谋,
-	description = {鹏洛客共鸣\\
+	description = {鹏洛客共鸣（你每操控一个鹏洛客，此咒语便减少\MTGsymbol{1}{3}来施放。）\\
 		飞行，警戒\\
 		每当任一对手以生物攻击时，若这些生物中有两个或更多正向你和／或由你操控的鹏洛客进行攻击，则该对手失去3点生命且你抓一张牌。},
 	stax_type = 攻击/格挡税,
@@ -3620,7 +3567,7 @@
 \card
 {
 	card_english_name = {Arena of the Ancients},
-	card_chinese_name = {None},
+	card_chinese_name = {远古斗技场},
 	card_image = me3-188-arena-of-the-ancients.png,
 	mana_cost = \MTGsymbol{3}{5},
 	card_type = Artifact,
@@ -3919,7 +3866,7 @@
 	card_image = nem-139-tangle-wire.png,
 	mana_cost = \MTGsymbol{3}{5},
 	card_type = Artifact,
-	description = {Fading 4 \\
+	description = {Fading 4 (This artifact enters with four fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it.)\\
 		At the beginning of each player's upkeep, that player taps an untapped artifact, creature, or land they control for each fade counter on Tangle Wire.},
 	stax_type = 冬之球效应,
 	is_in_restricted_list = Not RL,
@@ -4062,7 +4009,7 @@
 \card
 {
 	card_english_name = {Back to Basics},
-	card_chinese_name = {None},
+	card_chinese_name = {返璞归真},
 	card_image = usg-62-back-to-basics.png,
 	mana_cost = \MTGsymbol{2}{5}\MTGsymbol{U}{5},
 	card_type = Enchantment,
@@ -4358,7 +4305,7 @@
 	card_image = me2-88-dystopia.png,
 	mana_cost = \MTGsymbol{1}{5}\MTGsymbol{B}{5}\MTGsymbol{B}{5},
 	card_type = Enchantment,
-	description = {Cumulative upkeep—Pay 1 life. \\
+	description = {Cumulative upkeep—Pay 1 life. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\\
 		At the beginning of each player's upkeep, that player sacrifices a green or white permanent.},
 	stax_type = 大礼拜堂/烟囱效应,
 	is_in_restricted_list = RL,
@@ -4434,7 +4381,7 @@
 	card_type = 结界,
 	description = {牌手不能获得生命。\\
 		伤害不能被防止。\\
-		所有来源均视同其具有干枯异能地来造成伤害。},
+		所有来源均视同其具有干枯异能地来造成伤害。（具干枯异能的来源会以-1/-1指示物的方式对生物造成伤害。）},
 	stax_type = 获得生命锁,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -4529,7 +4476,7 @@
 \card
 {
 	card_english_name = {Gravity Sphere},
-	card_chinese_name = {None},
+	card_chinese_name = {重力圈},
 	card_image = leg-151-gravity-sphere.png,
 	mana_cost = \MTGsymbol{2}{5}\MTGsymbol{R}{5},
 	card_type = World Enchantment,
@@ -4678,7 +4625,7 @@
 	card_image = vis-109-katabatic-winds.png,
 	mana_cost = \MTGsymbol{2}{5}\MTGsymbol{G}{5},
 	card_type = Enchantment,
-	description = {Phasing \\
+	description = {Phasing (This phases in or out before you untap during each of your untap steps. While it's phased out, it's treated as though it doesn't exist.)\\
 		Creatures with flying can't attack or block, and their activated abilities with \MTGsymbol{T}{3} in their costs can't be activated.},
 	stax_type = 起动式异能锁，攻击/格挡锁,
 	is_in_restricted_list = RL,
@@ -4972,7 +4919,7 @@
 	card_image = ice-94-reality-twist.png,
 	mana_cost = \MTGsymbol{U}{5}\MTGsymbol{U}{5}\MTGsymbol{U}{5},
 	card_type = Enchantment,
-	description = {Cumulative upkeep \MTGsymbol{1}{3}\MTGsymbol{U}{3}\MTGsymbol{U}{3} \\
+	description = {Cumulative upkeep \MTGsymbol{1}{3}\MTGsymbol{U}{3}\MTGsymbol{U}{3} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\\
 		If tapped for mana, Plains produce \MTGsymbol{R}{3}, Swamps produce \MTGsymbol{G}{3}, Mountains produce \MTGsymbol{W}{3}, and Forests produce \MTGsymbol{B}{3} instead of any other type.},
 	stax_type = 腥红之月效应,
 	is_in_restricted_list = RL,
@@ -5119,7 +5066,7 @@
 	card_image = vis-44-teferi-s-realm.png,
 	mana_cost = \MTGsymbol{1}{5}\MTGsymbol{U}{5}\MTGsymbol{U}{5},
 	card_type = World Enchantment,
-	description = {At the beginning of each player's upkeep, that player chooses artifact, creature, land, or non-Aura enchantment. All nontoken permanents of that type phase out. },
+	description = {At the beginning of each player's upkeep, that player chooses artifact, creature, land, or non-Aura enchantment. All nontoken permanents of that type phase out. (While they're phased out, they're treated as though they don't exist. Each one phases in before its controller untaps during their next untap step.)},
 	stax_type = 大礼拜堂/烟囱效应,
 	is_in_restricted_list = RL,
 	legality / standard = notlegal,
@@ -5450,7 +5397,7 @@
 	mana_cost = \MTGsymbol{3}{5}\MTGsymbol{W}{5},
 	card_type = 生物 ～统领,
 	description = {飞行\\
-		反白保护\\
+		反白保护（此生物不能被白色的东西阻挡、指定为目标、造成伤害、结附或是装备。）\\
 		对每个生物而言，除非其操控者为其支付\MTGsymbol{1}{3}，否则它不能攻击你或由你操控的鹏洛客。},
 	stax_type = 攻击/格挡税,
 	is_in_restricted_list = Not RL,
@@ -5558,10 +5505,10 @@
 	back_card_image = mom-12-the-argent-etchings.png,
 	back_mana_cost = None,
 	back_card_type = 结界 — 传纪,
-	back_description = {\\
+	back_description = {（于此传纪进战场时及于你抓牌步骤后，加一个学问指示物。）\\
 		I — 抚育2五次，然后转化所有由你操控的抚育器衍生物。\\
 		II — 直到回合结束，由你操控的生物得+1/+1且获得连击异能。\\
-		III — 消灭所有其他永久物，但神器、地和非瑞人除外。放逐银蚀圣典，然后将它移回战场。},
+		III — 消灭所有其他永久物，但神器、地和非瑞人除外。放逐银蚀圣典，然后将它移回战场（移回时为正面朝上）。},
 	stax_type = 其他异能/效应税,
 	is_in_restricted_list = Not RL,
 	legality / standard = legal,
@@ -5586,7 +5533,7 @@
 	mana_cost = \MTGsymbol{3}{5}\MTGsymbol{B}{5},
 	card_type = 传奇结界生物～神,
 	description = {不灭\\
-		只要你的黑色献力小于五，厄睿柏斯便不是生物。\\
+		只要你的黑色献力小于五，厄睿柏斯便不是生物。（由你操控之永久物的法术力费用当中每含有一个\MTGsymbol{B}{3}，你的黑色献力就加一。）\\
 		对手不能获得生命。\\
 		\MTGsymbol{1}{3}\MTGsymbol{B}{3}，支付2点生命：抓一张牌。},
 	stax_type = 获得生命锁,
@@ -5958,7 +5905,7 @@
 	mana_cost = \MTGsymbol{1}{5}\MTGsymbol{R}{5}\MTGsymbol{G}{5}\MTGsymbol{W}{5},
 	card_type = Legendary Creature — Cat Warrior,
 	description = {Your opponents can't cast spells during combat.\\
-		Whenever a creature you control deals combat damage to a player, goad each creature that player controls. },
+		Whenever a creature you control deals combat damage to a player, goad each creature that player controls. (Until your next turn, those creatures attack each combat if able and attack a player other than you if able.)},
 	stax_type = 止咒高僧效应,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -6661,7 +6608,7 @@
 	mana_cost = \MTGsymbol{3}{5}\MTGsymbol{R}{5},
 	card_type = Enchantment — Aura,
 	description = {Enchant creature\\
-		Cumulative upkeep \MTGsymbol{R}{3} \\
+		Cumulative upkeep \MTGsymbol{R}{3} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\\
 		Enchanted creature's controller can't cast creature spells.},
 	stax_type = 咒语锁,
 	is_in_restricted_list = RL,
@@ -6686,7 +6633,7 @@
 	card_image = ice-62-breath-of-dreams.png,
 	mana_cost = \MTGsymbol{2}{5}\MTGsymbol{U}{5}\MTGsymbol{U}{5},
 	card_type = Enchantment,
-	description = {Cumulative upkeep \MTGsymbol{U}{3} \\
+	description = {Cumulative upkeep \MTGsymbol{U}{3} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\\
 		Green creatures have "Cumulative upkeep \MTGsymbol{1}{3}."},
 	stax_type = 大礼拜堂/烟囱效应,
 	is_in_restricted_list = Not RL,
@@ -6784,7 +6731,7 @@
 	card_image = soi-104-creeping-dread.png,
 	mana_cost = \MTGsymbol{3}{5}\MTGsymbol{B}{5},
 	card_type = 结界,
-	description = {在你的维持开始时，每位牌手各弃一张牌。对每位对手而言，如果其弃的牌与你弃的牌有共通牌类别，则其失去3点生命。},
+	description = {在你的维持开始时，每位牌手各弃一张牌。对每位对手而言，如果其弃的牌与你弃的牌有共通牌类别，则其失去3点生命。（牌手同时展示所弃的牌。）},
 	stax_type = 手牌Hate,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -6981,7 +6928,7 @@
 	card_image = ice-290-flooded-woodlands.png,
 	mana_cost = \MTGsymbol{2}{5}\MTGsymbol{U}{5}\MTGsymbol{B}{5},
 	card_type = Enchantment,
-	description = {Green creatures can't attack unless their controller sacrifices a land for each green creature they control that's attacking. },
+	description = {Green creatures can't attack unless their controller sacrifices a land for each green creature they control that's attacking. (This cost is paid as attackers are declared.)},
 	stax_type = 攻击/格挡税,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -7101,7 +7048,7 @@
 	card_image = me2-97-infernal-darkness.png,
 	mana_cost = \MTGsymbol{2}{5}\MTGsymbol{B}{5}\MTGsymbol{B}{5},
 	card_type = Enchantment,
-	description = {Cumulative upkeep—Pay \MTGsymbol{B}{3} and 1 life. \\
+	description = {Cumulative upkeep—Pay \MTGsymbol{B}{3} and 1 life. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\\
 		If a land is tapped for mana, it produces \MTGsymbol{B}{3} instead of any other type.},
 	stax_type = 腥红之月效应,
 	is_in_restricted_list = Not RL,
@@ -7171,7 +7118,7 @@
 \card
 {
 	card_english_name = {Land Equilibrium},
-	card_chinese_name = {None},
+	card_chinese_name = {土地平衡},
 	card_image = me3-40-land-equilibrium.png,
 	mana_cost = \MTGsymbol{2}{5}\MTGsymbol{U}{5}\MTGsymbol{U}{5},
 	card_type = Enchantment,
@@ -7467,7 +7414,7 @@
 	card_image = ice-300-reclamation.png,
 	mana_cost = \MTGsymbol{2}{5}\MTGsymbol{G}{5}\MTGsymbol{W}{5},
 	card_type = Enchantment,
-	description = {Black creatures can't attack unless their controller sacrifices a land for each black creature they control that's attacking. },
+	description = {Black creatures can't attack unless their controller sacrifices a land for each black creature they control that's attacking. (This cost is paid as attackers are declared.)},
 	stax_type = 攻击/格挡税,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -7585,7 +7532,7 @@
 \card
 {
 	card_english_name = {The Abyss},
-	card_chinese_name = {None},
+	card_chinese_name = {黑深渊},
 	card_image = me3-77-the-abyss.png,
 	mana_cost = \MTGsymbol{3}{5}\MTGsymbol{B}{5},
 	card_type = World Enchantment,
@@ -7846,7 +7793,7 @@
 	mana_cost = \MTGsymbol{3}{5}\MTGsymbol{B/R}{5}\MTGsymbol{B/R}{5},
 	card_type = 生物～元素／骑士,
 	description = {飞行\\
-		干枯 \\
+		干枯 （此来源会以-1/-1指示物的方式对生物造成伤害。）\\
 		由对手操控、且上面有指示物的生物不能进行攻击或阻挡。},
 	stax_type = 攻击/格挡锁,
 	is_in_restricted_list = Not RL,
@@ -7923,7 +7870,7 @@
 	card_type = 生物 ～拉高耶夫,
 	description = {死冥耶夫的力量等同于所有坟墓场中的生物牌数量。\\
 		在每位牌手的维持开始时，该牌手弃一张牌。\\
-		疯魔\MTGsymbol{1}{3}\MTGsymbol{B}{3}\MTGsymbol{B}{3}},
+		疯魔\MTGsymbol{1}{3}\MTGsymbol{B}{3}\MTGsymbol{B}{3}（如果你弃掉此牌，将之弃到放逐区。当你如此作时，支付其疯魔费用施放之，否则便将其置入你的坟墓场。）},
 	stax_type = 手牌Hate,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -8231,7 +8178,7 @@
 	card_image = me4-216-naked-singularity.png,
 	mana_cost = \MTGsymbol{5}{5},
 	card_type = Artifact,
-	description = {Cumulative upkeep \MTGsymbol{3}{3} \\
+	description = {Cumulative upkeep \MTGsymbol{3}{3} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\\
 		If tapped for mana, Plains produce \MTGsymbol{R}{3}, Islands produce \MTGsymbol{G}{3}, Swamps produce \MTGsymbol{W}{3}, Mountains produce \MTGsymbol{U}{3}, and Forests produce \MTGsymbol{B}{3} instead of any other type.},
 	stax_type = 腥红之月效应,
 	is_in_restricted_list = Not RL,
@@ -8256,7 +8203,7 @@
 	card_image = nph-17-norn-s-annex.png,
 	mana_cost = \MTGsymbol{3}{5}\MTGsymbol{W/P}{5}\MTGsymbol{W/P}{5},
 	card_type = 神器,
-	description = {\\
+	description = {（\MTGsymbol{W/P}{3}可用\MTGsymbol{W}{3}或2点生命来支付。）\\
 		对每个生物而言，除非其操控者为其支付\MTGsymbol{W/P}{3}，否则它不能攻击你或由你操控的鹏洛客。},
 	stax_type = 攻击/格挡税,
 	is_in_restricted_list = Not RL,
@@ -8332,7 +8279,7 @@
 	front_mana_cost = \MTGsymbol{3}{5}\MTGsymbol{W}{5}\MTGsymbol{W}{5},
 	front_card_type = 神器,
 	front_description = {当不稳雕符桥进战场时，若它经你施放，则为每位牌手各选择一个由其操控且力量等于或小于2的生物。然后消灭所有生物，但以此法选中的生物除外。\\
-		以神器化炼\MTGsymbol{3}{3}\MTGsymbol{W}{3}\MTGsymbol{W}{3}},
+		以神器化炼\MTGsymbol{3}{3}\MTGsymbol{W}{3}\MTGsymbol{W}{3}（\MTGsymbol{3}{3}\MTGsymbol{W}{3}\MTGsymbol{W}{3}，放逐此神器，放逐另一个由你操控的神器或一张你坟墓场中的神器牌：将此牌在其拥有者的操控下移回且已转化。只能于法术时机化炼。）},
 	back_card_english_name = {Sandswirl Wanderglyph},
 	back_card_chinese_name = {砂旋漫游符},
 	back_card_image = lci-41-sandswirl-wanderglyph.png,
@@ -8390,7 +8337,7 @@
 	card_image = 9ed-70-cowardice.png,
 	mana_cost = \MTGsymbol{3}{5}\MTGsymbol{U}{5}\MTGsymbol{U}{5},
 	card_type = 结界,
-	description = {每当一个生物成为咒语或异能的目标时，将该生物移回其拥有者手上。 },
+	description = {每当一个生物成为咒语或异能的目标时，将该生物移回其拥有者手上。 （此生物不会受到该咒语或异能的影响）},
 	stax_type = 其他异能/效应锁,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -8666,7 +8613,7 @@
 	card_image = 10e-127-ascendant-evincar.png,
 	mana_cost = \MTGsymbol{4}{5}\MTGsymbol{B}{5}\MTGsymbol{B}{5},
 	card_type = 传奇生物～吸血鬼,
-	description = {飞行\\
+	description = {飞行（只有具飞行或延势异能的生物才能阻挡它。）\\
 		其它黑色生物得+1/+1。\\
 		非黑色生物得-1/-1。},
 	stax_type = 生物Hate,
@@ -9050,7 +8997,7 @@
 	card_image = dis-143-dovescape.png,
 	mana_cost = \MTGsymbol{3}{5}\MTGsymbol{W/U}{5}\MTGsymbol{W/U}{5}\MTGsymbol{W/U}{5},
 	card_type = 结界,
-	description = {\\
+	description = {（\MTGsymbol{W/U}{3}可用\MTGsymbol{W}{3}或\MTGsymbol{U}{3}来支付。）\\
 		每当任一牌手使用非生物咒语时，反击该咒语。 该牌手将X个1/1，既是白色也是蓝色，具飞行异能的鸟衍生物放置进场，X为该咒语的总法术力费用。},
 	stax_type = 咒语锁,
 	is_in_restricted_list = Not RL,
@@ -9128,7 +9075,7 @@
 	card_type = 结界,
 	description = {在每位牌手的维持开始时，该牌手失去1点生命且弃一张牌。\\
 		背水战～若你没有手牌，则略过你的维持步骤。\\
-		疯魔\MTGsymbol{2}{3}\MTGsymbol{B}{3}\MTGsymbol{B}{3}},
+		疯魔\MTGsymbol{2}{3}\MTGsymbol{B}{3}\MTGsymbol{B}{3}（如果你弃掉此牌，可以改为使用它并支付其疯魔费用，而非直接将它置入你的坟墓场。）},
 	stax_type = 手牌Hate,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -9203,7 +9150,7 @@
 	card_image = me2-174-ritual-of-subdual.png,
 	mana_cost = \MTGsymbol{4}{5}\MTGsymbol{G}{5}\MTGsymbol{G}{5},
 	card_type = Enchantment,
-	description = {Cumulative upkeep \MTGsymbol{2}{3} \\
+	description = {Cumulative upkeep \MTGsymbol{2}{3} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\\
 		If a land is tapped for mana, it produces colorless mana instead of any other type.},
 	stax_type = 腥红之月效应,
 	is_in_restricted_list = RL,
@@ -9246,7 +9193,7 @@
 	legality / duel_commander = legal
 }
 
-\chapter{7费}
+\chapter{7+费}
 
 \section{生物}
 
@@ -9335,7 +9282,7 @@
 	card_image = neo-59-jin-gitaxias-progress-tyrant.png,
 	mana_cost = \MTGsymbol{5}{5}\MTGsymbol{U}{5}\MTGsymbol{U}{5},
 	card_type = 传奇生物 ～非瑞人／魔判官,
-	description = {每当你施放神器，瞬间或法术咒语时，复制该咒语。你可以为该复制品选择新的目标。此异能每回合只会触发一次。\\
+	description = {每当你施放神器，瞬间或法术咒语时，复制该咒语。你可以为该复制品选择新的目标。此异能每回合只会触发一次。（永久物咒语的复制品会成为衍生物。）\\
 		每当任一对手施放神器，瞬间或法术咒语时，反击该咒语。此异能每回合只会触发一次。},
 	stax_type = 咒语锁,
 	is_in_restricted_list = Not RL,
@@ -9362,7 +9309,7 @@
 	card_type = Creature — Alien Rhino Soldier,
 	description = {Trample\\
 		No more than one creature can attack you each combat.\\
-		Suspend 6—\MTGsymbol{1}{3}\MTGsymbol{R}{3}\MTGsymbol{W}{3} },
+		Suspend 6—\MTGsymbol{1}{3}\MTGsymbol{R}{3}\MTGsymbol{W}{3} (Rather than cast this card from your hand, you may pay \MTGsymbol{1}{3}\MTGsymbol{R}{3}\MTGsymbol{W}{3} and exile it with six time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost. It has haste.)},
 	stax_type = 攻击/格挡锁,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -9386,7 +9333,7 @@
 	card_image = mul-16-sheoldred-whispering-one.png,
 	mana_cost = \MTGsymbol{5}{5}\MTGsymbol{B}{5}\MTGsymbol{B}{5},
 	card_type = 传奇生物 ～非瑞人／魔判官,
-	description = {沼泽行者\\
+	description = {沼泽行者（只要防御牌手操控沼泽，此生物便不能被阻挡。）\\
 		在你的维持开始时，将目标生物牌从你的坟墓场移回战场。\\
 		在每位对手的维持开始时，该牌手牺牲一个生物。},
 	stax_type = 大礼拜堂/烟囱效应,
@@ -9432,36 +9379,6 @@
 	legality / duel_commander = legal
 }
 
-\section{结界}
-
-\card
-{
-	card_english_name = {Meishin, the Mind Cage},
-	card_chinese_name = {灵枷迷心},
-	card_image = sok-44-meishin-the-mind-cage.png,
-	mana_cost = \MTGsymbol{4}{5}\MTGsymbol{U}{5}\MTGsymbol{U}{5}\MTGsymbol{U}{5},
-	card_type = 传奇结界,
-	description = {所有生物得-X/-0，X为你的手牌数量。},
-	stax_type = 生物Hate,
-	is_in_restricted_list = Not RL,
-	legality / standard = notlegal,
-	legality / alchemy = notlegal,
-	legality / pioneer = notlegal,
-	legality / explorer = notlegal,
-	legality / modern = legal,
-	legality / historic = notlegal,
-	legality / legacy = legal,
-	legality / pauper = notlegal,
-	legality / vintage = legal,
-	legality / timeless = notlegal,
-	legality / commander = legal,
-	legality / duel_commander = legal
-}
-
-\chapter{8费}
-
-\section{生物}
-
 \card
 {
 	card_english_name = {Archfiend of Despair},
@@ -9471,7 +9388,7 @@
 	card_type = 生物 ～恶魔,
 	description = {飞行\\
 		所有对手都不能获得生命。\\
-		在每个结束步骤开始时，每位对手各失去等同于该牌手本回合中曾失去之数量的生命。},
+		在每个结束步骤开始时，每位对手各失去等同于该牌手本回合中曾失去之数量的生命。（伤害会导致失去生命。）},
 	stax_type = 获得生命锁,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -9495,7 +9412,7 @@
 	card_image = cmr-407-stormtide-leviathan.png,
 	mana_cost = \MTGsymbol{5}{5}\MTGsymbol{U}{5}\MTGsymbol{U}{5}\MTGsymbol{U}{5},
 	card_type = 生物 ～海怪,
-	description = {海岛行者\\
+	description = {海岛行者（只要防御牌手操控海岛，此生物就不能被阻挡。）\\
 		所有地均额外具有海岛此类别。\\
 		不具飞行或海岛行者异能的生物不能攻击。},
 	stax_type = 攻击/格挡锁,
@@ -9539,37 +9456,6 @@
 	legality / commander = legal,
 	legality / duel_commander = legal
 }
-
-\section{神器}
-
-\card
-{
-	card_english_name = {Possessed Portal},
-	card_chinese_name = {着魔时空通道},
-	card_image = 5dn-144-possessed-portal.png,
-	mana_cost = \MTGsymbol{8}{5},
-	card_type = 神器,
-	description = {若任何牌手将抓一张牌，改为该牌手略过该次抓牌。\\
-		在每个回合结束时，每位牌手除非从其手上弃掉一张牌，否则该牌手牺牲一个永久物。},
-	stax_type = 抓牌锁，大礼拜堂/烟囱效应,
-	is_in_restricted_list = Not RL,
-	legality / standard = notlegal,
-	legality / alchemy = notlegal,
-	legality / pioneer = notlegal,
-	legality / explorer = notlegal,
-	legality / modern = legal,
-	legality / historic = notlegal,
-	legality / legacy = legal,
-	legality / pauper = notlegal,
-	legality / vintage = legal,
-	legality / timeless = notlegal,
-	legality / commander = legal,
-	legality / duel_commander = legal
-}
-
-\chapter{9费}
-
-\section{生物}
 
 \card
 {
@@ -9654,7 +9540,7 @@
 	card_image = bfz-17-void-winnower.png,
 	mana_cost = \MTGsymbol{9}{5},
 	card_type = 生物～奥札奇,
-	description = {所有对手都不能施放总法术力费用为偶数的咒语。所有对手都不能以总法术力费用为偶数的生物进行阻挡。},
+	description = {所有对手都不能施放总法术力费用为偶数的咒语。（零是偶数。）所有对手都不能以总法术力费用为偶数的生物进行阻挡。},
 	stax_type = 攻击/格挡锁，咒语锁,
 	is_in_restricted_list = Not RL,
 	legality / standard = notlegal,
@@ -9670,8 +9556,6 @@
 	legality / commander = legal,
 	legality / duel_commander = legal
 }
-
-\chapter{10费}
 
 \card
 {
@@ -9699,14 +9583,12 @@
 	legality / duel_commander = legal
 }
 
-\chapter{11费}
-
 \card
 {
 	card_english_name = {Brisela, Voice of Nightmares},
 	card_chinese_name = {梦魇异音布瑟拉},
 	card_image = emn-15b-brisela-voice-of-nightmares.png,
-	mana_cost = None,
+	mana_cost = 无费用（法术力值为0）,
 	card_type = 传奇生物～奥札奇／天使,
 	description = {飞行，先攻，警戒，系命\\
 		所有对手都不能施放总法术力费用等于或小于3的咒语。},
@@ -9725,5 +9607,115 @@
 	legality / commander = legal,
 	legality / duel_commander = legal
 }
+
+\section{神器}
+
+\card
+{
+	card_english_name = {Possessed Portal},
+	card_chinese_name = {着魔时空通道},
+	card_image = 5dn-144-possessed-portal.png,
+	mana_cost = \MTGsymbol{8}{5},
+	card_type = 神器,
+	description = {若任何牌手将抓一张牌，改为该牌手略过该次抓牌。\\
+		在每个回合结束时，每位牌手除非从其手上弃掉一张牌，否则该牌手牺牲一个永久物。},
+	stax_type = 抓牌锁，大礼拜堂/烟囱效应,
+	is_in_restricted_list = Not RL,
+	legality / standard = notlegal,
+	legality / alchemy = notlegal,
+	legality / pioneer = notlegal,
+	legality / explorer = notlegal,
+	legality / modern = legal,
+	legality / historic = notlegal,
+	legality / legacy = legal,
+	legality / pauper = notlegal,
+	legality / vintage = legal,
+	legality / timeless = notlegal,
+	legality / commander = legal,
+	legality / duel_commander = legal
+}
+
+\section{结界}
+
+\card
+{
+	card_english_name = {Meishin, the Mind Cage},
+	card_chinese_name = {灵枷迷心},
+	card_image = sok-44-meishin-the-mind-cage.png,
+	mana_cost = \MTGsymbol{4}{5}\MTGsymbol{U}{5}\MTGsymbol{U}{5}\MTGsymbol{U}{5},
+	card_type = 传奇结界,
+	description = {所有生物得-X/-0，X为你的手牌数量。},
+	stax_type = 生物Hate,
+	is_in_restricted_list = Not RL,
+	legality / standard = notlegal,
+	legality / alchemy = notlegal,
+	legality / pioneer = notlegal,
+	legality / explorer = notlegal,
+	legality / modern = legal,
+	legality / historic = notlegal,
+	legality / legacy = legal,
+	legality / pauper = notlegal,
+	legality / vintage = legal,
+	legality / timeless = notlegal,
+	legality / commander = legal,
+	legality / duel_commander = legal
+}
+
+\chapter{0费（包括地）}
+
+\section{神器}
+
+\card
+{
+	card_english_name = {Chalice of the Void},
+	card_chinese_name = {虚空圣杯},
+	card_image = lcc-105-chalice-of-the-void.png,
+	mana_cost = \MTGsymbol{X}{5}\MTGsymbol{X}{5},
+	card_type = 神器,
+	description = {虚空圣杯进战场时上面有X个充电指示物。\\
+		每当任一牌手施放法术力值等同于虚空圣杯上充电指示物数量的咒语时，反击该咒语。},
+	stax_type = 咒语锁,
+	is_in_restricted_list = Not RL,
+	legality / standard = notlegal,
+	legality / alchemy = notlegal,
+	legality / pioneer = notlegal,
+	legality / explorer = notlegal,
+	legality / modern = legal,
+	legality / historic = legal,
+	legality / legacy = legal,
+	legality / pauper = notlegal,
+	legality / vintage = restricted,
+	legality / timeless = legal,
+	legality / commander = legal,
+	legality / duel_commander = legal
+}
+
+\section{其他}
+
+\card
+{
+	card_english_name = {The Tabernacle at Pendrell Vale},
+	card_chinese_name = {潘卓欧谷大礼拜堂},
+	card_image = me3-212-the-tabernacle-at-pendrell-vale.png,
+	mana_cost = 无费用（法术力值为0）,
+	card_type = Legendary Land,
+	description = {All creatures have "At the beginning of your upkeep, destroy this creature unless you pay \MTGsymbol{1}{3}."},
+	stax_type = 大礼拜堂/烟囱效应,
+	is_in_restricted_list = RL,
+	legality / standard = notlegal,
+	legality / alchemy = notlegal,
+	legality / pioneer = notlegal,
+	legality / explorer = notlegal,
+	legality / modern = notlegal,
+	legality / historic = notlegal,
+	legality / legacy = legal,
+	legality / pauper = notlegal,
+	legality / vintage = legal,
+	legality / timeless = notlegal,
+	legality / commander = legal,
+	legality / duel_commander = banned
+}
+
+% Latex text ends here
 
 \end{document}

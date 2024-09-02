@@ -10,7 +10,7 @@ def get_cards_information(
         sheet_file_name : str,
         sheet_name : str,
         multiface_sheet_name : str,
-        list_name : str,
+        card_list_name : str,
         stax_type_dict : dict,
         from_scratch : bool = False):
     
@@ -101,8 +101,9 @@ def get_cards_information(
             back_card_data = card_data["card_faces"][1]
 
             """
-            单面牌表格结构：
-            card_english_name, card_chinese_name, card_image_name, mana_cost, card_type, card_description,
+            双面牌表格结构：
+            front_card_english_name, front_card_chinese_name, front_card_image_name, front_mana_cost, front_card_type, front_card_description,
+            back_card_english_name, back_card_chinese_name, back_card_image_name, back_mana_cost, back_card_type, back_card_description,
             stax_type, is_rl, 
             legalities["standard"], legalities["alchemy"], legalities["pioneer"], legalities["explorer"],
             legalities["modern"], legalities["historic"], legalities["legacy"], legalities["pauper"],
@@ -116,13 +117,13 @@ def get_cards_information(
                 get_card_image(front_card_data["image_uris"]["png"] if card_data["layout"] != "flip" else card_data["image_uris"]["png"], front_card_data["name"]),
                 front_card_data["mana_cost"],
                 front_card_data["printed_type_line"] if "printed_type_line" in front_card_data else front_card_data["type_line"],
-                front_card_data["printed_text"] if "printed_text" in front_card_data else front_card_data["oracle_text"],
+                re.sub(r"\([^)]*\)|（[^）]*）", "", front_card_data["printed_text"]) if "printed_text" in front_card_data else re.sub(r"\([^)]*\)|（[^）]*）", "", front_card_data["oracle_text"]),
                 back_card_data["name"],
                 back_card_data["printed_name"] if "printed_name" in back_card_data else "",
                 get_card_image(back_card_data["image_uris"]["png"] if card_data["layout"] != "flip" else card_data["image_uris"]["png"], back_card_data["name"]),
                 back_card_data["mana_cost"],
                 back_card_data["printed_type_line"] if "printed_type_line" in back_card_data else back_card_data["type_line"],
-                back_card_data["printed_text"] if "printed_text" in back_card_data else back_card_data["oracle_text"],
+                re.sub(r"\([^)]*\)|（[^）]*）", "", back_card_data["printed_text"]) if "printed_text" in back_card_data else re.sub(r"\([^)]*\)|（[^）]*）", "", back_card_data["oracle_text"]),
                 "，".join(stax_type_dict[tag] for tag in tags if tag in stax_type_dict),
                 "RL" if card_data["reserved"] else "Not RL",
                 legalities["standard"], legalities["alchemy"], legalities["pioneer"], legalities["explorer"],
@@ -133,9 +134,8 @@ def get_cards_information(
         else:
 
             """
-            双面牌表格结构：
-            front_card_english_name, front_card_chinese_name, front_card_image_name, front_mana_cost, front_card_type, front_card_description,
-            back_card_english_name, back_card_chinese_name, back_card_image_name, back_mana_cost, back_card_type, back_card_description,
+            单面牌表格结构：
+            card_english_name, card_chinese_name, card_image_name, mana_cost, card_type, card_description,
             stax_type, is_rl, 
             legalities["standard"], legalities["alchemy"], legalities["pioneer"], legalities["explorer"],
             legalities["modern"], legalities["historic"], legalities["legacy"], legalities["pauper"],
@@ -149,7 +149,7 @@ def get_cards_information(
                 get_card_image(card_data["image_uris"]["png"], card_data["name"]),
                 card_data["mana_cost"],
                 card_data["printed_type_line"] if "printed_type_line" in card_data else card_data["type_line"],
-                card_data["printed_text"] if "printed_text" in card_data else card_data["oracle_text"],
+                re.sub(r"\([^)]*\)|（[^）]*）", "", card_data["printed_text"]) if "printed_text" in card_data else re.sub(r"\([^)]*\)|（[^）]*）", "", card_data["oracle_text"]),
                 "，".join(stax_type_dict[tag] for tag in tags if tag in stax_type_dict),
                 "RL" if card_data["reserved"] else "Not RL",
                 legalities["standard"], legalities["alchemy"], legalities["pioneer"], legalities["explorer"],
@@ -173,7 +173,7 @@ def get_cards_information(
         workbook[multiface_sheet_name + "_temp"].title = multiface_sheet_name
 
     # 读取列表
-    with open(list_name, "r", encoding = "utf-8") as f:
+    with open(card_list_name, "r", encoding = "utf-8") as f:
         card_names = f.readlines()
 
     # 读取表格

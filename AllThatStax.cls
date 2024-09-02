@@ -1366,6 +1366,45 @@
 		{B} {\includesvg[width=#2mm]{B.svg}}
 		{R} {\includesvg[width=#2mm]{R.svg}}
 		{G} {\includesvg[width=#2mm]{G.svg}}
+		{2/W} {\includesvg[width=#2mm]{2W.svg}}
+		{2/U} {\includesvg[width=#2mm]{2U.svg}}
+		{2/B} {\includesvg[width=#2mm]{2B.svg}}
+		{2/R} {\includesvg[width=#2mm]{2R.svg}}
+		{2/G} {\includesvg[width=#2mm]{2G.svg}}
+		{W/P} {\includesvg[width=#2mm]{WP.svg}}
+		{U/P} {\includesvg[width=#2mm]{UP.svg}}
+		{B/P} {\includesvg[width=#2mm]{BP.svg}}
+		{R/P} {\includesvg[width=#2mm]{RP.svg}}
+		{G/P} {\includesvg[width=#2mm]{GP.svg}}
+		{W/U} {\includesvg[width=#2mm]{WU.svg}}
+		{W/B} {\includesvg[width=#2mm]{WB.svg}}
+		{U/B} {\includesvg[width=#2mm]{UB.svg}}
+		{U/R} {\includesvg[width=#2mm]{UR.svg}}
+		{B/R} {\includesvg[width=#2mm]{BR.svg}}
+		{B/G} {\includesvg[width=#2mm]{BG.svg}}
+		{R/W} {\includesvg[width=#2mm]{RW.svg}}
+		{R/G} {\includesvg[width=#2mm]{RG.svg}}
+		{G/W} {\includesvg[width=#2mm]{GW.svg}}
+		{G/U} {\includesvg[width=#2mm]{GU.svg}}
+		{W/U/P} {\includesvg[width=#2mm]{WUP.svg}}
+		{W/B/P} {\includesvg[width=#2mm]{WBP.svg}}
+		{U/B/P} {\includesvg[width=#2mm]{UBP.svg}}
+		{U/R/P} {\includesvg[width=#2mm]{URP.svg}}
+		{B/R/P} {\includesvg[width=#2mm]{BRP.svg}}
+		{B/G/P} {\includesvg[width=#2mm]{BGP.svg}}
+		{R/W/P} {\includesvg[width=#2mm]{RWP.svg}}
+		{R/G/P} {\includesvg[width=#2mm]{RGP.svg}}
+		{G/W/P} {\includesvg[width=#2mm]{GWP.svg}}
+		{G/U/P} {\includesvg[width=#2mm]{GUP.svg}}
+		{C/W} {\includesvg[width=#2mm]{CW.svg}}
+		{C/U} {\includesvg[width=#2mm]{CU.svg}}
+		{C/B} {\includesvg[width=#2mm]{CB.svg}}
+		{C/R} {\includesvg[width=#2mm]{CR.svg}}
+		{C/G} {\includesvg[width=#2mm]{CG.svg}}
+		{C/P} {\includesvg[width=#2mm]{CP.svg}}
+		{C} {\includesvg[width=#2mm]{C.svg}}
+		{X} {\includesvg[width=#2mm]{X.svg}}
+		{0} {\includesvg[width=#2mm]{0.svg}}
 		{1} {\includesvg[width=#2mm]{1.svg}}
 		{2} {\includesvg[width=#2mm]{2.svg}}
 		{3} {\includesvg[width=#2mm]{3.svg}}
@@ -1376,7 +1415,21 @@
 		{8} {\includesvg[width=#2mm]{8.svg}}
 		{9} {\includesvg[width=#2mm]{9.svg}}
 		{10} {\includesvg[width=#2mm]{10.svg}}
-		{default} {1234}
+		{11} {\includesvg[width=#2mm]{11.svg}}
+		{12} {\includesvg[width=#2mm]{12.svg}}
+		{13} {\includesvg[width=#2mm]{13.svg}}
+		{14} {\includesvg[width=#2mm]{14.svg}}
+		{15} {\includesvg[width=#2mm]{15.svg}}
+		{16} {\includesvg[width=#2mm]{16.svg}}
+		{17} {\includesvg[width=#2mm]{17.svg}}
+		{18} {\includesvg[width=#2mm]{18.svg}}
+		{19} {\includesvg[width=#2mm]{19.svg}}
+		{20} {\includesvg[width=#2mm]{20.svg}}
+		{S} {\includesvg[width=#2mm]{S.svg}}
+		{E} {\includesvg[width=#2mm]{E.svg}}
+		{Q} {\includesvg[width=#2mm]{Q.svg}}
+		{T} {\includesvg[width=#2mm]{T.svg}}
+		{default} {#1}
 	}
 }
 
