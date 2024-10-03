@@ -1,8 +1,8 @@
 import subprocess
 
 def run_latex(
-        latex_file_name : str,
-        latex_text_name : str):
+    latex_file_name : str,
+    latex_text_name : str):
 
     with open(latex_text_name, "r", encoding = "utf-8") as latex_text:
         latex_text_content = latex_text.read()
@@ -13,9 +13,9 @@ def run_latex(
     start_idx = None
     end_idx = None
     for i, line in enumerate(latex_file_content):
-        if "%% Latex text starts here" in line:
+        if "% Latex text starts here" in line:
             start_idx = i
-        if "%% Latex text ends here" in line:
+        if "% Latex text ends here" in line:
             end_idx = i
             break
 
@@ -31,6 +31,6 @@ def run_latex(
 
     command = ["xelatex.exe", "-synctex=1", "-interaction=nonstopmode", "-shell-escape", latex_file_name]
 
-    result = subprocess.run(command, capture_output = True, text = True)
+    result = subprocess.run(command, capture_output = True, text = True, encoding = "utf-8")
 
     print(result.stdout)

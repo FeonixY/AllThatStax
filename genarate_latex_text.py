@@ -20,10 +20,10 @@ cmc, sort_card_type
 """
 
 def genarate_latex_text(
-        sheet_file_name : str,
-        sheet_name : str,
-        multiface_sheet_name : str,
-        latex_text_name : str):
+    sheet_file_name : str,
+    sheet_name : str,
+    multiface_sheet_name : str,
+    latex_text_name : str):
     
     def read_xlsx_excel(sheet_file_name, read_sheet_name):
         workbook = load_workbook(sheet_file_name)

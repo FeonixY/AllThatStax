@@ -1,5 +1,6 @@
 import json
 from run_latex import run_latex
+from localization import localization
 from genarate_latex_text import genarate_latex_text
 from get_cards_information import get_cards_information
 
@@ -17,5 +18,6 @@ stax_type_dict = data["stax_type"]
 
 #get_cards_information(image_folder_name, sheet_file_name, sheet_name, multiface_sheet_name, card_list_name, stax_type_dict,
                       #from_scratch = True)
+#localization(sheet_file_name, sheet_name, multiface_sheet_name)
 genarate_latex_text(sheet_file_name, sheet_name, multiface_sheet_name, latex_text_name)
 run_latex(latex_file_name, latex_text_name)

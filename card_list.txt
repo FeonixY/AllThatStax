@@ -10,6 +10,7 @@
 1 Arcane Laboratory (7ED) 60 #Rule of Law Effect
 1 Archangel of Tithes (OTJ) 2 #Attack/Block Tax
 1 Archelos, Lagoon Mystic (CMR) 268 #Orb of Dreams Effect
+1 Archfiend of Depravity (FRF) 62 #Tabernacle/Smokestack Effect
 1 Archfiend of Despair (BBD) 44 #Life Gain Stax
 1 Archon of Absolution (ELD) 3 #Attack/Block Tax
 1 Archon of Emeria (ZNR) 4 #Orb of Dreams Effect #Rule of Law Effect
@@ -18,6 +19,7 @@
 1 Ascendant Evincar (10E) 127 #Creature Hate
 1 Ashes of the Abhorrent (XLN) 2 #Graveyard Stax
 1 Ashiok, Dream Render (WAR) 228 #Search Library Stax
+1 Ashiok's Erasure (THB) 43 #Spell Stax
 1 Ashling's Prerogative (LRW) 150 #Orb of Dreams Effect
 1 Aura Flux (ULG) 27 #Tabernacle/Smokestack Effect
 1 Aura of Silence (10E) 6 #Spell Tax
@@ -83,6 +85,7 @@
 1 Defiler of Souls (ARB) 37 #Tabernacle/Smokestack Effect
 1 Dennick, Pious Apprentice / Dennick, Pious Apparition (MID) 217 #Graveyard Stax
 1 Destructive Flow (PLS) 102 #Tabernacle/Smokestack Effect
+1 Dingus Egg (LEA) 241 #Other Ability/Effect Tax
 1 Disciple of Caelus Nin (BRC) 41 #Other Ability/Effect Stax
 1 Dissipation Field (CLB) 718 #Attack/Block Tax #Other Ability/Effect Tax
 1 Doom Foretold (ELD) 187 #Tabernacle/Smokestack Effect
@@ -144,6 +147,8 @@
 1 Harbinger of the Seas (MH3) 63 #Blood Moon Effect
 1 Havoc (TMP) 181 #Spell Tax
 1 Havoc Festival (RTR) 166 #Life Gain Stax
+1 Hearthborn Battler (BLB) 361 #Spell Tax
+1 Herald of Anguish (BRC) 108 #Hand Hate
 1 High Noon (OTJ) 15 #Rule of Law Effect
 1 High Seas (MMQ) 83 #Spell Tax
 1 Hinata, Dawn-Crowned (NEO) 222 #Spell Tax
@@ -167,6 +172,7 @@
 1 Judoon Enforcers (WHO) 138 #Attack/Block Stax
 1 Juntu Stakes (INV) 304 #Winter Orb Effect
 1 Kaervek, the Spiteful (M21) 106 #Creature Hate
+1 Kalitas, Traitor of Ghet (OGW) 86 #Graveyard Hate
 1 Kambal, Consul of Allocation (KLD) 183 #Spell Tax
 1 Karlov Watchdog (MKM) 20 #Other Special Action Stax
 1 Karn, the Great Creator (WAR) 1 #Activated Ability Stax
@@ -202,6 +208,7 @@
 1 Magistrate's Veto (MMQ) 204 #Attack/Block Stax
 1 Magnetic Mountain (4ED) 209 #Winter Orb Effect
 1 Magus of the Abyss (2XM) 97 #Tabernacle/Smokestack Effect
+1 Magus of the Moat (FUT) 12
 1 Magus of the Moon (IMA) 138 #Blood Moon Effect
 1 Magus of the Tabernacle (PLC) 8 #Tabernacle/Smokestack Effect
 1 Mana Breach (EXO) 38 #Spell Tax
@@ -372,6 +379,7 @@
 1 Winter Orb (SLD) 1486 #Winter Orb Effect
 1 Witch Hunt (C13) 133 #Life Gain Stax
 1 Witch-king of Angmar (LTR) 114 #Attack/Block Tax
+1 Woebringer Demon (RVR) 98 #Tabernacle/Smokestack Effect
 1 World Queller (ZEN) 39 #Tabernacle/Smokestack Effect
 1 Wrath of Marit Lage (8ED) 115 #Winter Orb Effect
 1 Yasharn, Implacable Earth (ZNR) 240 #Activated Ability Stax #Spell Stax

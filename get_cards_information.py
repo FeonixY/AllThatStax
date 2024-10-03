@@ -6,13 +6,13 @@ from openpyxl import load_workbook
 from urllib.parse import urlparse, unquote
 
 def get_cards_information(
-        image_folder_name: str,
-        sheet_file_name : str,
-        sheet_name : str,
-        multiface_sheet_name : str,
-        card_list_name : str,
-        stax_type_dict : dict,
-        from_scratch : bool = False):
+    image_folder_name: str,
+    sheet_file_name : str,
+    sheet_name : str,
+    multiface_sheet_name : str,
+    card_list_name : str,
+    stax_type_dict : dict,
+    from_scratch : bool = False):
     
     def get_card_json_data(card_name):
         # 整理卡牌名称
@@ -61,7 +61,6 @@ def get_cards_information(
             if image_response.status_code == 200:
                 with open(f"{image_folder_name}/{card_image_name}", "wb") as f:
                     f.write(image_response.content)
-                print(f"{card_english_name} image downloaded and saved as {card_image_name}")
             else:
                 card_image_name = None
                 print(f"Failed to download {card_english_name} image. {image_response.status_code} - {image_response.text}")
@@ -206,14 +205,14 @@ def get_cards_information(
             for cell in prev_sheet["A"]:
                 if cell.value in card_name:
                     new_line = (False, [cell.value for cell in prev_sheet[cell.row]])
-                    used_images.add(prev_sheet[cell.row][3])
+                    used_images.add(prev_sheet.cell(cell.row, 3))
                     is_prev_has_information = True
                     break
             for cell in prev_multiface_sheet["A"]:
                 if cell.value in card_name:
                     new_line = (True, [cell.value for cell in prev_multiface_sheet[cell.row]])
-                    used_images.add(prev_multiface_sheet[cell.row][3])
-                    used_images.add(prev_multiface_sheet[cell.row][8])
+                    used_images.add(prev_multiface_sheet.cell(cell.row, 3))
+                    used_images.add(prev_multiface_sheet.cell(cell.row, 8))
                     is_prev_has_information = True
                     break
             if is_prev_has_information == False:
