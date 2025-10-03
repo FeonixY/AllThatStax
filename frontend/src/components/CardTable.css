@@ -1,0 +1,114 @@
+.card-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.card-table thead {
+  background: linear-gradient(135deg, #1e3a8a, #312e81);
+  color: #e0e7ff;
+}
+
+.card-table th,
+.card-table td {
+  padding: 0.75rem 0.85rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.95rem;
+  vertical-align: top;
+}
+
+.card-table th {
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.card-table__row:hover {
+  background-color: #f1f5f9;
+}
+
+.card-table__thumbnail {
+  width: 80px;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.16);
+}
+
+.card-table__no-image {
+  display: inline-flex;
+  width: 80px;
+  height: 112px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background: #e2e8f0;
+  color: #475569;
+  font-size: 0.85rem;
+}
+
+.card-table__name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-weight: 600;
+}
+
+.card-table__name small {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.card-table__faces {
+  margin: 0.25rem 0 0;
+  padding-left: 1rem;
+  color: #475569;
+  font-size: 0.8rem;
+}
+
+.card-table__type {
+  white-space: pre-line;
+}
+
+.card-table__description {
+  max-width: 320px;
+  line-height: 1.45;
+  color: #334155;
+  position: relative;
+}
+
+.card-table__toggle {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.card-table__toggle:hover {
+  text-decoration: underline;
+}
+
+.card-table__add {
+  padding: 0.45rem 0.75rem;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
+.card-table__add:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.25);
+}
+
+.card-table__empty {
+  text-align: center;
+  color: #64748b;
+  padding: 2rem;
+}
