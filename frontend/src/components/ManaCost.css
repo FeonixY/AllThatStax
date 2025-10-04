@@ -1,0 +1,21 @@
+.mana-cost {
+  display: inline-flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.mana-cost__icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.mana-cost__text {
+  font-size: 0.85rem;
+  color: #334155;
+}
+
+.mana-cost__none {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
