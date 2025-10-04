@@ -1,0 +1,144 @@
+.app {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.app--loading,
+.app--error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 1.2rem;
+}
+
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: flex-end;
+}
+
+.app__header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #111827;
+}
+
+.app__header p {
+  margin: 0.5rem 0 0;
+  color: #475569;
+}
+
+.app__tabs {
+  display: inline-flex;
+  gap: 0.75rem;
+  background: rgba(226, 232, 240, 0.6);
+  border-radius: 999px;
+  padding: 0.4rem;
+  align-self: flex-start;
+}
+
+.app__tab {
+  border: none;
+  background: transparent;
+  color: #475569;
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.app__tab--active {
+  background: linear-gradient(135deg, #4338ca, #2563eb);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(59, 130, 246, 0.25);
+}
+
+.app__body {
+  display: flex;
+}
+
+.library-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex: 1;
+}
+
+.app__filters {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.app__filters input,
+.app__filters select {
+  padding: 0.55rem 0.8rem;
+  border: 1px solid #cbd5f5;
+  border-radius: 0.75rem;
+  font-size: 0.95rem;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+.library {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.library__list,
+.library__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 0;
+}
+
+.library__list {
+  overflow-x: auto;
+}
+
+.library__details .card-details {
+  flex: 1;
+}
+
+.library__drag-hint {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .app {
+    padding: 1.5rem;
+  }
+
+  .library {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 1.25rem;
+  }
+
+  .app__tabs {
+    align-self: stretch;
+    justify-content: center;
+  }
+
+  .library {
+    gap: 1.25rem;
+  }
+}
