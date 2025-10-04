@@ -30,24 +30,6 @@
   background-color: #f1f5f9;
 }
 
-.card-table__thumbnail {
-  width: 120px;
-  border-radius: 0.65rem;
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.18);
-}
-
-.card-table__no-image {
-  display: inline-flex;
-  width: 120px;
-  height: 168px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.65rem;
-  background: #e2e8f0;
-  color: #475569;
-  font-size: 0.85rem;
-}
-
 .card-table__name {
   display: flex;
   flex-direction: column;
@@ -72,34 +54,25 @@
 }
 
 .card-table__description {
-  max-width: 560px;
   line-height: 1.6;
   color: #334155;
-  position: relative;
   white-space: pre-line;
 }
 
-.card-table__toggle {
-  margin-left: 0.5rem;
-  background: none;
-  border: none;
-  color: #2563eb;
-  cursor: pointer;
-  font-size: 0.85rem;
-}
-
-.card-table__toggle:hover {
-  text-decoration: underline;
-}
-
 .card-table__add {
-  padding: 0.45rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
   background: linear-gradient(135deg, #2563eb, #7c3aed);
   color: #fff;
   border: none;
-  border-radius: 0.6rem;
+  border-radius: 999px;
   cursor: pointer;
   font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1;
   box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
 }
 
@@ -112,4 +85,23 @@
   text-align: center;
   color: #64748b;
   padding: 2rem;
+}
+
+.card-table__row {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.card-table__row--selected {
+  background-color: #e0e7ff;
+  box-shadow: inset 4px 0 0 #6366f1;
+}
+
+.card-table__row--selected:hover {
+  background-color: #cbd5f5;
+}
+
+.card-table__actions {
+  text-align: center;
+  width: 80px;
 }

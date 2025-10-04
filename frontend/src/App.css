@@ -52,7 +52,7 @@
 
 .app__content {
   display: grid;
-  grid-template-columns: 5fr 3fr;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
   gap: 1.5rem;
 }
 
@@ -62,14 +62,49 @@
   gap: 1rem;
 }
 
+.app__panel--library {
+  gap: 1.25rem;
+}
+
 .app__panel h2 {
   margin: 0;
   font-size: 1.4rem;
   color: #1e293b;
 }
 
+.library {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.library__list,
+.library__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 0;
+}
+
+.library__list {
+  overflow-x: auto;
+}
+
+.library__details {
+  height: 100%;
+}
+
+.library__details .card-details {
+  flex: 1;
+}
+
 @media (max-width: 1200px) {
   .app__content {
+    grid-template-columns: 1fr;
+  }
+
+  .library {
     grid-template-columns: 1fr;
   }
 }
@@ -92,5 +127,9 @@
   .app__filters input,
   .app__filters select {
     flex: 1 1 200px;
+  }
+
+  .library {
+    gap: 1.25rem;
   }
 }

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { CardTable } from "./components/CardTable";
+import { CardDetails } from "./components/CardDetails";
 import { DeckBoard } from "./components/DeckBoard";
 import { fetchCards, fetchMetadata } from "./api";
 import { CardData, DeckCounts, Metadata } from "./types";
@@ -20,6 +21,7 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [selectedStaxType, setSelectedStaxType] = useState("all");
   const [selectedCardType, setSelectedCardType] = useState("all");
+  const [selectedCardId, setSelectedCardId] = useState<string | null>(null);
 
   useEffect(() => {
     async function load() {
@@ -61,6 +63,30 @@ export default function App() {
     });
   }, [cards, query, selectedStaxType, selectedCardType]);
 
+  useEffect(() => {
+    if (!filteredCards.length) {
+      if (selectedCardId !== null) {
+        setSelectedCardId(null);
+      }
+      return;
+    }
+
+    const stillVisible = filteredCards.some(
+      (card) => card.id === selectedCardId
+    );
+
+    if (!stillVisible) {
+      setSelectedCardId(filteredCards[0].id);
+    }
+  }, [filteredCards, selectedCardId]);
+
+  const selectedCard = useMemo(() => {
+    if (!selectedCardId) {
+      return null;
+    }
+    return cards.find((card) => card.id === selectedCardId) ?? null;
+  }, [cards, selectedCardId]);
+
   const handleAddCard = (card: CardData) => {
     setDeckCounts((prev) => ({
       ...prev,
@@ -83,6 +109,10 @@ export default function App() {
   };
 
   const handleClearDeck = () => setDeckCounts({});
+
+  const handleSelectCard = (card: CardData) => {
+    setSelectedCardId(card.id);
+  };
 
   if (loading) {
     return <div className="app app--loading">正在加载卡牌数据…</div>;
@@ -140,9 +170,26 @@ export default function App() {
       </header>
 
       <main className="app__content">
-        <section className="app__panel app__panel--table">
+        <section className="app__panel app__panel--library">
           <h2>卡牌列表</h2>
-          <CardTable cards={filteredCards} onAdd={handleAddCard} apiBase={API_BASE} />
+          <div className="library">
+            <div className="library__list">
+              <CardTable
+                cards={filteredCards}
+                onAdd={handleAddCard}
+                onSelect={handleSelectCard}
+                selectedCardId={selectedCardId}
+                apiBase={API_BASE}
+              />
+            </div>
+            <div className="library__details">
+              <CardDetails
+                card={selectedCard}
+                onAdd={handleAddCard}
+                apiBase={API_BASE}
+              />
+            </div>
+          </div>
         </section>
         <section className="app__panel app__panel--deck">
           <DeckBoard

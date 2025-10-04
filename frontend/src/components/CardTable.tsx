@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { CardData } from "../types";
 import { ManaCost } from "./ManaCost";
 import "./CardTable.css";
@@ -6,12 +5,18 @@ import "./CardTable.css";
 interface CardTableProps {
   cards: CardData[];
   onAdd: (card: CardData) => void;
+  onSelect: (card: CardData) => void;
+  selectedCardId: string | null;
   apiBase: string;
 }
 
-export function CardTable({ cards, onAdd, apiBase }: CardTableProps) {
-  const [expandedCard, setExpandedCard] = useState<string | null>(null);
-
+export function CardTable({
+  cards,
+  onAdd,
+  onSelect,
+  selectedCardId,
+  apiBase,
+}: CardTableProps) {
   if (!cards.length) {
     return <p className="card-table__empty">未找到符合条件的卡牌。</p>;
   }
@@ -20,13 +25,12 @@ export function CardTable({ cards, onAdd, apiBase }: CardTableProps) {
     <table className="card-table">
       <thead>
         <tr>
-          <th>卡图</th>
           <th>名称</th>
           <th>法术力值</th>
           <th>类型</th>
           <th>锁类型</th>
           <th>描述</th>
-          <th>操作</th>
+          <th className="card-table__actions">操作</th>
         </tr>
       </thead>
       <tbody>
@@ -34,28 +38,19 @@ export function CardTable({ cards, onAdd, apiBase }: CardTableProps) {
           const primaryFace = card.faces[0];
           const secondaryFaces = card.faces.slice(1);
           const description = primaryFace.description || "暂无描述";
-          const isExpanded = expandedCard === card.id;
-          const descriptionPreview = description.length > 120 && !isExpanded
-            ? `${description.slice(0, 120)}…`
+          const isSelected = selectedCardId === card.id;
+          const descriptionPreview = description.length > 180
+            ? `${description.slice(0, 180)}…`
             : description;
 
-          const imageUrl = primaryFace.image
-            ? `${apiBase}${primaryFace.image}`
-            : undefined;
-
           return (
-            <tr key={card.id} className="card-table__row">
-              <td>
-                {imageUrl ? (
-                  <img
-                    src={imageUrl}
-                    alt={primaryFace.chineseName}
-                    className="card-table__thumbnail"
-                  />
-                ) : (
-                  <span className="card-table__no-image">无图</span>
-                )}
-              </td>
+            <tr
+              key={card.id}
+              className={`card-table__row${
+                isSelected ? " card-table__row--selected" : ""
+              }`}
+              onClick={() => onSelect(card)}
+            >
               <td className="card-table__name">
                 <span>{primaryFace.chineseName}</span>
                 <small>{primaryFace.englishName}</small>
@@ -76,25 +71,18 @@ export function CardTable({ cards, onAdd, apiBase }: CardTableProps) {
               <td>{card.staxType ? card.staxType.label : "-"}</td>
               <td className="card-table__description">
                 {descriptionPreview}
-                {description.length > 120 && (
-                  <button
-                    type="button"
-                    className="card-table__toggle"
-                    onClick={() =>
-                      setExpandedCard(isExpanded ? null : card.id)
-                    }
-                  >
-                    {isExpanded ? "收起" : "展开"}
-                  </button>
-                )}
               </td>
-              <td>
+              <td className="card-table__actions">
                 <button
                   type="button"
                   className="card-table__add"
-                  onClick={() => onAdd(card)}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    onAdd(card);
+                  }}
+                  aria-label={`将 ${primaryFace.chineseName} 加入牌本`}
                 >
-                  加入牌本
+                  +
                 </button>
               </td>
             </tr>
