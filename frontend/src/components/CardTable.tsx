@@ -25,8 +25,6 @@ export function CardTable({ cards, onAdd, apiBase }: CardTableProps) {
           <th>法术力值</th>
           <th>类型</th>
           <th>锁类型</th>
-          <th>法术力曲线</th>
-          <th>限制名单</th>
           <th>描述</th>
           <th>操作</th>
         </tr>
@@ -76,8 +74,6 @@ export function CardTable({ cards, onAdd, apiBase }: CardTableProps) {
               </td>
               <td className="card-table__type">{primaryFace.cardType}</td>
               <td>{card.staxType ? card.staxType.label : "-"}</td>
-              <td>{card.manaValue}</td>
-              <td>{card.isRestricted ? "是" : "否"}</td>
               <td className="card-table__description">
                 {descriptionPreview}
                 {description.length > 120 && (
