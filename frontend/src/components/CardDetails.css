@@ -107,6 +107,12 @@
   text-transform: uppercase;
 }
 
+.card-details__hint {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
 .card-details__faces {
   display: flex;
   flex-direction: column;

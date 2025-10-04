@@ -30,6 +30,12 @@ export interface Metadata {
   cardTypeOrder: string[];
 }
 
-export interface DeckCounts {
-  [cardId: string]: number;
+export const CARD_DRAG_MIME = "application/x-all-that-stax-card";
+
+export type BinderSide = "front" | "back";
+
+export interface BinderPage {
+  id: string;
+  front: (string | null)[];
+  back: (string | null)[];
 }

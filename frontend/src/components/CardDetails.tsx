@@ -1,4 +1,5 @@
-import { CardData } from "../types";
+import type { DragEvent } from "react";
+import { CardData, CARD_DRAG_MIME } from "../types";
 import { ManaCost } from "./ManaCost";
 import "./CardDetails.css";
 
@@ -18,6 +19,12 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
   }
 
   const primaryFace = card.faces[0];
+
+  const handleDragStart = (event: DragEvent<HTMLImageElement>) => {
+    event.dataTransfer.setData(CARD_DRAG_MIME, card.id);
+    event.dataTransfer.setData("text/plain", card.id);
+    event.dataTransfer.effectAllowed = "copy";
+  };
 
   return (
     <div className="card-details">
@@ -62,6 +69,8 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
         </div>
       </div>
 
+      <p className="card-details__hint">拖拽下方任意卡图到“牌本”页即可放置。</p>
+
       <div className="card-details__faces">
         {card.faces.map((face, index) => (
           <article key={`${face.englishName}-${index}`} className="card-details__face">
@@ -77,6 +86,8 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
                   src={`${apiBase}${face.image}`}
                   alt={face.chineseName}
                   className="card-details__image"
+                  draggable
+                  onDragStart={handleDragStart}
                 />
               ) : null}
               <div className="card-details__face-content">
