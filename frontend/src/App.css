@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  min-height: 100vh;
 }
 
 .app--loading,
@@ -105,10 +106,21 @@
 
 .library__list {
   overflow-x: auto;
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+.library__details {
+  max-height: 70vh;
+  height: 70vh;
 }
 
 .library__details .card-details {
   flex: 1;
+  max-height: 70vh;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-gutter: stable both-edges;
 }
 
 .library__drag-hint {
