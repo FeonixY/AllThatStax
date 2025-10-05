@@ -1,0 +1,119 @@
+.card-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.card-table thead {
+  background: linear-gradient(135deg, #1e3a8a, #312e81);
+  color: #e0e7ff;
+}
+
+.card-table th,
+.card-table td {
+  padding: 0.75rem 0.85rem;
+  font-size: 0.95rem;
+  vertical-align: top;
+}
+
+.card-table thead th {
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid #cbd5f5;
+}
+
+.card-table tbody tr + tr td {
+  border-top: 1px solid #e2e8f0;
+}
+
+.card-table tbody tr td + td {
+  border-left: 1px solid #f1f5f9;
+}
+
+.card-table tbody tr td {
+  border-bottom: none;
+}
+
+.card-table__row:hover {
+  background-color: #f1f5f9;
+}
+
+.card-table__name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-weight: 600;
+}
+
+.card-table__name small {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.card-table__faces {
+  margin: 0.25rem 0 0;
+  padding-left: 1rem;
+  color: #475569;
+  font-size: 0.8rem;
+}
+
+.card-table__type {
+  white-space: pre-line;
+}
+
+.card-table__description {
+  line-height: 1.6;
+  color: #334155;
+  white-space: pre-line;
+}
+
+.card-table__add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
+.card-table__add:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.25);
+}
+
+.card-table__empty {
+  text-align: center;
+  color: #64748b;
+  padding: 2rem;
+}
+
+.card-table__row {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.card-table__row--selected {
+  background-color: #e0e7ff;
+  box-shadow: inset 4px 0 0 #6366f1;
+}
+
+.card-table__row--selected:hover {
+  background-color: #cbd5f5;
+}
+
+.card-table__actions {
+  text-align: center;
+  width: 80px;
+}
