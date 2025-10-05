@@ -1,5 +1,4 @@
-import type { DragEvent } from "react";
-import { CardData, CARD_DRAG_MIME } from "../types";
+import { CardData } from "../types";
 import { ManaCost } from "./ManaCost";
 import "./CardDetails.css";
 
@@ -26,7 +25,7 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
     ["pioneer", "先驱"],
     ["modern", "摩登"],
     ["legacy", "薪传"],
-    ["vintage", "薪传"],
+    ["vintage", "特选"],
     ["commander", "官禁"],
     ["duel_commander", "法禁"],
     ["pauper", "纯铁"],
@@ -45,12 +44,6 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
   const normaliseStatus = (value: string) => {
     const key = value.toLowerCase();
     return statusLabels[key] ?? value;
-  };
-
-  const handleDragStart = (event: DragEvent<HTMLImageElement>) => {
-    event.dataTransfer.setData(CARD_DRAG_MIME, card.id);
-    event.dataTransfer.setData("text/plain", card.id);
-    event.dataTransfer.effectAllowed = "copy";
   };
 
   const displayedLegalities = legalityEntries.filter(([format]) =>
@@ -100,8 +93,6 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
         </div>
       </div>
 
-      <p className="card-details__hint">拖拽下方任意卡图到“牌本”页即可放置。</p>
-
       <section className="card-details__section">
         <h4>赛制合法性</h4>
         <ul className="card-details__legalities">
@@ -110,13 +101,13 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
             const classState = state.toLowerCase().replace(/[^a-z_]/g, "-");
             return (
               <li key={format} className="card-details__legal-item">
-                <span className="card-details__legal-format">
-                  {allowedFormats.get(format) ?? format}
-                </span>
                 <span
                   className={`card-details__legal-state card-details__legal-state--${classState}`}
                 >
                   {stateLabel}
+                </span>
+                <span className="card-details__legal-format">
+                  {allowedFormats.get(format) ?? format}
                 </span>
               </li>
             );
@@ -139,8 +130,6 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
                     src={`${apiBase}${face.image}`}
                     alt={face.chineseName}
                     className="card-details__image"
-                    draggable={true}
-                    onDragStart={handleDragStart}
                   />
                 ) : null}
                 <div className="card-details__face-content">

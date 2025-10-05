@@ -344,9 +344,6 @@ export default function App() {
                   onAdd={handleQuickAdd}
                   apiBase={API_BASE}
                 />
-                <p className="library__drag-hint">
-                  提示：按住卡图拖拽到“牌本”标签页中的格子，即可摆放牌面。
-                </p>
               </div>
             </div>
           </section>

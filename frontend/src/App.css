@@ -123,13 +123,6 @@
   scrollbar-gutter: stable both-edges;
 }
 
-.library__drag-hint {
-  margin: 0;
-  color: #64748b;
-  font-size: 0.85rem;
-  text-align: center;
-}
-
 @media (max-width: 1200px) {
   .app {
     padding: 1.5rem;
