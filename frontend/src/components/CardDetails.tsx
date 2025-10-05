@@ -21,20 +21,16 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
   const primaryFace = card.faces[0];
   const legalityEntries = Object.entries(card.legalities ?? {});
 
-  const formatLabels: Record<string, string> = {
-    standard: "标准赛", 
-    alchemy: "炼金赛",
-    pioneer: "先锋赛",
-    explorer: "探索赛",
-    modern: "现代赛",
-    historic: "历史赛",
-    legacy: "传承赛",
-    pauper: "平民赛",
-    vintage: "古典赛",
-    timeless: "永恒赛",
-    commander: "统帅赛",
-    duel: "决斗统帅",
-  };
+  const allowedFormats = new Map<string, string>([
+    ["standard", "标准"],
+    ["pioneer", "先驱"],
+    ["modern", "摩登"],
+    ["legacy", "薪传"],
+    ["vintage", "薪传"],
+    ["commander", "官禁"],
+    ["duel_commander", "法禁"],
+    ["pauper", "纯铁"],
+  ]);
 
   const statusLabels: Record<string, string> = {
     legal: "合法",
@@ -56,6 +52,10 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
     event.dataTransfer.setData("text/plain", card.id);
     event.dataTransfer.effectAllowed = "copy";
   };
+
+  const displayedLegalities = legalityEntries.filter(([format]) =>
+    allowedFormats.has(format)
+  );
 
   return (
     <div className="card-details">
@@ -98,14 +98,6 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
           <span className="card-details__label">类型</span>
           <span>{primaryFace.cardType}</span>
         </div>
-        <div>
-          <span className="card-details__label">牌张结构</span>
-          <span>{card.kind === "multiface" ? "双面牌" : "单面牌"}</span>
-        </div>
-        <div>
-          <span className="card-details__label">排序类型</span>
-          <span>{card.sortCardType || "其他"}</span>
-        </div>
       </div>
 
       <p className="card-details__hint">拖拽下方任意卡图到“牌本”页即可放置。</p>
@@ -113,13 +105,13 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
       <section className="card-details__section">
         <h4>赛制合法性</h4>
         <ul className="card-details__legalities">
-          {legalityEntries.map(([format, state]) => {
+          {displayedLegalities.map(([format, state]) => {
             const stateLabel = normaliseStatus(state);
             const classState = state.toLowerCase().replace(/[^a-z_]/g, "-");
             return (
               <li key={format} className="card-details__legal-item">
                 <span className="card-details__legal-format">
-                  {formatLabels[format] ?? format}
+                  {allowedFormats.get(format) ?? format}
                 </span>
                 <span
                   className={`card-details__legal-state card-details__legal-state--${classState}`}
