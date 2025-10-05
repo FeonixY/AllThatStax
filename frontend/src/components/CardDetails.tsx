@@ -19,6 +19,37 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
   }
 
   const primaryFace = card.faces[0];
+  const legalityEntries = Object.entries(card.legalities ?? {});
+
+  const formatLabels: Record<string, string> = {
+    standard: "标准赛", 
+    alchemy: "炼金赛",
+    pioneer: "先锋赛",
+    explorer: "探索赛",
+    modern: "现代赛",
+    historic: "历史赛",
+    legacy: "传承赛",
+    pauper: "平民赛",
+    vintage: "古典赛",
+    timeless: "永恒赛",
+    commander: "统帅赛",
+    duel: "决斗统帅",
+  };
+
+  const statusLabels: Record<string, string> = {
+    legal: "合法",
+    not_legal: "非法",
+    banned: "禁用",
+    restricted: "限制",
+    suspended: "暂停",
+    playable: "可用",
+    unknown: "未知",
+  };
+
+  const normaliseStatus = (value: string) => {
+    const key = value.toLowerCase();
+    return statusLabels[key] ?? value;
+  };
 
   const handleDragStart = (event: DragEvent<HTMLImageElement>) => {
     event.dataTransfer.setData(CARD_DRAG_MIME, card.id);
@@ -50,11 +81,11 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
         </div>
       </header>
 
-      <div className="card-details__meta">
-        <div>
-          <span className="card-details__label">锁类型</span>
-          <span>{card.staxType ? card.staxType.label : "—"}</span>
-        </div>
+        <div className="card-details__meta">
+          <div>
+            <span className="card-details__label">锁类型</span>
+            <span>{card.staxType ? card.staxType.label : "—"}</span>
+          </div>
         <div>
           <span className="card-details__label">法术力费用</span>
           <ManaCost symbols={primaryFace.manaCost} apiBase={apiBase} />
@@ -67,9 +98,39 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
           <span className="card-details__label">类型</span>
           <span>{primaryFace.cardType}</span>
         </div>
+        <div>
+          <span className="card-details__label">牌张结构</span>
+          <span>{card.kind === "multiface" ? "双面牌" : "单面牌"}</span>
+        </div>
+        <div>
+          <span className="card-details__label">排序类型</span>
+          <span>{card.sortCardType || "其他"}</span>
+        </div>
       </div>
 
       <p className="card-details__hint">拖拽下方任意卡图到“牌本”页即可放置。</p>
+
+      <section className="card-details__section">
+        <h4>赛制合法性</h4>
+        <ul className="card-details__legalities">
+          {legalityEntries.map(([format, state]) => {
+            const stateLabel = normaliseStatus(state);
+            const classState = state.toLowerCase().replace(/[^a-z_]/g, "-");
+            return (
+              <li key={format} className="card-details__legal-item">
+                <span className="card-details__legal-format">
+                  {formatLabels[format] ?? format}
+                </span>
+                <span
+                  className={`card-details__legal-state card-details__legal-state--${classState}`}
+                >
+                  {stateLabel}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
 
       <div className="card-details__faces">
         {card.faces.map((face, index) => (
@@ -80,17 +141,17 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
                 <small>{face.englishName}</small>
               </header>
             )}
-            <div className="card-details__face-body">
-              {face.image ? (
-                <img
-                  src={`${apiBase}${face.image}`}
-                  alt={face.chineseName}
-                  className="card-details__image"
-                  draggable
-                  onDragStart={handleDragStart}
-                />
-              ) : null}
-              <div className="card-details__face-content">
+              <div className="card-details__face-body">
+                {face.image ? (
+                  <img
+                    src={`${apiBase}${face.image}`}
+                    alt={face.chineseName}
+                    className="card-details__image"
+                    draggable={true}
+                    onDragStart={handleDragStart}
+                  />
+                ) : null}
+                <div className="card-details__face-content">
                 <div className="card-details__face-meta">
                   <ManaCost symbols={face.manaCost} apiBase={apiBase} />
                   <span className="card-details__face-type">{face.cardType}</span>

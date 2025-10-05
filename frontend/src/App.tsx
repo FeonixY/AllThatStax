@@ -43,7 +43,6 @@ export default function App() {
     createEmptyPage(1),
   ]);
   const [activePageIndex, setActivePageIndex] = useState(0);
-  const [activeBinderSide, setActiveBinderSide] = useState<BinderSide>("front");
 
   useEffect(() => {
     async function load() {
@@ -128,7 +127,7 @@ export default function App() {
       }));
 
       let pageIndex = preferred?.pageIndex ?? activePageIndex;
-      let side = preferred?.side ?? activeBinderSide;
+      let side: BinderSide = preferred?.side ?? "front";
       let slotIndex = preferred?.slotIndex ?? -1;
 
       if (preferred) {
@@ -152,6 +151,15 @@ export default function App() {
         let available = next[pageIndex]
           ? findFirstEmpty(pageIndex, side)
           : -1;
+
+        if (available === -1 && next[pageIndex]) {
+          const alternateSide: BinderSide = side === "front" ? "back" : "front";
+          const alternateIndex = findFirstEmpty(pageIndex, alternateSide);
+          if (alternateIndex !== -1) {
+            side = alternateSide;
+            available = alternateIndex;
+          }
+        }
 
         if (available === -1) {
           let found = false;
@@ -181,7 +189,6 @@ export default function App() {
 
       next[pageIndex][side][slotIndex] = card.id;
       setActivePageIndex(pageIndex);
-      setActiveBinderSide(side);
       return next;
     });
   };
@@ -227,24 +234,18 @@ export default function App() {
   const handleClearBinder = () => {
     setBinderPages([createEmptyPage(1)]);
     setActivePageIndex(0);
-    setActiveBinderSide("front");
   };
 
   const handleAddPage = () => {
     setBinderPages((prev) => {
       const next = [...prev, createEmptyPage(prev.length + 1)];
       setActivePageIndex(next.length - 1);
-      setActiveBinderSide("front");
       return next;
     });
   };
 
   const handlePageChange = (index: number) => {
     setActivePageIndex(index);
-  };
-
-  const handleSideChange = (side: BinderSide) => {
-    setActiveBinderSide(side);
   };
 
   const handleTabChange = (tab: TabKey) => {
@@ -354,9 +355,7 @@ export default function App() {
             pages={binderPages}
             cardsById={cardsById}
             activePageIndex={activePageIndex}
-            activeSide={activeBinderSide}
             onPageChange={handlePageChange}
-            onSideChange={handleSideChange}
             onAddPage={handleAddPage}
             onClear={handleClearBinder}
             onSlotDrop={handleSlotDrop}
