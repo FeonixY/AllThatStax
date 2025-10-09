@@ -68,3 +68,22 @@ npm run build
 4. 前端自动按法术力曲线与牌类型分区展示卡牌，便于整理、导出和继续在 LaTeX 流程中使用。
 
 欢迎根据需要扩展 API、添加导出能力或集成现有 LaTeX 生成流程。
+
+## 卡牌列表管理脚本
+
+仓库中新增了 `card_list_manager.py`，用于从指定的 Moxfield 牌表抓取卡牌信息，并整合来自 Scryfall 与 mtgch.com 的数据。执行脚本后会：
+
+- 调用 `https://api.moxfield.com` 获取牌表中的所有卡牌与数量；
+- 从 Scryfall 获取卡牌的英文名称、类型、法术力费用、效果文字以及最早印刷的系列与卡图；
+- 从 mtgch.com 获取卡牌的中文名称、类型、费用、效果与系列名称（若网站暂缺资料则跳过该部分）；
+- 将整合后的数据写入本地 JSON 文件，并把卡图下载至指定目录。
+
+### 使用示例
+
+```bash
+python card_list_manager.py kBI9w5lzJUijYHVBWddzfg \
+  --output data/moxfield_stax_cards.json \
+  --image-dir data/moxfield_images
+```
+
+脚本默认在请求之间等待 0.2 秒，可通过 `--pause` 参数调整；使用 `--keep-existing` 可避免重复下载已存在的卡图。
