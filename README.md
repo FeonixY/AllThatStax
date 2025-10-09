@@ -68,3 +68,47 @@ npm run build
 4. 前端自动按法术力曲线与牌类型分区展示卡牌，便于整理、导出和继续在 LaTeX 流程中使用。
 
 欢迎根据需要扩展 API、添加导出能力或集成现有 LaTeX 生成流程。
+
+## 卡牌列表管理脚本
+
+仓库中新增了 `card_list_manager.py`，用于从指定的 Moxfield 牌表抓取卡牌信息，并整合来自 Scryfall 与 mtgch.com 的数据。执行脚本后会：
+
+- 调用 `https://api.moxfield.com` 获取牌表中的所有卡牌与数量；
+- 从 Scryfall 获取卡牌的英文名称、类型、法术力费用、效果文字以及最早印刷的系列与卡图；
+- 从 mtgch.com 获取卡牌的中文名称、类型、费用、效果与系列名称（若网站暂缺资料则跳过该部分）；
+- 将整合后的数据写入本地 JSON 文件，并把卡图下载至指定目录。
+
+### 环境准备
+
+1. 安装 Python 3.9+（建议使用虚拟环境管理依赖）。
+2. 本脚本仅使用标准库，无需额外依赖，但需要能够访问 `moxfield.com`、`api.scryfall.com` 与 `mtgch.com`。
+3. 准备一个用于存放输出数据与图片的目录（例如 `data/`）。
+
+### 常用命令
+
+```bash
+# 查看脚本自带的帮助信息
+python card_list_manager.py --help
+
+# 抓取示例牌表（牌表 ID 可在 moxfield 牌表 URL 中找到）
+python card_list_manager.py kBI9w5lzJUijYHVBWddzfg \
+  --output data/moxfield_stax_cards.json \
+  --image-dir data/moxfield_images
+```
+
+主要参数说明：
+
+- `deck_id`：Moxfield 牌表链接中的 ID，例如 `https://moxfield.com/decks/<deck_id>`。
+- `--output`：整合后的卡牌数据保存路径（默认为 `data/card_data.json`）。
+- `--image-dir`：卡图下载目录（默认 `data/images`）。
+- `--pause`：连续请求之间的等待秒数（默认为 `0.2`）。
+- `--keep-existing`：若指定则跳过已存在的卡图文件，避免重复下载。
+
+### 运行流程
+
+1. 从 Moxfield 读取牌表中的卡牌与数量。
+2. 使用 Scryfall API 获取卡牌的英文资料、最早印刷系列与对应卡图链接。
+3. 前往 mtgch.com 搜索对应卡牌，解析中文名称、类别、费用、效果与系列名称（若 mtgch 无数据则该部分字段为空字符串）。
+4. 将所有卡牌的中英文资料写入 `--output` 指定的 JSON 文件，并把最早系列的英文卡图下载到 `--image-dir`。
+
+执行过程中，脚本会在终端输出当前处理的卡牌与进度，若遇到网络错误会在重试后抛出提示，可根据需要调整 `--pause` 或稍后重试。
