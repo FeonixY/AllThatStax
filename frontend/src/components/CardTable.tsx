@@ -1,4 +1,5 @@
-import { CardData } from "../types";
+import type { DragEvent, MouseEvent } from "react";
+import { CardData, CARD_DRAG_MIME } from "../types";
 import { ManaCost } from "./ManaCost";
 import "./CardTable.css";
 
@@ -43,6 +44,22 @@ export function CardTable({
             ? `${description.slice(0, 180)}…`
             : description;
 
+          const handleDragStart = (
+            event: DragEvent<HTMLTableRowElement>
+          ) => {
+            const payload = {
+              cardId: card.id,
+              source: "library" as const,
+            };
+
+            event.dataTransfer.effectAllowed = "copy";
+            event.dataTransfer.setData(
+              CARD_DRAG_MIME,
+              JSON.stringify(payload)
+            );
+            event.dataTransfer.setData("text/plain", card.id);
+          };
+
           return (
             <tr
               key={card.id}
@@ -50,6 +67,8 @@ export function CardTable({
                 isSelected ? " card-table__row--selected" : ""
               }`}
               onClick={() => onSelect(card)}
+              draggable
+              onDragStart={handleDragStart}
             >
               <td className="card-table__name">
                 <span>{primaryFace.chineseName}</span>
@@ -76,11 +95,12 @@ export function CardTable({
                 <button
                   type="button"
                   className="card-table__add"
-                  onClick={(event) => {
+                  onClick={(event: MouseEvent<HTMLButtonElement>) => {
                     event.stopPropagation();
                     onAdd(card);
                   }}
-                  aria-label={`将 ${primaryFace.chineseName} 加入牌本`}
+                  aria-label={`将 ${primaryFace.chineseName} 加入暂留区`}
+                  title="加入暂留区"
                 >
                   +
                 </button>

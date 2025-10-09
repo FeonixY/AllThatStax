@@ -91,6 +91,145 @@
   font-size: 0.9rem;
 }
 
+.binder__staging {
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.binder__staging-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.binder__staging-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.binder__staging-header p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.binder__staging-dropzone {
+  border: 2px dashed rgba(148, 163, 184, 0.45);
+  border-radius: 0.9rem;
+  padding: 0.75rem;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.65);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.binder__staging-dropzone--hovered {
+  border-color: rgba(37, 99, 235, 0.65);
+  background: rgba(219, 234, 254, 0.6);
+}
+
+.binder__staging-empty {
+  color: #94a3b8;
+  font-weight: 600;
+  text-align: center;
+}
+
+.binder__staging-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.binder__staging-item {
+  flex: 0 0 180px;
+}
+
+.binder__staging-card {
+  background: #fff;
+  border-radius: 0.9rem;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  cursor: grab;
+  position: relative;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.binder__staging-card:active {
+  cursor: grabbing;
+}
+
+.binder__staging-image {
+  width: 100%;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.18);
+}
+
+.binder__staging-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 140px;
+  border-radius: 0.75rem;
+  background: rgba(226, 232, 240, 0.35);
+  color: #64748b;
+  font-weight: 600;
+}
+
+.binder__staging-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.binder__staging-name {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.binder__staging-subname {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.binder__staging-remove {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  border: none;
+  background: rgba(220, 38, 38, 0.2);
+  color: #b91c1c;
+  padding: 0.2rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.binder__staging-remove:hover {
+  background: rgba(220, 38, 38, 0.3);
+}
+
 .binder__spreads {
   display: flex;
   flex-direction: column;

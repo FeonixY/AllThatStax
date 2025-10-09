@@ -1,21 +1,21 @@
-import { useEffect, useMemo, useState } from "react";
+import { ChangeEvent, useEffect, useMemo, useState } from "react";
 import { CardTable } from "./components/CardTable";
 import { CardDetails } from "./components/CardDetails";
 import { BinderBoard } from "./components/BinderBoard";
 import { fetchCards, fetchMetadata } from "./api";
-import { BinderPage, BinderSide, CardData, Metadata } from "./types";
+import {
+  BinderPage,
+  BinderSide,
+  CardData,
+  DragPayload,
+  Metadata,
+} from "./types";
 import "./App.css";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "";
 const SLOTS_PER_PAGE = 9;
 
 type TabKey = "library" | "binder";
-
-type BinderPlacement = {
-  pageIndex: number;
-  side: BinderSide;
-  slotIndex: number;
-};
 
 function normaliseQuery(value: string) {
   return value.trim().toLowerCase();
@@ -43,6 +43,7 @@ export default function App() {
     createEmptyPage(1),
   ]);
   const [activePageIndex, setActivePageIndex] = useState(0);
+  const [stagingArea, setStagingArea] = useState<string[]>([]);
 
   useEffect(() => {
     async function load() {
@@ -118,97 +119,127 @@ export default function App() {
     setSelectedCardId(card.id);
   };
 
-  const placeCardInBinder = (card: CardData, preferred?: BinderPlacement) => {
-    setBinderPages((prev) => {
-      let next = prev.map((page) => ({
-        ...page,
-        front: [...page.front],
-        back: [...page.back],
-      }));
-
-      let pageIndex = preferred?.pageIndex ?? activePageIndex;
-      let side: BinderSide = preferred?.side ?? "front";
-      let slotIndex = preferred?.slotIndex ?? -1;
-
-      if (preferred) {
-        if (!next[pageIndex]) {
-          return prev;
-        }
-        const sideSlots = next[pageIndex][side];
-        if (slotIndex < 0 || slotIndex >= sideSlots.length) {
-          return prev;
-        }
-      } else {
-        if (!next[pageIndex]) {
-          pageIndex = 0;
-        }
-
-        const findFirstEmpty = (pageIdx: number, binderSide: BinderSide) => {
-          const slots = next[pageIdx]?.[binderSide] ?? [];
-          return slots.findIndex((value) => !value);
-        };
-
-        let available = next[pageIndex]
-          ? findFirstEmpty(pageIndex, side)
-          : -1;
-
-        if (available === -1 && next[pageIndex]) {
-          const alternateSide: BinderSide = side === "front" ? "back" : "front";
-          const alternateIndex = findFirstEmpty(pageIndex, alternateSide);
-          if (alternateIndex !== -1) {
-            side = alternateSide;
-            available = alternateIndex;
-          }
-        }
-
-        if (available === -1) {
-          let found = false;
-          for (let p = 0; p < next.length && !found; p++) {
-            for (const candidateSide of ["front", "back"] as const) {
-              const idx = findFirstEmpty(p, candidateSide);
-              if (idx !== -1) {
-                pageIndex = p;
-                side = candidateSide;
-                available = idx;
-                found = true;
-                break;
-              }
-            }
-          }
-
-          if (!found) {
-            next = [...next, createEmptyPage(next.length + 1)];
-            pageIndex = next.length - 1;
-            side = "front";
-            available = 0;
-          }
-        }
-
-        slotIndex = available;
-      }
-
-      next[pageIndex][side][slotIndex] = card.id;
-      setActivePageIndex(pageIndex);
-      return next;
-    });
+  const handleAddToStaging = (card: CardData) => {
+    setStagingArea((prev) => [...prev, card.id]);
+    setActiveTab("binder");
   };
 
   const handleQuickAdd = (card: CardData) => {
-    placeCardInBinder(card);
-    setActiveTab("binder");
+    handleAddToStaging(card);
   };
 
   const handleSlotDrop = (
     pageIndex: number,
     side: BinderSide,
     slotIndex: number,
-    cardId: string
+    payload: DragPayload
   ) => {
-    const card = cardsById[cardId];
+    const card = cardsById[payload.cardId];
     if (!card) {
       return;
     }
-    placeCardInBinder(card, { pageIndex, side, slotIndex });
+
+    let displacedCardId: string | null = null;
+
+    setBinderPages((prev) => {
+      if (!prev[pageIndex]) {
+        return prev;
+      }
+
+      const next = prev.map((page) => ({
+        ...page,
+        front: [...page.front],
+        back: [...page.back],
+      }));
+
+      if (payload.source === "binder") {
+        const { binderPageIndex, binderSide, binderSlotIndex } = payload;
+        if (
+          binderPageIndex !== undefined &&
+          binderSide &&
+          binderSlotIndex !== undefined &&
+          next[binderPageIndex]
+        ) {
+          const updatedSourceSide = [...next[binderPageIndex][binderSide]];
+          if (updatedSourceSide[binderSlotIndex] === card.id) {
+            updatedSourceSide[binderSlotIndex] = null;
+            next[binderPageIndex] = {
+              ...next[binderPageIndex],
+              [binderSide]: updatedSourceSide,
+            };
+          }
+        }
+      }
+
+      const currentCardId = next[pageIndex][side][slotIndex];
+      if (currentCardId && currentCardId !== card.id) {
+        displacedCardId = currentCardId;
+      }
+
+      const updatedTargetSide = [...next[pageIndex][side]];
+      updatedTargetSide[slotIndex] = card.id;
+      next[pageIndex] = {
+        ...next[pageIndex],
+        [side]: updatedTargetSide,
+      };
+
+      return next;
+    });
+
+    if (payload.source === "staging" && payload.stagingIndex !== undefined) {
+      setStagingArea((prev) =>
+        prev.filter((_, index) => index !== payload.stagingIndex)
+      );
+    }
+
+    if (displacedCardId) {
+      setStagingArea((prev) => [...prev, displacedCardId as string]);
+    }
+
+    setActivePageIndex(pageIndex);
+  };
+
+  const handleStagingDrop = (payload: DragPayload) => {
+    const card = cardsById[payload.cardId];
+    if (!card) {
+      return;
+    }
+
+    if (payload.source === "staging") {
+      return;
+    }
+
+    if (payload.source === "binder") {
+      const { binderPageIndex, binderSide, binderSlotIndex } = payload;
+      if (
+        binderPageIndex !== undefined &&
+        binderSide &&
+        binderSlotIndex !== undefined
+      ) {
+        setBinderPages((prev) =>
+          prev.map((page, index) => {
+            if (index !== binderPageIndex) {
+              return page;
+            }
+            const updatedSide = [...page[binderSide]];
+            if (updatedSide[binderSlotIndex] !== card.id) {
+              return page;
+            }
+            updatedSide[binderSlotIndex] = null;
+            return {
+              ...page,
+              [binderSide]: updatedSide,
+            };
+          })
+        );
+      }
+    }
+
+    setStagingArea((prev) => [...prev, payload.cardId]);
+  };
+
+  const handleRemoveFromStaging = (index: number) => {
+    setStagingArea((prev) => prev.filter((_, idx) => idx !== index));
   };
 
   const handleSlotRemove = (
@@ -294,11 +325,15 @@ export default function App() {
                 type="search"
                 placeholder="搜索中文名、英文名或描述…"
                 value={query}
-                onChange={(event) => setQuery(event.target.value)}
+                onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                  setQuery(event.target.value)
+                }
               />
               <select
                 value={selectedStaxType}
-                onChange={(event) => setSelectedStaxType(event.target.value)}
+                onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+                  setSelectedStaxType(event.target.value)
+                }
               >
                 <option value="all">全部锁类型</option>
                 {metadata?.staxTypes.map((type) => (
@@ -309,7 +344,9 @@ export default function App() {
               </select>
               <select
                 value={selectedCardType}
-                onChange={(event) => setSelectedCardType(event.target.value)}
+                onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+                  setSelectedCardType(event.target.value)
+                }
               >
                 <option value="all">全部牌类型</option>
                 {[...(metadata?.cardTypeOrder ?? [])]
@@ -357,6 +394,9 @@ export default function App() {
             onClear={handleClearBinder}
             onSlotDrop={handleSlotDrop}
             onSlotRemove={handleSlotRemove}
+            onStagingDrop={handleStagingDrop}
+            onStagingRemove={handleRemoveFromStaging}
+            stagingCards={stagingArea}
             apiBase={API_BASE}
           />
         )}

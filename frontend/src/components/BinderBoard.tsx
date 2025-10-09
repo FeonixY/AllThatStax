@@ -1,5 +1,12 @@
 import { useMemo, useState } from "react";
-import { BinderPage, BinderSide, CardData, CARD_DRAG_MIME } from "../types";
+import type { DragEvent, MouseEvent } from "react";
+import {
+  BinderPage,
+  BinderSide,
+  CardData,
+  CARD_DRAG_MIME,
+  DragPayload,
+} from "../types";
 import "./BinderBoard.css";
 
 interface BinderBoardProps {
@@ -13,9 +20,12 @@ interface BinderBoardProps {
     pageIndex: number,
     side: BinderSide,
     slotIndex: number,
-    cardId: string
+    payload: DragPayload
   ) => void;
   onSlotRemove: (pageIndex: number, side: BinderSide, slotIndex: number) => void;
+  onStagingDrop: (payload: DragPayload) => void;
+  onStagingRemove: (index: number) => void;
+  stagingCards: string[];
   apiBase: string;
 }
 
@@ -23,6 +33,30 @@ function getSlotLabel(index: number) {
   const row = Math.floor(index / 3) + 1;
   const column = (index % 3) + 1;
   return `${row}-${column}`;
+}
+
+function parseDragPayload(event: DragEvent<HTMLElement>): DragPayload | null {
+  const rawData =
+    event.dataTransfer.getData(CARD_DRAG_MIME) ||
+    event.dataTransfer.getData("text/plain");
+
+  if (!rawData) {
+    return null;
+  }
+
+  try {
+    const parsed = JSON.parse(rawData) as DragPayload;
+    if (parsed && typeof parsed.cardId === "string") {
+      return parsed;
+    }
+  } catch (error) {
+    return {
+      cardId: rawData,
+      source: "library",
+    };
+  }
+
+  return null;
 }
 
 export function BinderBoard({
@@ -34,6 +68,9 @@ export function BinderBoard({
   onClear,
   onSlotDrop,
   onSlotRemove,
+  onStagingDrop,
+  onStagingRemove,
+  stagingCards,
   apiBase,
 }: BinderBoardProps) {
   const [hoveredSlot, setHoveredSlot] = useState<{
@@ -41,6 +78,7 @@ export function BinderBoard({
     side: BinderSide;
     slotIndex: number;
   } | null>(null);
+  const [isStagingHovered, setIsStagingHovered] = useState(false);
 
   const totalCards = useMemo(() => {
     return pages.reduce((sum, page) => {
@@ -51,25 +89,23 @@ export function BinderBoard({
   }, [pages]);
 
   const handleDrop = (
-    event: React.DragEvent<HTMLDivElement>,
+    event: DragEvent<HTMLDivElement>,
     pageIndex: number,
     side: BinderSide,
     slotIndex: number
   ) => {
     event.preventDefault();
-    const data =
-      event.dataTransfer.getData(CARD_DRAG_MIME) ||
-      event.dataTransfer.getData("text/plain");
-    if (!data) {
+    const payload = parseDragPayload(event);
+    if (!payload) {
       return;
     }
-    onSlotDrop(pageIndex, side, slotIndex, data);
+    onSlotDrop(pageIndex, side, slotIndex, payload);
     setHoveredSlot(null);
   };
 
-  const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
+  const handleDragOver = (event: DragEvent<HTMLDivElement>) => {
     event.preventDefault();
-    event.dataTransfer.dropEffect = "copy";
+    event.dataTransfer.dropEffect = "move";
   };
 
   const handleDragEnter = (
@@ -93,6 +129,64 @@ export function BinderBoard({
         current.slotIndex === slotIndex;
       return isSameSlot ? null : current;
     });
+  };
+
+  const handleSlotDragStart = (
+    event: DragEvent<HTMLDivElement>,
+    pageIndex: number,
+    side: BinderSide,
+    slotIndex: number,
+    cardId: string
+  ) => {
+    const payload: DragPayload = {
+      cardId,
+      source: "binder",
+      binderPageIndex: pageIndex,
+      binderSide: side,
+      binderSlotIndex: slotIndex,
+    };
+
+    event.dataTransfer.effectAllowed = "move";
+    event.dataTransfer.setData(CARD_DRAG_MIME, JSON.stringify(payload));
+    event.dataTransfer.setData("text/plain", cardId);
+  };
+
+  const handleStagingDrop = (event: DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    const payload = parseDragPayload(event);
+    if (!payload) {
+      setIsStagingHovered(false);
+      return;
+    }
+    onStagingDrop(payload);
+    setIsStagingHovered(false);
+  };
+
+  const handleStagingDragEnter = () => {
+    setIsStagingHovered(true);
+  };
+
+  const handleStagingDragLeave = (event: DragEvent<HTMLDivElement>) => {
+    const nextTarget = event.relatedTarget as Node | null;
+    if (!nextTarget || !event.currentTarget.contains(nextTarget)) {
+      setIsStagingHovered(false);
+    }
+  };
+
+  const handleStagingCardDragStart = (
+    event: DragEvent<HTMLDivElement>,
+    cardId: string,
+    index: number
+  ) => {
+    const payload: DragPayload = {
+      cardId,
+      source: "staging",
+      stagingIndex: index,
+    };
+
+    event.dataTransfer.effectAllowed = "move";
+    event.dataTransfer.setData(CARD_DRAG_MIME, JSON.stringify(payload));
+    event.dataTransfer.setData("text/plain", cardId);
   };
 
   return (
@@ -143,6 +237,76 @@ export function BinderBoard({
         {activePageIndex * 2 + 1} 与第 {activePageIndex * 2 + 2} 页。
       </p>
 
+      <section className="binder__staging">
+        <header className="binder__staging-header">
+          <h3>暂留区</h3>
+          <p>暂存卡牌以便在不同页面之间调整位置。</p>
+        </header>
+        <div
+          className={`binder__staging-dropzone${
+            isStagingHovered ? " binder__staging-dropzone--hovered" : ""
+          }`}
+          onDrop={handleStagingDrop}
+          onDragOver={handleDragOver}
+          onDragEnter={handleStagingDragEnter}
+          onDragLeave={handleStagingDragLeave}
+        >
+          {stagingCards.length === 0 ? (
+            <span className="binder__staging-empty">
+              暂无卡牌。使用“+”按钮或从牌表拖拽加入。
+            </span>
+          ) : (
+            <ul className="binder__staging-list">
+              {stagingCards.map((cardId, index) => {
+                const card = cardsById[cardId];
+                const face = card?.faces[0];
+                const imageUrl = face?.image ? `${apiBase}${face.image}` : null;
+
+                return (
+                  <li key={`${cardId}-${index}`} className="binder__staging-item">
+                    <div
+                      className="binder__staging-card"
+                      draggable
+                      onDragStart={(event: DragEvent<HTMLDivElement>) =>
+                        handleStagingCardDragStart(event, cardId, index)
+                      }
+                    >
+                      {imageUrl ? (
+                        <img
+                          src={imageUrl}
+                          alt={face?.chineseName ?? "卡牌"}
+                          className="binder__staging-image"
+                        />
+                      ) : (
+                        <span className="binder__staging-placeholder">无图</span>
+                      )}
+                      <div className="binder__staging-info">
+                        <span className="binder__staging-name">
+                          {face?.chineseName ?? "未知卡牌"}
+                        </span>
+                        <span className="binder__staging-subname">
+                          {face?.englishName ?? card?.id}
+                        </span>
+                      </div>
+                      <button
+                        type="button"
+                        className="binder__staging-remove"
+                        onClick={(event: MouseEvent<HTMLButtonElement>) => {
+                          event.stopPropagation();
+                          onStagingRemove(index);
+                        }}
+                      >
+                        移除
+                      </button>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+        </div>
+      </section>
+
       <div className="binder__spreads">
         {pages.map((page, pageIndex) => {
           const frontPageNumber = pageIndex * 2 + 1;
@@ -184,16 +348,30 @@ export function BinderBoard({
                             className={`binder__slot${
                               isHovered ? " binder__slot--hovered" : ""
                             }`}
-                            onDrop={(event) =>
+                            onDrop={(event: DragEvent<HTMLDivElement>) =>
                               handleDrop(event, pageIndex, side, index)
                             }
-                            onDragOver={handleDragOver}
+                            onDragOver={(event: DragEvent<HTMLDivElement>) =>
+                              handleDragOver(event)
+                            }
                             onDragEnter={() =>
                               handleDragEnter(pageIndex, side, index)
                             }
                             onDragLeave={() =>
                               handleDragLeave(pageIndex, side, index)
                             }
+                            draggable={Boolean(cardId)}
+                            onDragStart={(event: DragEvent<HTMLDivElement>) => {
+                              if (cardId) {
+                                handleSlotDragStart(
+                                  event,
+                                  pageIndex,
+                                  side,
+                                  index,
+                                  cardId
+                                );
+                              }
+                            }}
                           >
                             <div className="binder__slot-label">
                               格 {getSlotLabel(index)}

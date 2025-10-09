@@ -34,6 +34,17 @@ export const CARD_DRAG_MIME = "application/x-all-that-stax-card";
 
 export type BinderSide = "front" | "back";
 
+export type DragSource = "library" | "staging" | "binder";
+
+export interface DragPayload {
+  cardId: string;
+  source: DragSource;
+  binderPageIndex?: number;
+  binderSide?: BinderSide;
+  binderSlotIndex?: number;
+  stagingIndex?: number;
+}
+
 export interface BinderPage {
   id: string;
   front: (string | null)[];

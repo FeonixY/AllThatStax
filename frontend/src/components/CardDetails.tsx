@@ -67,7 +67,8 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
             type="button"
             className="card-details__add"
             onClick={() => onAdd(card)}
-            aria-label={`将 ${primaryFace.chineseName} 加入牌本`}
+            aria-label={`将 ${primaryFace.chineseName} 加入暂留区`}
+            title="加入暂留区"
           >
             +
           </button>
