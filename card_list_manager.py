@@ -14,7 +14,8 @@ import time
 from dataclasses import dataclass, asdict
 from html.parser import HTMLParser
 from pathlib import Path
-from typing import Dict, Iterable, List, Optional, Tuple
+from collections.abc import Iterable
+from typing import Dict, List, Optional, Tuple
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode, urljoin
 from urllib.request import Request, urlopen
@@ -293,44 +294,126 @@ class CardListManager:
     def _fetch_moxfield_cards(self) -> List[Dict[str, object]]:
         url = f"https://api.moxfield.com/v2/decks/all/{self.deck_id}"
         data = self._http_get(url, expect_json=True)
-        cards: Dict[str, Dict[str, object]] = {}
+        if not isinstance(data, dict):
+            raise CardListError(
+                "Unexpected response from Moxfield; expected a JSON object"
+            )
 
-        def _iter_cards(board: Dict[str, object]) -> Iterable[Dict[str, object]]:
-            if not isinstance(board, dict):
-                return []
-            cards_obj = board.get("cards") or board.get("cardList")
-            if isinstance(cards_obj, dict):
-                return cards_obj.values()
-            if isinstance(cards_obj, list):
-                return cards_obj
+        cards: Dict[str, Dict[str, object]] = {}
+        seen_entries: set[str] = set()
+
+        def _normalize_tags(raw: object) -> List[str]:
+            if isinstance(raw, str):
+                return [raw]
+            if isinstance(raw, dict):
+                values = [value for value in raw.values() if isinstance(value, str)]
+                return values
+            if isinstance(raw, Iterable):
+                values: List[str] = []
+                for item in raw:
+                    if isinstance(item, str):
+                        values.append(item)
+                    elif isinstance(item, dict):
+                        values.extend(
+                            str(value)
+                            for value in item.values()
+                            if isinstance(value, str)
+                        )
+                return values
             return []
 
-        def _consume_board(board: Dict[str, object]) -> None:
-            for item in _iter_cards(board):
-                oracle = (
-                    item.get("card")
-                    or item.get("oracleCard")
-                    or item.get("oracleCardData")
-                    or item
-                )
-                name = oracle.get("name") if isinstance(oracle, dict) else None
-                if not name:
-                    continue
-                tags = item.get("tags") or []
-                if isinstance(tags, dict):
-                    tags = list(tags.values())
-                elif isinstance(tags, str):
-                    tags = [tags]
-                entry = cards.setdefault(
-                    name,
-                    {"name": name, "quantity": 0, "tags": []},
-                )
-                entry["quantity"] += int(item.get("quantity", 1))
-                entry["tags"] = sorted(set(entry["tags"]) | set(tags))
+        def _coerce_quantity(raw_quantity: object) -> Optional[int]:
+            if isinstance(raw_quantity, (int, float)):
+                return int(raw_quantity)
+            if isinstance(raw_quantity, str):
+                stripped = raw_quantity.strip()
+                if not stripped:
+                    return None
+                try:
+                    return int(float(stripped))
+                except ValueError:
+                    return None
+            if isinstance(raw_quantity, dict):
+                for key in ("quantity", "qty", "count"):
+                    if key in raw_quantity:
+                        return _coerce_quantity(raw_quantity[key])
+            return None
 
-        _consume_board(data.get("mainboard", {}))
-        _consume_board(data.get("sideboard", {}))
-        _consume_board(data.get("maybeboard", {}))
+        def _extract_card_payload(node: Dict[str, object]) -> Optional[Tuple[str, int, List[str], str]]:
+            card_obj: Optional[Dict[str, object]] = None
+            for key in ("card", "boardCard", "oracleCard", "oracleCardData", "gameCard"):
+                candidate = node.get(key)
+                if isinstance(candidate, dict) and candidate.get("name"):
+                    card_obj = candidate
+                    break
+            if not card_obj:
+                return None
+
+            quantity = _coerce_quantity(
+                node.get("quantity")
+                or node.get("qty")
+                or node.get("count")
+                or node.get("boardCard")
+            )
+            if quantity is None:
+                quantity = 1
+
+            board_card = node.get("boardCard")
+            board_tags = None
+            if isinstance(board_card, dict):
+                board_tags = board_card.get("tags")
+
+            tags = _normalize_tags(
+                node.get("tags")
+                or node.get("tagList")
+                or board_tags
+            )
+
+            entry_id = (
+                node.get("boardCardId")
+                or node.get("id")
+                or node.get("cardId")
+                or node.get("uuid")
+            )
+            if isinstance(entry_id, (int, float)):
+                entry_id = str(int(entry_id))
+            elif not isinstance(entry_id, str) or not entry_id:
+                # Fallback signature based on content; helps avoid obvious duplicates
+                board_hint = node.get("board") or node.get("zone") or ""
+                entry_id = f"{card_obj.get('name')}|{quantity}|{board_hint}|{','.join(sorted(tags))}"
+
+            if entry_id in seen_entries:
+                return None
+            seen_entries.add(entry_id)
+
+            return card_obj.get("name", ""), quantity, tags, entry_id
+
+        def _traverse(obj: object) -> None:
+            if isinstance(obj, dict):
+                payload = _extract_card_payload(obj)
+                if payload:
+                    name, quantity, tags, _ = payload
+                    if name:
+                        entry = cards.setdefault(
+                            name,
+                            {"name": name, "quantity": 0, "tags": []},
+                        )
+                        entry["quantity"] += quantity
+                        entry["tags"] = sorted(set(entry["tags"]) | set(tags))
+                for value in obj.values():
+                    _traverse(value)
+            elif isinstance(obj, list):
+                for item in obj:
+                    _traverse(item)
+
+        _traverse(data.get("mainboard"))
+        _traverse(data.get("sideboard"))
+        _traverse(data.get("maybeboard"))
+        _traverse(data.get("commanders"))
+        _traverse(data.get("companions"))
+        _traverse(data.get("signatureSpells"))
+        _traverse(data.get("boards"))
+        _traverse(data)
 
         if not cards:
             raise CardListError(f"No cards found in deck {self.deck_id}")
