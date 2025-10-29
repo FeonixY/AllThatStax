@@ -287,6 +287,8 @@ def _build_card_record(
     return record, downloads
 
 
+REQUEST_TIMEOUT = 15
+
 def get_cards_information(
     image_folder_name: str,
     data_file_name: str,

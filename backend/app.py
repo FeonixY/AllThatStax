@@ -22,6 +22,12 @@ from allthatstax.latex_text import generate_latex_text
 from get_cards_information import get_cards_information
 from run_latex import DEFAULT_COMMAND, run_latex
 
+from allthatstax.config import load_config
+from allthatstax.latex_text import generate_latex_text
+from get_cards_information import get_cards_information
+from localization import localization
+from run_latex import DEFAULT_COMMAND, run_latex
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 CONFIG_PATH = BASE_DIR / "config.json"
 
