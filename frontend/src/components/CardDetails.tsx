@@ -27,7 +27,7 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
     ["legacy", "薪传"],
     ["vintage", "特选"],
     ["commander", "官禁"],
-    ["duel_commander", "法禁"],
+    ["duel", "法禁"],
     ["pauper", "纯铁"],
   ]);
 

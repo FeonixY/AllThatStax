@@ -65,6 +65,11 @@
   display: flex;
 }
 
+.app__body--single {
+  display: block;
+  width: 100%;
+}
+
 .library-panel {
   display: flex;
   flex-direction: column;

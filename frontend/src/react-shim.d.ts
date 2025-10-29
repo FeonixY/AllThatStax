@@ -7,6 +7,7 @@ declare module "react" {
   export type ChangeEvent<T = any> = any;
   export type DragEvent<T = any> = any;
   export type MouseEvent<T = any> = any;
+  export type FormEvent<T = any> = any;
 
   export const Fragment: any;
   export const StrictMode: any;
@@ -52,4 +53,5 @@ declare namespace JSX {
 declare namespace React {
   type DragEvent<T = any> = any;
   type ChangeEvent<T = any> = any;
+  type FormEvent<T = any> = any;
 }

@@ -1,11 +1,9 @@
 {
-	"image_folder_name": "Images",
-    "sheet_file_name": "card_information_sheet.xlsx",
-    "sheet_name": "Sheet",
-    "multiface_sheet_name": "Multiface Sheet",
+        "image_folder_name": "Images",
+    "data_file_name": "card_data.json",
     "card_list_name": "card_list.txt",
     "latex_text_name": "latex_text.txt",
-	"latex_file_name": "AllThatStax.tex",
+        "latex_file_name": "AllThatStax.tex",
     "stax_type":
     {
         "Phase/Step Stax": "阶段/步骤锁",
