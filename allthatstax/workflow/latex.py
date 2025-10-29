@@ -15,7 +15,7 @@ DEFAULT_COMMAND: Sequence[str] = (
 START_MARKER = "% Latex text starts here"
 END_MARKER = "% Latex text ends here"
 
-__all__ = ["run_latex", "inject_latex_text", "compile_latex"]
+__all__ = ["DEFAULT_COMMAND", "run_latex", "inject_latex_text", "compile_latex"]
 
 
 def inject_latex_text(

@@ -8,8 +8,7 @@ from typing import Any, Iterable, Mapping, Sequence
 
 from allthatstax.config import load_config
 from allthatstax.latex_text import generate_latex_text
-from get_cards_information import get_cards_information
-from run_latex import run_latex
+from allthatstax.workflow import get_cards_information, run_latex
 
 DEFAULT_CONFIG = Path("config.json")
 
