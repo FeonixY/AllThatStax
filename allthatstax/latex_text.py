@@ -4,10 +4,11 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, Iterable, List, Sequence
+from typing import Dict, Iterable, List
 
 from allthatstax.card_store import CardFaceRecord, CardRecord, load_card_store
 from allthatstax.config import load_config
+from allthatstax.legalities import LEGALITY_ORDER, extract_legalities
 
 __all__ = ["generate_latex_text"]
 
@@ -17,18 +18,6 @@ CARD_TYPE_ORDER: Dict[str, int] = {
     "结界": 3,
     "其他": 4,
 }
-
-LEGALITY_FIELDS: Sequence[str] = (
-    "standard",
-    "pioneer",
-    "modern",
-    "legacy",
-    "pauper",
-    "vintage",
-    "commander",
-    "duel_commander",
-)
-
 
 @dataclass
 class LatexCard:
@@ -73,9 +62,10 @@ def _format_description(value: str) -> str:
 
 def _format_legalities(legalities: Dict[str, str]) -> str:
     rendered: List[str] = []
-    for index, label in enumerate(LEGALITY_FIELDS):
-        entry = _coerce_text(legalities.get(label, "unknown"))
-        suffix = "," if index < len(LEGALITY_FIELDS) - 1 else ""
+    cleaned = extract_legalities(legalities)
+    for index, label in enumerate(LEGALITY_ORDER):
+        entry = _coerce_text(cleaned.get(label, "unknown"))
+        suffix = "," if index < len(LEGALITY_ORDER) - 1 else ""
         rendered.append(f"\tlegality / {label} = {entry}{suffix}")
     return "\n".join(rendered)
 

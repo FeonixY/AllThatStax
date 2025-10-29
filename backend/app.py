@@ -18,13 +18,12 @@ from starlette.status import HTTP_404_NOT_FOUND
 from allthatstax.card_store import CardFaceRecord, CardRecord, load_card_store
 from allthatstax.config import load_config
 from allthatstax.latex_text import generate_latex_text
+from allthatstax.legalities import extract_legalities
 from allthatstax.workflow import DEFAULT_COMMAND, get_cards_information, run_latex
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 CONFIG_PATH = BASE_DIR / "config.json"
 CARD_TYPE_ORDER = ["生物", "神器", "结界", "其他"]
-ONLINE_ONLY_FORMATS = {"alchemy", "historic", "explorer", "timeless", "brawl"}
-LEGALITY_KEY_REMAP = {"duel": "duel_commander"}
 _mana_pattern = re.compile(r"\{([^}]+)\}")
 _cache_lock = threading.Lock()
 _cached_payload: Optional[Dict[str, object]] = None
@@ -164,25 +163,12 @@ def _build_stax_type_entry(key: Optional[str]) -> Optional[StaxType]:
         return None
     label = str(CONFIG.get("stax_type", {}).get(key, key))
     return StaxType(key=key, label=label)
-
-
-def _clean_legalities(raw: Dict[str, str]) -> Dict[str, str]:
-    cleaned: Dict[str, str] = {}
-    for key, value in raw.items():
-        lowered = str(key).lower()
-        if lowered in ONLINE_ONLY_FORMATS:
-            continue
-        mapped_key = LEGALITY_KEY_REMAP.get(lowered, lowered)
-        cleaned[mapped_key] = str(value)
-    return cleaned
-
-
 def _record_to_card(record: CardRecord) -> Optional[Card]:
     if not record.faces:
         return None
     faces = [_face_to_api(face) for face in record.faces]
     stax_type = _build_stax_type_entry(record.stax_type)
-    legalities = _clean_legalities(record.legalities)
+    legalities = extract_legalities(record.legalities)
     kind = record.kind if record.kind in {"single", "multiface"} else "single"
     return Card(
         id=record.id or f"card-{faces[0].englishName}",

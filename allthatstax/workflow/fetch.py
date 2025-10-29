@@ -12,14 +12,12 @@ from urllib.parse import urlparse
 import requests
 
 from allthatstax.card_store import CardFaceRecord, CardRecord, CardStore, load_card_store
-from allthatstax.mtgch import ChineseCardInfo, MTGCHClient, MTGCHError
+from allthatstax.legalities import extract_legalities
+from allthatstax.workflow.mtgch import ChineseCardInfo, MTGCHClient, MTGCHError
 
 REQUEST_TIMEOUT = 20
 SCRYFALL_ROOT = "https://api.scryfall.com"
 IMAGE_VARIANTS = ("png", "large", "normal")
-
-ONLINE_ONLY_FORMATS = {"alchemy", "historic", "explorer", "timeless", "brawl"}
-LEGALITY_KEY_REMAP = {"duel": "duel_commander"}
 
 __all__ = ["get_cards_information"]
 
@@ -211,19 +209,6 @@ def _resolve_stax_key(tags: Iterable[str], stax_type_dict: Dict[str, str]) -> Op
         if tag in stax_type_dict:
             return tag
     return None
-
-
-def _clean_legalities(raw: Dict[str, str]) -> Dict[str, str]:
-    cleaned: Dict[str, str] = {}
-    for key, value in raw.items():
-        lowered = key.lower()
-        if lowered in ONLINE_ONLY_FORMATS:
-            continue
-        mapped_key = LEGALITY_KEY_REMAP.get(lowered, lowered)
-        cleaned[mapped_key] = value
-    return cleaned
-
-
 def _fetch_card_payload(session: requests.Session, entry: CardListEntry) -> Dict[str, object]:
     set_code = _normalise_set_code(entry.set_code)
     collector = entry.collector_number.lower()
@@ -311,7 +296,7 @@ def _build_card_record(
         faces=faces,
         stax_type=stax_key,
         is_restricted=bool(payload.get("reserved", False)),
-        legalities=_clean_legalities(raw_legalities),
+        legalities=extract_legalities(raw_legalities),
         mana_value=mana_value_int,
         sort_card_type=_determine_sort_type(card_type),
         set_code=entry.set_code,
