@@ -8,14 +8,13 @@ __all__ = ["generate_latex_text", "genarate_latex_text"]
 
 
 def genarate_latex_text(
-    sheet_file_name: str,
-    sheet_name: str,
-    multiface_sheet_name: str,
+    data_file_name: str,
     latex_text_name: str,
+    *,
+    config_path: str | None = None,
 ):
     return generate_latex_text(
-        sheet_file_name=sheet_file_name,
-        sheet_name=sheet_name,
-        multiface_sheet_name=multiface_sheet_name,
+        data_file_name=data_file_name,
         latex_text_name=latex_text_name,
+        config_path=config_path,
     )

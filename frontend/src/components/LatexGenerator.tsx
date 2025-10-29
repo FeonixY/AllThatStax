@@ -15,15 +15,13 @@ interface LatexGeneratorProps {
 type GenerationPhase = "idle" | "loading" | "success" | "error";
 
 interface FormState {
-  sheetFileName: string;
-  sheetName: string;
-  multifaceSheetName: string;
+  dataFileName: string;
   latexTextName: string;
   latexFileName: string;
   latexCommandText: string;
   fetchCards: boolean;
   fetchFromScratch: boolean;
-  localize: boolean;
+  downloadImages: boolean;
   skipCompile: boolean;
 }
 
@@ -51,15 +49,13 @@ export function LatexGenerator({ apiBase }: LatexGeneratorProps) {
         }
         setSettings(data);
         setForm({
-          sheetFileName: data.sheetFileName,
-          sheetName: data.sheetName,
-          multifaceSheetName: data.multifaceSheetName,
+          dataFileName: data.dataFileName,
           latexTextName: data.latexTextName,
           latexFileName: data.latexFileName,
           latexCommandText: data.latexCommand.join("\n"),
           fetchCards: false,
           fetchFromScratch: false,
-          localize: false,
+          downloadImages: true,
           skipCompile: false,
         });
       })
@@ -93,15 +89,13 @@ export function LatexGenerator({ apiBase }: LatexGeneratorProps) {
     setResult(null);
 
     const payload: LatexGenerationRequest = {
-      sheetFileName: form.sheetFileName,
-      sheetName: form.sheetName,
-      multifaceSheetName: form.multifaceSheetName,
+      dataFileName: form.dataFileName,
       latexTextName: form.latexTextName,
       latexFileName: form.latexFileName,
       latexCommand: normaliseCommand(form.latexCommandText),
       fetchCards: form.fetchCards,
       fetchFromScratch: form.fetchFromScratch,
-      localize: form.localize,
+      downloadImages: form.downloadImages,
       skipCompile: form.skipCompile,
     };
 
@@ -124,6 +118,7 @@ export function LatexGenerator({ apiBase }: LatexGeneratorProps) {
       const next = { ...prev, [key]: value };
       if (key === "fetchFromScratch" && value) {
         next.fetchCards = true;
+        next.downloadImages = true;
       }
       return next;
     });
@@ -158,31 +153,11 @@ export function LatexGenerator({ apiBase }: LatexGeneratorProps) {
       <form className="latex-form" onSubmit={handleSubmit}>
         <div className="latex-form__grid">
           <label>
-            <span>牌表 Excel 文件</span>
+            <span>卡牌数据 JSON 文件</span>
             <input
               type="text"
-              value={form.sheetFileName}
-              onChange={(event) => handleChange("sheetFileName", event.target.value)}
-              required
-            />
-          </label>
-          <label>
-            <span>单面牌 Sheet 名称</span>
-            <input
-              type="text"
-              value={form.sheetName}
-              onChange={(event) => handleChange("sheetName", event.target.value)}
-              required
-            />
-          </label>
-          <label>
-            <span>多面牌 Sheet 名称</span>
-            <input
-              type="text"
-              value={form.multifaceSheetName}
-              onChange={(event) =>
-                handleChange("multifaceSheetName", event.target.value)
-              }
+              value={form.dataFileName}
+              onChange={(event) => handleChange("dataFileName", event.target.value)}
               required
             />
           </label>
@@ -231,15 +206,16 @@ export function LatexGenerator({ apiBase }: LatexGeneratorProps) {
               checked={form.fetchFromScratch}
               onChange={(event) => handleChange("fetchFromScratch", event.target.checked)}
             />
-            重新构建 Excel（会同时抓取数据）
+            重新生成数据文件（会同时抓取数据）
           </label>
           <label>
             <input
               type="checkbox"
-              checked={form.localize}
-              onChange={(event) => handleChange("localize", event.target.checked)}
+              checked={form.downloadImages}
+              onChange={(event) => handleChange("downloadImages", event.target.checked)}
+              disabled={!form.fetchCards && !form.fetchFromScratch}
             />
-            补全中文本地化字段
+            下载缺失的卡图
           </label>
           <label>
             <input

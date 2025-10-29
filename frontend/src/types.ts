@@ -31,24 +31,20 @@ export interface Metadata {
 }
 
 export interface LatexSettings {
-  sheetFileName: string;
-  sheetName: string;
-  multifaceSheetName: string;
+  dataFileName: string;
   latexTextName: string;
   latexFileName: string;
   latexCommand: string[];
 }
 
 export interface LatexGenerationRequest {
-  sheetFileName: string;
-  sheetName: string;
-  multifaceSheetName: string;
+  dataFileName: string;
   latexTextName: string;
   latexFileName: string;
   latexCommand?: string[];
   fetchCards?: boolean;
   fetchFromScratch?: boolean;
-  localize?: boolean;
+  downloadImages?: boolean;
   skipCompile?: boolean;
 }
 
@@ -58,6 +54,30 @@ export interface LatexGenerationResult {
   command: string[];
   stdout?: string | null;
   stderr?: string | null;
+}
+
+export interface CardFetchSettings {
+  cardListName: string;
+  dataFileName: string;
+  imageFolderName: string;
+  downloadImages: boolean;
+}
+
+export interface CardFetchRequest {
+  cardListName: string;
+  dataFileName: string;
+  imageFolderName: string;
+  fromScratch: boolean;
+  downloadImages: boolean;
+}
+
+export interface CardFetchResponse {
+  cardsProcessed: number;
+  cardsUpdated: number;
+  imagesDownloaded: number;
+  errors: string[];
+  dataFile: string;
+  duration: number;
 }
 
 export const CARD_DRAG_MIME = "application/x-all-that-stax-card";

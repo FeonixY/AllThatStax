@@ -9,7 +9,6 @@ from typing import Any, Iterable, Mapping, Sequence
 from allthatstax.config import load_config
 from allthatstax.latex_text import generate_latex_text
 from get_cards_information import get_cards_information
-from localization import localization
 from run_latex import run_latex
 
 DEFAULT_CONFIG = Path("config.json")
@@ -38,9 +37,9 @@ def build_parser() -> argparse.ArgumentParser:
         help="Rebuild the workbook from scratch when fetching cards",
     )
     parser.add_argument(
-        "--localize",
+        "--no-download-images",
         action="store_true",
-        help="Augment the workbook with localized text using Selenium",
+        help="Skip downloading card images during the fetch step",
     )
     parser.add_argument(
         "--skip-compile",
@@ -59,7 +58,7 @@ def _resolve_paths(config_path: Path, config: Mapping[str, Any]) -> dict[str, Pa
     base_dir = config_path.parent
     return {
         "image_folder": base_dir / str(config["image_folder_name"]),
-        "sheet_file": base_dir / str(config["sheet_file_name"]),
+        "data_file": base_dir / str(config["data_file_name"]),
         "card_list": base_dir / str(config["card_list_name"]),
         "latex_text": base_dir / str(config["latex_text_name"]),
         "latex_file": base_dir / str(config["latex_file_name"]),
@@ -77,12 +76,6 @@ def main(argv: Sequence[str] | None = None) -> int:
     except KeyError as exc:
         parser.error(f"Missing configuration key: {exc.args[0]}")
 
-    try:
-        sheet_name = str(config["sheet_name"])
-        multiface_sheet_name = str(config["multiface_sheet_name"])
-    except KeyError as exc:
-        parser.error(f"Missing configuration key: {exc.args[0]}")
-
     stax_types = dict(config.get("stax_type", {}))
 
     fetch_cards = args.fetch or args.fetch_from_scratch
@@ -90,28 +83,18 @@ def main(argv: Sequence[str] | None = None) -> int:
         print("Fetching card information…")
         get_cards_information(
             str(paths["image_folder"]),
-            str(paths["sheet_file"]),
-            sheet_name,
-            multiface_sheet_name,
+            str(paths["data_file"]),
             str(paths["card_list"]),
             stax_types,
             from_scratch=args.fetch_from_scratch,
-        )
-
-    if args.localize:
-        print("Localizing missing card information…")
-        localization(
-            str(paths["sheet_file"]),
-            sheet_name,
-            multiface_sheet_name,
+            download_images=not args.no_download_images,
         )
 
     print("Generating LaTeX snippets…")
     generate_latex_text(
-        sheet_file_name=str(paths["sheet_file"]),
-        sheet_name=sheet_name,
-        multiface_sheet_name=multiface_sheet_name,
+        data_file_name=str(paths["data_file"]),
         latex_text_name=str(paths["latex_text"]),
+        config_path=str(config_path),
     )
 
     if args.skip_compile:

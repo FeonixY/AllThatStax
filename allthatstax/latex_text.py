@@ -1,13 +1,13 @@
-"""Helpers for turning workbook data into LaTeX content."""
+"""Generate LaTeX snippets from the JSON card store."""
 
 from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, Iterable, Iterator, List, Sequence
+from typing import Dict, Iterable, List, Sequence
 
-from openpyxl import load_workbook
-from openpyxl.worksheet.worksheet import Worksheet
+from allthatstax.card_store import CardFaceRecord, CardRecord, load_card_store
+from allthatstax.config import load_config
 
 __all__ = ["generate_latex_text"]
 
@@ -30,7 +30,7 @@ LEGALITY_FIELDS: Sequence[str] = (
     "vintage",
     "timeless",
     "commander",
-    "duel_commander",
+    "duel",
 )
 
 
@@ -56,185 +56,141 @@ class LatexCard:
         )
 
 
-def _iter_values(sheet: Worksheet) -> Iterator[Sequence[object]]:
-    for row in sheet.iter_rows(min_row=2, values_only=True):
-        if any(row):
-            yield row
-
-
 def _coerce_text(value: object, default: str = "") -> str:
-    if value is None:
-        return default
-    text = str(value)
+    text = str(value) if value is not None else default
     if text.strip().lower() == "none":
         return default
     return text
 
 
-def _format_mana_cost(value: object) -> str:
-    text = _coerce_text(value)
-    if not text:
+def _format_mana_cost(value: str) -> str:
+    if not value:
         return "无费用（法术力值为0）"
-    return text.replace("{", "\\MTGsymbol{").replace("}", "}{5}")
+    return value.replace("{", "\\MTGsymbol{").replace("}", "}{5}")
 
 
-def _format_description(value: object) -> str:
-    text = _coerce_text(value)
-    if not text:
+def _format_description(value: str) -> str:
+    if not value:
         return ""
-    return text.replace("{", "\\MTGsymbol{").replace("}", "}{3}").replace("\n", "\\\\\n")
+    return value.replace("{", "\\MTGsymbol{").replace("}", "}{3}").replace("\n", "\\\\\n")
 
 
-def _get_value(values: Sequence[object], index: int, default: object = "") -> object:
-    return values[index] if index < len(values) else default
-
-
-def _parse_mana_value(value: object) -> int:
-    text = _coerce_text(value)
-    if not text:
-        return 0
-    try:
-        return int(float(text))
-    except ValueError:
-        return 0
-
-
-def _format_legalities(values: Sequence[object]) -> str:
+def _format_legalities(legalities: Dict[str, str]) -> str:
     rendered: List[str] = []
     for index, label in enumerate(LEGALITY_FIELDS):
-        entry = _get_value(values, index)
+        entry = _coerce_text(legalities.get(label, "unknown"))
         suffix = "," if index < len(LEGALITY_FIELDS) - 1 else ""
-        rendered.append(f"\tlegality / {label} = {_coerce_text(entry)}{suffix}")
+        rendered.append(f"\tlegality / {label} = {entry}{suffix}")
     return "\n".join(rendered)
 
 
-def _build_single_cards(sheet: Worksheet) -> Iterable[LatexCard]:
-    for row in _iter_values(sheet):
-        row_list = list(row)
-        english_name = _coerce_text(_get_value(row_list, 0))
-        if not english_name:
-            continue
-        chinese_name = _coerce_text(_get_value(row_list, 1))
-        image_path = _coerce_text(_get_value(row_list, 2))
-        mana_cost = _format_mana_cost(_get_value(row_list, 3))
-        card_type = _coerce_text(_get_value(row_list, 4))
-        description = _format_description(_get_value(row_list, 5))
-        stax_type = _coerce_text(_get_value(row_list, 6))
-        restricted = _coerce_text(_get_value(row_list, 7))
-        legalities = [
-            _get_value(row_list, index)
-            for index in range(8, 8 + len(LEGALITY_FIELDS))
-        ]
-        mana_value = _parse_mana_value(_get_value(row_list, 20))
-        sort_type = _coerce_text(_get_value(row_list, 21), "其他")
-
-        lines = [
-            "\\card",
-            "{",
-            f"\tcard_english_name = {{{english_name}}},",
-            f"\tcard_chinese_name = {{{chinese_name}}},",
-            f"\tcard_image = {image_path},",
-            f"\tmana_cost = {mana_cost},",
-            f"\tcard_type = {card_type},",
-            f"\tdescription = {{{description}}},",
-            f"\tstax_type = {stax_type},",
-            f"\tis_in_restricted_list = {restricted},",
-            _format_legalities(legalities),
-            "}",
-            "",
-        ]
-        yield LatexCard("\n".join(lines), mana_value, sort_type, english_name)
+def _stax_label(stax_key: str | None, mapping: Dict[str, str]) -> str:
+    if not stax_key:
+        return ""
+    return _coerce_text(mapping.get(stax_key, stax_key))
 
 
-def _build_multiface_cards(sheet: Worksheet) -> Iterable[LatexCard]:
-    for row in _iter_values(sheet):
-        row_list = list(row)
-        english_front = _coerce_text(_get_value(row_list, 0))
-        if not english_front:
-            continue
-        chinese_front = _coerce_text(_get_value(row_list, 1))
-        image_front = _coerce_text(_get_value(row_list, 2))
-        mana_front = _format_mana_cost(_get_value(row_list, 3))
-        type_front = _coerce_text(_get_value(row_list, 4))
-        desc_front = _format_description(_get_value(row_list, 5))
-        english_back = _coerce_text(_get_value(row_list, 6))
-        chinese_back = _coerce_text(_get_value(row_list, 7))
-        image_back = _coerce_text(_get_value(row_list, 8))
-        mana_back = _format_mana_cost(_get_value(row_list, 9))
-        type_back = _coerce_text(_get_value(row_list, 10))
-        desc_back = _format_description(_get_value(row_list, 11))
-        stax_type = _coerce_text(_get_value(row_list, 12))
-        restricted = _coerce_text(_get_value(row_list, 13))
-        legalities = [
-            _get_value(row_list, index)
-            for index in range(14, 14 + len(LEGALITY_FIELDS))
-        ]
-        mana_value = _parse_mana_value(_get_value(row_list, 26))
-        sort_type = _coerce_text(_get_value(row_list, 27), "其他")
-
-        lines = [
-            "\\mfcard",
-            "{",
-            f"\tfront_card_english_name = {{{english_front}}},",
-            f"\tfront_card_chinese_name = {{{chinese_front}}},",
-            f"\tfront_card_image = {image_front},",
-            f"\tfront_mana_cost = {mana_front},",
-            f"\tfront_card_type = {type_front},",
-            f"\tfront_description = {{{desc_front}}},",
-            f"\tback_card_english_name = {{{english_back}}},",
-            f"\tback_card_chinese_name = {{{chinese_back}}},",
-            f"\tback_card_image = {image_back},",
-            f"\tback_mana_cost = {mana_back},",
-            f"\tback_card_type = {type_back},",
-            f"\tback_description = {{{desc_back}}},",
-            f"\tstax_type = {stax_type},",
-            f"\tis_in_restricted_list = {restricted},",
-            _format_legalities(legalities),
-            "}",
-            "",
-        ]
-        yield LatexCard("\n".join(lines), mana_value, sort_type, english_front)
+def _build_single_card(
+    card: CardRecord,
+    face: CardFaceRecord,
+    stax_mapping: Dict[str, str],
+) -> LatexCard:
+    lines = [
+        "\\card",
+        "{",
+        f"\tcard_english_name = {{{_coerce_text(face.english_name)}}},",
+        f"\tcard_chinese_name = {{{_coerce_text(face.chinese_name)}}},",
+        f"\tcard_image = {face.image_file},",
+        f"\tmana_cost = {_format_mana_cost(_coerce_text(face.mana_cost))},",
+        f"\tcard_type = {_coerce_text(face.card_type)},",
+        f"\tdescription = {{{_format_description(_coerce_text(face.description))}}},",
+        f"\tstax_type = {_stax_label(card.stax_type, stax_mapping)},",
+        f"\tis_in_restricted_list = {'RL' if card.is_restricted else 'Not RL'},",
+        _format_legalities(card.legalities),
+        "}",
+        "",
+    ]
+    return LatexCard("\n".join(lines), int(card.mana_value), card.sort_card_type, face.english_name)
 
 
-def generate_latex_text(
-    sheet_file_name: str | Path,
-    sheet_name: str,
-    multiface_sheet_name: str,
-    latex_text_name: str | Path,
-) -> Path:
-    """Generate LaTeX snippets from the workbook and write them to disk."""
+def _build_multiface_card(
+    card: CardRecord,
+    faces: Iterable[CardFaceRecord],
+    stax_mapping: Dict[str, str],
+) -> LatexCard:
+    faces_list = list(faces)
+    if len(faces_list) < 2:
+        raise ValueError("Multiface card requires at least two faces")
+    front, back = faces_list[0], faces_list[1]
+    lines = [
+        "\\mfcard",
+        "{",
+        f"\tfront_card_english_name = {{{_coerce_text(front.english_name)}}},",
+        f"\tfront_card_chinese_name = {{{_coerce_text(front.chinese_name)}}},",
+        f"\tfront_card_image = {front.image_file},",
+        f"\tfront_mana_cost = {_format_mana_cost(_coerce_text(front.mana_cost))},",
+        f"\tfront_card_type = {_coerce_text(front.card_type)},",
+        f"\tfront_description = {{{_format_description(_coerce_text(front.description))}}},",
+        f"\tback_card_english_name = {{{_coerce_text(back.english_name)}}},",
+        f"\tback_card_chinese_name = {{{_coerce_text(back.chinese_name)}}},",
+        f"\tback_card_image = {back.image_file},",
+        f"\tback_mana_cost = {_format_mana_cost(_coerce_text(back.mana_cost))},",
+        f"\tback_card_type = {_coerce_text(back.card_type)},",
+        f"\tback_description = {{{_format_description(_coerce_text(back.description))}}},",
+        f"\tstax_type = {_stax_label(card.stax_type, stax_mapping)},",
+        f"\tis_in_restricted_list = {'RL' if card.is_restricted else 'Not RL'},",
+        _format_legalities(card.legalities),
+        "}",
+        "",
+    ]
+    return LatexCard("\n".join(lines), int(card.mana_value), card.sort_card_type, front.english_name)
 
-    workbook_path = Path(sheet_file_name)
-    if not workbook_path.exists():
-        raise FileNotFoundError(f"Workbook not found: {workbook_path}")
 
-    workbook = load_workbook(workbook_path, data_only=True)
-    try:
-        singles_sheet = workbook[sheet_name]
-    except KeyError as exc:  # pragma: no cover - invalid configuration
-        raise ValueError(f"Worksheet '{sheet_name}' not found in {workbook_path}") from exc
-    try:
-        multiface_sheet = workbook[multiface_sheet_name]
-    except KeyError as exc:  # pragma: no cover - invalid configuration
-        raise ValueError(f"Worksheet '{multiface_sheet_name}' not found in {workbook_path}") from exc
-
-    cards: List[LatexCard] = []
-    cards.extend(_build_single_cards(singles_sheet))
-    cards.extend(_build_multiface_cards(multiface_sheet))
-    workbook.close()
-
+def _group_cards(cards: List[LatexCard]) -> Dict[object, List[LatexCard]]:
     cards.sort(key=lambda card: card.base_sort_key())
-
     groups: Dict[object, List[LatexCard]] = {i: [] for i in range(7)}
     groups["7+"] = []
-
     for card in cards:
         if card.mana_value >= 7:
             groups["7+"].append(card)
         else:
             groups.setdefault(card.mana_value, []).append(card)
-
     groups["7+"].sort(key=lambda card: card.plus_sort_key())
+    return groups
+
+
+def generate_latex_text(
+    data_file_name: str | Path,
+    latex_text_name: str | Path,
+    *,
+    config_path: str | Path | None = None,
+) -> Path:
+    """Generate LaTeX snippets from the JSON card data file."""
+
+    data_path = Path(data_file_name)
+    if not data_path.exists():
+        raise FileNotFoundError(f"Card data file not found: {data_path}")
+
+    store = load_card_store(data_path)
+    if not store.cards:
+        raise ValueError("卡牌数据为空，无法生成 LaTeX 内容")
+
+    config = load_config(config_path) if config_path else load_config()
+    stax_mapping = {str(key): str(value) for key, value in config.get("stax_type", {}).items()}
+
+    latex_cards: List[LatexCard] = []
+    for card in store.cards.values():
+        if not card.faces:
+            continue
+        if card.kind == "multiface" and len(card.faces) >= 2:
+            latex_cards.append(_build_multiface_card(card, card.faces, stax_mapping))
+        else:
+            latex_cards.append(_build_single_card(card, card.faces[0], stax_mapping))
+
+    if not latex_cards:
+        raise ValueError("未找到任何可用卡牌用于生成 LaTeX")
+
+    groups = _group_cards(latex_cards)
 
     output_path = Path(latex_text_name)
     output_path.parent.mkdir(parents=True, exist_ok=True)

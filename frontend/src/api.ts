@@ -1,5 +1,8 @@
 import {
   CardData,
+  CardFetchRequest,
+  CardFetchResponse,
+  CardFetchSettings,
   LatexGenerationRequest,
   LatexGenerationResult,
   LatexSettings,
@@ -37,6 +40,22 @@ export function generateLatex(
   payload: LatexGenerationRequest
 ): Promise<LatexGenerationResult> {
   return request<LatexGenerationResult>("/latex/generate", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+}
+
+export function fetchCardFetchSettings(): Promise<CardFetchSettings> {
+  return request<CardFetchSettings>("/cards/fetch/settings");
+}
+
+export function triggerCardFetch(
+  payload: CardFetchRequest
+): Promise<CardFetchResponse> {
+  return request<CardFetchResponse>("/cards/fetch", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
