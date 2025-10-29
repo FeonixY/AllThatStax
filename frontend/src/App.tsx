@@ -11,11 +11,12 @@ import {
   Metadata,
 } from "./types";
 import "./App.css";
+import { LatexGenerator } from "./components/LatexGenerator";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL ?? "";
 const SLOTS_PER_PAGE = 9;
 
-type TabKey = "library" | "binder";
+type TabKey = "library" | "binder" | "latex";
 
 function normaliseQuery(value: string) {
   return value.trim().toLowerCase();
@@ -315,9 +316,16 @@ export default function App() {
         >
           牌本
         </button>
+        <button
+          type="button"
+          className={`app__tab${activeTab === "latex" ? " app__tab--active" : ""}`}
+          onClick={() => handleTabChange("latex")}
+        >
+          PDF 生成
+        </button>
       </nav>
 
-      <main className="app__body">
+      <main className={`app__body${activeTab === "latex" ? " app__body--single" : ""}`}>
         {activeTab === "library" ? (
           <section className="library-panel">
             <div className="app__filters">
@@ -384,7 +392,7 @@ export default function App() {
               </div>
             </div>
           </section>
-        ) : (
+        ) : activeTab === "binder" ? (
           <BinderBoard
             pages={binderPages}
             cardsById={cardsById}
@@ -399,6 +407,8 @@ export default function App() {
             stagingCards={stagingArea}
             apiBase={API_BASE}
           />
+        ) : (
+          <LatexGenerator apiBase={API_BASE} />
         )}
       </main>
     </div>

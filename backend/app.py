@@ -5,11 +5,13 @@ import re
 import threading
 from functools import lru_cache
 from pathlib import Path
+from subprocess import CalledProcessError
 from typing import Dict, Iterable, List, Literal, Optional
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from starlette.responses import JSONResponse
 from starlette.status import HTTP_404_NOT_FOUND
@@ -18,6 +20,12 @@ try:
     from openpyxl import load_workbook
 except ImportError as exc:  # pragma: no cover - handled during runtime only
     raise RuntimeError("openpyxl is required to run the backend") from exc
+
+from allthatstax.config import load_config
+from allthatstax.latex_text import generate_latex_text
+from get_cards_information import get_cards_information
+from localization import localization
+from run_latex import DEFAULT_COMMAND, run_latex
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 CONFIG_PATH = BASE_DIR / "config.json"
@@ -83,6 +91,36 @@ class Card(BaseModel):
 class Metadata(BaseModel):
     staxTypes: List[StaxType]
     cardTypeOrder: List[str]
+
+
+class LatexSettings(BaseModel):
+    sheetFileName: str
+    sheetName: str
+    multifaceSheetName: str
+    latexTextName: str
+    latexFileName: str
+    latexCommand: List[str]
+
+
+class LatexGenerationRequest(BaseModel):
+    sheetFileName: str
+    sheetName: str
+    multifaceSheetName: str
+    latexTextName: str
+    latexFileName: str
+    latexCommand: Optional[List[str]] = None
+    fetchCards: bool = False
+    fetchFromScratch: bool = False
+    localize: bool = False
+    skipCompile: bool = False
+
+
+class LatexGenerationResponse(BaseModel):
+    latexTextPath: str
+    pdfPath: Optional[str]
+    command: List[str]
+    stdout: Optional[str]
+    stderr: Optional[str]
 
 
 app = FastAPI(title="AllThatStax API", version="1.0.0")
@@ -243,6 +281,22 @@ def _build_stax_types() -> List[StaxType]:
     return stax_types
 
 
+def _resolve_path_within_base(path_value: str | Path) -> Path:
+    candidate = Path(path_value)
+    if not candidate.is_absolute():
+        candidate = BASE_DIR / candidate
+    candidate = candidate.resolve()
+    try:
+        candidate.relative_to(BASE_DIR)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail="提供的路径不在项目目录内") from exc
+    return candidate
+
+
+def _relative_to_base(path_value: Path) -> str:
+    return str(path_value.relative_to(BASE_DIR))
+
+
 @app.get("/health")
 def health_check() -> Dict[str, str]:
     return {"status": "ok"}
@@ -269,6 +323,115 @@ def get_card(card_id: str) -> Card:
         if card.id == card_id:
             return card
     raise HTTPException(status_code=HTTP_404_NOT_FOUND, detail="Card not found")
+
+
+@app.get("/latex/settings", response_model=LatexSettings)
+def get_latex_settings() -> LatexSettings:
+    config = load_config(CONFIG_PATH)
+    return LatexSettings(
+        sheetFileName=str(config.get("sheet_file_name", "card_information_sheet.xlsx")),
+        sheetName=str(config.get("sheet_name", "Sheet")),
+        multifaceSheetName=str(config.get("multiface_sheet_name", "Multiface Sheet")),
+        latexTextName=str(config.get("latex_text_name", "latex_text.txt")),
+        latexFileName=str(config.get("latex_file_name", "AllThatStax.tex")),
+        latexCommand=list(DEFAULT_COMMAND),
+    )
+
+
+@app.post("/latex/generate", response_model=LatexGenerationResponse)
+def generate_latex(payload: LatexGenerationRequest) -> LatexGenerationResponse:
+    config = load_config(CONFIG_PATH)
+
+    sheet_path = _resolve_path_within_base(payload.sheetFileName)
+    latex_text_path = _resolve_path_within_base(payload.latexTextName)
+    latex_file_path = _resolve_path_within_base(payload.latexFileName)
+
+    card_list_path = _resolve_path_within_base(str(config.get("card_list_name", "card_list.txt")))
+    image_folder_path = _resolve_path_within_base(str(config.get("image_folder_name", "Images")))
+
+    command = payload.latexCommand[:] if payload.latexCommand else list(DEFAULT_COMMAND)
+
+    try:
+        if payload.fetchCards or payload.fetchFromScratch:
+            get_cards_information(
+                str(image_folder_path),
+                str(sheet_path),
+                payload.sheetName,
+                payload.multifaceSheetName,
+                str(card_list_path),
+                dict(config.get("stax_type", {})),
+                from_scratch=payload.fetchFromScratch,
+            )
+
+        if payload.localize:
+            localization(str(sheet_path), payload.sheetName, payload.multifaceSheetName)
+
+        latex_text_result = generate_latex_text(
+            sheet_file_name=str(sheet_path),
+            sheet_name=payload.sheetName,
+            multiface_sheet_name=payload.multifaceSheetName,
+            latex_text_name=str(latex_text_path),
+        )
+    except FileNotFoundError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+
+    stdout = None
+    stderr = None
+    pdf_path: Optional[Path] = None
+
+    if not payload.skipCompile:
+        try:
+            result = run_latex(
+                latex_file_name=str(latex_file_path),
+                latex_text_name=str(latex_text_result),
+                command=command,
+            )
+        except FileNotFoundError as exc:
+            raise HTTPException(status_code=404, detail=str(exc)) from exc
+        except ValueError as exc:
+            raise HTTPException(status_code=400, detail=str(exc)) from exc
+        except RuntimeError as exc:
+            raise HTTPException(status_code=500, detail=str(exc)) from exc
+        except CalledProcessError as exc:
+            stdout = exc.stdout or None
+            stderr = exc.stderr or None
+            pdf_candidate = latex_file_path.with_suffix(".pdf")
+            if pdf_candidate.exists():
+                pdf_path = pdf_candidate
+            return LatexGenerationResponse(
+                latexTextPath=_relative_to_base(latex_text_path),
+                pdfPath=_relative_to_base(pdf_path) if pdf_path else None,
+                command=command,
+                stdout=stdout,
+                stderr=stderr,
+            )
+        stdout = result.stdout or None
+        stderr = result.stderr or None
+        pdf_candidate = latex_file_path.with_suffix(".pdf")
+        if pdf_candidate.exists():
+            pdf_path = pdf_candidate
+
+    response = LatexGenerationResponse(
+        latexTextPath=_relative_to_base(latex_text_path),
+        pdfPath=_relative_to_base(pdf_path) if pdf_path else None,
+        command=command,
+        stdout=stdout,
+        stderr=stderr,
+    )
+
+    return response
+
+
+@app.get("/latex/download")
+def download_latex_pdf(path: str = Query(..., description="相对于项目根目录的 PDF 路径")) -> FileResponse:
+    file_path = _resolve_path_within_base(path)
+    if not file_path.exists():
+        raise HTTPException(status_code=404, detail="指定的文件不存在")
+    if file_path.suffix.lower() != ".pdf":
+        raise HTTPException(status_code=400, detail="仅支持下载 PDF 文件")
+    return FileResponse(file_path, filename=file_path.name, media_type="application/pdf")
 
 
 @app.exception_handler(FileNotFoundError)

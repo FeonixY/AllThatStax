@@ -31,6 +31,9 @@ uvicorn backend.app:app --reload
 - `GET /cards/{card_id}`：按 ID 获取指定卡牌详情。
 - `GET /metadata`：返回锁类型映射与牌类型排序信息。
 - `GET /health`：健康检查。
+- `GET /latex/settings`：读取当前配置中的 LaTeX 生成参数默认值。
+- `POST /latex/generate`：根据传入设置生成 `latex_text.txt` 并可选编译 PDF。
+- `GET /latex/download`：下载最近一次生成的 PDF 文件。
 
 静态资源：
 
@@ -39,7 +42,7 @@ uvicorn backend.app:app --reload
 
 ## 前端（Vite + React）
 
-前端提供卡牌浏览与牌本构建界面，支持按名称/描述搜索、按锁类型和牌类型筛选、展示法术力曲线与锁类型分布等功能。
+前端提供卡牌浏览、牌本构建以及 LaTeX/PDF 生成界面，支持按名称/描述搜索、按锁类型和牌类型筛选、展示法术力曲线与锁类型分布等功能。
 
 ### 本地开发
 
@@ -66,7 +69,7 @@ npm run build
 1. 使用命令行工具 `python main.py --fetch` 更新 `card_information_sheet.xlsx` 与本地图片资源（可选 `--fetch-from-scratch` 完全重建表格）。
 2. 如需补全中文信息，执行 `python main.py --localize` 自动抓取缺失的本地化字段。
 3. 默认命令会读取 Excel 并生成最新的 LaTeX 片段，然后调用 `xelatex` 编译 PDF；如只需生成文本可添加 `--skip-compile`。
-4. 启动 FastAPI 服务，通过 `/cards` 和 `/metadata` 获取最新数据，配合前端浏览、检索和构建牌本。
+4. 启动 FastAPI 服务，通过 `/cards` 和 `/metadata` 获取最新数据，配合前端浏览、检索和构建牌本，或使用前端的“PDF 生成”标签直接触发 LaTeX 文本生成与编译。
 
 欢迎根据需要扩展 API、添加导出能力或集成现有 LaTeX 生成流程。
 
