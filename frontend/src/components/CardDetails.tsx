@@ -25,10 +25,10 @@ export function CardDetails({ card, apiBase, onAdd }: CardDetailsProps) {
     ["pioneer", "先驱"],
     ["modern", "摩登"],
     ["legacy", "薪传"],
+    ["pauper", "纯铁"],
     ["vintage", "特选"],
     ["commander", "官禁"],
-    ["duel", "法禁"],
-    ["pauper", "纯铁"],
+    ["duel_commander", "法禁"],
   ]);
 
   const statusLabels: Record<string, string> = {

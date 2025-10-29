@@ -33,6 +33,9 @@ CONFIG_PATH = BASE_DIR / "config.json"
 
 CARD_TYPE_ORDER = ["生物", "神器", "结界", "其他"]
 
+ONLINE_ONLY_FORMATS = {"alchemy", "historic", "explorer", "timeless", "brawl"}
+LEGALITY_KEY_REMAP = {"duel": "duel_commander"}
+
 _mana_pattern = re.compile(r"\{([^}]+)\}")
 _cache_lock = threading.Lock()
 _cached_payload: Optional[Dict[str, object]] = None
@@ -183,12 +186,23 @@ def _build_stax_type_entry(key: Optional[str]) -> Optional[StaxType]:
     return StaxType(key=key, label=label)
 
 
+def _clean_legalities(raw: Dict[str, str]) -> Dict[str, str]:
+    cleaned: Dict[str, str] = {}
+    for key, value in raw.items():
+        lowered = str(key).lower()
+        if lowered in ONLINE_ONLY_FORMATS:
+            continue
+        mapped_key = LEGALITY_KEY_REMAP.get(lowered, lowered)
+        cleaned[mapped_key] = str(value)
+    return cleaned
+
+
 def _record_to_card(record: CardRecord) -> Optional[Card]:
     if not record.faces:
         return None
     faces = [_face_to_api(face) for face in record.faces]
     stax_type = _build_stax_type_entry(record.stax_type)
-    legalities = {str(key): str(value) for key, value in record.legalities.items()}
+    legalities = _clean_legalities(record.legalities)
     kind = record.kind if record.kind in {"single", "multiface"} else "single"
     return Card(
         id=record.id or f"card-{faces[0].englishName}",
@@ -223,6 +237,7 @@ def _load_cards_payload(force: bool = False) -> Dict[str, object]:
         store = load_card_store(data_path)
         cards: List[Card] = []
         for record in store.cards.values():
+            record.legalities = _clean_legalities(record.legalities)
             card = _record_to_card(record)
             if card is not None:
                 cards.append(card)
