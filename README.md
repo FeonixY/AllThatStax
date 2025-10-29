@@ -9,7 +9,7 @@
 - `card_data.json`：整理后的卡牌数据源，包含单面与多面牌的结构化信息。
 - `config.json`：配置文件，定义图像、表格、锁类型映射等路径。
 - `allthatstax/`：新版的 Python 工具包，封装了配置读取、JSON 数据处理与 LaTeX 文本生成逻辑。
-- `get_cards_information.py`、`run_latex.py`、`main.py`：Python 数据抓取、文本生成与编译脚本。
+- `allthatstax/workflow/`：Python 数据抓取与 LaTeX 编译工作流模块，`main.py` 提供命令行入口。
 - `backend/`：基于 FastAPI 的数据 API，提供卡牌数据与元信息，并托管图片、法术力图标静态资源。
 - `frontend/`：基于 Vite + React + TypeScript 的前端项目，包含卡牌表格、筛选器以及可视化牌本构建界面。
 
@@ -106,4 +106,4 @@ python main.py --latex-command xelatex -shell-escape
 
 抓取时会将卡图保存到 `Images/` 目录，文件名包含系列与收藏编号，前端和 LaTeX 生成都会引用这些资源。若仅需更新文字信息，可在前端取消“下载英文卡图”，或在命令行追加 `--no-download-images`。
 
-如需扩展新的标签或自定义存储结构，可修改 `config.json` 中的路径与 `stax_type` 映射，`get_cards_information.py` 会自动读取这些配置。
+如需扩展新的标签或自定义存储结构，可修改 `config.json` 中的路径与 `stax_type` 映射，`allthatstax.workflow.fetch.get_cards_information` 会自动读取这些配置。

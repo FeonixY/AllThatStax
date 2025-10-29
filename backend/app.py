@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import json
 import re
 import threading
 from functools import lru_cache
@@ -19,37 +18,18 @@ from starlette.status import HTTP_404_NOT_FOUND
 from allthatstax.card_store import CardFaceRecord, CardRecord, load_card_store
 from allthatstax.config import load_config
 from allthatstax.latex_text import generate_latex_text
-from get_cards_information import get_cards_information
-from run_latex import DEFAULT_COMMAND, run_latex
-
-from allthatstax.config import load_config
-from allthatstax.latex_text import generate_latex_text
-from get_cards_information import get_cards_information
-from localization import localization
-from run_latex import DEFAULT_COMMAND, run_latex
+from allthatstax.workflow import DEFAULT_COMMAND, get_cards_information, run_latex
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 CONFIG_PATH = BASE_DIR / "config.json"
-
 CARD_TYPE_ORDER = ["生物", "神器", "结界", "其他"]
-
 ONLINE_ONLY_FORMATS = {"alchemy", "historic", "explorer", "timeless", "brawl"}
 LEGALITY_KEY_REMAP = {"duel": "duel_commander"}
-
 _mana_pattern = re.compile(r"\{([^}]+)\}")
 _cache_lock = threading.Lock()
 _cached_payload: Optional[Dict[str, object]] = None
 _cached_mtime: Optional[float] = None
-
-
-def _load_config() -> Dict[str, object]:
-    if not CONFIG_PATH.exists():
-        raise FileNotFoundError(f"Config file not found at {CONFIG_PATH}")
-    with CONFIG_PATH.open("r", encoding="utf-8") as fh:
-        return json.load(fh)
-
-
-CONFIG = _load_config()
+CONFIG = load_config(CONFIG_PATH)
 
 
 class CardFace(BaseModel):
