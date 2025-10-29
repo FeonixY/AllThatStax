@@ -1,0 +1,204 @@
+.latex-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.latex-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.latex-panel__header h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #1f2937;
+}
+
+.latex-panel__header p {
+  margin: 0.25rem 0 0;
+  color: #4b5563;
+}
+
+.latex-panel__hint {
+  font-size: 0.9rem;
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+}
+
+.latex-panel__error {
+  color: #b91c1c;
+  background: rgba(239, 68, 68, 0.12);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+}
+
+.latex-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 18px 40px rgba(148, 163, 184, 0.18);
+}
+
+.latex-form__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.latex-form__grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.latex-form__grid input,
+.latex-form__grid textarea {
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid #cbd5f5;
+  background: #fff;
+  font-size: 0.95rem;
+  box-shadow: 0 10px 24px rgba(148, 163, 184, 0.18);
+  resize: vertical;
+}
+
+.latex-form__command {
+  grid-column: 1 / -1;
+}
+
+.latex-form__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.latex-form__options legend {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.latex-form__options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.latex-form__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.latex-form__actions button {
+  background: linear-gradient(135deg, #4338ca, #2563eb);
+  color: #fff;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.65rem 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(59, 130, 246, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.latex-form__actions button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+  box-shadow: none;
+}
+
+.latex-form__actions button:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+.latex-result {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 18px 40px rgba(148, 163, 184, 0.22);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.latex-result header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #1f2937;
+}
+
+.latex-result dl {
+  display: grid;
+  grid-template-columns: minmax(0, 180px) minmax(0, 1fr);
+  gap: 0.5rem 1.25rem;
+  margin: 0;
+}
+
+.latex-result dt {
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.latex-result dd {
+  margin: 0;
+  color: #374151;
+  word-break: break-all;
+}
+
+.latex-result a {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.latex-result__logs {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+}
+
+.latex-result__logs summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+.latex-result__logs pre {
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0.75rem 0 0;
+}
+
+@media (max-width: 768px) {
+  .latex-form__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .latex-result dl {
+    grid-template-columns: 1fr;
+  }
+}

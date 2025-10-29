@@ -1,19 +1,30 @@
+from __future__ import annotations
+
 import os
 import re
 import time
+from typing import Optional
+
 import requests
 from openpyxl import load_workbook
 from urllib.parse import urlparse, unquote
 
+REQUEST_TIMEOUT = 15
+
 def get_cards_information(
     image_folder_name: str,
-    sheet_file_name : str,
-    sheet_name : str,
-    multiface_sheet_name : str,
-    card_list_name : str,
-    stax_type_dict : dict,
-    from_scratch : bool = False):
+    sheet_file_name: str,
+    sheet_name: str,
+    multiface_sheet_name: str,
+    card_list_name: str,
+    stax_type_dict: dict,
+    from_scratch: bool = False,
+):
     
+    session = requests.Session()
+    session.headers.setdefault("User-Agent", "AllThatStax/1.0")
+    used_images: set[str] = set()
+
     def get_card_json_data(card_name):
         # 整理卡牌名称
         card_name_match = re.search(r'\d+\s+(.+?)\s+\(.*?\)', card_name)
@@ -23,7 +34,7 @@ def get_cards_information(
 
         # 检索中文信息
         url = f"https://api.scryfall.com/cards/search?q=lang:zhs%20!%22{card_english_name}%22"
-        response = requests.get(url)
+        response = session.get(url, timeout=REQUEST_TIMEOUT)
 
         # 如果存在中文信息，则使用
         if response.status_code == 200:
@@ -32,7 +43,7 @@ def get_cards_information(
         # 如果不存在中文信息，则检索并使用默认信息
         elif response.status_code == 404:
             new_url = f"https://api.scryfall.com/cards/named?exact={card_english_name}"
-            new_response = requests.get(new_url)
+            new_response = session.get(new_url, timeout=REQUEST_TIMEOUT)
             if new_response.status_code != 200:
                 print(f"Failed to get {card_english_name} Chinese card name or other versions. {new_response.status_code} - {new_response.text}")
                 return None
@@ -43,9 +54,18 @@ def get_cards_information(
             print(f"Failed to get {card_english_name} information. {response.status_code} - {response.text}")
             return None
     
+    def mark_used_image(image_name: Optional[object]) -> None:
+        if not image_name:
+            return
+        text = str(image_name).strip()
+        if text:
+            used_images.add(text)
+
     def get_card_image(image_uri, card_english_name):
         # 获取图片名
-        image_name_response = requests.head(image_uri, allow_redirects = True)
+        image_name_response = session.head(
+            image_uri, allow_redirects=True, timeout=REQUEST_TIMEOUT
+        )
         if image_name_response.status_code == 200:
             if "Content-Disposition" in image_name_response.headers:
                 content_disposition = image_name_response.headers["Content-Disposition"]
@@ -57,7 +77,7 @@ def get_cards_information(
                         
             # 获取图片
             os.makedirs(image_folder_name, exist_ok = True)
-            image_response = requests.get(image_uri)
+            image_response = session.get(image_uri, timeout=REQUEST_TIMEOUT)
             if image_response.status_code == 200:
                 with open(f"{image_folder_name}/{card_image_name}", "wb") as f:
                     f.write(image_response.content)
@@ -68,7 +88,7 @@ def get_cards_information(
             card_image_name = None
             print(f"Failed to get {card_english_name} image headers. {image_name_response.status_code} - {image_name_response.text}")
 
-        used_images.add(card_image_name)
+        mark_used_image(card_image_name)
         return card_image_name
 
     type_dict = {
@@ -159,6 +179,8 @@ def get_cards_information(
     
     # 删除Images文件夹中未用到的图片
     def clean_up_images(image_folder, used_images):
+        if not os.path.isdir(image_folder):
+            return
         for image_file in os.listdir(image_folder):
             if image_file not in used_images:
                 os.remove(os.path.join(image_folder, image_file))
@@ -192,7 +214,6 @@ def get_cards_information(
         workbook.save(sheet_file_name)
 
     # 遍历列表
-    used_images = set()
     for card_name in card_names:
         # 获取卡牌信息
         if from_scratch:
@@ -205,14 +226,14 @@ def get_cards_information(
             for cell in prev_sheet["A"]:
                 if cell.value in card_name:
                     new_line = (False, [cell.value for cell in prev_sheet[cell.row]])
-                    used_images.add(prev_sheet.cell(cell.row, 3))
+                    mark_used_image(prev_sheet.cell(cell.row, 3).value)
                     is_prev_has_information = True
                     break
             for cell in prev_multiface_sheet["A"]:
                 if cell.value in card_name:
                     new_line = (True, [cell.value for cell in prev_multiface_sheet[cell.row]])
-                    used_images.add(prev_multiface_sheet.cell(cell.row, 3))
-                    used_images.add(prev_multiface_sheet.cell(cell.row, 8))
+                    mark_used_image(prev_multiface_sheet.cell(cell.row, 3).value)
+                    mark_used_image(prev_multiface_sheet.cell(cell.row, 8).value)
                     is_prev_has_information = True
                     break
             if is_prev_has_information == False:
@@ -233,9 +254,11 @@ def get_cards_information(
     clean_up_images(image_folder_name, used_images)
     if from_scratch == False:
         # 清理未使用的图片
-        
+
         # 删除旧表并重命名新表
         rename_sheets(workbook, sheet_name, multiface_sheet_name)
 
         workbook.save(sheet_file_name)
+
+    session.close()
 

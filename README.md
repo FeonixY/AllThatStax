@@ -8,7 +8,8 @@
 - `Figures/`、`Images/`、`Symbols/`：书籍所需的插图、卡图与法术力符号。
 - `card_information_sheet.xlsx`：整理后的卡牌数据源，`Sheet`/`Multiface Sheet` 分别存放单面牌与多面牌。
 - `config.json`：配置文件，定义图像、表格、锁类型映射等路径。
-- `get_cards_information.py`、`localization.py`、`genarate_latex_text.py`、`run_latex.py`、`main.py`：原有的 Python 数据抓取、文本生成与编译脚本。
+- `allthatstax/`：新版的 Python 工具包，封装了配置读取、Excel 数据处理与 LaTeX 文本生成逻辑。
+- `get_cards_information.py`、`localization.py`、`run_latex.py`、`main.py`：Python 数据抓取、文本生成与编译脚本，其中 `genarate_latex_text.py` 保留为兼容旧用法的包装器。
 - `backend/`：基于 FastAPI 的数据 API，提供卡牌数据与元信息，并托管图片、法术力图标静态资源。
 - `frontend/`：基于 Vite + React + TypeScript 的前端项目，包含卡牌表格、筛选器以及可视化牌本构建界面。
 
@@ -30,6 +31,9 @@ uvicorn backend.app:app --reload
 - `GET /cards/{card_id}`：按 ID 获取指定卡牌详情。
 - `GET /metadata`：返回锁类型映射与牌类型排序信息。
 - `GET /health`：健康检查。
+- `GET /latex/settings`：读取当前配置中的 LaTeX 生成参数默认值。
+- `POST /latex/generate`：根据传入设置生成 `latex_text.txt` 并可选编译 PDF。
+- `GET /latex/download`：下载最近一次生成的 PDF 文件。
 
 静态资源：
 
@@ -38,7 +42,7 @@ uvicorn backend.app:app --reload
 
 ## 前端（Vite + React）
 
-前端提供卡牌浏览与牌本构建界面，支持按名称/描述搜索、按锁类型和牌类型筛选、展示法术力曲线与锁类型分布等功能。
+前端提供卡牌浏览、牌本构建以及 LaTeX/PDF 生成界面，支持按名称/描述搜索、按锁类型和牌类型筛选、展示法术力曲线与锁类型分布等功能。
 
 ### 本地开发
 
@@ -62,12 +66,29 @@ npm run build
 
 ## 牌本工作流
 
-1. 使用后端脚本更新 `card_information_sheet.xlsx` 与本地图片资源。
-2. 启动 FastAPI 服务，通过 `/cards` 和 `/metadata` 获取最新数据。
-3. 启动前端，浏览卡牌表格并将卡牌加入右侧牌本面板。
-4. 前端自动按法术力曲线与牌类型分区展示卡牌，便于整理、导出和继续在 LaTeX 流程中使用。
+1. 使用命令行工具 `python main.py --fetch` 更新 `card_information_sheet.xlsx` 与本地图片资源（可选 `--fetch-from-scratch` 完全重建表格）。
+2. 如需补全中文信息，执行 `python main.py --localize` 自动抓取缺失的本地化字段。
+3. 默认命令会读取 Excel 并生成最新的 LaTeX 片段，然后调用 `xelatex` 编译 PDF；如只需生成文本可添加 `--skip-compile`。
+4. 启动 FastAPI 服务，通过 `/cards` 和 `/metadata` 获取最新数据，配合前端浏览、检索和构建牌本，或使用前端的“PDF 生成”标签直接触发 LaTeX 文本生成与编译。
 
 欢迎根据需要扩展 API、添加导出能力或集成现有 LaTeX 生成流程。
+
+## 命令行工具
+
+新版 `main.py` 将常用流程整合为一个命令行入口，可通过 `python main.py --help` 查看完整参数列表。常用场景示例：
+
+```bash
+# 从配置读取路径，抓取卡牌信息并编译 PDF
+python main.py --fetch
+
+# 仅生成 LaTeX 文本，跳过编译
+python main.py --skip-compile
+
+# 使用自定义 LaTeX 编译命令
+python main.py --latex-command xelatex -shell-escape
+```
+
+命令会自动解析 `config.json` 中的路径，生成的 LaTeX 片段存放在 `latex_text.txt`（默认配置），并在未禁止的情况下调用 `xelatex` 生成最终 PDF。
 
 ## 卡牌列表管理脚本
 
