@@ -9,7 +9,7 @@
 - `card_data.json`：整理后的卡牌数据源，包含单面与多面牌的结构化信息。
 - `config.json`：配置文件，定义图像、表格、锁类型映射等路径。
 - `allthatstax/`：新版的 Python 工具包，封装了配置读取、JSON 数据处理与 LaTeX 文本生成逻辑。
-- `get_cards_information.py`、`run_latex.py`、`main.py`：Python 数据抓取、文本生成与编译脚本，其中 `genarate_latex_text.py` 保留为兼容旧用法的包装器。
+- `get_cards_information.py`、`run_latex.py`、`main.py`：Python 数据抓取、文本生成与编译脚本。
 - `backend/`：基于 FastAPI 的数据 API，提供卡牌数据与元信息，并托管图片、法术力图标静态资源。
 - `frontend/`：基于 Vite + React + TypeScript 的前端项目，包含卡牌表格、筛选器以及可视化牌本构建界面。
 

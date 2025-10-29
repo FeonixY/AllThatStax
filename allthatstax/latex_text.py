@@ -20,17 +20,13 @@ CARD_TYPE_ORDER: Dict[str, int] = {
 
 LEGALITY_FIELDS: Sequence[str] = (
     "standard",
-    "alchemy",
     "pioneer",
-    "explorer",
     "modern",
-    "historic",
     "legacy",
     "pauper",
     "vintage",
-    "timeless",
     "commander",
-    "duel",
+    "duel_commander",
 )
 
 

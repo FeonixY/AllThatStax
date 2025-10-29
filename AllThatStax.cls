@@ -1444,15 +1444,11 @@
     stax_type             .tl_set:N = \stax_type,
     is_in_restricted_list .tl_set:N = \is_in_restricted_list,
     legality / standard       .tl_set:N = \legality_standard,
-    legality / alchemy        .tl_set:N = \legality_alchemy,
     legality / pioneer        .tl_set:N = \legality_pioneer,
-    legality / explorer       .tl_set:N = \legality_explorer,
     legality / modern         .tl_set:N = \legality_modern,
-    legality / historic       .tl_set:N = \legality_historic,
     legality / legacy         .tl_set:N = \legality_legacy,
     legality / pauper         .tl_set:N = \legality_pauper,
     legality / vintage        .tl_set:N = \legality_vintage,
-    legality / timeless       .tl_set:N = \legality_timeless,
     legality / commander      .tl_set:N = \legality_commander,
     legality / duel_commander .tl_set:N = \legality_duel_commander
 }
@@ -1484,17 +1480,13 @@
         \vspace{-0.3cm}\\
         \begin{tabular}
         {>{\centering\arraybackslash}m{1.5cm} >{\arraybackslash}m{1.5cm} >{\centering\arraybackslash}m{1.5cm} >{\arraybackslash}m{1.5cm}}
-            \cell{\legality_standard} & \MTGDESfont{标准} & 
-            \cell{\legality_alchemy} & \MTGDESfont{炼金} \\
-            \cell{\legality_pioneer} & \MTGDESfont{先驱} & 
-            \cell{\legality_explorer} & \MTGDESfont{探索} \\
-            \cell{\legality_modern} & \MTGDESfont{摩登} & 
-            \cell{\legality_historic} & \MTGDESfont{史迹} \\
-            \cell{\legality_legacy} & \MTGDESfont{薪传} & 
-            \cell{\legality_pauper} & \MTGDESfont{纯铁} \\
-            \cell{\legality_vintage} & \MTGDESfont{特选} & 
-            \cell{\legality_timeless} & \MTGDESfont{不朽} \\
-            \cell{\legality_commander} & \MTGDESfont{官禁} & 
+            \cell{\legality_standard} & \MTGDESfont{标准} &
+            \cell{\legality_pioneer} & \MTGDESfont{先驱} \\
+            \cell{\legality_modern} & \MTGDESfont{摩登} &
+            \cell{\legality_legacy} & \MTGDESfont{薪传} \\
+            \cell{\legality_pauper} & \MTGDESfont{纯铁} &
+            \cell{\legality_vintage} & \MTGDESfont{特选} \\
+            \cell{\legality_commander} & \MTGDESfont{官禁} &
             \cell{\legality_duel_commander} & \MTGDESfont{法禁}
         \end{tabular}
     \end{minipage}
@@ -1517,15 +1509,11 @@
     stax_type               .tl_set:N = \stax_type,
     is_in_restricted_list   .tl_set:N = \is_in_restricted_list,
     legality / standard       .tl_set:N = \legality_standard,
-    legality / alchemy        .tl_set:N = \legality_alchemy,
     legality / pioneer        .tl_set:N = \legality_pioneer,
-    legality / explorer       .tl_set:N = \legality_explorer,
     legality / modern         .tl_set:N = \legality_modern,
-    legality / historic       .tl_set:N = \legality_historic,
     legality / legacy         .tl_set:N = \legality_legacy,
     legality / pauper         .tl_set:N = \legality_pauper,
     legality / vintage        .tl_set:N = \legality_vintage,
-    legality / timeless       .tl_set:N = \legality_timeless,
     legality / commander      .tl_set:N = \legality_commander,
     legality / duel_commander .tl_set:N = \legality_duel_commander
 }
@@ -1572,17 +1560,13 @@
         \vspace{-0.3cm}\\
         \begin{tabular}
         {>{\centering\arraybackslash}m{1.5cm} >{\arraybackslash}m{1.5cm} >{\centering\arraybackslash}m{1.5cm} >{\arraybackslash}m{1.5cm}}
-            \cell{\legality_standard} & \MTGDESfont{标准} & 
-            \cell{\legality_alchemy} & \MTGDESfont{炼金} \\
-            \cell{\legality_pioneer} & \MTGDESfont{先驱} & 
-            \cell{\legality_explorer} & \MTGDESfont{探索} \\
-            \cell{\legality_modern} & \MTGDESfont{摩登} & 
-            \cell{\legality_historic} & \MTGDESfont{史迹} \\
-            \cell{\legality_legacy} & \MTGDESfont{薪传} & 
-            \cell{\legality_pauper} & \MTGDESfont{纯铁} \\
-            \cell{\legality_vintage} & \MTGDESfont{特选} & 
-            \cell{\legality_timeless} & \MTGDESfont{不朽} \\
-            \cell{\legality_commander} & \MTGDESfont{官禁} & 
+            \cell{\legality_standard} & \MTGDESfont{标准} &
+            \cell{\legality_pioneer} & \MTGDESfont{先驱} \\
+            \cell{\legality_modern} & \MTGDESfont{摩登} &
+            \cell{\legality_legacy} & \MTGDESfont{薪传} \\
+            \cell{\legality_pauper} & \MTGDESfont{纯铁} &
+            \cell{\legality_vintage} & \MTGDESfont{特选} \\
+            \cell{\legality_commander} & \MTGDESfont{官禁} &
             \cell{\legality_duel_commander} & \MTGDESfont{法禁}
         \end{tabular}
     \end{minipage}
