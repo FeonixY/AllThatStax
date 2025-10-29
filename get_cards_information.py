@@ -12,6 +12,7 @@ from urllib.parse import urlparse
 import requests
 
 from allthatstax.card_store import CardFaceRecord, CardRecord, CardStore, load_card_store
+from allthatstax.mtgch import ChineseCardInfo, MTGCHClient, MTGCHError
 
 REQUEST_TIMEOUT = 20
 SCRYFALL_ROOT = "https://api.scryfall.com"
@@ -175,6 +176,23 @@ def _extract_face(
     return face_record, image_file
 
 
+def _apply_chinese_translation(
+    faces: List[CardFaceRecord],
+    chinese_info: ChineseCardInfo,
+) -> None:
+    if not chinese_info.faces:
+        return
+
+    for index, face in enumerate(faces):
+        translated_face = chinese_info.faces[index] if index < len(chinese_info.faces) else chinese_info.faces[-1]
+        if translated_face.name:
+            face.chinese_name = translated_face.name.strip()
+        if translated_face.type_line:
+            face.card_type = translated_face.type_line.strip()
+        if translated_face.oracle_text:
+            face.description = translated_face.oracle_text.strip()
+
+
 def _determine_sort_type(card_type: str, *, default: str = "其他") -> str:
     mapping = {
         "creature": "生物",
@@ -331,6 +349,9 @@ def get_cards_information(
 
     session = requests.Session()
     session.headers.setdefault("User-Agent", "AllThatStax/1.0 (+https://github.com)")
+    session.headers.setdefault("Accept-Language", "zh-CN,zh;q=0.9,en;q=0.8")
+
+    mtgch_client = MTGCHClient(session=session)
 
     updated = 0
     downloaded_images = 0
@@ -348,6 +369,24 @@ def get_cards_information(
                 session,
                 download_images,
             )
+            try:
+                chinese_info = mtgch_client.fetch_chinese_info(
+                    english_name=str(payload.get("name") or entry.name),
+                    set_code=entry.set_code,
+                    collector_number=entry.collector_number,
+                    face_names=[face.english_name for face in card_record.faces],
+                )
+            except MTGCHError as exc:
+                errors.append(
+                    f"{entry.name} ({entry.set_code}) - 获取中文信息失败: {exc}"
+                )
+            else:
+                if chinese_info:
+                    _apply_chinese_translation(card_record.faces, chinese_info)
+                else:
+                    errors.append(
+                        f"{entry.name} ({entry.set_code}) - 未找到中文信息"
+                    )
         except CardFetchError as exc:
             errors.append(f"{entry.name} ({entry.set_code}) - {exc}")
             continue

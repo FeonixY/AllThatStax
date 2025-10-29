@@ -116,7 +116,9 @@ export function CardFetcher({ apiBase }: CardFetcherProps) {
       <header className="fetch-panel__header">
         <div>
           <h2>卡牌信息爬取</h2>
-          <p>读取牌表并使用 Scryfall 获取英文数据与卡图。</p>
+          <p>
+            读取牌表并使用 Scryfall 获取英文数据与卡图，同时从 mtgch.com 获取中文信息。
+          </p>
         </div>
         {settings && (
           <span className="fetch-panel__hint">
