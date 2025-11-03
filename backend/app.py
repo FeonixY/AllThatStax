@@ -486,7 +486,7 @@ def _load_cards_payload(force: bool = False) -> Dict[str, object]:
         store = load_card_store(data_path)
         cards: List[Card] = []
         for record in store.cards.values():
-            record.legalities = _clean_legalities(record.legalities)
+            record.legalities = extract_legalities(record.legalities)
             card = _record_to_card(record)
             if card is not None:
                 cards.append(card)
