@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 import time
 from dataclasses import dataclass
@@ -60,22 +61,42 @@ def _parse_card_list(card_list_path: Path) -> List[CardListEntry]:
     if not card_list_path.exists():
         raise FileNotFoundError(f"Card list not found: {card_list_path}")
 
-    pattern = re.compile(r"^\s*\d+\s+(.+?)\s+\(([^)]+)\)\s+([^\s#]+)\s*(.*)$")
     entries: List[CardListEntry] = []
+    text = card_list_path.read_text(encoding="utf-8")
 
-    with card_list_path.open("r", encoding="utf-8") as handle:
-        for line in handle:
-            stripped = line.strip()
-            if not stripped:
+    try:
+        payload = json.loads(text)
+    except json.JSONDecodeError:
+        payload = None
+
+    if isinstance(payload, list):
+        raw_cards = payload
+    elif isinstance(payload, dict):
+        raw_cards = payload.get("cards")
+    else:
+        raw_cards = None
+
+    if isinstance(raw_cards, list):
+        for item in raw_cards:
+            if not isinstance(item, dict):
                 continue
-            match = pattern.match(stripped)
-            if not match:
+            name = str(item.get("name") or "").strip()
+            set_code = str(item.get("setCode") or item.get("set_code") or "").strip()
+            collector_number = str(
+                item.get("collectorNumber")
+                or item.get("collector_number")
+                or ""
+            ).strip()
+            if not name or not set_code or not collector_number:
                 continue
-            name = match.group(1).strip()
-            set_code = match.group(2).strip()
-            collector_number = match.group(3).strip()
-            tag_blob = match.group(4) or ""
-            tags = [token.strip() for token in tag_blob.split("#") if token.strip()]
+            tags_raw = item.get("lockTypes") or item.get("tags") or []
+            tags: List[str] = []
+            if isinstance(tags_raw, (list, tuple, set)):
+                for tag in tags_raw:
+                    if isinstance(tag, str) and tag.strip():
+                        tags.append(tag.strip())
+            elif isinstance(tags_raw, str) and tags_raw.strip():
+                tags = [tags_raw.strip()]
             entries.append(
                 CardListEntry(
                     name=name,
@@ -84,6 +105,30 @@ def _parse_card_list(card_list_path: Path) -> List[CardListEntry]:
                     tags=tags,
                 )
             )
+        return entries
+
+    pattern = re.compile(r"^\s*\d+\s+(.+?)\s+\(([^)]+)\)\s+([^\s#]+)\s*(.*)$")
+
+    for line in text.splitlines():
+        stripped = line.strip()
+        if not stripped:
+            continue
+        match = pattern.match(stripped)
+        if not match:
+            continue
+        name = match.group(1).strip()
+        set_code = match.group(2).strip()
+        collector_number = match.group(3).strip()
+        tag_blob = match.group(4) or ""
+        tags = [token.strip() for token in tag_blob.split("#") if token.strip()]
+        entries.append(
+            CardListEntry(
+                name=name,
+                set_code=set_code,
+                collector_number=collector_number,
+                tags=tags,
+            )
+        )
     return entries
 
 

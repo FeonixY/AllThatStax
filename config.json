@@ -1,7 +1,7 @@
 {
   "image_folder_name": "Images",
   "data_file_name": "card_data.json",
-  "card_list_name": "card_list.txt",
+  "card_list_name": "card_list.json",
   "latex_text_name": "latex_text.txt",
   "latex_file_name": "AllThatStax.tex",
   "moxfield_deck_url": "https://moxfield.com/decks/kBI9w5lzJUijYHVBWddzfg",

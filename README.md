@@ -68,7 +68,7 @@ npm run build
 
 ## 牌本工作流
 
-1. 使用命令行工具 `python main.py --fetch` 或前端“卡牌信息爬取”标签，从 `card_list.txt` 读取卡牌列表并调用 Scryfall 获取英文信息、合法性与同系列卡图，结果写入 `card_data.json` 并更新 `Images/`。
+1. 使用命令行工具 `python main.py --fetch` 或前端“卡牌信息爬取”标签，从 `card_list.json` 读取卡牌列表并调用 Scryfall 获取英文信息、合法性与同系列卡图，结果写入 `card_data.json` 并更新 `Images/`。
 2. 如需重置数据，可加上 `--fetch-from-scratch`（或在前端勾选“从空白开始重新生成”），忽略既有 JSON 重新抓取。
 3. 默认命令会读取 JSON 并生成最新的 LaTeX 片段，然后调用 `xelatex` 编译 PDF；如只需生成文本可添加 `--skip-compile`，也可在前端“PDF 生成”标签中直接配置并触发。
 4. 启动 FastAPI 服务，通过 `/cards` 和 `/metadata` 获取最新数据，配合前端浏览、检索和构建牌本，或使用新增的抓取与生成界面完成全流程。
@@ -94,18 +94,30 @@ python main.py --latex-command xelatex -shell-escape
 
 ## 卡牌抓取说明
 
-项目默认的卡牌列表保存在 `card_list.txt`，每一行格式如下：
+项目默认的卡牌列表保存在 `card_list.json`，结构示例如下：
 
 ```
-数量 卡牌英文名 (系列代码) 收藏编号 #锁类型标签
+{
+  "source": "moxfield",
+  "deckId": "kBI9w5lzJUijYHVBWddzfg",
+  "cards": [
+    {
+      "quantity": 1,
+      "name": "Aether Barrier",
+      "setCode": "NEM",
+      "collectorNumber": "27",
+      "lockTypes": ["Spell Tax"]
+    }
+  ]
+}
 ```
 
 若使用 Moxfield 维护牌表，可在 `config.json` 中配置 `moxfield_deck_url`，或在前端“卡牌信息爬取”界面填写 Moxfield 链接并点击“获取牌表”。
-后端会通过新的 `/cards/fetch/moxfield` 接口请求 Moxfield API，将主牌列表转换为上述格式并写入本地卡表文件，便于随后执行抓取流程。
+后端会通过新的 `/cards/fetch/moxfield` 接口请求 Moxfield API，将主牌列表转换为上述 JSON 结构并写入本地卡表文件，便于随后执行抓取流程。
 
 抓取流程会根据系列代码与收藏编号调用 Scryfall 的 `/cards/{set}/{collector_number}` 接口，若该版本不存在则回退至 `cards/named` 搜索，对应的英文信息、合法性、法术力值与卡图链接都会写入 `card_data.json`。配置中的 `stax_type` 用于将行尾的 `#标签` 映射为中文锁类型。
 
-> 例如 `1 Archon of Emeria (ZNR) 4 #Orb of Dreams Effect #Rule of Law Effect` 会抓取赞迪卡重生版本的《艾美拉统治魔鬼》，同时标记两个锁类型。
+> 例如示例中的《Aether Barrier》会抓取复仇时代版本，并将“Spell Tax”标记为锁类型。
 
 抓取时会将卡图保存到 `Images/` 目录，文件名包含系列与收藏编号，前端和 LaTeX 生成都会引用这些资源。若仅需更新文字信息，可在前端取消“下载英文卡图”，或在命令行追加 `--no-download-images`。
 

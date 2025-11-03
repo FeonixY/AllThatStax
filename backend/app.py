@@ -575,7 +575,9 @@ def generate_latex(payload: LatexGenerationRequest) -> LatexGenerationResponse:
     latex_text_path = _resolve_path_within_base(payload.latexTextName)
     latex_file_path = _resolve_path_within_base(payload.latexFileName)
 
-    card_list_path = _resolve_path_within_base(str(config.get("card_list_name", "card_list.txt")))
+    card_list_path = _resolve_path_within_base(
+        str(config.get("card_list_name", "card_list.json"))
+    )
     image_folder_path = _resolve_path_within_base(str(config.get("image_folder_name", "Images")))
 
     command = payload.latexCommand[:] if payload.latexCommand else list(DEFAULT_COMMAND)
@@ -653,7 +655,7 @@ def get_fetch_settings() -> CardFetchSettings:
     config = load_config(CONFIG_PATH)
     deck_url = str(config.get("moxfield_deck_url", "")).strip()
     return CardFetchSettings(
-        cardListName=str(config.get("card_list_name", "card_list.txt")),
+        cardListName=str(config.get("card_list_name", "card_list.json")),
         dataFileName=str(config.get("data_file_name", "card_data.json")),
         imageFolderName=str(config.get("image_folder_name", "Images")),
         downloadImages=True,
@@ -706,7 +708,7 @@ def fetch_moxfield_deck(payload: MoxfieldFetchRequest) -> MoxfieldFetchResponse:
     card_list_value = (
         payload.cardListName
         if payload.cardListName and payload.cardListName.strip()
-        else str(config.get("card_list_name", "card_list.txt"))
+        else str(config.get("card_list_name", "card_list.json"))
     )
 
     destination = _resolve_path_within_base(card_list_value)

@@ -1,0 +1,3523 @@
+{
+  "source": "moxfield",
+  "deckId": "kBI9w5lzJUijYHVBWddzfg",
+  "cards": [
+    {
+      "quantity": 1,
+      "name": "Aether Barrier",
+      "setCode": "NEM",
+      "collectorNumber": "27",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Aether Flash",
+      "setCode": "WTH",
+      "collectorNumber": "88",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Alms Collector",
+      "setCode": "C17",
+      "collectorNumber": "1",
+      "lockTypes": [
+        "Draw Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "An-Zerrin Ruins",
+      "setCode": "HML",
+      "collectorNumber": "64",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Anafenza, the Foremost",
+      "setCode": "KTK",
+      "collectorNumber": "163",
+      "lockTypes": [
+        "Graveyard Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Angel of Jubilation",
+      "setCode": "AVR",
+      "collectorNumber": "2",
+      "lockTypes": [
+        "Activated Ability Stax",
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Angelic Arbiter",
+      "setCode": "CMA",
+      "collectorNumber": "4",
+      "lockTypes": [
+        "Attack/Block Stax",
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Anowon, the Ruin Sage",
+      "setCode": "VOC",
+      "collectorNumber": "118",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Arboria",
+      "setCode": "DMR",
+      "collectorNumber": "335",
+      "lockTypes": [
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Arcane Laboratory",
+      "setCode": "7ED",
+      "collectorNumber": "60",
+      "lockTypes": [
+        "Rule of Law Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Archangel of Tithes",
+      "setCode": "OTJ",
+      "collectorNumber": "2",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Archelos, Lagoon Mystic",
+      "setCode": "CMR",
+      "collectorNumber": "268",
+      "lockTypes": [
+        "Orb of Dreams Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Archfiend of Depravity",
+      "setCode": "FRF",
+      "collectorNumber": "62",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Archfiend of Despair",
+      "setCode": "BBD",
+      "collectorNumber": "44",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Archon of Absolution",
+      "setCode": "ELD",
+      "collectorNumber": "3",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Archon of Emeria",
+      "setCode": "ZNR",
+      "collectorNumber": "4",
+      "lockTypes": [
+        "Orb of Dreams Effect",
+        "Rule of Law Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Archon of Valor's Reach",
+      "setCode": "BBD",
+      "collectorNumber": "74",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Arena of the Ancients",
+      "setCode": "CHR",
+      "collectorNumber": "91",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Ascendant Evincar",
+      "setCode": "10E",
+      "collectorNumber": "127",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Ashes of the Abhorrent",
+      "setCode": "XLN",
+      "collectorNumber": "2",
+      "lockTypes": [
+        "Graveyard Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Ashiok, Dream Render",
+      "setCode": "WAR",
+      "collectorNumber": "228",
+      "lockTypes": [
+        "Search Library Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Ashiok's Erasure",
+      "setCode": "THB",
+      "collectorNumber": "43",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Ashling's Prerogative",
+      "setCode": "LRW",
+      "collectorNumber": "150",
+      "lockTypes": [
+        "Orb of Dreams Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Aura Flux",
+      "setCode": "ULG",
+      "collectorNumber": "27",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Aura of Silence",
+      "setCode": "10E",
+      "collectorNumber": "6",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Authority of the Consuls",
+      "setCode": "KLD",
+      "collectorNumber": "5",
+      "lockTypes": [
+        "Orb of Dreams Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Aven Interrupter",
+      "setCode": "OTJ",
+      "collectorNumber": "4",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Aven Mindcensor",
+      "setCode": "TSR",
+      "collectorNumber": "5",
+      "lockTypes": [
+        "Search Library Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Back to Basics",
+      "setCode": "UMA",
+      "collectorNumber": "46",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Baird, Steward of Argive",
+      "setCode": "DOM",
+      "collectorNumber": "4",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Basandra, Battle Seraph",
+      "setCode": "CMA",
+      "collectorNumber": "174",
+      "lockTypes": [
+        "Grand Abolisher Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Bedlam",
+      "setCode": "7ED",
+      "collectorNumber": "174",
+      "lockTypes": [
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Blazing Archon",
+      "setCode": "RVR",
+      "collectorNumber": "302",
+      "lockTypes": [
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Blightbeetle",
+      "setCode": "M20",
+      "collectorNumber": "87",
+      "lockTypes": [
+        "Other Ability/Effect Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Blind Obedience",
+      "setCode": "RVR",
+      "collectorNumber": "9",
+      "lockTypes": [
+        "Orb of Dreams Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Blood Moon",
+      "setCode": "CHR",
+      "collectorNumber": "46",
+      "lockTypes": [
+        "Blood Moon Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Blood Sun",
+      "setCode": "RIX",
+      "collectorNumber": "92",
+      "lockTypes": [
+        "Blood Moon Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Bloodroot Apothecary",
+      "setCode": "BLC",
+      "collectorNumber": "27",
+      "lockTypes": [
+        "Other Ability/Effect Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Boromir, Warden of the Tower",
+      "setCode": "LTR",
+      "collectorNumber": "4",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Bottomless Pit",
+      "setCode": "STH",
+      "collectorNumber": "51",
+      "lockTypes": [
+        "Hand Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Braids, Cabal Minion",
+      "setCode": "EMA",
+      "collectorNumber": "82",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Brand of Ill Omen",
+      "setCode": "ICE",
+      "collectorNumber": "177",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Breath of Dreams",
+      "setCode": "ICE",
+      "collectorNumber": "62",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Briar Patch",
+      "setCode": "MMQ",
+      "collectorNumber": "232",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Brisela, Voice of Nightmares",
+      "setCode": "EMN",
+      "collectorNumber": "15b",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Brutal Suppression",
+      "setCode": "PCY",
+      "collectorNumber": "85",
+      "lockTypes": [
+        "Activated Ability Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Burning Earth",
+      "setCode": "M14",
+      "collectorNumber": "130",
+      "lockTypes": [
+        "Land Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Burning Sands",
+      "setCode": "ODY",
+      "collectorNumber": "180",
+      "lockTypes": [
+        "Other Ability/Effect Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Caltrops",
+      "setCode": "UDS",
+      "collectorNumber": "129",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Catalyst Stone",
+      "setCode": "ODY",
+      "collectorNumber": "297",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Caverns of Despair",
+      "setCode": "LEG",
+      "collectorNumber": "136",
+      "lockTypes": [
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Cemetery Gatekeeper",
+      "setCode": "VOW",
+      "collectorNumber": "304",
+      "lockTypes": [
+        "Land Tax",
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Chains of Mephistopheles",
+      "setCode": "LEG",
+      "collectorNumber": "91",
+      "lockTypes": [
+        "Draw Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Chalice of the Void",
+      "setCode": "MMA",
+      "collectorNumber": "203",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Champions of Minas Tirith",
+      "setCode": "LTC",
+      "collectorNumber": "10",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Chancellor of the Annex",
+      "setCode": "PLST",
+      "collectorNumber": "NPH-6",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Charitable Levy",
+      "setCode": "MH3",
+      "collectorNumber": "21",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Chill",
+      "setCode": "6ED",
+      "collectorNumber": "60",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Choke",
+      "setCode": "8ED",
+      "collectorNumber": "237",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Circle of Flame",
+      "setCode": "M15",
+      "collectorNumber": "135",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "City in a Bottle",
+      "setCode": "ARN",
+      "collectorNumber": "60",
+      "lockTypes": [
+        "Land Stax",
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Collective Restraint",
+      "setCode": "INV",
+      "collectorNumber": "49",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Collector Ouphe",
+      "setCode": "PLST",
+      "collectorNumber": "MH1-158",
+      "lockTypes": [
+        "Activated Ability Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Confounding Conundrum",
+      "setCode": "ZNR",
+      "collectorNumber": "53",
+      "lockTypes": [
+        "Land Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Conqueror's Flail",
+      "setCode": "C16",
+      "collectorNumber": "53",
+      "lockTypes": [
+        "Grand Abolisher Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Containment Priest",
+      "setCode": "M21",
+      "collectorNumber": "13",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Contamination",
+      "setCode": "PLST",
+      "collectorNumber": "USG-123",
+      "lockTypes": [
+        "Blood Moon Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Cornered Market",
+      "setCode": "MMQ",
+      "collectorNumber": "14",
+      "lockTypes": [
+        "Land Stax",
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Cowardice",
+      "setCode": "8ED",
+      "collectorNumber": "71",
+      "lockTypes": [
+        "Other Ability/Effect Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Crackdown",
+      "setCode": "MMQ",
+      "collectorNumber": "15",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Crawlspace",
+      "setCode": "DMR",
+      "collectorNumber": "375",
+      "lockTypes": [
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Creeping Dread",
+      "setCode": "SOI",
+      "collectorNumber": "104",
+      "lockTypes": [
+        "Hand Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Crovax, Ascendant Hero",
+      "setCode": "TSR",
+      "collectorNumber": "15",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Curse of Exhaustion",
+      "setCode": "DKA",
+      "collectorNumber": "5",
+      "lockTypes": [
+        "Rule of Law Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Curse of Marit Lage",
+      "setCode": "ICE",
+      "collectorNumber": "181",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Cursed Totem",
+      "setCode": "MH2",
+      "collectorNumber": "295",
+      "lockTypes": [
+        "Activated Ability Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Damping Engine",
+      "setCode": "ULG",
+      "collectorNumber": "124",
+      "lockTypes": [
+        "Land Stax",
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Damping Field",
+      "setCode": "ATQ",
+      "collectorNumber": "5",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Damping Matrix",
+      "setCode": "MRD",
+      "collectorNumber": "161",
+      "lockTypes": [
+        "Activated Ability Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Damping Sphere",
+      "setCode": "DOM",
+      "collectorNumber": "213",
+      "lockTypes": [
+        "Blood Moon Effect",
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Dauntless Dismantler",
+      "setCode": "LCI",
+      "collectorNumber": "8",
+      "lockTypes": [
+        "Orb of Dreams Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Dauthi Voidwalker",
+      "setCode": "MH2",
+      "collectorNumber": "81",
+      "lockTypes": [
+        "Graveyard Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Deafening Silence",
+      "setCode": "ELD",
+      "collectorNumber": "10",
+      "lockTypes": [
+        "Rule of Law Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Defense Grid",
+      "setCode": "BRR",
+      "collectorNumber": "13",
+      "lockTypes": [
+        "Grand Abolisher Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Defiler of Souls",
+      "setCode": "ARB",
+      "collectorNumber": "37",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Dennick, Pious Apprentice / Dennick, Pious Apparition",
+      "setCode": "MID",
+      "collectorNumber": "217",
+      "lockTypes": [
+        "Graveyard Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Destructive Flow",
+      "setCode": "PLS",
+      "collectorNumber": "102",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Dingus Egg",
+      "setCode": "LEA",
+      "collectorNumber": "241",
+      "lockTypes": [
+        "Other Ability/Effect Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Disciple of Caelus Nin",
+      "setCode": "BRC",
+      "collectorNumber": "41",
+      "lockTypes": [
+        "Other Ability/Effect Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Dissipation Field",
+      "setCode": "CLB",
+      "collectorNumber": "718",
+      "lockTypes": [
+        "Attack/Block Tax",
+        "Other Ability/Effect Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Doom Foretold",
+      "setCode": "ELD",
+      "collectorNumber": "187",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Doorkeeper Thrull",
+      "setCode": "MKM",
+      "collectorNumber": "338",
+      "lockTypes": [
+        "ETB Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Dovescape",
+      "setCode": "GK2",
+      "collectorNumber": "11",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Dovin, Hand of Control",
+      "setCode": "WAR",
+      "collectorNumber": "229",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Drana and Linvala",
+      "setCode": "MOM",
+      "collectorNumber": "222",
+      "lockTypes": [
+        "Activated Ability Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Drannith Magistrate",
+      "setCode": "PIKO",
+      "collectorNumber": "11p",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Dread of Night",
+      "setCode": "TMP",
+      "collectorNumber": "130",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Dream Tides",
+      "setCode": "VIS",
+      "collectorNumber": "31",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Drop of Honey",
+      "setCode": "ARN",
+      "collectorNumber": "47",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Drought",
+      "setCode": "ICE",
+      "collectorNumber": "21",
+      "lockTypes": [
+        "Activated Ability Tax",
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Dryad Militant",
+      "setCode": "RTR",
+      "collectorNumber": "214",
+      "lockTypes": [
+        "Graveyard Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Dueling Grounds",
+      "setCode": "INV",
+      "collectorNumber": "245",
+      "lockTypes": [
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Dystopia",
+      "setCode": "ALL",
+      "collectorNumber": "47",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Earthlink",
+      "setCode": "ICE",
+      "collectorNumber": "285",
+      "lockTypes": [
+        "Other Ability/Effect Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Eidolon of Obstruction",
+      "setCode": "PTHB",
+      "collectorNumber": "12p",
+      "lockTypes": [
+        "Activated Ability Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Eidolon of Rhetoric",
+      "setCode": "JOU",
+      "collectorNumber": "10",
+      "lockTypes": [
+        "Rule of Law Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Elephant Grass",
+      "setCode": "PLST",
+      "collectorNumber": "VIS-104",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Elesh Norn / The Argent Etchings",
+      "setCode": "MOM",
+      "collectorNumber": "12",
+      "lockTypes": [
+        "Other Ability/Effect Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Elesh Norn, Grand Cenobite",
+      "setCode": "SLD",
+      "collectorNumber": "209",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Elesh Norn, Mother of Machines",
+      "setCode": "ONE",
+      "collectorNumber": "10",
+      "lockTypes": [
+        "ETB Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Embargo",
+      "setCode": "MMQ",
+      "collectorNumber": "77",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Enemy of Enlightenment",
+      "setCode": "THB",
+      "collectorNumber": "92",
+      "lockTypes": [
+        "Hand Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Energy Flux",
+      "setCode": "5ED",
+      "collectorNumber": "83",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Energy Storm",
+      "setCode": "ICE",
+      "collectorNumber": "24",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Engineered Plague",
+      "setCode": "ULG",
+      "collectorNumber": "51",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Ensnaring Bridge",
+      "setCode": "LTC",
+      "collectorNumber": "350",
+      "lockTypes": [
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Erayo, Soratami Ascendant / Erayo's Essence",
+      "setCode": "SOK",
+      "collectorNumber": "35",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Erebos, God of the Dead",
+      "setCode": "THS",
+      "collectorNumber": "85",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Eriette of the Charmed Apple",
+      "setCode": "WOE",
+      "collectorNumber": "299",
+      "lockTypes": [
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Ethereal Absolution",
+      "setCode": "RNA",
+      "collectorNumber": "170",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Ethersworn Canonist",
+      "setCode": "2XM",
+      "collectorNumber": "14",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Everlasting Torment",
+      "setCode": "C16",
+      "collectorNumber": "233",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Exiled Doomsayer",
+      "setCode": "SCG",
+      "collectorNumber": "13",
+      "lockTypes": [
+        "Other Special Action Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Eye of Singularity",
+      "setCode": "VIS",
+      "collectorNumber": "4",
+      "lockTypes": [
+        "Other Ability/Effect Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "False Floor",
+      "setCode": "NCC",
+      "collectorNumber": "82",
+      "lockTypes": [
+        "Orb of Dreams Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Fatespinner",
+      "setCode": "MRD",
+      "collectorNumber": "36",
+      "lockTypes": [
+        "Phase/Step Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Feroz's Ban",
+      "setCode": "HML",
+      "collectorNumber": "107",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Flooded Woodlands",
+      "setCode": "ICE",
+      "collectorNumber": "290",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Forsaken Wastes",
+      "setCode": "MIR",
+      "collectorNumber": "125",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Frozen Aether",
+      "setCode": "PLC",
+      "collectorNumber": "54",
+      "lockTypes": [
+        "Orb of Dreams Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Gaddock Teeg",
+      "setCode": "UMA",
+      "collectorNumber": "199",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Ghostly Prison",
+      "setCode": "C19",
+      "collectorNumber": "64",
+      "lockTypes": [
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Giant Cindermaw",
+      "setCode": "BRO",
+      "collectorNumber": "136",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Gibbering Descent",
+      "setCode": "FUT",
+      "collectorNumber": "66",
+      "lockTypes": [
+        "Hand Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Gloom",
+      "setCode": "5ED",
+      "collectorNumber": "165",
+      "lockTypes": [
+        "Activated Ability Tax",
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Glowrider",
+      "setCode": "LGN",
+      "collectorNumber": "15",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Gnat Miser",
+      "setCode": "SOK",
+      "collectorNumber": "70",
+      "lockTypes": [
+        "Hand Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "God-Pharaoh's Statue",
+      "setCode": "WAR",
+      "collectorNumber": "238",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Godsend",
+      "setCode": "JOU",
+      "collectorNumber": "12",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Grafdigger's Cage",
+      "setCode": "MM3",
+      "collectorNumber": "221",
+      "lockTypes": [
+        "Graveyard Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Grand Abolisher",
+      "setCode": "BIG",
+      "collectorNumber": "2",
+      "lockTypes": [
+        "Grand Abolisher Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Grand Arbiter Augustin IV",
+      "setCode": "PLST",
+      "collectorNumber": "MMA-176",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Gravity Sphere",
+      "setCode": "LEG",
+      "collectorNumber": "151",
+      "lockTypes": [
+        "Humility Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Gríma Wormtongue",
+      "setCode": "LTR",
+      "collectorNumber": "88",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Hall of Gemstone",
+      "setCode": "MIR",
+      "collectorNumber": "221",
+      "lockTypes": [
+        "Blood Moon Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Hand to Hand",
+      "setCode": "TMP",
+      "collectorNumber": "180",
+      "lockTypes": [
+        "Grand Abolisher Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Harbinger of the Seas",
+      "setCode": "MH3",
+      "collectorNumber": "63",
+      "lockTypes": [
+        "Blood Moon Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Havoc",
+      "setCode": "TMP",
+      "collectorNumber": "181",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Havoc Festival",
+      "setCode": "RTR",
+      "collectorNumber": "166",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Hearthborn Battler",
+      "setCode": "BLB",
+      "collectorNumber": "361",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Herald of Anguish",
+      "setCode": "BRC",
+      "collectorNumber": "108",
+      "lockTypes": [
+        "Hand Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "High Noon",
+      "setCode": "OTJ",
+      "collectorNumber": "15",
+      "lockTypes": [
+        "Rule of Law Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "High Seas",
+      "setCode": "MMQ",
+      "collectorNumber": "83",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Hinata, Dawn-Crowned",
+      "setCode": "NEO",
+      "collectorNumber": "222",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Hokori, Dust Drinker",
+      "setCode": "PLST",
+      "collectorNumber": "BOK-7",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Honden of Night's Reach",
+      "setCode": "CHK",
+      "collectorNumber": "116",
+      "lockTypes": [
+        "Hand Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Hullbreacher",
+      "setCode": "CMR",
+      "collectorNumber": "74",
+      "lockTypes": [
+        "Draw Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Hum of the Radix",
+      "setCode": "MRD",
+      "collectorNumber": "122",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Humility",
+      "setCode": "TMP",
+      "collectorNumber": "24",
+      "lockTypes": [
+        "Humility Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Hushbringer",
+      "setCode": "ELD",
+      "collectorNumber": "18",
+      "lockTypes": [
+        "ETB Stax",
+        "Other Triggered Ability Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Hushwing Gryff",
+      "setCode": "M15",
+      "collectorNumber": "15",
+      "lockTypes": [
+        "ETB Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Illness in the Ranks",
+      "setCode": "GTC",
+      "collectorNumber": "69",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Imi Statue",
+      "setCode": "CHK",
+      "collectorNumber": "255",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Imposing Sovereign",
+      "setCode": "M14",
+      "collectorNumber": "22",
+      "lockTypes": [
+        "Orb of Dreams Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "In the Eye of Chaos",
+      "setCode": "LEG",
+      "collectorNumber": "61",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Infernal Darkness",
+      "setCode": "ICE",
+      "collectorNumber": "135",
+      "lockTypes": [
+        "Blood Moon Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Intruder Alarm",
+      "setCode": "WOT",
+      "collectorNumber": "21",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Iona, Shield of Emeria",
+      "setCode": "MM2",
+      "collectorNumber": "20",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Irini Sengir",
+      "setCode": "HML",
+      "collectorNumber": "54",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Jin-Gitaxias, Core Augur",
+      "setCode": "SLD",
+      "collectorNumber": "210",
+      "lockTypes": [
+        "Hand Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Jin-Gitaxias, Progress Tyrant",
+      "setCode": "NEO",
+      "collectorNumber": "59",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Judoon Enforcers",
+      "setCode": "WHO",
+      "collectorNumber": "138",
+      "lockTypes": [
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Juntu Stakes",
+      "setCode": "INV",
+      "collectorNumber": "304",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Kaervek, the Spiteful",
+      "setCode": "M21",
+      "collectorNumber": "106",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Kalitas, Traitor of Ghet",
+      "setCode": "OGW",
+      "collectorNumber": "86",
+      "lockTypes": [
+        "Graveyard Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Kambal, Consul of Allocation",
+      "setCode": "KLD",
+      "collectorNumber": "183",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Karlov Watchdog",
+      "setCode": "MKM",
+      "collectorNumber": "20",
+      "lockTypes": [
+        "Other Special Action Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Karn, the Great Creator",
+      "setCode": "WAR",
+      "collectorNumber": "1",
+      "lockTypes": [
+        "Activated Ability Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Karn's Sylex",
+      "setCode": "DMU",
+      "collectorNumber": "234",
+      "lockTypes": [
+        "Activated Ability Stax",
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Katabatic Winds",
+      "setCode": "VIS",
+      "collectorNumber": "109",
+      "lockTypes": [
+        "Activated Ability Stax",
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Kataki, War's Wage",
+      "setCode": "MD1",
+      "collectorNumber": "24",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Kinjalli's Sunwing",
+      "setCode": "XLN",
+      "collectorNumber": "19",
+      "lockTypes": [
+        "Orb of Dreams Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Kismet",
+      "setCode": "4ED",
+      "collectorNumber": "33",
+      "lockTypes": [
+        "Orb of Dreams Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Knight of Dusk's Shadow",
+      "setCode": "DMU",
+      "collectorNumber": "96",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Koskun Falls",
+      "setCode": "HML",
+      "collectorNumber": "55",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Kudo, King Among Bears",
+      "setCode": "MH3",
+      "collectorNumber": "192",
+      "lockTypes": [
+        "Humility Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Kulrath Knight",
+      "setCode": "SHM",
+      "collectorNumber": "190",
+      "lockTypes": [
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Kunoros, Hound of Athreos",
+      "setCode": "THB",
+      "collectorNumber": "222",
+      "lockTypes": [
+        "Graveyard Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Kutzil, Malamet Exemplar",
+      "setCode": "LCI",
+      "collectorNumber": "304",
+      "lockTypes": [
+        "Grand Abolisher Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Land Equilibrium",
+      "setCode": "LEG",
+      "collectorNumber": "64",
+      "lockTypes": [
+        "Land Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Lavinia, Azorius Renegade",
+      "setCode": "RVR",
+      "collectorNumber": "195",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Leonin Arbiter",
+      "setCode": "2X2",
+      "collectorNumber": "16",
+      "lockTypes": [
+        "Search Library Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Leovold, Emissary of Trest",
+      "setCode": "UMA",
+      "collectorNumber": "202",
+      "lockTypes": [
+        "Draw Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Leyline of Punishment",
+      "setCode": "M11",
+      "collectorNumber": "148",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Leyline of Singularity",
+      "setCode": "GPT",
+      "collectorNumber": "29",
+      "lockTypes": [
+        "Other Ability/Effect Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Leyline of the Void",
+      "setCode": "M20",
+      "collectorNumber": "107",
+      "lockTypes": [
+        "Graveyard Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Liesa, Shroud of Dusk",
+      "setCode": "CMR",
+      "collectorNumber": "286",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Light of Day",
+      "setCode": "6ED",
+      "collectorNumber": "29",
+      "lockTypes": [
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Limited Resources",
+      "setCode": "EXO",
+      "collectorNumber": "10",
+      "lockTypes": [
+        "Land Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Linvala, Keeper of Silence",
+      "setCode": "MM3",
+      "collectorNumber": "13",
+      "lockTypes": [
+        "Activated Ability Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Llawan, Cephalid Empress",
+      "setCode": "TOR",
+      "collectorNumber": "42",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Locust Miser",
+      "setCode": "SOK",
+      "collectorNumber": "80",
+      "lockTypes": [
+        "Hand Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Lodestone Golem",
+      "setCode": "BRR",
+      "collectorNumber": "29",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Loxodon Gatekeeper",
+      "setCode": "RAV",
+      "collectorNumber": "25",
+      "lockTypes": [
+        "Orb of Dreams Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "MacCready, Lamplight Mayor",
+      "setCode": "PIP",
+      "collectorNumber": "108",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Maddening Hex",
+      "setCode": "AFC",
+      "collectorNumber": "301",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Magebane Lizard",
+      "setCode": "OTJ",
+      "collectorNumber": "134",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Magistrate's Veto",
+      "setCode": "MMQ",
+      "collectorNumber": "204",
+      "lockTypes": [
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Magnetic Mountain",
+      "setCode": "4ED",
+      "collectorNumber": "209",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Magus of the Abyss",
+      "setCode": "2XM",
+      "collectorNumber": "97",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Magus of the Moat",
+      "setCode": "FUT",
+      "collectorNumber": "12",
+      "lockTypes": []
+    },
+    {
+      "quantity": 1,
+      "name": "Magus of the Moon",
+      "setCode": "IMA",
+      "collectorNumber": "138",
+      "lockTypes": [
+        "Blood Moon Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Magus of the Tabernacle",
+      "setCode": "PLC",
+      "collectorNumber": "8",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Mana Breach",
+      "setCode": "EXO",
+      "collectorNumber": "38",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Mana Maze",
+      "setCode": "INV",
+      "collectorNumber": "59",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Mana Vortex",
+      "setCode": "DRK",
+      "collectorNumber": "31",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Manabarbs",
+      "setCode": "4ED",
+      "collectorNumber": "212",
+      "lockTypes": [
+        "Land Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Manglehorn",
+      "setCode": "AKH",
+      "collectorNumber": "175",
+      "lockTypes": [
+        "Orb of Dreams Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Maralen of the Mornsong",
+      "setCode": "MOR",
+      "collectorNumber": "65",
+      "lockTypes": [
+        "Draw Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Marble Titan",
+      "setCode": "TMP",
+      "collectorNumber": "28",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Marisi, Breaker of the Coil",
+      "setCode": "PLST",
+      "collectorNumber": "C19-46",
+      "lockTypes": [
+        "Grand Abolisher Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Meekstone",
+      "setCode": "4ED",
+      "collectorNumber": "335",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Meishin, the Mind Cage",
+      "setCode": "SOK",
+      "collectorNumber": "44",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Michiko Konda, Truth Seeker",
+      "setCode": "PLST",
+      "collectorNumber": "SOK-19",
+      "lockTypes": [
+        "Other Ability/Effect Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Mindlock Orb",
+      "setCode": "ALA",
+      "collectorNumber": "51",
+      "lockTypes": [
+        "Search Library Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Mindwhisker",
+      "setCode": "BLB",
+      "collectorNumber": "60",
+      "lockTypes": [
+        "Humility Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Misery's Shadow",
+      "setCode": "BRO",
+      "collectorNumber": "330",
+      "lockTypes": [
+        "Graveyard Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Mist of Stagnation",
+      "setCode": "JUD",
+      "collectorNumber": "48",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Moat",
+      "setCode": "LEG",
+      "collectorNumber": "28",
+      "lockTypes": [
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Molder Slug",
+      "setCode": "MRD",
+      "collectorNumber": "125",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Mudslide",
+      "setCode": "ICE",
+      "collectorNumber": "204",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Naked Singularity",
+      "setCode": "ICE",
+      "collectorNumber": "330",
+      "lockTypes": [
+        "Blood Moon Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Narset, Parter of Veils",
+      "setCode": "WAR",
+      "collectorNumber": "61",
+      "lockTypes": [
+        "Draw Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Nature's Wrath",
+      "setCode": "ALL",
+      "collectorNumber": "98",
+      "lockTypes": [
+        "Land Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Necrogen Mists",
+      "setCode": "MRD",
+      "collectorNumber": "69",
+      "lockTypes": [
+        "Hand Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Necrogoyf",
+      "setCode": "MH2",
+      "collectorNumber": "451",
+      "lockTypes": [
+        "Hand Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Nekusar, the Mindrazer",
+      "setCode": "CMM",
+      "collectorNumber": "349",
+      "lockTypes": [
+        "Draw Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Nether Void",
+      "setCode": "LEG",
+      "collectorNumber": "113",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Night of Souls' Betrayal",
+      "setCode": "IMA",
+      "collectorNumber": "99",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Noetic Scales",
+      "setCode": "USG",
+      "collectorNumber": "304",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Norn's Annex",
+      "setCode": "CMM",
+      "collectorNumber": "829",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Notion Thief",
+      "setCode": "DGM",
+      "collectorNumber": "88",
+      "lockTypes": [
+        "Draw Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Null Rod",
+      "setCode": "WTH",
+      "collectorNumber": "154",
+      "lockTypes": [
+        "Activated Ability Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Nullstone Gargoyle",
+      "setCode": "RAV",
+      "collectorNumber": "266",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Ob Nixilis, Unshackled",
+      "setCode": "M15",
+      "collectorNumber": "110",
+      "lockTypes": [
+        "Search Library Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Omen Machine",
+      "setCode": "NPH",
+      "collectorNumber": "148",
+      "lockTypes": [
+        "Draw Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Onakke Oathkeeper",
+      "setCode": "CMM",
+      "collectorNumber": "722",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Opposition Agent",
+      "setCode": "CMR",
+      "collectorNumber": "141",
+      "lockTypes": [
+        "Search Library Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Oppression",
+      "setCode": "WOT",
+      "collectorNumber": "32",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Orb of Dreams",
+      "setCode": "BOK",
+      "collectorNumber": "156",
+      "lockTypes": [
+        "Orb of Dreams Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Orcish Bowmasters",
+      "setCode": "LTR",
+      "collectorNumber": "103",
+      "lockTypes": [
+        "Draw Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Overburden",
+      "setCode": "PCY",
+      "collectorNumber": "39",
+      "lockTypes": [
+        "Other Ability/Effect Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Overencumbered",
+      "setCode": "PIP",
+      "collectorNumber": "18",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Painful Quandary",
+      "setCode": "BRO",
+      "collectorNumber": "111",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Peacekeeper",
+      "setCode": "WTH",
+      "collectorNumber": "22",
+      "lockTypes": [
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Pendrell Mists",
+      "setCode": "WTH",
+      "collectorNumber": "47",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Phyrexian Censor",
+      "setCode": "MOM",
+      "collectorNumber": "31",
+      "lockTypes": [
+        "Orb of Dreams Effect",
+        "Rule of Law Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Pillar Tombs of Aku",
+      "setCode": "VIS",
+      "collectorNumber": "67",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Plague Drone",
+      "setCode": "40K",
+      "collectorNumber": "47",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Plague Engineer",
+      "setCode": "MH1",
+      "collectorNumber": "100",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Planar Void",
+      "setCode": "USG",
+      "collectorNumber": "149",
+      "lockTypes": [
+        "Graveyard Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Porphyry Nodes",
+      "setCode": "PLC",
+      "collectorNumber": "28",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Portcullis",
+      "setCode": "STH",
+      "collectorNumber": "139",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Possessed Portal",
+      "setCode": "5DN",
+      "collectorNumber": "144",
+      "lockTypes": [
+        "Draw Stax",
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Pramikon, Sky Rampart",
+      "setCode": "C19",
+      "collectorNumber": "47",
+      "lockTypes": [
+        "*F*",
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Presence of the Master",
+      "setCode": "USG",
+      "collectorNumber": "32",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Price of Glory",
+      "setCode": "ODY",
+      "collectorNumber": "214",
+      "lockTypes": [
+        "Land Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Propaganda",
+      "setCode": "ACR",
+      "collectorNumber": "85",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Putrefaction",
+      "setCode": "MMQ",
+      "collectorNumber": "153",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Pyrostatic Pillar",
+      "setCode": "SCG",
+      "collectorNumber": "100",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Quakebringer",
+      "setCode": "KHM",
+      "collectorNumber": "145",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Quicksilver Fountain",
+      "setCode": "MRD",
+      "collectorNumber": "233",
+      "lockTypes": [
+        "Blood Moon Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Rain of Gore",
+      "setCode": "DIS",
+      "collectorNumber": "126",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Raking Canopy",
+      "setCode": "SHM",
+      "collectorNumber": "127",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Rampaging Ferocidon",
+      "setCode": "XLN",
+      "collectorNumber": "154",
+      "lockTypes": [
+        "Life Gain Stax",
+        "Other Ability/Effect Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Reality Twist",
+      "setCode": "ICE",
+      "collectorNumber": "94",
+      "lockTypes": [
+        "Blood Moon Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Reclamation",
+      "setCode": "ICE",
+      "collectorNumber": "300",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Reidane, God of the Worthy / Valkmira, Protector's Shield",
+      "setCode": "KHM",
+      "collectorNumber": "21",
+      "lockTypes": [
+        "Orb of Dreams Effect",
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Rest in Peace",
+      "setCode": "ACR",
+      "collectorNumber": "156",
+      "lockTypes": [
+        "Graveyard Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Rising Waters",
+      "setCode": "NEM",
+      "collectorNumber": "38",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Ritual of Subdual",
+      "setCode": "ICE",
+      "collectorNumber": "261",
+      "lockTypes": [
+        "Blood Moon Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "River Song",
+      "setCode": "WHO",
+      "collectorNumber": "152",
+      "lockTypes": [
+        "Other Ability/Effect Tax",
+        "Search Library Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Roiling Vortex",
+      "setCode": "ZNR",
+      "collectorNumber": "156",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Root Maze",
+      "setCode": "10E",
+      "collectorNumber": "292",
+      "lockTypes": [
+        "Orb of Dreams Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Rule of Law",
+      "setCode": "M20",
+      "collectorNumber": "35",
+      "lockTypes": [
+        "Rule of Law Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Ruric Thar, the Unbowed",
+      "setCode": "DGM",
+      "collectorNumber": "99",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Samurai of the Pale Curtain",
+      "setCode": "CHK",
+      "collectorNumber": "43",
+      "lockTypes": [
+        "Graveyard Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Sanctifier en-Vec",
+      "setCode": "MH2",
+      "collectorNumber": "27",
+      "lockTypes": [
+        "Graveyard Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Sanctum Prelate",
+      "setCode": "CN2",
+      "collectorNumber": "23",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Scald",
+      "setCode": "USG",
+      "collectorNumber": "211",
+      "lockTypes": [
+        "Land Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Screaming Nemesis",
+      "setCode": "DSK",
+      "collectorNumber": "157",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Scytheclaw Raptor",
+      "setCode": "LCI",
+      "collectorNumber": "323",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Sen Triplets",
+      "setCode": "2XM",
+      "collectorNumber": "218",
+      "lockTypes": [
+        "Grand Abolisher Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Shared Fate",
+      "setCode": "MRD",
+      "collectorNumber": "49",
+      "lockTypes": [
+        "Draw Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Sharkey, Tyrant of the Shire",
+      "setCode": "LTR",
+      "collectorNumber": "229",
+      "lockTypes": [
+        "Activated Ability Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Sheoldred, the Apocalypse",
+      "setCode": "DMU",
+      "collectorNumber": "369",
+      "lockTypes": [
+        "Draw Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Sheoldred, Whispering One",
+      "setCode": "SLD",
+      "collectorNumber": "211",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Silent Arbiter",
+      "setCode": "C20",
+      "collectorNumber": "250",
+      "lockTypes": [
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Sire of Insanity",
+      "setCode": "DGM",
+      "collectorNumber": "104",
+      "lockTypes": [
+        "Hand Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Smog Elemental",
+      "setCode": "GTC",
+      "collectorNumber": "79",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Smoke",
+      "setCode": "3ED",
+      "collectorNumber": "178",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Smokestack",
+      "setCode": "SLC",
+      "collectorNumber": "1998",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Solemnity",
+      "setCode": "HOU",
+      "collectorNumber": "22",
+      "lockTypes": [
+        "Other Ability/Effect Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Soulless Jailer",
+      "setCode": "ONE",
+      "collectorNumber": "241",
+      "lockTypes": [
+        "Graveyard Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Spelltithe Enforcer",
+      "setCode": "GPT",
+      "collectorNumber": "18",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Sphere of Resistance",
+      "setCode": "SLD",
+      "collectorNumber": "1484",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Sphere of Safety",
+      "setCode": "RVR",
+      "collectorNumber": "447",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Spirit of the Labyrinth",
+      "setCode": "BNG",
+      "collectorNumber": "27",
+      "lockTypes": [
+        "Draw Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Spreading Plague",
+      "setCode": "INV",
+      "collectorNumber": "125",
+      "lockTypes": [
+        "Other Ability/Effect Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Squeeze",
+      "setCode": "MMQ",
+      "collectorNumber": "105",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Stabilizer",
+      "setCode": "SCG",
+      "collectorNumber": "142",
+      "lockTypes": [
+        "Activated Ability Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Stasis",
+      "setCode": "5ED",
+      "collectorNumber": "127",
+      "lockTypes": [
+        "Phase/Step Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Static Orb",
+      "setCode": "TMP",
+      "collectorNumber": "310",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Stigma Lasher",
+      "setCode": "PLST",
+      "collectorNumber": "EVE-62",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Stoic Angel",
+      "setCode": "ALA",
+      "collectorNumber": "199",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Stone of Erech",
+      "setCode": "LTR",
+      "collectorNumber": "251",
+      "lockTypes": [
+        "Graveyard Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Stony Silence",
+      "setCode": "MM3",
+      "collectorNumber": "25",
+      "lockTypes": [
+        "Activated Ability Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Storage Matrix",
+      "setCode": "9ED",
+      "collectorNumber": "310",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Storm Cauldron",
+      "setCode": "6ED",
+      "collectorNumber": "314",
+      "lockTypes": [
+        "Land Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Stormtide Leviathan",
+      "setCode": "M11",
+      "collectorNumber": "74",
+      "lockTypes": [
+        "Attack/Block Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Stranglehold",
+      "setCode": "CMA",
+      "collectorNumber": "87",
+      "lockTypes": [
+        "Other Ability/Effect Stax",
+        "Search Library Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Strict Proctor",
+      "setCode": "STX",
+      "collectorNumber": "33",
+      "lockTypes": [
+        "ETB Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Stronghold Taskmaster",
+      "setCode": "STH",
+      "collectorNumber": "72",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Sulfur Elemental",
+      "setCode": "PLC",
+      "collectorNumber": "108",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Sulfuric Vortex",
+      "setCode": "DDK",
+      "collectorNumber": "68",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Sunspine Lynx",
+      "setCode": "BLB",
+      "collectorNumber": "155",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Suppression Field",
+      "setCode": "RAV",
+      "collectorNumber": "31",
+      "lockTypes": [
+        "Activated Ability Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Tainted Aether",
+      "setCode": "7ED",
+      "collectorNumber": "167",
+      "lockTypes": [
+        "Other Ability/Effect Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Tainted Remedy",
+      "setCode": "ORI",
+      "collectorNumber": "120",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Talion, the Kindly Lord",
+      "setCode": "WOE",
+      "collectorNumber": "215",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Tangle Wire",
+      "setCode": "NEM",
+      "collectorNumber": "139",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Tectonic Instability",
+      "setCode": "INV",
+      "collectorNumber": "173",
+      "lockTypes": [
+        "Land Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Teferi, Mage of Zhalfir",
+      "setCode": "TSR",
+      "collectorNumber": "91",
+      "lockTypes": [
+        "Grand Abolisher Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Teferi, Time Raveler",
+      "setCode": "RVR",
+      "collectorNumber": "232",
+      "lockTypes": [
+        "Grand Abolisher Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Teferi's Realm",
+      "setCode": "VIS",
+      "collectorNumber": "44",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Territorial Dispute",
+      "setCode": "MMQ",
+      "collectorNumber": "217",
+      "lockTypes": [
+        "Land Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Thalia and The Gitrog Monster",
+      "setCode": "MOM",
+      "collectorNumber": "316",
+      "lockTypes": [
+        "Orb of Dreams Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Thalia, Guardian of Thraben",
+      "setCode": "VOW",
+      "collectorNumber": "318",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Thalia, Heretic Cathar",
+      "setCode": "EMN",
+      "collectorNumber": "46",
+      "lockTypes": [
+        "Orb of Dreams Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "The Abyss",
+      "setCode": "LEG",
+      "collectorNumber": "120",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "The Immortal Sun",
+      "setCode": "RIX",
+      "collectorNumber": "180",
+      "lockTypes": [
+        "Activated Ability Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "The Tabernacle at Pendrell Vale",
+      "setCode": "LEG",
+      "collectorNumber": "307",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Thorn of Amethyst",
+      "setCode": "BRR",
+      "collectorNumber": "60",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Tibalt, Rakish Instigator",
+      "setCode": "WAR",
+      "collectorNumber": "146",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Titania's Song",
+      "setCode": "3ED",
+      "collectorNumber": "220",
+      "lockTypes": [
+        "Humility Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Tocatli Honor Guard",
+      "setCode": "XLN",
+      "collectorNumber": "42",
+      "lockTypes": [
+        "ETB Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Tomik, Wielder of Law",
+      "setCode": "MKM",
+      "collectorNumber": "431",
+      "lockTypes": [
+        "*F*",
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Torment of Scarabs",
+      "setCode": "HOU",
+      "collectorNumber": "78",
+      "lockTypes": [
+        "Hand Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Torpor Orb",
+      "setCode": "BIG",
+      "collectorNumber": "27",
+      "lockTypes": [
+        "ETB Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Toxrill, the Corrosive",
+      "setCode": "VOW",
+      "collectorNumber": "132",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Trinisphere",
+      "setCode": "SLD",
+      "collectorNumber": "1485",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Triumph of Cruelty",
+      "setCode": "AVR",
+      "collectorNumber": "122",
+      "lockTypes": [
+        "Hand Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Trouble in Pairs",
+      "setCode": "MKC",
+      "collectorNumber": "15",
+      "lockTypes": [
+        "Other Ability/Effect Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Tsabo's Web",
+      "setCode": "INV",
+      "collectorNumber": "317",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Uba Mask",
+      "setCode": "CHK",
+      "collectorNumber": "272",
+      "lockTypes": [
+        "Draw Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Ugin's Nexus",
+      "setCode": "KTK",
+      "collectorNumber": "227",
+      "lockTypes": [
+        "Other Ability/Effect Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Underworld Cerberus",
+      "setCode": "THS",
+      "collectorNumber": "208",
+      "lockTypes": [
+        "Graveyard Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Unstable Glyphbridge / Sandswirl Wanderglyph",
+      "setCode": "LCI",
+      "collectorNumber": "41",
+      "lockTypes": [
+        "Attack/Block Stax",
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Uphill Battle",
+      "setCode": "MMQ",
+      "collectorNumber": "222",
+      "lockTypes": [
+        "Orb of Dreams Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Urabrask the Hidden",
+      "setCode": "SLD",
+      "collectorNumber": "212",
+      "lockTypes": [
+        "Orb of Dreams Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Urabrask, Heretic Praetor",
+      "setCode": "SNC",
+      "collectorNumber": "129",
+      "lockTypes": [
+        "Draw Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Urborg Shambler",
+      "setCode": "INV",
+      "collectorNumber": "133",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Valentin, Dean of the Vein / Lisette, Dean of the Root",
+      "setCode": "STX",
+      "collectorNumber": "161",
+      "lockTypes": [
+        "Graveyard Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Vengeful Tracker",
+      "setCode": "MKM",
+      "collectorNumber": "147",
+      "lockTypes": [
+        "Other Ability/Effect Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Vexing Bauble",
+      "setCode": "MH3",
+      "collectorNumber": "212",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Virulent Plague",
+      "setCode": "DTK",
+      "collectorNumber": "125",
+      "lockTypes": [
+        "Creature Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Void Mirror",
+      "setCode": "MH2",
+      "collectorNumber": "242",
+      "lockTypes": [
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Void Winnower",
+      "setCode": "SLD",
+      "collectorNumber": "1075",
+      "lockTypes": [
+        "Attack/Block Stax",
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Vorinclex, Monstrous Raider",
+      "setCode": "KHM",
+      "collectorNumber": "333",
+      "lockTypes": [
+        "Other Ability/Effect Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Vorinclex, Voice of Hunger",
+      "setCode": "SLD",
+      "collectorNumber": "213",
+      "lockTypes": [
+        "Land Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Vren, the Relentless",
+      "setCode": "BLB",
+      "collectorNumber": "239",
+      "lockTypes": [
+        "Graveyard Hate"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Vryn Wingmare",
+      "setCode": "M21",
+      "collectorNumber": "43",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Wandering Archaic / Explore the Vastlands",
+      "setCode": "STX",
+      "collectorNumber": "6",
+      "lockTypes": [
+        "Spell Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "War's Toll",
+      "setCode": "BBD",
+      "collectorNumber": "187",
+      "lockTypes": [
+        "Attack/Block Tax",
+        "Land Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Ward of Bones",
+      "setCode": "EVE",
+      "collectorNumber": "174",
+      "lockTypes": [
+        "Land Stax",
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Weathered Runestone",
+      "setCode": "KHM",
+      "collectorNumber": "247",
+      "lockTypes": [
+        "Graveyard Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Windborn Muse",
+      "setCode": "DMR",
+      "collectorNumber": "278",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Winter Moon",
+      "setCode": "MH3",
+      "collectorNumber": "213",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Winter Orb",
+      "setCode": "SLD",
+      "collectorNumber": "1486",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Witch Hunt",
+      "setCode": "C13",
+      "collectorNumber": "133",
+      "lockTypes": [
+        "Life Gain Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Witch-king of Angmar",
+      "setCode": "LTR",
+      "collectorNumber": "114",
+      "lockTypes": [
+        "Attack/Block Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Woebringer Demon",
+      "setCode": "RVR",
+      "collectorNumber": "98",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "World Queller",
+      "setCode": "ZEN",
+      "collectorNumber": "39",
+      "lockTypes": [
+        "Tabernacle/Smokestack Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Wrath of Marit Lage",
+      "setCode": "8ED",
+      "collectorNumber": "115",
+      "lockTypes": [
+        "Winter Orb Effect"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Yasharn, Implacable Earth",
+      "setCode": "ZNR",
+      "collectorNumber": "240",
+      "lockTypes": [
+        "Activated Ability Stax",
+        "Spell Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Yixlid Jailer",
+      "setCode": "FUT",
+      "collectorNumber": "93",
+      "lockTypes": [
+        "Graveyard Stax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Yurlok of Scorch Thrash",
+      "setCode": "CMR",
+      "collectorNumber": "293",
+      "lockTypes": [
+        "Other Ability/Effect Tax"
+      ]
+    },
+    {
+      "quantity": 1,
+      "name": "Zo-Zu the Punisher",
+      "setCode": "DDS",
+      "collectorNumber": "41",
+      "lockTypes": [
+        "Land Tax"
+      ]
+    }
+  ]
+}
