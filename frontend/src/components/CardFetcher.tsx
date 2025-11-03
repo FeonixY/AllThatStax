@@ -82,19 +82,6 @@ export function CardFetcher({ apiBase, jobState, onJobStateChange }: CardFetcher
     };
   }, []);
 
-  const handleChange = <K extends keyof FormState>(key: K, value: FormState[K]) => {
-    setForm((prev) => {
-      if (!prev) {
-        return prev;
-      }
-      const next = { ...prev, [key]: value };
-      if (key === "fromScratch" && value) {
-        next.downloadImages = true;
-      }
-      return next;
-    });
-  };
-
   useEffect(() => {
     if (!logContainerRef.current) {
       return;
@@ -107,6 +94,26 @@ export function CardFetcher({ apiBase, jobState, onJobStateChange }: CardFetcher
       setFetchError(null);
     }
   }, [fetchError, jobState.status]);
+
+  const progressPercent = useMemo(() => {
+    if (!jobState.total || jobState.total <= 0) {
+      return 0;
+    }
+    return Math.min(100, Math.round((jobState.processed / jobState.total) * 100));
+  }, [jobState.processed, jobState.total]);
+
+  const handleChange = <K extends keyof FormState>(key: K, value: FormState[K]) => {
+    setForm((prev) => {
+      if (!prev) {
+        return prev;
+      }
+      const next = { ...prev, [key]: value };
+      if (key === "fromScratch" && value) {
+        next.downloadImages = true;
+      }
+      return next;
+    });
+  };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -184,13 +191,6 @@ export function CardFetcher({ apiBase, jobState, onJobStateChange }: CardFetcher
       </section>
     );
   }
-
-  const progressPercent = useMemo(() => {
-    if (!jobState.total || jobState.total <= 0) {
-      return 0;
-    }
-    return Math.min(100, Math.round((jobState.processed / jobState.total) * 100));
-  }, [jobState.processed, jobState.total]);
 
   const combinedError = fetchError || jobState.error || null;
   const result = jobState.result ?? null;
