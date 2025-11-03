@@ -1,7 +1,7 @@
 import {
   CardData,
+  CardFetchJobState,
   CardFetchRequest,
-  CardFetchResponse,
   CardFetchSettings,
   LatexGenerationRequest,
   LatexGenerationResult,
@@ -17,7 +17,16 @@ const apiBase = import.meta.env.VITE_API_BASE_URL ?? defaultApiBase;
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const response = await fetch(`${apiBase}${path}`, init);
   if (!response.ok) {
-    throw new Error(`请求失败: ${response.status}`);
+    let message = `请求失败: ${response.status}`;
+    try {
+      const data = await response.json();
+      if (data && typeof data.detail === "string" && data.detail.trim()) {
+        message = data.detail;
+      }
+    } catch {
+      // ignore body parsing errors
+    }
+    throw new Error(message);
   }
   const contentType = response.headers.get("Content-Type");
   if (contentType && contentType.includes("application/json")) {
@@ -54,18 +63,6 @@ export function fetchCardFetchSettings(): Promise<CardFetchSettings> {
   return request<CardFetchSettings>("/cards/fetch/settings");
 }
 
-export function triggerCardFetch(
-  payload: CardFetchRequest
-): Promise<CardFetchResponse> {
-  return request<CardFetchResponse>("/cards/fetch", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(payload),
-  });
-}
-
 export function fetchMoxfieldDeck(
   payload: MoxfieldFetchRequest
 ): Promise<MoxfieldFetchResponse> {
@@ -76,4 +73,23 @@ export function fetchMoxfieldDeck(
     },
     body: JSON.stringify(payload),
   });
+}
+
+export function startCardFetch(
+  payload: CardFetchRequest
+): Promise<CardFetchJobState> {
+  return request<CardFetchJobState>("/cards/fetch/start", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+}
+
+export function fetchCardFetchStatus(
+  jobId?: string | null
+): Promise<CardFetchJobState> {
+  const query = jobId ? `?jobId=${encodeURIComponent(jobId)}` : "";
+  return request<CardFetchJobState>(`/cards/fetch/status${query}`);
 }

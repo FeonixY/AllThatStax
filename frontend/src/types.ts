@@ -81,6 +81,49 @@ export interface CardFetchResponse {
   duration: number;
 }
 
+export type CardFetchStatus = "idle" | "running" | "success" | "error";
+
+export type CardFetchLogLevel = "info" | "warning" | "error";
+
+export interface CardFetchLogEntry {
+  id: number;
+  timestamp: number;
+  level: CardFetchLogLevel;
+  message: string;
+  processed: number;
+  total: number;
+  updated: number;
+  imagesDownloaded: number;
+  cardName?: string | null;
+  setCode?: string | null;
+}
+
+export interface CardFetchJobState {
+  jobId: string | null;
+  status: CardFetchStatus;
+  logs: CardFetchLogEntry[];
+  processed: number;
+  total: number;
+  updated: number;
+  imagesDownloaded: number;
+  result: CardFetchResponse | null;
+  error: string | null;
+}
+
+export function createInitialCardFetchJobState(): CardFetchJobState {
+  return {
+    jobId: null,
+    status: "idle",
+    logs: [],
+    processed: 0,
+    total: 0,
+    updated: 0,
+    imagesDownloaded: 0,
+    result: null,
+    error: null,
+  };
+}
+
 export interface MoxfieldFetchRequest {
   deckUrl: string;
   cardListName?: string;

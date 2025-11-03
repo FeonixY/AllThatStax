@@ -213,3 +213,171 @@
   padding-left: 1.25rem;
   color: #9a3412;
 }
+
+.fetch-log {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+}
+
+.fetch-log__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.fetch-log__header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.fetch-log__header p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.fetch-log__summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+}
+
+@media (min-width: 640px) {
+  .fetch-log__summary {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+}
+
+.fetch-log__summary span {
+  background: #e0e7ff;
+  color: #1e293b;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-weight: 600;
+}
+
+.fetch-log__progress {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.fetch-log__progress-bar {
+  flex: 1;
+  height: 8px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+
+.fetch-log__progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  transition: width 0.3s ease;
+}
+
+.fetch-log__progress-label {
+  font-size: 0.85rem;
+  color: #475569;
+  min-width: 80px;
+  text-align: right;
+}
+
+.fetch-log__body {
+  max-height: 240px;
+  overflow-y: auto;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+.fetch-log__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.fetch-log__item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  border-left: 4px solid #6366f1;
+  padding-left: 0.75rem;
+}
+
+.fetch-log__item--warning {
+  border-left-color: #f59e0b;
+}
+
+.fetch-log__item--error {
+  border-left-color: #dc2626;
+}
+
+.fetch-log__time {
+  font-family: "JetBrains Mono", Menlo, monospace;
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.fetch-log__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.fetch-log__message {
+  margin: 0;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.fetch-log__item--warning .fetch-log__message {
+  color: #92400e;
+}
+
+.fetch-log__item--error .fetch-log__message {
+  color: #b91c1c;
+}
+
+.fetch-log__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #475569;
+}
+
+.fetch-log__meta span {
+  background: #f1f5f9;
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+}
+
+.fetch-log__item--warning .fetch-log__meta span {
+  background: #fef3c7;
+}
+
+.fetch-log__item--error .fetch-log__meta span {
+  background: #fee2e2;
+}
+
+.fetch-log__empty {
+  margin: 0;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
