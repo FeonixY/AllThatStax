@@ -7,6 +7,7 @@ from pathlib import Path
 from subprocess import CalledProcessError
 from typing import Dict, Iterable, List, Literal, Optional
 
+import requests
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -19,7 +20,13 @@ from allthatstax.card_store import CardFaceRecord, CardRecord, load_card_store
 from allthatstax.config import load_config
 from allthatstax.latex_text import generate_latex_text
 from allthatstax.legalities import extract_legalities
-from allthatstax.workflow import DEFAULT_COMMAND, get_cards_information, run_latex
+from allthatstax.workflow import (
+    DEFAULT_COMMAND,
+    MoxfieldError,
+    get_cards_information,
+    run_latex,
+    save_deck_to_file,
+)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 CONFIG_PATH = BASE_DIR / "config.json"
@@ -84,6 +91,7 @@ class CardFetchSettings(BaseModel):
     dataFileName: str
     imageFolderName: str
     downloadImages: bool
+    moxfieldDeckUrl: Optional[str] = None
 
 
 class CardFetchRequest(BaseModel):
@@ -101,6 +109,16 @@ class CardFetchResponse(BaseModel):
     errors: List[str]
     dataFile: str
     duration: float
+
+
+class MoxfieldFetchRequest(BaseModel):
+    deckUrl: str
+    cardListName: Optional[str] = None
+
+
+class MoxfieldFetchResponse(BaseModel):
+    cardsWritten: int
+    cardListPath: str
 
 
 class LatexGenerationResponse(BaseModel):
@@ -368,11 +386,13 @@ def generate_latex(payload: LatexGenerationRequest) -> LatexGenerationResponse:
 @app.get("/cards/fetch/settings", response_model=CardFetchSettings)
 def get_fetch_settings() -> CardFetchSettings:
     config = load_config(CONFIG_PATH)
+    deck_url = str(config.get("moxfield_deck_url", "")).strip()
     return CardFetchSettings(
         cardListName=str(config.get("card_list_name", "card_list.txt")),
         dataFileName=str(config.get("data_file_name", "card_data.json")),
         imageFolderName=str(config.get("image_folder_name", "Images")),
         downloadImages=True,
+        moxfieldDeckUrl=deck_url or None,
     )
 
 
@@ -395,6 +415,40 @@ def fetch_cards(payload: CardFetchRequest) -> CardFetchResponse:
 
     _load_cards_payload(force=True)
     return CardFetchResponse(**result)
+
+
+@app.post("/cards/fetch/moxfield", response_model=MoxfieldFetchResponse)
+def fetch_moxfield_deck(payload: MoxfieldFetchRequest) -> MoxfieldFetchResponse:
+    config = load_config(CONFIG_PATH)
+
+    deck_url = payload.deckUrl.strip()
+    if not deck_url:
+        raise HTTPException(status_code=400, detail="需要提供 Moxfield 牌表链接")
+
+    card_list_value = (
+        payload.cardListName
+        if payload.cardListName and payload.cardListName.strip()
+        else str(config.get("card_list_name", "card_list.txt"))
+    )
+
+    destination = _resolve_path_within_base(card_list_value)
+
+    try:
+        count, saved_path = save_deck_to_file(deck_url, destination)
+    except MoxfieldError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    except requests.RequestException as exc:  # pragma: no cover - network failure
+        raise HTTPException(
+            status_code=502,
+            detail=f"请求 Moxfield 失败: {exc}",
+        ) from exc
+    except OSError as exc:  # pragma: no cover - filesystem failure
+        raise HTTPException(status_code=500, detail=f"写入牌表失败: {exc}") from exc
+
+    return MoxfieldFetchResponse(
+        cardsWritten=count,
+        cardListPath=_relative_to_base(saved_path),
+    )
 
 
 @app.get("/latex/download")

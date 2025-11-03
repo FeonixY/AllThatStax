@@ -6,6 +6,8 @@ import {
   LatexGenerationRequest,
   LatexGenerationResult,
   LatexSettings,
+  MoxfieldFetchRequest,
+  MoxfieldFetchResponse,
   Metadata,
 } from "./types";
 
@@ -56,6 +58,18 @@ export function triggerCardFetch(
   payload: CardFetchRequest
 ): Promise<CardFetchResponse> {
   return request<CardFetchResponse>("/cards/fetch", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+}
+
+export function fetchMoxfieldDeck(
+  payload: MoxfieldFetchRequest
+): Promise<MoxfieldFetchResponse> {
+  return request<MoxfieldFetchResponse>("/cards/fetch/moxfield", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

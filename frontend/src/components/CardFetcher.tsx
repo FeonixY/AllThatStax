@@ -1,12 +1,14 @@
 import { FormEvent, useEffect, useState } from "react";
 import {
   fetchCardFetchSettings,
+  fetchMoxfieldDeck,
   triggerCardFetch,
 } from "../api";
 import {
   CardFetchRequest,
   CardFetchResponse,
   CardFetchSettings,
+  MoxfieldFetchResponse,
 } from "../types";
 import "./CardFetcher.css";
 
@@ -30,6 +32,11 @@ export function CardFetcher({ apiBase }: CardFetcherProps) {
   const [phase, setPhase] = useState<FetchPhase>("idle");
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<CardFetchResponse | null>(null);
+  const [moxfieldDeckUrl, setMoxfieldDeckUrl] = useState("");
+  const [moxfieldPhase, setMoxfieldPhase] = useState<FetchPhase>("idle");
+  const [moxfieldError, setMoxfieldError] = useState<string | null>(null);
+  const [moxfieldResult, setMoxfieldResult] =
+    useState<MoxfieldFetchResponse | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -46,6 +53,7 @@ export function CardFetcher({ apiBase }: CardFetcherProps) {
           fromScratch: false,
           downloadImages: data.downloadImages,
         });
+        setMoxfieldDeckUrl(data.moxfieldDeckUrl ?? "");
       })
       .catch((err: Error) => {
         if (!cancelled) {
@@ -99,6 +107,35 @@ export function CardFetcher({ apiBase }: CardFetcherProps) {
     }
   };
 
+  const handleMoxfieldFetch = async () => {
+    if (!form) {
+      return;
+    }
+    const trimmedUrl = moxfieldDeckUrl.trim();
+    if (!trimmedUrl) {
+      setMoxfieldError("请输入 Moxfield 牌表链接");
+      setMoxfieldPhase("error");
+      return;
+    }
+
+    setMoxfieldPhase("loading");
+    setMoxfieldError(null);
+    setMoxfieldResult(null);
+
+    try {
+      const response = await fetchMoxfieldDeck({
+        deckUrl: trimmedUrl,
+        cardListName: form.cardListName,
+      });
+      setMoxfieldResult(response);
+      setMoxfieldPhase("success");
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "未知错误";
+      setMoxfieldError(message);
+      setMoxfieldPhase("error");
+    }
+  };
+
   if (!form) {
     return (
       <section className="fetch-panel">
@@ -128,6 +165,43 @@ export function CardFetcher({ apiBase }: CardFetcherProps) {
       </header>
 
       <form className="fetch-form" onSubmit={handleSubmit}>
+        <section className="fetch-moxfield">
+          <header>
+            <h3>从 Moxfield 获取牌表</h3>
+            <p>将远程牌表保存为本地卡表列表文件，供后续抓取使用。</p>
+          </header>
+          <div className="fetch-moxfield__controls">
+            <label>
+              <span>Moxfield 牌表链接</span>
+              <input
+                type="text"
+                value={moxfieldDeckUrl}
+                onChange={(event) => setMoxfieldDeckUrl(event.target.value)}
+                placeholder="https://moxfield.com/decks/..."
+              />
+            </label>
+            <button
+              type="button"
+              className="fetch-button"
+              onClick={handleMoxfieldFetch}
+              disabled={moxfieldPhase === "loading"}
+            >
+              {moxfieldPhase === "loading" ? "正在获取…" : "获取牌表"}
+            </button>
+          </div>
+          {moxfieldError && (
+            <div className="fetch-panel__error">{moxfieldError}</div>
+          )}
+          {moxfieldResult && (
+            <div className="fetch-moxfield__result" aria-live="polite">
+              <p>
+                成功写入 {moxfieldResult.cardsWritten} 张牌至{" "}
+                <code>{moxfieldResult.cardListPath}</code>
+              </p>
+            </div>
+          )}
+        </section>
+
         <div className="fetch-form__grid">
           <label>
             <span>卡表列表文件</span>
@@ -180,7 +254,11 @@ export function CardFetcher({ apiBase }: CardFetcherProps) {
         </fieldset>
 
         <div className="fetch-form__actions">
-          <button type="submit" disabled={phase === "loading"}>
+          <button
+            type="submit"
+            className="fetch-button"
+            disabled={phase === "loading"}
+          >
             {phase === "loading" ? "正在抓取…" : "开始抓取"}
           </button>
           {error && <span className="fetch-panel__error">{error}</span>}
