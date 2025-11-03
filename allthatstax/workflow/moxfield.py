@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+import json
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Iterable, List, MutableMapping, Optional, Sequence
@@ -11,7 +12,7 @@ from urllib.parse import urlparse
 import requests
 
 REQUEST_TIMEOUT = 20
-MOXFIELD_API_ROOT = "https://api.moxfield.com/v2/decks/all"
+MOXFIELD_API_ROOT = "https://api2.moxfield.com/v2/decks/all"
 
 __all__ = ["MoxfieldError", "DeckCard", "fetch_deck_cards", "save_deck_to_file"]
 
@@ -64,6 +65,7 @@ def _request_deck_payload(deck_id: str, session: Optional[requests.Session] = No
         "User-Agent": "AllThatStax/1.0 (+https://github.com)",
         "Origin": "https://www.moxfield.com",
         "Referer": "https://www.moxfield.com/",
+        "X-Moxfield-Platform": "web",
     }
     response = session.get(url, timeout=REQUEST_TIMEOUT, headers=headers)
     if response.status_code != 200:
@@ -257,21 +259,34 @@ def save_deck_to_file(
     *,
     session: Optional[requests.Session] = None,
 ) -> tuple[int, Path]:
-    """Fetch a Moxfield deck and persist it to ``destination``."""
+    """Fetch a Moxfield deck and persist it to ``destination`` as JSON."""
 
-    cards = fetch_deck_cards(deck_identifier, session=session)
+    deck_id = _extract_deck_id(deck_identifier)
+    cards = fetch_deck_cards(deck_id, session=session)
     destination = destination.resolve()
     destination.parent.mkdir(parents=True, exist_ok=True)
 
-    lines: List[str] = []
     total_cards = 0
+    payload_cards: List[Dict[str, object]] = []
     for card in cards:
-        line = f"{card.quantity} {card.name} ({card.set_code}) {card.collector_number}"
-        if card.categories:
-            tags = " ".join(f"#{category}" for category in card.categories)
-            line = f"{line} {tags}"
-        lines.append(line)
         total_cards += max(card.quantity, 0)
+        payload_cards.append(
+            {
+                "quantity": card.quantity,
+                "name": card.name,
+                "setCode": card.set_code,
+                "collectorNumber": card.collector_number,
+                "lockTypes": list(card.categories),
+            }
+        )
 
-    destination.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    payload: Dict[str, object] = {
+        "source": "moxfield",
+        "deckId": deck_id,
+        "cards": payload_cards,
+    }
+
+    destination.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
     return total_cards, destination
