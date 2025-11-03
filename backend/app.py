@@ -2,10 +2,12 @@ from __future__ import annotations
 
 import re
 import threading
+import time
 from functools import lru_cache
 from pathlib import Path
 from subprocess import CalledProcessError
-from typing import Dict, Iterable, List, Literal, Optional
+from typing import Dict, Iterable, List, Literal, Optional, cast
+from uuid import uuid4
 
 import requests
 from fastapi import FastAPI, HTTPException, Query
@@ -111,6 +113,31 @@ class CardFetchResponse(BaseModel):
     duration: float
 
 
+class FetchLogEntry(BaseModel):
+    id: int
+    timestamp: float
+    level: Literal["info", "warning", "error"]
+    message: str
+    processed: int
+    total: int
+    updated: int
+    imagesDownloaded: int
+    cardName: Optional[str] = None
+    setCode: Optional[str] = None
+
+
+class CardFetchJobStatus(BaseModel):
+    jobId: Optional[str]
+    status: Literal["idle", "running", "success", "error"]
+    logs: List[FetchLogEntry]
+    processed: int
+    total: int
+    updated: int
+    imagesDownloaded: int
+    result: Optional[CardFetchResponse] = None
+    error: Optional[str] = None
+
+
 class MoxfieldFetchRequest(BaseModel):
     deckUrl: str
     cardListName: Optional[str] = None
@@ -130,6 +157,244 @@ class LatexGenerationResponse(BaseModel):
 
 
 app = FastAPI(title="AllThatStax API", version="1.0.0")
+
+
+class CardFetchJob:
+    def __init__(self, payload: CardFetchRequest):
+        self.job_id = uuid4().hex
+        self.payload = payload
+        self.status: Literal["running", "success", "error"] = "running"
+        self.error: Optional[str] = None
+        self.result: Optional[Dict[str, object]] = None
+        self.processed = 0
+        self.total = 0
+        self.updated = 0
+        self.images_downloaded = 0
+        self._logs: List[Dict[str, object]] = []
+        self._log_sequence = 0
+        self._lock = threading.Lock()
+        self._max_logs = 500
+        self._thread = threading.Thread(target=self._run, daemon=True)
+
+    def start(self) -> None:
+        self._thread.start()
+
+    def is_running(self) -> bool:
+        return self.status == "running" and self._thread.is_alive()
+
+    def snapshot(self) -> CardFetchJobStatus:
+        with self._lock:
+            logs = [FetchLogEntry(**entry) for entry in self._logs]
+            result = CardFetchResponse(**self.result) if self.result else None
+            status: Literal["idle", "running", "success", "error"] = (
+                self.status if self.status in {"success", "error"} else "running"
+            )
+            return CardFetchJobStatus(
+                jobId=self.job_id,
+                status=status,
+                logs=logs,
+                processed=self.processed,
+                total=self.total,
+                updated=self.updated,
+                imagesDownloaded=self.images_downloaded,
+                result=result,
+                error=self.error,
+            )
+
+    def _emit(
+        self,
+        level: Literal["info", "warning", "error"],
+        message: str,
+        *,
+        processed: int,
+        total: int,
+        updated: int,
+        images_downloaded: int,
+        entry: Optional[Dict[str, object]] = None,
+    ) -> None:
+        with self._lock:
+            self._log_sequence += 1
+            payload: Dict[str, object] = {
+                "id": self._log_sequence,
+                "timestamp": time.time(),
+                "level": level,
+                "message": message,
+                "processed": processed,
+                "total": total,
+                "updated": updated,
+                "imagesDownloaded": images_downloaded,
+            }
+            if entry:
+                card_name = str(entry.get("name") or "").strip()
+                set_code = str(entry.get("set_code") or "").strip()
+                if card_name:
+                    payload["cardName"] = card_name
+                if set_code:
+                    payload["setCode"] = set_code
+            self._logs.append(payload)
+            if len(self._logs) > self._max_logs:
+                self._logs = self._logs[-self._max_logs :]
+
+    def _handle_progress(self, event: Dict[str, object]) -> None:
+        entry = event.get("entry") if isinstance(event.get("entry"), dict) else None
+        processed = int(event.get("processed") or self.processed)
+        total = int(event.get("total") or self.total)
+        updated = int(event.get("updated") or self.updated)
+        images_downloaded = int(
+            event.get("imagesDownloaded") or self.images_downloaded
+        )
+        message = str(event.get("message") or "").strip()
+        level_value = str(event.get("level") or "info")
+        level: Literal["info", "warning", "error"] = "info"
+        if level_value in {"info", "warning", "error"}:
+            level = cast(Literal["info", "warning", "error"], level_value)
+
+        with self._lock:
+            self.processed = processed
+            self.total = max(self.total, total)
+            self.updated = updated
+            self.images_downloaded = images_downloaded
+
+        event_type = str(event.get("type") or "")
+        if not message:
+            if event_type == "start":
+                message = f"开始抓取，共 {total} 张牌"
+            elif event_type == "card:start" and entry:
+                card_name = entry.get("name") or "未知卡牌"
+                set_code = entry.get("set_code") or ""
+                suffix = f" ({set_code})" if set_code else ""
+                message = f"正在处理 {card_name}{suffix}"
+            elif event_type == "card:success" and entry:
+                card_name = entry.get("name") or "未知卡牌"
+                set_code = entry.get("set_code") or ""
+                suffix = f" ({set_code})" if set_code else ""
+                message = f"完成 {card_name}{suffix}"
+            elif event_type == "card:error" and entry:
+                card_name = entry.get("name") or "未知卡牌"
+                message = f"{card_name} 处理失败"
+            elif event_type == "complete":
+                message = "抓取完成"
+
+        self._emit(
+            level,
+            message or "",
+            processed=processed,
+            total=total,
+            updated=updated,
+            images_downloaded=images_downloaded,
+            entry=entry,
+        )
+
+    def _initialise_paths(self) -> Dict[str, Path]:
+        data_path = _resolve_path_within_base(self.payload.dataFileName)
+        card_list_path = _resolve_path_within_base(self.payload.cardListName)
+        image_folder_path = _resolve_path_within_base(self.payload.imageFolderName)
+        return {
+            "data": data_path,
+            "card_list": card_list_path,
+            "images": image_folder_path,
+        }
+
+    def _run(self) -> None:
+        try:
+            config = load_config(CONFIG_PATH)
+            paths = self._initialise_paths()
+            result = get_cards_information(
+                str(paths["images"]),
+                str(paths["data"]),
+                str(paths["card_list"]),
+                dict(config.get("stax_type", {})),
+                from_scratch=self.payload.fromScratch,
+                download_images=self.payload.downloadImages,
+                progress_callback=self._handle_progress,
+            )
+        except FileNotFoundError as exc:
+            self._handle_failure(str(exc))
+            return
+        except ValueError as exc:
+            self._handle_failure(str(exc))
+            return
+        except HTTPException as exc:
+            detail = str(exc.detail) if hasattr(exc, "detail") else str(exc)
+            self._handle_failure(detail)
+            return
+        except Exception as exc:  # pragma: no cover - unexpected failure
+            self._handle_failure(f"抓取过程中出现错误: {exc}")
+            return
+
+        _load_cards_payload(force=True)
+
+        with self._lock:
+            self.status = "success"
+            self.result = result
+            self.processed = int(result.get("cardsProcessed", self.processed))
+            self.updated = int(result.get("cardsUpdated", self.updated))
+            self.images_downloaded = int(
+                result.get("imagesDownloaded", self.images_downloaded)
+            )
+            self.total = int(result.get("cardsProcessed", self.total or self.processed))
+            self.error = None
+
+    def _handle_failure(self, message: str) -> None:
+        with self._lock:
+            self.status = "error"
+            self.error = message
+        self._emit(
+            "error",
+            message,
+            processed=self.processed,
+            total=self.total,
+            updated=self.updated,
+            images_downloaded=self.images_downloaded,
+        )
+
+
+class FetchJobManager:
+    def __init__(self) -> None:
+        self._lock = threading.Lock()
+        self._job: Optional[CardFetchJob] = None
+
+    def start(self, payload: CardFetchRequest) -> CardFetchJobStatus:
+        with self._lock:
+            if self._job and self._job.is_running():
+                raise RuntimeError("已有抓取任务正在运行")
+            job = CardFetchJob(payload)
+            self._job = job
+            job.start()
+            return job.snapshot()
+
+    def get_status(self, job_id: Optional[str] = None) -> CardFetchJobStatus:
+        with self._lock:
+            if not self._job:
+                return CardFetchJobStatus(
+                    jobId=None,
+                    status="idle",
+                    logs=[],
+                    processed=0,
+                    total=0,
+                    updated=0,
+                    imagesDownloaded=0,
+                    result=None,
+                    error=None,
+                )
+
+            status = self._job.snapshot()
+            if job_id and status.jobId != job_id and status.status in {"success", "error"}:
+                return CardFetchJobStatus(
+                    jobId=None,
+                    status="idle",
+                    logs=[],
+                    processed=0,
+                    total=0,
+                    updated=0,
+                    imagesDownloaded=0,
+                    result=None,
+                    error=None,
+                )
+            return status
+
+
+fetch_job_manager = FetchJobManager()
 
 app.add_middleware(
     CORSMiddleware,
@@ -394,6 +659,19 @@ def get_fetch_settings() -> CardFetchSettings:
         downloadImages=True,
         moxfieldDeckUrl=deck_url or None,
     )
+
+
+@app.post("/cards/fetch/start", response_model=CardFetchJobStatus)
+def start_card_fetch(payload: CardFetchRequest) -> CardFetchJobStatus:
+    try:
+        return fetch_job_manager.start(payload)
+    except RuntimeError as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+
+
+@app.get("/cards/fetch/status", response_model=CardFetchJobStatus)
+def get_card_fetch_status(job_id: Optional[str] = Query(None, alias="jobId")) -> CardFetchJobStatus:
+    return fetch_job_manager.get_status(job_id=job_id)
 
 
 @app.post("/cards/fetch", response_model=CardFetchResponse)

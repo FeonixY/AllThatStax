@@ -6,7 +6,7 @@ import re
 import time
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, Iterable, List, Optional, Tuple
+from typing import Callable, Dict, Iterable, List, Optional, Tuple
 from urllib.parse import urlparse
 
 import requests
@@ -45,6 +45,15 @@ def _slugify(text: str) -> str:
 
 def _normalise_set_code(value: str) -> str:
     return value.strip().lower()
+
+
+def _entry_to_payload(entry: CardListEntry) -> Dict[str, object]:
+    return {
+        "name": entry.name,
+        "set_code": entry.set_code,
+        "collector_number": entry.collector_number,
+        "tags": list(entry.tags),
+    }
 
 
 def _parse_card_list(card_list_path: Path) -> List[CardListEntry]:
@@ -314,6 +323,7 @@ def get_cards_information(
     *,
     from_scratch: bool = False,
     download_images: bool = True,
+    progress_callback: Optional[Callable[[Dict[str, object]], None]] = None,
 ) -> Dict[str, object]:
     """Fetch cards defined in ``card_list_name`` and persist them to JSON."""
 
@@ -340,8 +350,41 @@ def get_cards_information(
     downloaded_images = 0
     errors: List[str] = []
     start_time = time.time()
+    processed = 0
+    total = len(entries)
+
+    def emit(
+        event_type: str,
+        *,
+        entry: Optional[CardListEntry] = None,
+        level: str = "info",
+        message: Optional[str] = None,
+        processed_value: Optional[int] = None,
+        updated_value: Optional[int] = None,
+        images_value: Optional[int] = None,
+    ) -> None:
+        if not progress_callback:
+            return
+        payload: Dict[str, object] = {
+            "type": event_type,
+            "level": level,
+            "processed": processed_value if processed_value is not None else processed,
+            "total": total,
+            "updated": updated_value if updated_value is not None else updated,
+            "imagesDownloaded": images_value
+            if images_value is not None
+            else downloaded_images,
+        }
+        if entry is not None:
+            payload["entry"] = _entry_to_payload(entry)
+        if message:
+            payload["message"] = message
+        progress_callback(payload)
+
+    emit("start", message=f"准备抓取 {total} 张牌", processed_value=0)
 
     for entry in entries:
+        emit("card:start", entry=entry, processed_value=processed)
         try:
             payload = _fetch_card_payload(session, entry)
             card_record, downloads = _build_card_record(
@@ -360,32 +403,67 @@ def get_cards_information(
                     face_names=[face.english_name for face in card_record.faces],
                 )
             except MTGCHError as exc:
-                errors.append(
-                    f"{entry.name} ({entry.set_code}) - 获取中文信息失败: {exc}"
-                )
+                warning = f"{entry.name} ({entry.set_code}) - 获取中文信息失败: {exc}"
+                errors.append(warning)
+                emit("card:warning", entry=entry, level="warning", message=warning)
             else:
                 if chinese_info:
                     _apply_chinese_translation(card_record.faces, chinese_info)
                 else:
-                    errors.append(
-                        f"{entry.name} ({entry.set_code}) - 未找到中文信息"
-                    )
+                    warning = f"{entry.name} ({entry.set_code}) - 未找到中文信息"
+                    errors.append(warning)
+                    emit("card:warning", entry=entry, level="warning", message=warning)
         except CardFetchError as exc:
-            errors.append(f"{entry.name} ({entry.set_code}) - {exc}")
+            processed += 1
+            error_message = f"{entry.name} ({entry.set_code}) - {exc}"
+            errors.append(error_message)
+            emit(
+                "card:error",
+                entry=entry,
+                level="error",
+                message=error_message,
+                processed_value=processed,
+            )
             continue
         except requests.RequestException as exc:
-            errors.append(f"{entry.name} ({entry.set_code}) - network error: {exc}")
+            processed += 1
+            error_message = (
+                f"{entry.name} ({entry.set_code}) - network error: {exc}"
+            )
+            errors.append(error_message)
+            emit(
+                "card:error",
+                entry=entry,
+                level="error",
+                message=error_message,
+                processed_value=processed,
+            )
             continue
 
         store.upsert(card_record)
         updated += 1
         downloaded_images += downloads
+        processed += 1
+        emit(
+            "card:success",
+            entry=entry,
+            processed_value=processed,
+            updated_value=updated,
+            images_value=downloaded_images,
+        )
         time.sleep(0.05)
 
     save_path = data_path
     store.save(save_path)
 
     duration = time.time() - start_time
+    emit(
+        "complete",
+        message="抓取完成",
+        processed_value=processed,
+        updated_value=updated,
+        images_value=downloaded_images,
+    )
     return {
         "cardsProcessed": len(entries),
         "cardsUpdated": updated,

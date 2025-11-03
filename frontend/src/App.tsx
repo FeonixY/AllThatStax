@@ -2,13 +2,15 @@ import { ChangeEvent, useEffect, useMemo, useState } from "react";
 import { CardTable } from "./components/CardTable";
 import { CardDetails } from "./components/CardDetails";
 import { BinderBoard } from "./components/BinderBoard";
-import { fetchCards, fetchMetadata } from "./api";
+import { fetchCardFetchStatus, fetchCards, fetchMetadata } from "./api";
 import {
   BinderPage,
   BinderSide,
   CardData,
   DragPayload,
+  CardFetchJobState,
   Metadata,
+  createInitialCardFetchJobState,
 } from "./types";
 import "./App.css";
 import { LatexGenerator } from "./components/LatexGenerator";
@@ -46,6 +48,9 @@ export default function App() {
   ]);
   const [activePageIndex, setActivePageIndex] = useState(0);
   const [stagingArea, setStagingArea] = useState<string[]>([]);
+  const [fetchJobState, setFetchJobState] = useState<CardFetchJobState>(
+    createInitialCardFetchJobState()
+  );
 
   useEffect(() => {
     async function load() {
@@ -66,6 +71,64 @@ export default function App() {
 
     load();
   }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    fetchCardFetchStatus(fetchJobState.jobId)
+      .then((status) => {
+        if (!cancelled) {
+          setFetchJobState(status);
+        }
+      })
+      .catch(() => {
+        /* ignore */
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (fetchJobState.status !== "running" || !fetchJobState.jobId) {
+      return;
+    }
+
+    let cancelled = false;
+    let timer: number | undefined;
+
+    const poll = async () => {
+      try {
+        const status = await fetchCardFetchStatus(fetchJobState.jobId);
+        if (cancelled) {
+          return;
+        }
+        setFetchJobState(status);
+        if (status.status === "running" && !cancelled) {
+          timer = window.setTimeout(poll, 1000);
+        }
+      } catch (pollError) {
+        if (!cancelled) {
+          setFetchJobState((prev) => ({
+            ...prev,
+            error:
+              pollError instanceof Error ? pollError.message : "未知错误",
+          }));
+          timer = window.setTimeout(poll, 2000);
+        }
+      }
+    };
+
+    poll();
+
+    return () => {
+      cancelled = true;
+      if (timer !== undefined) {
+        window.clearTimeout(timer);
+      }
+    };
+  }, [fetchJobState.jobId, fetchJobState.status]);
 
   const filteredCards = useMemo(() => {
     const q = normaliseQuery(query);
@@ -424,7 +487,11 @@ export default function App() {
         ) : activeTab === "latex" ? (
           <LatexGenerator apiBase={API_BASE} />
         ) : (
-          <CardFetcher apiBase={API_BASE} />
+          <CardFetcher
+            apiBase={API_BASE}
+            jobState={fetchJobState}
+            onJobStateChange={setFetchJobState}
+          />
         )}
       </main>
     </div>
