@@ -100,6 +100,9 @@ python main.py --latex-command xelatex -shell-escape
 数量 卡牌英文名 (系列代码) 收藏编号 #锁类型标签
 ```
 
+若使用 Moxfield 维护牌表，可在 `config.json` 中配置 `moxfield_deck_url`，或在前端“卡牌信息爬取”界面填写 Moxfield 链接并点击“获取牌表”。
+后端会通过新的 `/cards/fetch/moxfield` 接口请求 Moxfield API，将主牌列表转换为上述格式并写入本地卡表文件，便于随后执行抓取流程。
+
 抓取流程会根据系列代码与收藏编号调用 Scryfall 的 `/cards/{set}/{collector_number}` 接口，若该版本不存在则回退至 `cards/named` 搜索，对应的英文信息、合法性、法术力值与卡图链接都会写入 `card_data.json`。配置中的 `stax_type` 用于将行尾的 `#标签` 映射为中文锁类型。
 
 > 例如 `1 Archon of Emeria (ZNR) 4 #Orb of Dreams Effect #Rule of Law Effect` 会抓取赞迪卡重生版本的《艾美拉统治魔鬼》，同时标记两个锁类型。

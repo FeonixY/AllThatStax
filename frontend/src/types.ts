@@ -61,6 +61,7 @@ export interface CardFetchSettings {
   dataFileName: string;
   imageFolderName: string;
   downloadImages: boolean;
+  moxfieldDeckUrl?: string | null;
 }
 
 export interface CardFetchRequest {
@@ -78,6 +79,16 @@ export interface CardFetchResponse {
   errors: string[];
   dataFile: string;
   duration: number;
+}
+
+export interface MoxfieldFetchRequest {
+  deckUrl: string;
+  cardListName?: string;
+}
+
+export interface MoxfieldFetchResponse {
+  cardsWritten: number;
+  cardListPath: string;
 }
 
 export const CARD_DRAG_MIME = "application/x-all-that-stax-card";
